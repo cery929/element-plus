@@ -5,7 +5,7 @@ import {
   ArrowLeft,
   ArrowRight,
   ArrowUp,
-} from '@element-plus/icons-vue'
+} from '@cery929-ui/icons-vue'
 import { useNamespace } from '@element-plus/hooks'
 
 const ns = useNamespace('splitter-bar')

@@ -9,7 +9,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { CloseBold } from '@element-plus/icons-vue'
+import { CloseBold } from '@cery929-ui/icons-vue'
 
 const input = ref<string[]>(['custom', 'clear', 'icon'])
 </script>

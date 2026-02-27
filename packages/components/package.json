@@ -14,7 +14,7 @@
     "@element-plus/constants": "workspace:^",
     "@element-plus/directives": "workspace:^",
     "@element-plus/hooks": "workspace:^",
-    "@element-plus/icons-vue": "catalog:",
+    "@cery929-ui/icons-vue": "catalog:",
     "@element-plus/utils": "workspace:^",
     "@popperjs/core": "catalog:",
     "@vueuse/core": "catalog:",

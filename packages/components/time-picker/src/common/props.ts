@@ -6,7 +6,7 @@ import {
   useSizeProp,
 } from '@element-plus/hooks'
 import { useTooltipContentProps } from '@element-plus/components/tooltip'
-import { CircleClose } from '@element-plus/icons-vue'
+import { CircleClose } from '@cery929-ui/icons-vue'
 import { disabledTimeListsProps } from '../props/shared'
 
 import type { Component, ExtractPropTypes, ExtractPublicPropTypes } from 'vue'

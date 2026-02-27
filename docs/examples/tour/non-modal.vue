@@ -30,7 +30,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { MoreFilled } from '@element-plus/icons-vue'
+import { MoreFilled } from '@cery929-ui/icons-vue'
 
 import type { ButtonInstance } from 'element-plus'
 

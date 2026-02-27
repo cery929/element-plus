@@ -144,7 +144,7 @@ import {
   ScaleToOriginal,
   ZoomIn,
   ZoomOut,
-} from '@element-plus/icons-vue'
+} from '@cery929-ui/icons-vue'
 import { imageViewerEmits } from './image-viewer'
 
 import type { CSSProperties } from 'vue'

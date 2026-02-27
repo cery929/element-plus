@@ -43,11 +43,11 @@
     "postinstall": "pnpm stub && pnpm gen:version & pnpm run -C internal/metadata dev &"
   },
   "dependencies": {
+    "@cery929-ui/icons-vue": "^1.0.1",
     "@element-plus/components": "workspace:*",
     "@element-plus/constants": "workspace:*",
     "@element-plus/directives": "workspace:*",
     "@element-plus/hooks": "workspace:*",
-    "@element-plus/icons-vue": "^2.3.2",
     "@element-plus/locale": "workspace:*",
     "@element-plus/test-utils": "workspace:*",
     "@element-plus/theme-chalk": "workspace:*",

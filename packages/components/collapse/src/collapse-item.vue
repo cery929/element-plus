@@ -45,7 +45,7 @@
 import { markRaw } from 'vue'
 import ElCollapseTransition from '@element-plus/components/collapse-transition'
 import ElIcon from '@element-plus/components/icon'
-import { ArrowRight } from '@element-plus/icons-vue'
+import { ArrowRight } from '@cery929-ui/icons-vue'
 import { useCollapseItem, useCollapseItemDOM } from './use-collapse-item'
 
 import type { CollapseItemProps } from './collapse-item'

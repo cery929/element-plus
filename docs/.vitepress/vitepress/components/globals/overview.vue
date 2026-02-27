@@ -81,7 +81,7 @@
 <script lang="ts" setup>
 import { computed, nextTick, onMounted, ref } from 'vue'
 import { useRouter, withBase } from 'vitepress'
-import { Search } from '@element-plus/icons-vue'
+import { Search } from '@cery929-ui/icons-vue'
 import overviewLocale from '../../../i18n/component/overview.json'
 
 import type { InputInstance } from 'element-plus'

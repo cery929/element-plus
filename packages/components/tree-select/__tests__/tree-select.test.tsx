@@ -1,7 +1,7 @@
 import { nextTick, reactive, ref } from 'vue'
 import { mount } from '@vue/test-utils'
 import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest'
-import { CircleClose } from '@element-plus/icons-vue'
+import { CircleClose } from '@cery929-ui/icons-vue'
 import TreeSelect from '../src/tree-select.vue'
 import Tree from '@element-plus/components/tree/src/tree.vue'
 import defineGetter from '@element-plus/test-utils/define-getter'

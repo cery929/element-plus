@@ -8,7 +8,7 @@
 </template>
 
 <script lang="ts" setup>
-import { CloseBold } from '@element-plus/icons-vue'
+import { CloseBold } from '@cery929-ui/icons-vue'
 
 const options = [
   {

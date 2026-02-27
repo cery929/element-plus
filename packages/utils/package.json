@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@element-plus/constants": "workspace:^",
-    "@element-plus/icons-vue": "catalog:",
+    "@cery929-ui/icons-vue": "catalog:",
     "@vueuse/core": "catalog:",
     "lodash-unified": "catalog:"
   },

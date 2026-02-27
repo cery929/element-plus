@@ -17,7 +17,7 @@
 </template>
 
 <script lang="ts" setup>
-import { Document, Folder, FolderOpened } from '@element-plus/icons-vue'
+import { Document, Folder, FolderOpened } from '@cery929-ui/icons-vue'
 
 interface Tree {
   id: string

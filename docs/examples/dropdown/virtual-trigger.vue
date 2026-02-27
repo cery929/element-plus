@@ -37,7 +37,7 @@ import {
   CirclePlus,
   CirclePlusFilled,
   Plus,
-} from '@element-plus/icons-vue'
+} from '@cery929-ui/icons-vue'
 
 import type { DropdownInstance } from 'element-plus'
 

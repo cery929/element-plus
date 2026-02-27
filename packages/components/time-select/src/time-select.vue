@@ -47,7 +47,7 @@ import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@element-plus/constants'
 import {
   CircleClose as IconCircleClose,
   Clock as IconClock,
-} from '@element-plus/icons-vue'
+} from '@cery929-ui/icons-vue'
 import { compareTime, formatTime, nextTime, parseTime } from './utils'
 
 import type { TimeSelectProps } from './time-select'

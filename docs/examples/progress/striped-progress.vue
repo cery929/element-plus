@@ -33,7 +33,7 @@
 
 <script lang="ts" setup>
 import { computed, ref } from 'vue'
-import { Minus, Plus } from '@element-plus/icons-vue'
+import { Minus, Plus } from '@cery929-ui/icons-vue'
 
 const percentage = ref<number>(70)
 const duration = computed(() => Math.floor(percentage.value / 10))

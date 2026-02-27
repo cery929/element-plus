@@ -2,7 +2,7 @@
 import { computed, getCurrentInstance, ref, toRef } from 'vue'
 import { useClipboard, useToggle } from '@vueuse/core'
 import { EVENT_CODE } from 'element-plus'
-import { CaretTop } from '@element-plus/icons-vue'
+import { CaretTop } from '@cery929-ui/icons-vue'
 import { useLang } from '../composables/lang'
 import { useSourceCode } from '../composables/source-code'
 import { usePlayground } from '../composables/use-playground'

@@ -42,7 +42,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { Picture as IconPicture } from '@element-plus/icons-vue'
+import { Picture as IconPicture } from '@cery929-ui/icons-vue'
 
 const showPreview = ref(false)
 

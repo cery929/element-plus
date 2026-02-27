@@ -102,7 +102,7 @@ import {
   OfficeBuilding,
   Tickets,
   User,
-} from '@element-plus/icons-vue'
+} from '@cery929-ui/icons-vue'
 
 import type { ComponentSize } from 'element-plus'
 

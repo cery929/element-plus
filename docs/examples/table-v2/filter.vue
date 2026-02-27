@@ -18,7 +18,7 @@ import {
   TableV2FixedDir,
   useLocale,
 } from 'element-plus'
-import { Filter } from '@element-plus/icons-vue'
+import { Filter } from '@cery929-ui/icons-vue'
 
 import type { HeaderCellSlotProps } from 'element-plus'
 

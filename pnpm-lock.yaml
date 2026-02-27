@@ -6,12 +6,12 @@ settings:
 
 catalogs:
   default:
+    '@cery929-ui/icons-vue':
+      specifier: ^1.0.1
+      version: 1.0.1
     '@ctrl/tinycolor':
       specifier: ^3.4.1
       version: 3.6.1
-    '@element-plus/icons-vue':
-      specifier: ^2.3.2
-      version: 2.3.2
     '@popperjs/core':
       specifier: npm:@sxzz/popperjs-es@^2.11.7
       version: 2.11.7
@@ -56,6 +56,9 @@ importers:
 
   .:
     dependencies:
+      '@cery929-ui/icons-vue':
+        specifier: ^1.0.1
+        version: 1.0.1(vue@3.5.25(typescript@5.5.4))
       '@element-plus/components':
         specifier: workspace:*
         version: link:packages/components
@@ -68,9 +71,6 @@ importers:
       '@element-plus/hooks':
         specifier: workspace:*
         version: link:packages/hooks
-      '@element-plus/icons-vue':
-        specifier: ^2.3.2
-        version: 2.3.2(vue@3.5.25(typescript@5.5.4))
       '@element-plus/locale':
         specifier: workspace:*
         version: link:packages/locale
@@ -234,12 +234,12 @@ importers:
 
   docs:
     dependencies:
+      '@cery929-ui/icons-vue':
+        specifier: ^1.0.1
+        version: 1.0.1(vue@3.4.31(typescript@5.5.4))
       '@docsearch/js':
         specifier: ^3.1.0
         version: 3.9.0(@algolia/client-search@5.46.0)(search-insights@2.17.3)
-      '@element-plus/icons-vue':
-        specifier: ^2.3.2
-        version: 2.3.2(vue@3.4.31(typescript@5.5.4))
       '@element-plus/metadata':
         specifier: workspace:*
         version: link:../internal/metadata
@@ -253,8 +253,8 @@ importers:
         specifier: ^4.0.1
         version: 4.0.1
       element-plus:
-        specifier: npm:element-plus@latest
-        version: 2.13.1(vue@3.4.31(typescript@5.5.4))
+        specifier: 2.13.2
+        version: 2.13.2(vue@3.4.31(typescript@5.5.4))
       normalize.css:
         specifier: ^8.0.1
         version: 8.0.1
@@ -493,6 +493,9 @@ importers:
 
   packages/components:
     dependencies:
+      '@cery929-ui/icons-vue':
+        specifier: 'catalog:'
+        version: 1.0.1(vue@3.5.25(typescript@5.5.4))
       '@ctrl/tinycolor':
         specifier: 'catalog:'
         version: 3.6.1
@@ -505,9 +508,6 @@ importers:
       '@element-plus/hooks':
         specifier: workspace:^
         version: link:../hooks
-      '@element-plus/icons-vue':
-        specifier: 'catalog:'
-        version: 2.3.2(vue@3.5.25(typescript@5.5.4))
       '@element-plus/utils':
         specifier: workspace:^
         version: link:../utils
@@ -554,12 +554,12 @@ importers:
 
   packages/element-plus:
     dependencies:
+      '@cery929-ui/icons-vue':
+        specifier: ^1.0.1
+        version: 1.0.1(vue@3.4.31(typescript@5.5.4))
       '@ctrl/tinycolor':
         specifier: ^3.4.1
         version: 3.6.1
-      '@element-plus/icons-vue':
-        specifier: ^2.3.2
-        version: 2.3.2(vue@3.4.31(typescript@5.5.4))
       '@floating-ui/dom':
         specifier: ^1.0.1
         version: 1.7.4
@@ -573,7 +573,7 @@ importers:
         specifier: ^4.17.12
         version: 4.17.12
       '@vueuse/core':
-        specifier: 'catalog:'
+        specifier: ^10.11.0
         version: 10.11.1(vue@3.4.31(typescript@5.5.4))
       async-validator:
         specifier: ^4.2.5
@@ -678,12 +678,12 @@ importers:
 
   packages/utils:
     dependencies:
+      '@cery929-ui/icons-vue':
+        specifier: 'catalog:'
+        version: 1.0.1(vue@3.5.25(typescript@5.5.4))
       '@element-plus/constants':
         specifier: workspace:^
         version: link:../constants
-      '@element-plus/icons-vue':
-        specifier: 'catalog:'
-        version: 2.3.2(vue@3.5.25(typescript@5.5.4))
       '@vueuse/core':
         specifier: 'catalog:'
         version: 10.11.1(vue@3.5.25(typescript@5.5.4))
@@ -706,9 +706,9 @@ importers:
 
   play:
     dependencies:
-      '@element-plus/icons-vue':
-        specifier: ^2.3.2
-        version: 2.3.2(vue@3.5.25(typescript@5.5.4))
+      '@cery929-ui/icons-vue':
+        specifier: ^1.0.1
+        version: 1.0.1(vue@3.5.25(typescript@5.5.4))
       vue:
         specifier: 'catalog:'
         version: 3.5.25(typescript@5.5.4)
@@ -978,6 +978,11 @@ packages:
   '@bcoe/v8-coverage@1.0.2':
     resolution: {integrity: sha512-6zABk/ECA/QYSCQ1NGiVwwbQerUCZ+TQbp64Q3AgmfNvurHH0j8TtXa1qbShXA6qqkpAj4V5W8pP6mLe1mcMqA==}
     engines: {node: '>=18'}
+
+  '@cery929-ui/icons-vue@1.0.1':
+    resolution: {integrity: sha512-v/1BYdN/YOO/rRnPAdHC2fRmg+nzYsC+hXdtiUmMeuK5TYdZ62eHcIfnyk/vvhyKTuMhcCceAHX9UeGI5cfQMA==}
+    peerDependencies:
+      vue: ^3.2.0
 
   '@commitlint/cli@20.2.0':
     resolution: {integrity: sha512-l37HkrPZ2DZy26rKiTUvdq/LZtlMcxz+PeLv9dzK9NzoFGuJdOQyYU7IEkEQj0pO++uYue89wzOpZ0hcTtoqUA==}
@@ -4609,8 +4614,8 @@ packages:
   electron-to-chromium@1.5.267:
     resolution: {integrity: sha512-0Drusm6MVRXSOJpGbaSVgcQsuB4hEkMpHXaVstcPmhu5LIedxs1xNK/nIxmQIU/RPC0+1/o0AVZfBTkTNJOdUw==}
 
-  element-plus@2.13.1:
-    resolution: {integrity: sha512-eG4BDBGdAsUGN6URH1PixzZb0ngdapLivIk1meghS1uEueLvQ3aljSKrCt5x6sYb6mUk8eGtzTQFgsPmLavQcA==}
+  element-plus@2.13.2:
+    resolution: {integrity: sha512-Zjzm1NnFXGhV4LYZ6Ze9skPlYi2B4KAmN18FL63A3PZcjhDfroHwhtM6RE8BonlOPHXUnPQynH0BgaoEfvhrGw==}
     peerDependencies:
       vue: ^3.3.0
 
@@ -9625,6 +9630,14 @@ snapshots:
 
   '@bcoe/v8-coverage@1.0.2': {}
 
+  '@cery929-ui/icons-vue@1.0.1(vue@3.4.31(typescript@5.5.4))':
+    dependencies:
+      vue: 3.4.31(typescript@5.5.4)
+
+  '@cery929-ui/icons-vue@1.0.1(vue@3.5.25(typescript@5.5.4))':
+    dependencies:
+      vue: 3.5.25(typescript@5.5.4)
+
   '@commitlint/cli@20.2.0(@types/node@22.19.3)(typescript@5.5.4)':
     dependencies:
       '@commitlint/format': 20.2.0
@@ -9798,10 +9811,6 @@ snapshots:
   '@element-plus/icons-vue@2.3.2(vue@3.4.31(typescript@5.5.4))':
     dependencies:
       vue: 3.4.31(typescript@5.5.4)
-
-  '@element-plus/icons-vue@2.3.2(vue@3.5.25(typescript@5.5.4))':
-    dependencies:
-      vue: 3.5.25(typescript@5.5.4)
 
   '@emnapi/core@1.8.1':
     dependencies:
@@ -13895,12 +13904,12 @@ snapshots:
 
   electron-to-chromium@1.5.267: {}
 
-  element-plus@2.13.1(vue@3.4.31(typescript@5.5.4)):
+  element-plus@2.13.2(vue@3.4.31(typescript@5.5.4)):
     dependencies:
       '@ctrl/tinycolor': 3.6.1
       '@element-plus/icons-vue': 2.3.2(vue@3.4.31(typescript@5.5.4))
       '@floating-ui/dom': 1.7.4
-      '@popperjs/core': '@sxzz/popperjs-es@2.11.7'
+      '@popperjs/core': '@sxzz/popperjs-es@2.11.8'
       '@types/lodash': 4.17.21
       '@types/lodash-es': 4.17.12
       '@vueuse/core': 10.11.1(vue@3.4.31(typescript@5.5.4))

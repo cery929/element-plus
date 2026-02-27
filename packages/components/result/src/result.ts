@@ -4,7 +4,7 @@ import {
   CircleCloseFilled,
   InfoFilled,
   WarningFilled,
-} from '@element-plus/icons-vue'
+} from '@cery929-ui/icons-vue'
 
 import type { Component, ExtractPublicPropTypes } from 'vue'
 import type Result from './result.vue'

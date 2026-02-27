@@ -58,7 +58,7 @@
 <script lang="ts" setup>
 import { computed, inject } from 'vue'
 import ElIcon from '@element-plus/components/icon'
-import { CaretRight } from '@element-plus/icons-vue'
+import { CaretRight } from '@cery929-ui/icons-vue'
 import ElCheckbox from '@element-plus/components/checkbox'
 import { useNamespace } from '@element-plus/hooks'
 import { isFunction, isString, mutable } from '@element-plus/utils'

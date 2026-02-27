@@ -69,7 +69,8 @@
       :size="size"
       :disabled="disabled"
       :background="background"
-      layout="total, sizes, prev, pager, next, jumper"
+      :center-controls="true"
+      layout="sizes,prev, pager, next, "
       :total="400"
       @size-change="handleSizeChange"
       @current-change="handleCurrentChange"
@@ -105,6 +106,7 @@ const handleCurrentChange = (val: number) => {
 .demo-pagination-block + .demo-pagination-block {
   margin-top: 10px;
 }
+
 .demo-pagination-block .demonstration {
   margin-bottom: 16px;
 }

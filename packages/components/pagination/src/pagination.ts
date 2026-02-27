@@ -7,7 +7,7 @@ import {
   ref,
   watch,
 } from 'vue'
-import { ArrowLeft, ArrowRight } from '@element-plus/icons-vue'
+import { ArrowLeft, ArrowRight } from '@cery929-ui/icons-vue'
 import {
   buildProps,
   debugWarn,
@@ -184,6 +184,10 @@ export const paginationProps = buildProps({
    * @description which element the size dropdown appends to.
    */
   appendSizeTo: String,
+  /**
+   * @description whether to center the prev, pager, and next controls
+   */
+  centerControls: Boolean,
 } as const)
 export type PaginationProps = ExtractPropTypes<typeof paginationProps>
 export type PaginationPropsPublic = ExtractPublicPropTypes<
@@ -386,13 +390,14 @@ export default defineComponent({
       }
       if (!props.layout) return null
       if (props.hideOnSinglePage && pageCountBridge.value <= 1) return null
+
       const rootChildren: Array<VNode | VNode[] | null> = []
+      const leftWrapperChildren: Array<VNode | VNode[] | null> = []
       const rightWrapperChildren: Array<VNode | VNode[] | null> = []
-      const rightWrapperRoot = h(
-        'div',
-        { class: ns.e('rightwrapper') },
-        rightWrapperChildren
-      )
+      const centerWrapperChildren: Array<VNode | VNode[] | null> = []
+
+      let currentWrapper: 'left' | 'center' | 'right' = 'left'
+
       const TEMPLATE_MAP: Record<
         Exclude<LayoutKey, '->'>,
         VNode | VNode[] | null
@@ -440,31 +445,97 @@ export default defineComponent({
         .split(',')
         .map((item: string) => item.trim()) as LayoutKey[]
 
-      let haveRightWrapper = false
+      // 解析布局，根据 centerControls 决定如何分配组件
+      if (props.centerControls) {
+        // 居中模式：使用三个区域（左、中、右）
+        components.forEach((c) => {
+          if (c === '->') {
+            // 遇到 -> 切换到右区域
+            currentWrapper = 'right'
+            return
+          }
 
-      components.forEach((c) => {
-        if (c === '->') {
-          haveRightWrapper = true
-          return
+          // 判断是否是控制组件
+          const isControl = c === 'prev' || c === 'pager' || c === 'next'
+
+          if (isControl) {
+            // 控制组件始终放在中间区域
+            centerWrapperChildren.push(TEMPLATE_MAP[c])
+          } else if (currentWrapper === 'left') {
+            // 非控制组件在遇到 -> 之前放在左边
+            leftWrapperChildren.push(TEMPLATE_MAP[c])
+          } else {
+            // 非控制组件在遇到 -> 之后放在右边
+            rightWrapperChildren.push(TEMPLATE_MAP[c])
+          }
+        })
+
+        // 添加左边区域（如果有内容）
+        if (leftWrapperChildren.length > 0) {
+          addClass(leftWrapperChildren[0], ns.is('first'))
+          addClass(
+            leftWrapperChildren[leftWrapperChildren.length - 1],
+            ns.is('last')
+          )
+          rootChildren.push(
+            h('div', { class: ns.e('leftwrapper') }, leftWrapperChildren)
+          )
         }
-        if (!haveRightWrapper) {
-          rootChildren.push(TEMPLATE_MAP[c])
-        } else {
-          rightWrapperChildren.push(TEMPLATE_MAP[c])
+
+        // 添加中间区域（控制组件）
+        if (centerWrapperChildren.length > 0) {
+          addClass(centerWrapperChildren[0], ns.is('first'))
+          addClass(
+            centerWrapperChildren[centerWrapperChildren.length - 1],
+            ns.is('last')
+          )
+          rootChildren.push(
+            h('div', { class: ns.e('centerwrapper') }, centerWrapperChildren)
+          )
         }
-      })
 
-      addClass(rootChildren[0], ns.is('first'))
-      addClass(rootChildren[rootChildren.length - 1], ns.is('last'))
+        // 添加右边区域（如果有内容）
+        if (rightWrapperChildren.length > 0) {
+          addClass(rightWrapperChildren[0], ns.is('first'))
+          addClass(
+            rightWrapperChildren[rightWrapperChildren.length - 1],
+            ns.is('last')
+          )
+          rootChildren.push(
+            h('div', { class: ns.e('rightwrapper') }, rightWrapperChildren)
+          )
+        }
+      } else {
+        // 原始模式：只有左右区域
+        let haveRightWrapper = false
 
-      if (haveRightWrapper && rightWrapperChildren.length > 0) {
-        addClass(rightWrapperChildren[0], ns.is('first'))
-        addClass(
-          rightWrapperChildren[rightWrapperChildren.length - 1],
-          ns.is('last')
-        )
-        rootChildren.push(rightWrapperRoot)
+        components.forEach((c) => {
+          if (c === '->') {
+            haveRightWrapper = true
+            return
+          }
+          if (!haveRightWrapper) {
+            rootChildren.push(TEMPLATE_MAP[c])
+          } else {
+            rightWrapperChildren.push(TEMPLATE_MAP[c])
+          }
+        })
+
+        addClass(rootChildren[0], ns.is('first'))
+        addClass(rootChildren[rootChildren.length - 1], ns.is('last'))
+
+        if (haveRightWrapper && rightWrapperChildren.length > 0) {
+          addClass(rightWrapperChildren[0], ns.is('first'))
+          addClass(
+            rightWrapperChildren[rightWrapperChildren.length - 1],
+            ns.is('last')
+          )
+          rootChildren.push(
+            h('div', { class: ns.e('rightwrapper') }, rightWrapperChildren)
+          )
+        }
       }
+
       return h(
         'div',
         {
@@ -472,6 +543,9 @@ export default defineComponent({
             ns.b(),
             ns.is('background', props.background),
             ns.m(_size.value),
+            {
+              [ns.m('center-controls')]: props.centerControls,
+            },
           ],
         },
         rootChildren

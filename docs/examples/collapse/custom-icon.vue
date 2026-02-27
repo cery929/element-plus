@@ -56,7 +56,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { CaretRight } from '@element-plus/icons-vue'
+import { CaretRight } from '@cery929-ui/icons-vue'
 
 import type { CollapseModelValue } from 'element-plus'
 

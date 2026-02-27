@@ -183,7 +183,7 @@ import {
   isValidComponentSize,
 } from '@element-plus/utils'
 import { ElIcon } from '@element-plus/components/icon'
-import { Loading } from '@element-plus/icons-vue'
+import { Loading } from '@cery929-ui/icons-vue'
 import ElFocusTrap from '@element-plus/components/focus-trap'
 import { useGlobalComponentSettings } from '@element-plus/components/config-provider'
 

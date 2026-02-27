@@ -211,7 +211,7 @@ import {
   EVENT_CODE,
   UPDATE_MODEL_EVENT,
 } from '@element-plus/constants'
-import { Calendar, Clock } from '@element-plus/icons-vue'
+import { Calendar, Clock } from '@cery929-ui/icons-vue'
 import { dayOrDaysToDate, valueEquals } from '../utils'
 import {
   PICKER_BASE_INJECTION_KEY,

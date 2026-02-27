@@ -123,7 +123,7 @@ import {
 } from 'vue'
 import { pick } from 'lodash-unified'
 import { onClickOutside, useDebounceFn } from '@vueuse/core'
-import { Loading } from '@element-plus/icons-vue'
+import { Loading } from '@cery929-ui/icons-vue'
 import { useId, useNamespace } from '@element-plus/hooks'
 import { NOOP, getEventCode, isArray, throwError } from '@element-plus/utils'
 import {

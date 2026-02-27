@@ -29,7 +29,7 @@
 <script lang="ts" setup>
 import { computed, markRaw } from 'vue'
 import { ElIcon } from '@element-plus/components/icon'
-import { Loading } from '@element-plus/icons-vue'
+import { Loading } from '@cery929-ui/icons-vue'
 import { useNamespace } from '@element-plus/hooks'
 import { useButton } from './use-button'
 import { buttonEmits } from './button'

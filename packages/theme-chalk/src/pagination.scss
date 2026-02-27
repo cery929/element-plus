@@ -150,11 +150,35 @@
     }
   }
 
+  // 左区域 - 靠左对齐
+  @include e(leftwrapper) {
+    display: flex;
+    align-items: center;
+  }
+
+  // 中区域 - 居中
+  @include e(centerwrapper) {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  // 右区域 - 靠右对齐（复用现有的 rightwrapper 样式）
   @include e(rightwrapper) {
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: flex-end;
+  }
+
+  // 当居中控制启用时的额外样式
+  @include m(center-controls) {
+    // 确保所有区域都能正确显示
+    .#{$namespace}-pagination__leftwrapper,
+    .#{$namespace}-pagination__centerwrapper,
+    .#{$namespace}-pagination__rightwrapper {
+      flex: 0 0 auto;
+    }
   }
 
   @include when(background) {

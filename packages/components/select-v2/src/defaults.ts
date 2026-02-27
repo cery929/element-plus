@@ -13,7 +13,7 @@ import {
 } from '@element-plus/utils'
 import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@element-plus/constants'
 import { useTooltipContentProps } from '@element-plus/components/tooltip'
-import { ArrowDown, CircleClose } from '@element-plus/icons-vue'
+import { ArrowDown, CircleClose } from '@cery929-ui/icons-vue'
 import { tagProps } from '../../tag'
 import { defaultProps } from './useProps'
 

@@ -46,7 +46,7 @@ import { EVENT_CODE } from '@element-plus/constants'
 import { ElIcon } from '@element-plus/components/icon'
 import { useGlobalComponentSettings } from '@element-plus/components/config-provider'
 import { notificationEmits } from './notification'
-import { Close } from '@element-plus/icons-vue'
+import { Close } from '@cery929-ui/icons-vue'
 
 import type { CSSProperties } from 'vue'
 import type { NotificationProps } from './notification'

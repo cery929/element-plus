@@ -27,7 +27,7 @@ import {
   House,
   Notification,
   Operation,
-} from '@element-plus/icons-vue'
+} from '@cery929-ui/icons-vue'
 
 const direction = ref<'horizontal' | 'vertical'>('horizontal')
 </script>

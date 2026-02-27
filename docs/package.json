@@ -11,12 +11,12 @@
   },
   "dependencies": {
     "@docsearch/js": "^3.1.0",
-    "@element-plus/icons-vue": "^2.3.2",
+    "@cery929-ui/icons-vue": "^1.0.1",
     "@element-plus/metadata": "workspace:*",
     "@vue/shared": "catalog:",
     "@vueuse/core": "catalog:",
     "clipboard-copy": "^4.0.1",
-    "element-plus": "npm:element-plus@latest",
+    "element-plus": "2.13.2",
     "normalize.css": "^8.0.1",
     "nprogress": "^0.2.0"
   },

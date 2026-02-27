@@ -8,7 +8,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { Hide, View } from '@element-plus/icons-vue'
+import { Hide, View } from '@cery929-ui/icons-vue'
 
 const value1 = ref(true)
 </script>

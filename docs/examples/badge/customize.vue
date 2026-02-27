@@ -19,7 +19,7 @@
 </template>
 
 <script setup lang="ts">
-import { Message } from '@element-plus/icons-vue'
+import { Message } from '@cery929-ui/icons-vue'
 </script>
 
 <style scoped>

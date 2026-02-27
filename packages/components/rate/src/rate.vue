@@ -80,7 +80,7 @@ import {
   useFormSize,
 } from '@element-plus/components/form'
 import { ElIcon } from '@element-plus/components/icon'
-import { Star, StarFilled } from '@element-plus/icons-vue'
+import { Star, StarFilled } from '@cery929-ui/icons-vue'
 import { useNamespace } from '@element-plus/hooks'
 import { rateEmits } from './rate'
 

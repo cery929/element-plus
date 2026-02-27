@@ -1,7 +1,7 @@
 import { markRaw, nextTick, ref } from 'vue'
 import { mount } from '@vue/test-utils'
 import { describe, expect, it, test } from 'vitest'
-import { Loading, Search } from '@element-plus/icons-vue'
+import { Loading, Search } from '@cery929-ui/icons-vue'
 import Form from '@element-plus/components/form'
 import { useNamespace } from '@element-plus/hooks'
 import Button from '../src/button.vue'

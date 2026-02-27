@@ -1,5 +1,5 @@
 import { buildProps, definePropType, iconPropType } from '@element-plus/utils'
-import { ArrowRight } from '@element-plus/icons-vue'
+import { ArrowRight } from '@cery929-ui/icons-vue'
 
 import type { Component, ExtractPublicPropTypes } from 'vue'
 import type { CollapseActiveName } from './collapse'

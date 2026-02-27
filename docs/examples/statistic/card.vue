@@ -98,7 +98,7 @@ import {
   CaretBottom,
   CaretTop,
   Warning,
-} from '@element-plus/icons-vue'
+} from '@cery929-ui/icons-vue'
 </script>
 
 <style scoped>

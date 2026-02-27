@@ -46,7 +46,7 @@ import {
   Message,
   Search,
   Star,
-} from '@element-plus/icons-vue'
+} from '@cery929-ui/icons-vue'
 </script>
 
 <style scoped>

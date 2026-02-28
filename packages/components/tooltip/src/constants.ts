@@ -1,4 +1,4 @@
-import type { Arrayable } from '@element-plus/utils'
+import type { Arrayable } from '@cery929-ui/utils'
 import type { InjectionKey, Ref } from 'vue'
 import type { TooltipTriggerType } from './trigger'
 

@@ -1,11 +1,6 @@
 <template>
-  <button
-    v-if="mergedShowClose"
-    :aria-label="t('el.tour.close')"
-    :class="ns.e('closebtn')"
-    type="button"
-    @click="onClose"
-  >
+  <button v-if="mergedShowClose" :aria-label="t('el.tour.close')" :class="ns.e('closebtn')" type="button"
+    @click="onClose">
     <el-icon :class="ns.e('close')">
       <component :is="mergedCloseIcon" />
     </el-icon>
@@ -24,37 +19,19 @@
   </div>
   <footer :class="ns.e('footer')">
     <div :class="ns.b('indicators')">
-      <component
-        :is="tourSlots.indicators"
-        v-if="tourSlots.indicators"
-        :current="current"
-        :total="total"
-      />
+      <component :is="tourSlots.indicators" v-if="tourSlots.indicators" :current="current" :total="total" />
       <template v-else>
-        <span
-          v-for="(item, index) in total"
-          :key="item"
-          :class="[ns.b('indicator'), ns.is('active', index === current)]"
-        />
+        <span v-for="(item, index) in total" :key="item"
+          :class="[ns.b('indicator'), ns.is('active', index === current)]" />
       </template>
     </div>
     <div :class="ns.b('buttons')">
-      <el-button
-        v-if="current > 0"
-        size="small"
-        :type="mergedType"
-        v-bind="filterButtonProps(prevButtonProps)"
-        @click="onPrev"
-      >
+      <el-button v-if="current > 0" size="small" :type="mergedType" v-bind="filterButtonProps(prevButtonProps)"
+        @click="onPrev">
         {{ prevButtonProps?.children ?? t('el.tour.previous') }}
       </el-button>
-      <el-button
-        v-if="current <= total - 1"
-        size="small"
-        :type="mergedType === 'primary' ? 'default' : 'primary'"
-        v-bind="filterButtonProps(nextButtonProps)"
-        @click="onNext"
-      >
+      <el-button v-if="current <= total - 1" size="small" :type="mergedType === 'primary' ? 'default' : 'primary'"
+        v-bind="filterButtonProps(nextButtonProps)" @click="onNext">
         {{
           nextButtonProps?.children ??
           (current === total - 1 ? t('el.tour.finish') : t('el.tour.next'))
@@ -66,12 +43,12 @@
 
 <script lang="ts" setup>
 import { computed, inject, onBeforeUnmount, onMounted, watch } from 'vue'
-import { EVENT_CODE } from '@element-plus/constants'
+import { EVENT_CODE } from '@cery929-ui/constants'
 import { omit } from 'lodash-unified'
-import { ElButton } from '@element-plus/components/button'
-import { ElIcon } from '@element-plus/components/icon'
-import { CloseComponents, getEventCode } from '@element-plus/utils'
-import { useLocale } from '@element-plus/hooks'
+import { ElButton } from '@cery929-ui/components/button'
+import { ElIcon } from '@cery929-ui/components/icon'
+import { CloseComponents, getEventCode } from '@cery929-ui/utils'
+import { useLocale } from '@cery929-ui/hooks'
 import { tourStepEmits } from './step'
 import { tourKey } from './helper'
 

@@ -9,7 +9,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-import type { TagProps } from 'element-plus'
+import type { TagProps } from 'cery929-ui'
 
 interface TagsItem {
   name: string

@@ -1,7 +1,7 @@
-import { withInstall } from '@element-plus/utils'
+import { withInstall } from '@cery929-ui/utils'
 import Select from './src/select.vue'
 
-import type { SFCWithInstall } from '@element-plus/utils'
+import type { SFCWithInstall } from '@cery929-ui/utils'
 
 export const ElSelectV2: SFCWithInstall<typeof Select> = withInstall(Select)
 export default ElSelectV2

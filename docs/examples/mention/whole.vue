@@ -1,28 +1,14 @@
 <template>
-  <el-mention
-    v-model="value1"
-    whole
-    :options="options1"
-    style="width: 320px"
-    placeholder="Please input"
-  />
+  <el-mention v-model="value1" whole :options="options1" style="width: 320px" placeholder="Please input" />
   <el-divider />
-  <el-mention
-    v-model="value2"
-    :options="options2"
-    :prefix="['@', '#']"
-    whole
-    :check-is-whole="checkIsWhole"
-    style="width: 320px"
-    placeholder="input @ to mention people, # to mention tag"
-    @search="handleSearch"
-  />
+  <el-mention v-model="value2" :options="options2" :prefix="['@', '#']" whole :check-is-whole="checkIsWhole"
+    style="width: 320px" placeholder="input @ to mention people, # to mention tag" @search="handleSearch" />
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
 
-import type { MentionOption } from 'element-plus'
+import type { MentionOption } from 'cery929-ui'
 
 const MOCK_DATA: Record<string, string[]> = {
   '@': ['Fuphoenixes', 'kooriookami', 'Jeremy', 'btea'],

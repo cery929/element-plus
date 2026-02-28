@@ -23,10 +23,10 @@
 <script lang="ts" setup>
 import { computed } from 'vue'
 import dayjs from 'dayjs'
-import { useLocale, useNamespace } from '@element-plus/hooks'
-import ElSelect from '@element-plus/components/select'
-import { ElButton } from '@element-plus/components/button'
-import { isFunction } from '@element-plus/utils'
+import { useLocale, useNamespace } from '@cery929-ui/hooks'
+import ElSelect from '@cery929-ui/components/select'
+import { ElButton } from '@cery929-ui/components/button'
+import { isFunction } from '@cery929-ui/utils'
 import { selectControllerEmits } from './select-controller'
 
 import type { SelectControllerProps } from './select-controller'

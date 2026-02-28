@@ -6,10 +6,10 @@ import {
   isClient,
   isString,
   removeClass,
-} from '@element-plus/utils'
+} from '@cery929-ui/utils'
 import { createLoadingComponent } from './loading'
 
-import type { UseNamespaceReturn, UseZIndexReturn } from '@element-plus/hooks'
+import type { UseNamespaceReturn, UseZIndexReturn } from '@cery929-ui/hooks'
 import type { LoadingInstance } from './loading'
 import type { LoadingOptionsResolved } from '..'
 import type { LoadingOptions } from './types'

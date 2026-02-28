@@ -1,6 +1,6 @@
 import { computed, ref, watch } from 'vue'
 import { getPct, getPx, isPct, isPx } from './useSize'
-import { NOOP } from '@element-plus/utils'
+import { NOOP } from '@cery929-ui/utils'
 
 import type { ComputedRef, Ref } from 'vue'
 import type { PanelItemState } from '../type'

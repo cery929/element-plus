@@ -1,8 +1,8 @@
-import { withInstall, withNoopInstall } from '@element-plus/utils'
+import { withInstall, withNoopInstall } from '@cery929-ui/utils'
 import Tabs from './src/tabs'
 import TabPane from './src/tab-pane.vue'
 
-import type { SFCWithInstall } from '@element-plus/utils'
+import type { SFCWithInstall } from '@cery929-ui/utils'
 
 export const ElTabs: SFCWithInstall<typeof Tabs> & {
   TabPane: typeof TabPane

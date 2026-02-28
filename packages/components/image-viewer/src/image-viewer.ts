@@ -3,7 +3,7 @@ import {
   definePropType,
   isNumber,
   mutable,
-} from '@element-plus/utils'
+} from '@cery929-ui/utils'
 
 import type { Component, ExtractPublicPropTypes } from 'vue'
 import type ImageViewer from './image-viewer.vue'

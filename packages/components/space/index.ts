@@ -1,7 +1,7 @@
-import { withInstall } from '@element-plus/utils'
+import { withInstall } from '@cery929-ui/utils'
 import Space from './src/space'
 
-import type { SFCWithInstall } from '@element-plus/utils'
+import type { SFCWithInstall } from '@cery929-ui/utils'
 
 export const ElSpace: SFCWithInstall<typeof Space> = withInstall(Space)
 export default ElSpace

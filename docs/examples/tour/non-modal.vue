@@ -10,21 +10,9 @@
   </el-space>
 
   <el-tour v-model="open" type="primary" :mask="false">
-    <el-tour-step
-      :target="ref1?.$el"
-      title="Upload File"
-      description="Put you files here."
-    />
-    <el-tour-step
-      :target="ref2?.$el"
-      title="Save"
-      description="Save your changes"
-    />
-    <el-tour-step
-      :target="ref3?.$el"
-      title="Other Actions"
-      description="Click to see other"
-    />
+    <el-tour-step :target="ref1?.$el" title="Upload File" description="Put you files here." />
+    <el-tour-step :target="ref2?.$el" title="Save" description="Save your changes" />
+    <el-tour-step :target="ref3?.$el" title="Other Actions" description="Click to see other" />
   </el-tour>
 </template>
 
@@ -32,7 +20,7 @@
 import { ref } from 'vue'
 import { MoreFilled } from '@cery929-ui/icons-vue'
 
-import type { ButtonInstance } from 'element-plus'
+import type { ButtonInstance } from 'cery929-ui'
 
 const ref1 = ref<ButtonInstance>()
 const ref2 = ref<ButtonInstance>()

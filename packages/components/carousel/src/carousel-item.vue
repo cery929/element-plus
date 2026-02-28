@@ -13,7 +13,7 @@
 
 <script lang="ts" setup>
 import { computed, unref } from 'vue'
-import { useNamespace } from '@element-plus/hooks'
+import { useNamespace } from '@cery929-ui/hooks'
 import { useCarouselItem } from './use-carousel-item'
 import { CAROUSEL_ITEM_NAME } from './constants'
 

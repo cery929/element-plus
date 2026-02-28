@@ -1,22 +1,8 @@
 <template>
   <div ref="scrollbarRef" :class="ns.b()">
-    <div
-      ref="wrapRef"
-      :class="wrapKls"
-      :style="wrapStyle"
-      :tabindex="tabindex"
-      @scroll="handleScroll"
-    >
-      <component
-        :is="tag"
-        :id="id"
-        ref="resizeRef"
-        :class="resizeKls"
-        :style="viewStyle"
-        :role="role"
-        :aria-label="ariaLabel"
-        :aria-orientation="ariaOrientation"
-      >
+    <div ref="wrapRef" :class="wrapKls" :style="wrapStyle" :tabindex="tabindex" @scroll="handleScroll">
+      <component :is="tag" :id="id" ref="resizeRef" :class="resizeKls" :style="viewStyle" :role="role"
+        :aria-label="ariaLabel" :aria-orientation="ariaOrientation">
         <slot />
       </component>
     </div>
@@ -39,8 +25,8 @@ import {
   watch,
 } from 'vue'
 import { useEventListener, useResizeObserver } from '@vueuse/core'
-import { addUnit, debugWarn, isNumber, isObject } from '@element-plus/utils'
-import { useNamespace } from '@element-plus/hooks'
+import { addUnit, debugWarn, isNumber, isObject } from '@cery929-ui/utils'
+import { useNamespace } from '@cery929-ui/hooks'
 import Bar from './bar.vue'
 import { scrollbarContextKey } from './constants'
 import { scrollbarEmits } from './scrollbar'
@@ -151,7 +137,7 @@ const handleScroll = () => {
       top: wrapScrollTop <= props.distance && prevTop !== 0,
       right:
         wrapScrollLeft + wrapRef.value.clientWidth >=
-          wrapRef.value.scrollWidth - props.distance &&
+        wrapRef.value.scrollWidth - props.distance &&
         prevLeft !== wrapScrollLeft,
       left: wrapScrollLeft <= props.distance && prevLeft !== 0,
     }
@@ -216,8 +202,8 @@ watch(
       stopWrapResizeObserver?.()
       stopResizeListener?.()
     } else {
-      ;({ stop: stopResizeObserver } = useResizeObserver(resizeRef, update))
-      ;({ stop: stopWrapResizeObserver } = useResizeObserver(wrapRef, update))
+      ; ({ stop: stopResizeObserver } = useResizeObserver(resizeRef, update))
+        ; ({ stop: stopWrapResizeObserver } = useResizeObserver(wrapRef, update))
       stopResizeListener = useEventListener('resize', update)
     }
   },

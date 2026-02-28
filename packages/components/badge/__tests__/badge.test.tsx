@@ -2,7 +2,7 @@ import { nextTick, ref } from 'vue'
 import { mount } from '@vue/test-utils'
 import { describe, expect, test } from 'vitest'
 import { InfoFilled } from '@cery929-ui/icons-vue'
-import { ElIcon } from '@element-plus/components/icon'
+import { ElIcon } from '@cery929-ui/components/icon'
 import Badge from '../src/badge.vue'
 
 const AXIOM = 'Rem is the best girl'

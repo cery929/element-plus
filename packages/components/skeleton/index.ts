@@ -1,8 +1,8 @@
-import { withInstall, withNoopInstall } from '@element-plus/utils'
+import { withInstall, withNoopInstall } from '@cery929-ui/utils'
 import Skeleton from './src/skeleton.vue'
 import SkeletonItem from './src/skeleton-item.vue'
 
-import type { SFCWithInstall } from '@element-plus/utils'
+import type { SFCWithInstall } from '@cery929-ui/utils'
 
 export const ElSkeleton: SFCWithInstall<typeof Skeleton> & {
   SkeletonItem: typeof SkeletonItem

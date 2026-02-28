@@ -1,6 +1,6 @@
-import { buildProps } from '@element-plus/utils'
-import { useSizeProp } from '@element-plus/hooks'
-import { ComponentSize } from '@element-plus/constants'
+import { buildProps } from '@cery929-ui/utils'
+import { useSizeProp } from '@cery929-ui/hooks'
+import { ComponentSize } from '@cery929-ui/constants'
 
 import type { ExtractPublicPropTypes } from 'vue'
 import type Description from './description.vue'

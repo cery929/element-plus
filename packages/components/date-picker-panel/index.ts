@@ -1,7 +1,7 @@
-import { withInstall } from '@element-plus/utils'
+import { withInstall } from '@cery929-ui/utils'
 import DatePickerPanel from './src/date-picker-panel'
 
-import type { SFCWithInstall } from '@element-plus/utils'
+import type { SFCWithInstall } from '@cery929-ui/utils'
 
 export const ElDatePickerPanel: SFCWithInstall<typeof DatePickerPanel> =
   withInstall(DatePickerPanel)

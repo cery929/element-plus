@@ -15,15 +15,15 @@ import {
   iconPropType,
   isNumber,
   mutable,
-} from '@element-plus/utils'
+} from '@cery929-ui/utils'
 import {
   useDeprecated,
   useGlobalSize,
   useLocale,
   useNamespace,
   useSizeProp,
-} from '@element-plus/hooks'
-import { CHANGE_EVENT } from '@element-plus/constants'
+} from '@cery929-ui/hooks'
+import { CHANGE_EVENT } from '@cery929-ui/constants'
 import { elPaginationKey } from './constants'
 import Prev from './components/prev.vue'
 import Next from './components/next.vue'

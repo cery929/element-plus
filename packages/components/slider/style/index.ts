@@ -1,4 +1,4 @@
-import '@element-plus/components/base/style'
-import '@element-plus/theme-chalk/src/slider.scss'
-import '@element-plus/components/input-number/style'
-import '@element-plus/components/tooltip/style'
+import '@cery929-ui/components/base/style'
+import '@cery929-ui/theme-chalk/src/slider.scss'
+import '@cery929-ui/components/input-number/style'
+import '@cery929-ui/components/tooltip/style'

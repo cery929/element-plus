@@ -10,11 +10,7 @@
       <div class="flex flex-col basis-150px gap-1">
         <span>Underline:</span>
         <el-select v-model="config.underline">
-          <el-option
-            v-for="type in underlineOptions"
-            :key="type"
-            :value="type"
-          />
+          <el-option v-for="type in underlineOptions" :key="type" :value="type" />
         </el-select>
       </div>
     </div>
@@ -28,7 +24,7 @@
 <script lang="ts" setup>
 import { reactive } from 'vue'
 
-import type { LinkConfigContext } from 'element-plus'
+import type { LinkConfigContext } from 'cery929-ui'
 
 const linkTypes = ['primary', 'success', 'warning', 'info', 'danger', 'default']
 const underlineOptions = ['always', 'never', 'hover']

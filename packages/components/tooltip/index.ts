@@ -1,7 +1,7 @@
-import { withInstall } from '@element-plus/utils'
+import { withInstall } from '@cery929-ui/utils'
 import Tooltip from './src/tooltip.vue'
 
-import type { SFCWithInstall } from '@element-plus/utils'
+import type { SFCWithInstall } from '@cery929-ui/utils'
 
 export const ElTooltip: SFCWithInstall<typeof Tooltip> = withInstall(Tooltip)
 export * from './src/tooltip'

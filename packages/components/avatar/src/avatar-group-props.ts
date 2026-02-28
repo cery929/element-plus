@@ -1,11 +1,11 @@
 import { placements } from '@popperjs/core'
-import { useTooltipContentProps } from '@element-plus/components/tooltip'
-import { definePropType, isNumber } from '@element-plus/utils'
-import { componentSizes } from '@element-plus/constants'
+import { useTooltipContentProps } from '@cery929-ui/components/tooltip'
+import { definePropType, isNumber } from '@cery929-ui/utils'
+import { componentSizes } from '@cery929-ui/constants'
 
 import type { AvatarProps } from './avatar'
 import type { ExtractPropTypes, ExtractPublicPropTypes, StyleValue } from 'vue'
-import type { Placement, PopperEffect } from '@element-plus/components/popper'
+import type { Placement, PopperEffect } from '@cery929-ui/components/popper'
 
 export const avatarGroupProps = {
   /**

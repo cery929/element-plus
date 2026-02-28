@@ -4,7 +4,7 @@
 
 <script lang="ts" setup>
 import { markRaw } from 'vue'
-import { ElMessage, ElMessageBox } from 'element-plus'
+import { ElMessage, ElMessageBox } from 'cery929-ui'
 import { Delete } from '@cery929-ui/icons-vue'
 
 const open = () => {

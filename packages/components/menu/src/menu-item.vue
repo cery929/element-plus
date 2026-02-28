@@ -1,28 +1,16 @@
 <template>
-  <li
-    :class="[
-      nsMenuItem.b(),
-      nsMenuItem.is('active', active),
-      nsMenuItem.is('disabled', disabled),
-    ]"
-    role="menuitem"
-    tabindex="-1"
-    @click="handleClick"
-  >
-    <el-tooltip
-      v-if="
-        parentMenu.type.name === 'ElMenu' &&
-        rootMenu.props.collapse &&
-        $slots.title
-      "
-      :effect="rootMenu.props.popperEffect"
-      placement="right"
-      :fallback-placements="['left']"
-      :popper-class="rootMenu.props.popperClass"
-      :popper-style="rootMenu.props.popperStyle"
-      :persistent="rootMenu.props.persistent"
-      focus-on-target
-    >
+  <li :class="[
+    nsMenuItem.b(),
+    nsMenuItem.is('active', active),
+    nsMenuItem.is('disabled', disabled),
+  ]" role="menuitem" tabindex="-1" @click="handleClick">
+    <el-tooltip v-if="
+      parentMenu.type.name === 'ElMenu' &&
+      rootMenu.props.collapse &&
+      $slots.title
+    " :effect="rootMenu.props.popperEffect" placement="right" :fallback-placements="['left']"
+      :popper-class="rootMenu.props.popperClass" :popper-style="rootMenu.props.popperStyle"
+      :persistent="rootMenu.props.persistent" focus-on-target>
       <template #content>
         <slot name="title" />
       </template>
@@ -48,9 +36,9 @@ import {
   reactive,
   toRef,
 } from 'vue'
-import ElTooltip from '@element-plus/components/tooltip'
-import { debugWarn, isPropAbsent, throwError } from '@element-plus/utils'
-import { useNamespace } from '@element-plus/hooks'
+import ElTooltip from '@cery929-ui/components/tooltip'
+import { debugWarn, isPropAbsent, throwError } from '@cery929-ui/utils'
+import { useNamespace } from '@cery929-ui/hooks'
 import useMenu from './use-menu'
 import { menuItemEmits } from './menu-item'
 import { MENU_INJECTION_KEY, SUB_MENU_INJECTION_KEY } from './tokens'

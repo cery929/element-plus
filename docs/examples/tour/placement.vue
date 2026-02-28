@@ -4,29 +4,16 @@
   </el-button>
 
   <el-tour v-model="open">
-    <el-tour-step
-      title="Center"
-      description="Displayed in the center of screen."
-    />
-    <el-tour-step
-      title="Right"
-      description="On the right of target."
-      placement="right"
-      :target="btnRef?.$el"
-    />
-    <el-tour-step
-      title="Top"
-      description="On the top of target."
-      placement="top"
-      :target="btnRef?.$el"
-    />
+    <el-tour-step title="Center" description="Displayed in the center of screen." />
+    <el-tour-step title="Right" description="On the right of target." placement="right" :target="btnRef?.$el" />
+    <el-tour-step title="Top" description="On the top of target." placement="top" :target="btnRef?.$el" />
   </el-tour>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
 
-import type { ButtonInstance } from 'element-plus'
+import type { ButtonInstance } from 'cery929-ui'
 
 const btnRef = ref<ButtonInstance>()
 

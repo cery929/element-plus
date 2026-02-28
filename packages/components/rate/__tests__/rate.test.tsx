@@ -1,7 +1,7 @@
 import { nextTick, ref } from 'vue'
 import { mount } from '@vue/test-utils'
 import { describe, expect, it } from 'vitest'
-import { ElForm, ElFormItem as FormItem } from '@element-plus/components/form'
+import { ElForm, ElFormItem as FormItem } from '@cery929-ui/components/form'
 import Rate from '../src/rate.vue'
 
 import type { RateInstance } from '../src/rate'

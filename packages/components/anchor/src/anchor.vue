@@ -1,11 +1,6 @@
 <template>
   <div ref="anchorRef" :class="cls">
-    <div
-      v-if="marker"
-      ref="markerRef"
-      :class="ns.e('marker')"
-      :style="markerStyle"
-    />
+    <div v-if="marker" ref="markerRef" :class="ns.e('marker')" :style="markerStyle" />
     <div :class="ns.e('list')">
       <slot />
     </div>
@@ -23,7 +18,7 @@ import {
   watch,
 } from 'vue'
 import { useEventListener } from '@vueuse/core'
-import { useNamespace } from '@element-plus/hooks'
+import { useNamespace } from '@cery929-ui/hooks'
 import {
   animateScrollTo,
   getElement,
@@ -33,8 +28,8 @@ import {
   isUndefined,
   isWindow,
   throttleByRaf,
-} from '@element-plus/utils'
-import { CHANGE_EVENT } from '@element-plus/constants'
+} from '@cery929-ui/utils'
+import { CHANGE_EVENT } from '@cery929-ui/constants'
 import { anchorEmits } from './anchor'
 import { anchorKey } from './constants'
 

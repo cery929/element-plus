@@ -7,7 +7,7 @@ pnpm update:version
 
 pnpm build
 
-cd dist/element-plus
+cd dist/cery929-ui
 pnpm publish --access public --no-git-checks
 cd -
 

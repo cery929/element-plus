@@ -1,14 +1,6 @@
 <template>
-  <div
-    v-if="shouldBeRender"
-    v-show="active"
-    :id="`pane-${paneName}`"
-    ref="paneRef"
-    :class="ns.b()"
-    role="tabpanel"
-    :aria-hidden="!active"
-    :aria-labelledby="`tab-${paneName}`"
-  >
+  <div v-if="shouldBeRender" v-show="active" :id="`pane-${paneName}`" ref="paneRef" :class="ns.b()" role="tabpanel"
+    :aria-hidden="!active" :aria-labelledby="`tab-${paneName}`">
     <slot />
   </div>
 </template>
@@ -25,8 +17,8 @@ import {
   useSlots,
   watch,
 } from 'vue'
-import { throwError } from '@element-plus/utils'
-import { useNamespace } from '@element-plus/hooks'
+import { throwError } from '@cery929-ui/utils'
+import { useNamespace } from '@cery929-ui/hooks'
 import { tabsRootContextKey } from './constants'
 
 import type { TabPaneProps } from './tab-pane'

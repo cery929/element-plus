@@ -1,29 +1,19 @@
 <template>
   <span :class="ns.e('jump')" :disabled="disabled">
     <span :class="[ns.e('goto')]">{{ t('el.pagination.goto') }}</span>
-    <el-input
-      :size="size"
-      :class="[ns.e('editor'), ns.is('in-pagination')]"
-      :min="1"
-      :max="pageCount"
-      :disabled="disabled"
-      :model-value="innerValue"
-      :validate-event="false"
-      :aria-label="t('el.pagination.page')"
-      type="number"
-      @update:model-value="handleInput"
-      @change="handleChange"
-    />
+    <el-input :size="size" :class="[ns.e('editor'), ns.is('in-pagination')]" :min="1" :max="pageCount"
+      :disabled="disabled" :model-value="innerValue" :validate-event="false" :aria-label="t('el.pagination.page')"
+      type="number" @update:model-value="handleInput" @change="handleChange" />
     <span :class="[ns.e('classifier')]">{{
       t('el.pagination.pageClassifier')
-    }}</span>
+      }}</span>
   </span>
 </template>
 
 <script lang="ts" setup>
 import { computed, ref } from 'vue'
-import { useLocale, useNamespace } from '@element-plus/hooks'
-import ElInput from '@element-plus/components/input'
+import { useLocale, useNamespace } from '@cery929-ui/hooks'
+import ElInput from '@cery929-ui/components/input'
 import { usePagination } from '../usePagination'
 import { paginationJumperProps } from './jumper'
 

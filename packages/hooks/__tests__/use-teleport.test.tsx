@@ -1,7 +1,7 @@
 import { defineComponent, h, nextTick, ref } from 'vue'
 import { mount } from '@vue/test-utils'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import { NOOP } from '@element-plus/utils'
+import { NOOP } from '@cery929-ui/utils'
 import { useTeleport } from '../use-teleport'
 
 import type { VueWrapper } from '@vue/test-utils'
@@ -82,14 +82,14 @@ describe('useTeleport when isClient is false', () => {
 
   beforeEach(() => {
     vi.resetModules()
-    vi.doMock('@element-plus/utils', async () => {
-      const utils = await vi.importActual('@element-plus/utils')
+    vi.doMock('@cery929-ui/utils', async () => {
+      const utils = await vi.importActual('@cery929-ui/utils')
 
       return { ...utils, isClient: mockIsClient }
     })
   })
   afterEach(() => {
-    vi.doUnmock('@element-plus/utils')
+    vi.doUnmock('@cery929-ui/utils')
   })
 
   it('should get default value when isClient is false', async () => {

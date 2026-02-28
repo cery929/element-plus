@@ -8,7 +8,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ElNotification } from 'element-plus'
+import { ElNotification } from 'cery929-ui'
 
 const open1 = () => {
   ElNotification({

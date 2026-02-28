@@ -1,10 +1,10 @@
-import { buildProps, definePropType, isArray } from '@element-plus/utils'
-import { datePickTypes } from '@element-plus/constants'
+import { buildProps, definePropType, isArray } from '@cery929-ui/utils'
+import { datePickTypes } from '@cery929-ui/constants'
 
 import type { ExtractPropTypes, ExtractPublicPropTypes } from 'vue'
 import type { Dayjs } from 'dayjs'
-import type { DatePickType } from '@element-plus/constants'
-import type { DayOrDays } from '@element-plus/components/time-picker'
+import type { DatePickType } from '@cery929-ui/constants'
+import type { DayOrDays } from '@cery929-ui/components/time-picker'
 
 const selectionModes = [
   'date',

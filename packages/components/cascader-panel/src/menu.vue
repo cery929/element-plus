@@ -37,10 +37,10 @@
 
 <script lang="ts" setup>
 import { computed, getCurrentInstance, inject, ref } from 'vue'
-import ElScrollbar from '@element-plus/components/scrollbar'
-import { useId, useLocale, useNamespace } from '@element-plus/hooks'
+import ElScrollbar from '@cery929-ui/components/scrollbar'
+import { useId, useLocale, useNamespace } from '@cery929-ui/hooks'
 import { Loading } from '@cery929-ui/icons-vue'
-import ElIcon from '@element-plus/components/icon'
+import ElIcon from '@cery929-ui/components/icon'
 import ElCascaderNode from './node.vue'
 import { CASCADER_PANEL_INJECTION_KEY } from './types'
 

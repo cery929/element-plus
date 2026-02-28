@@ -1,22 +1,10 @@
 <template>
-  <el-card
-    class="content"
-    @click="handleClick"
-    @contextmenu="handleContextmenu"
-  >
+  <el-card class="content" @click="handleClick" @contextmenu="handleContextmenu">
     Right click
   </el-card>
-  <el-dropdown
-    ref="dropdownRef"
-    :virtual-ref="triggerRef"
-    :show-arrow="false"
-    :popper-options="{
-      modifiers: [{ name: 'offset', options: { offset: [0, 0] } }],
-    }"
-    virtual-triggering
-    trigger="contextmenu"
-    placement="bottom-start"
-  >
+  <el-dropdown ref="dropdownRef" :virtual-ref="triggerRef" :show-arrow="false" :popper-options="{
+    modifiers: [{ name: 'offset', options: { offset: [0, 0] } }],
+  }" virtual-triggering trigger="contextmenu" placement="bottom-start">
     <template #dropdown>
       <el-dropdown-menu>
         <el-dropdown-item :icon="Plus">Action 1</el-dropdown-item>
@@ -39,7 +27,7 @@ import {
   Plus,
 } from '@cery929-ui/icons-vue'
 
-import type { DropdownInstance } from 'element-plus'
+import type { DropdownInstance } from 'cery929-ui'
 
 const dropdownRef = ref<DropdownInstance>()
 const position = ref({

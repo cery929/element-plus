@@ -4,21 +4,21 @@ import { flushPromises, mount } from '@vue/test-utils'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import dayjs from 'dayjs'
 import { CircleClose } from '@cery929-ui/icons-vue'
-import { rAF } from '@element-plus/test-utils/tick'
-import ConfigProvider from '@element-plus/components/config-provider'
+import { rAF } from '@cery929-ui/test-utils/tick'
+import ConfigProvider from '@cery929-ui/components/config-provider'
 import {
   CommonPicker,
   PICKER_POPPER_OPTIONS_INJECTION_KEY,
-} from '@element-plus/components/time-picker'
-import triggerEvent from '@element-plus/test-utils/trigger-event'
-import Input from '@element-plus/components/input'
-import zhCn from '@element-plus/locale/lang/zh-cn'
-import enUs from '@element-plus/locale/lang/en'
+} from '@cery929-ui/components/time-picker'
+import triggerEvent from '@cery929-ui/test-utils/trigger-event'
+import Input from '@cery929-ui/components/input'
+import zhCn from '@cery929-ui/locale/lang/zh-cn'
+import enUs from '@cery929-ui/locale/lang/en'
 import 'dayjs/locale/zh-cn'
-import { EVENT_CODE } from '@element-plus/constants'
-import { ElForm, ElFormItem } from '@element-plus/components/form'
+import { EVENT_CODE } from '@cery929-ui/constants'
+import { ElForm, ElFormItem } from '@cery929-ui/components/form'
 import DatePicker from '../src/date-picker'
-import DatePickerRange from '@element-plus/components/date-picker-panel/src/date-picker-com/panel-date-range.vue'
+import DatePickerRange from '@cery929-ui/components/date-picker-panel/src/date-picker-com/panel-date-range.vue'
 
 const _mount = (template: string, data = () => ({}), otherObj?) =>
   mount(

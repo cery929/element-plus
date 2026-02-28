@@ -1,83 +1,39 @@
 <template>
-  <div
-    v-show="node.visible"
-    ref="node$"
-    :class="[
-      ns.b('node'),
-      ns.is('expanded', expanded),
-      ns.is('current', node.isCurrent),
-      ns.is('hidden', !node.visible),
-      ns.is('focusable', !node.disabled),
-      ns.is('checked', !node.disabled && node.checked),
-      getNodeClass(node),
-    ]"
-    role="treeitem"
-    tabindex="-1"
-    :aria-expanded="expanded"
-    :aria-disabled="node.disabled"
-    :aria-checked="node.checked"
-    :draggable="tree.props.draggable"
-    :data-key="getNodeKey(node)"
-    @click.stop="handleClick"
-    @contextmenu="handleContextMenu"
-    @dragstart.stop="handleDragStart"
-    @dragover.stop="handleDragOver"
-    @dragend.stop="handleDragEnd"
-    @drop.stop="handleDrop"
-  >
-    <div
-      :class="ns.be('node', 'content')"
-      :style="{ paddingLeft: (node.level - 1) * tree.props.indent + 'px' }"
-    >
-      <el-icon
-        v-if="tree.props.icon || CaretRight"
-        :class="[
-          ns.be('node', 'expand-icon'),
-          ns.is('leaf', node.isLeaf),
-          {
-            expanded: !node.isLeaf && expanded,
-          },
-        ]"
-        @click.stop="handleExpandIconClick"
-      >
+  <div v-show="node.visible" ref="node$" :class="[
+    ns.b('node'),
+    ns.is('expanded', expanded),
+    ns.is('current', node.isCurrent),
+    ns.is('hidden', !node.visible),
+    ns.is('focusable', !node.disabled),
+    ns.is('checked', !node.disabled && node.checked),
+    getNodeClass(node),
+  ]" role="treeitem" tabindex="-1" :aria-expanded="expanded" :aria-disabled="node.disabled"
+    :aria-checked="node.checked" :draggable="tree.props.draggable" :data-key="getNodeKey(node)"
+    @click.stop="handleClick" @contextmenu="handleContextMenu" @dragstart.stop="handleDragStart"
+    @dragover.stop="handleDragOver" @dragend.stop="handleDragEnd" @drop.stop="handleDrop">
+    <div :class="ns.be('node', 'content')" :style="{ paddingLeft: (node.level - 1) * tree.props.indent + 'px' }">
+      <el-icon v-if="tree.props.icon || CaretRight" :class="[
+        ns.be('node', 'expand-icon'),
+        ns.is('leaf', node.isLeaf),
+        {
+          expanded: !node.isLeaf && expanded,
+        },
+      ]" @click.stop="handleExpandIconClick">
         <component :is="tree.props.icon || CaretRight" />
       </el-icon>
-      <el-checkbox
-        v-if="showCheckbox"
-        :model-value="node.checked"
-        :indeterminate="node.indeterminate"
-        :disabled="!!node.disabled"
-        @click.stop
-        @change="handleCheckChange"
-      />
-      <el-icon
-        v-if="node.loading"
-        :class="[ns.be('node', 'loading-icon'), ns.is('loading')]"
-      >
+      <el-checkbox v-if="showCheckbox" :model-value="node.checked" :indeterminate="node.indeterminate"
+        :disabled="!!node.disabled" @click.stop @change="handleCheckChange" />
+      <el-icon v-if="node.loading" :class="[ns.be('node', 'loading-icon'), ns.is('loading')]">
         <loading />
       </el-icon>
       <node-content :node="node" :render-content="renderContent" />
     </div>
     <el-collapse-transition>
-      <div
-        v-if="!renderAfterExpand || childNodeRendered"
-        v-show="expanded"
-        :class="ns.be('node', 'children')"
-        role="group"
-        :aria-expanded="expanded"
-        @click.stop
-      >
-        <el-tree-node
-          v-for="child in node.childNodes"
-          :key="getNodeKey(child)"
-          :render-content="renderContent"
-          :render-after-expand="renderAfterExpand"
-          :show-checkbox="showCheckbox"
-          :node="child"
-          :accordion="accordion"
-          :props="props"
-          @node-expand="handleChildNodeExpand"
-        />
+      <div v-if="!renderAfterExpand || childNodeRendered" v-show="expanded" :class="ns.be('node', 'children')"
+        role="group" :aria-expanded="expanded" @click.stop>
+        <el-tree-node v-for="child in node.childNodes" :key="getNodeKey(child)" :render-content="renderContent"
+          :render-after-expand="renderAfterExpand" :show-checkbox="showCheckbox" :node="child" :accordion="accordion"
+          :props="props" @node-expand="handleChildNodeExpand" />
       </div>
     </el-collapse-transition>
   </div>
@@ -93,12 +49,12 @@ import {
   ref,
   watch,
 } from 'vue'
-import { debugWarn, isFunction, isString } from '@element-plus/utils'
-import ElCollapseTransition from '@element-plus/components/collapse-transition'
-import ElCheckbox from '@element-plus/components/checkbox'
-import { ElIcon } from '@element-plus/components/icon'
+import { debugWarn, isFunction, isString } from '@cery929-ui/utils'
+import ElCollapseTransition from '@cery929-ui/components/collapse-transition'
+import ElCheckbox from '@cery929-ui/components/checkbox'
+import { ElIcon } from '@cery929-ui/components/icon'
 import { CaretRight, Loading } from '@cery929-ui/icons-vue'
-import { useNamespace } from '@element-plus/hooks'
+import { useNamespace } from '@cery929-ui/hooks'
 import NodeContent from './tree-node-content.vue'
 import { getNodeKey as getNodeKeyUtil, handleCurrentChange } from './model/util'
 import { useNodeExpandEventBroadcast } from './model/useNodeExpandEventBroadcast'
@@ -108,7 +64,7 @@ import { NODE_INSTANCE_INJECTION_KEY, ROOT_TREE_INJECTION_KEY } from './tokens'
 
 import type { ComponentInternalInstance, PropType } from 'vue'
 import type { RootTreeType, TreeNodeData, TreeOptionProps } from './tree.type'
-import type { CheckboxValueType } from '@element-plus/components/checkbox'
+import type { CheckboxValueType } from '@cery929-ui/components/checkbox'
 
 export default defineComponent({
   name: 'ElTreeNode',

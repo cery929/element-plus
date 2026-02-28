@@ -1,9 +1,5 @@
 <template>
-  <el-button
-    v-loading.fullscreen.lock="fullscreenLoading"
-    type="primary"
-    @click="openFullScreen1"
-  >
+  <el-button v-loading.fullscreen.lock="fullscreenLoading" type="primary" @click="openFullScreen1">
     As a directive
   </el-button>
   <el-button type="primary" @click="openFullScreen2"> As a service </el-button>
@@ -11,7 +7,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { ElLoading } from 'element-plus'
+import { ElLoading } from 'cery929-ui'
 
 const fullscreenLoading = ref(false)
 const openFullScreen1 = () => {

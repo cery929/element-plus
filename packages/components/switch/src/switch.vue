@@ -1,33 +1,17 @@
 <template>
   <div :class="switchKls" @click.prevent="switchValue">
-    <input
-      :id="inputId"
-      ref="input"
-      :class="ns.e('input')"
-      type="checkbox"
-      role="switch"
-      :aria-checked="checked"
-      :aria-disabled="switchDisabled"
-      :aria-label="ariaLabel"
-      :name="name"
-      :true-value="activeValue"
-      :false-value="inactiveValue"
-      :disabled="switchDisabled"
-      :tabindex="tabindex"
-      @change="handleChange"
-      @keydown.enter="switchValue"
-    />
-    <span
-      v-if="!inlinePrompt && (inactiveIcon || inactiveText || $slots.inactive)"
-      :class="labelLeftKls"
-    >
+    <input :id="inputId" ref="input" :class="ns.e('input')" type="checkbox" role="switch" :aria-checked="checked"
+      :aria-disabled="switchDisabled" :aria-label="ariaLabel" :name="name" :true-value="activeValue"
+      :false-value="inactiveValue" :disabled="switchDisabled" :tabindex="tabindex" @change="handleChange"
+      @keydown.enter="switchValue" />
+    <span v-if="!inlinePrompt && (inactiveIcon || inactiveText || $slots.inactive)" :class="labelLeftKls">
       <slot name="inactive">
         <el-icon v-if="inactiveIcon">
           <component :is="inactiveIcon" />
         </el-icon>
         <span v-if="!inactiveIcon && inactiveText" :aria-hidden="checked">{{
           inactiveText
-        }}</span>
+          }}</span>
       </slot>
     </span>
     <span :class="ns.e('core')" :style="coreStyle">
@@ -65,17 +49,14 @@
         </slot>
       </div>
     </span>
-    <span
-      v-if="!inlinePrompt && (activeIcon || activeText || $slots.active)"
-      :class="labelRightKls"
-    >
+    <span v-if="!inlinePrompt && (activeIcon || activeText || $slots.active)" :class="labelRightKls">
       <slot name="active">
         <el-icon v-if="activeIcon">
           <component :is="activeIcon" />
         </el-icon>
         <span v-if="!activeIcon && activeText" :aria-hidden="!checked">{{
           activeText
-        }}</span>
+          }}</span>
       </slot>
     </span>
   </div>
@@ -89,21 +70,21 @@ import {
   isBoolean,
   isPromise,
   throwError,
-} from '@element-plus/utils'
-import ElIcon from '@element-plus/components/icon'
+} from '@cery929-ui/utils'
+import ElIcon from '@cery929-ui/components/icon'
 import {
   useFormDisabled,
   useFormItem,
   useFormItemInputId,
   useFormSize,
-} from '@element-plus/components/form'
+} from '@cery929-ui/components/form'
 import { Loading } from '@cery929-ui/icons-vue'
 import {
   CHANGE_EVENT,
   INPUT_EVENT,
   UPDATE_MODEL_EVENT,
-} from '@element-plus/constants'
-import { useNamespace } from '@element-plus/hooks'
+} from '@cery929-ui/constants'
+import { useNamespace } from '@cery929-ui/hooks'
 import { switchEmits } from './switch'
 
 import type { CSSProperties } from 'vue'

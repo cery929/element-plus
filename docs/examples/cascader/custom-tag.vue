@@ -3,11 +3,7 @@
     <p>Using slots allows for more flexible control over the display.</p>
     <el-cascader :options="options" :props="props" clearable>
       <template #tag="{ data }">
-        <el-tag
-          v-for="(item, index) in getTags(data)"
-          :key="item"
-          :color="index % 2 === 0 ? '#FFDE0A' : ''"
-        >
+        <el-tag v-for="(item, index) in getTags(data)" :key="item" :color="index % 2 === 0 ? '#FFDE0A' : ''">
           {{ item }}
         </el-tag>
       </template>
@@ -24,7 +20,7 @@
 </template>
 
 <script lang="ts" setup>
-import type { Tag } from 'element-plus'
+import type { Tag } from 'cery929-ui'
 
 const props = { multiple: true }
 const options = [

@@ -1,6 +1,6 @@
 import { nextTick } from 'vue'
-import { getEventCode, obtainAllFocusableElements } from '@element-plus/utils'
-import { EVENT_CODE } from '@element-plus/constants'
+import { getEventCode, obtainAllFocusableElements } from '@cery929-ui/utils'
+import { EVENT_CODE } from '@cery929-ui/constants'
 
 import type { ObjectDirective } from 'vue'
 

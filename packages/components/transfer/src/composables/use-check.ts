@@ -1,10 +1,10 @@
 import { computed, watch } from 'vue'
-import { isFunction } from '@element-plus/utils'
+import { isFunction } from '@cery929-ui/utils'
 import { CHECKED_CHANGE_EVENT } from '../transfer-panel'
 import { usePropsAlias } from './use-props-alias'
 
 import type { SetupContext } from 'vue'
-import type { CheckboxValueType } from '@element-plus/components/checkbox'
+import type { CheckboxValueType } from '@cery929-ui/components/checkbox'
 import type { TransferKey } from '../transfer'
 import type {
   TransferPanelEmits,

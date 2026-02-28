@@ -15,8 +15,8 @@ import {
   isNumber,
   isString,
   isValidElementNode,
-} from '@element-plus/utils'
-import { componentSizes } from '@element-plus/constants'
+} from '@cery929-ui/utils'
+import { componentSizes } from '@cery929-ui/constants'
 import Item from './item'
 import { useSpace } from './use-space'
 
@@ -29,7 +29,7 @@ import type {
   VNodeArrayChildren,
   VNodeChild,
 } from 'vue'
-import type { Arrayable } from '@element-plus/utils'
+import type { Arrayable } from '@cery929-ui/utils'
 
 export const spaceProps = buildProps({
   /**

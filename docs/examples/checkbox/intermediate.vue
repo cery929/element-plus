@@ -1,15 +1,8 @@
 <template>
-  <el-checkbox
-    v-model="checkAll"
-    :indeterminate="isIndeterminate"
-    @change="handleCheckAllChange"
-  >
+  <el-checkbox v-model="checkAll" :indeterminate="isIndeterminate" @change="handleCheckAllChange">
     Check all
   </el-checkbox>
-  <el-checkbox-group
-    v-model="checkedCities"
-    @change="handleCheckedCitiesChange"
-  >
+  <el-checkbox-group v-model="checkedCities" @change="handleCheckedCitiesChange">
     <el-checkbox v-for="city in cities" :key="city" :label="city" :value="city">
       {{ city }}
     </el-checkbox>
@@ -19,7 +12,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-import type { CheckboxValueType } from 'element-plus'
+import type { CheckboxValueType } from 'cery929-ui'
 
 const checkAll = ref(false)
 const isIndeterminate = ref(true)

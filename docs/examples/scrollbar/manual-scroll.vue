@@ -7,18 +7,13 @@
     </div>
   </el-scrollbar>
 
-  <el-slider
-    v-model="value"
-    :max="max"
-    :format-tooltip="formatTooltip"
-    @input="inputSlider"
-  />
+  <el-slider v-model="value" :max="max" :format-tooltip="formatTooltip" @input="inputSlider" />
 </template>
 
 <script lang="ts" setup>
 import { onMounted, ref } from 'vue'
 
-import type { ScrollbarInstance } from 'element-plus'
+import type { ScrollbarInstance } from 'cery929-ui'
 
 type Arrayable<T> = T | T[]
 
@@ -52,6 +47,7 @@ const formatTooltip = (value: number) => `${value} px`
   background: var(--el-color-primary-light-9);
   color: var(--el-color-primary);
 }
+
 .el-slider {
   margin-top: 20px;
 }

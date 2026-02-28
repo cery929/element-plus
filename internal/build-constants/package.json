@@ -1,9 +1,9 @@
 {
-  "name": "@element-plus/build-constants",
+  "name": "@cery929-ui/build-constants",
   "version": "0.0.1",
   "description": "Build constants for Element Plus",
   "keywords": [
-    "element-plus"
+    "cery929-ui"
   ],
   "license": "MIT",
   "main": "./dist/index.cjs",

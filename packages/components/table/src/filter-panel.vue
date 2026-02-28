@@ -1,51 +1,21 @@
 <template>
-  <el-tooltip
-    ref="tooltipRef"
-    :offset="0"
-    :placement="placement"
-    :show-arrow="false"
-    trigger="click"
-    role="dialog"
-    teleported
-    effect="light"
-    pure
-    loop
-    :popper-class="filterClassName"
-    persistent
-    :append-to="appendTo"
-    @show="handleShowTooltip"
-    @hide="handleHideTooltip"
-  >
+  <el-tooltip ref="tooltipRef" :offset="0" :placement="placement" :show-arrow="false" trigger="click" role="dialog"
+    teleported effect="light" pure loop :popper-class="filterClassName" persistent :append-to="appendTo"
+    @show="handleShowTooltip" @hide="handleHideTooltip">
     <template #content>
-      <div
-        v-if="multiple"
-        ref="rootRef"
-        tabindex="-1"
-        :class="ns.e('multiple')"
-      >
+      <div v-if="multiple" ref="rootRef" tabindex="-1" :class="ns.e('multiple')">
         <div :class="ns.e('content')">
           <el-scrollbar :wrap-class="ns.e('wrap')">
-            <el-checkbox-group
-              v-model="filteredValue"
-              :class="ns.e('checkbox-group')"
-            >
-              <el-checkbox
-                v-for="filter in filters"
-                :key="filter.value"
-                :value="filter.value"
-              >
+            <el-checkbox-group v-model="filteredValue" :class="ns.e('checkbox-group')">
+              <el-checkbox v-for="filter in filters" :key="filter.value" :value="filter.value">
                 {{ filter.text }}
               </el-checkbox>
             </el-checkbox-group>
           </el-scrollbar>
         </div>
         <div :class="ns.e('bottom')">
-          <button
-            :class="ns.is('disabled', filteredValue.length === 0)"
-            :disabled="filteredValue.length === 0"
-            type="button"
-            @click="handleConfirm"
-          >
+          <button :class="ns.is('disabled', filteredValue.length === 0)" :disabled="filteredValue.length === 0"
+            type="button" @click="handleConfirm">
             {{ t('el.table.confirmFilter') }}
           </button>
           <button type="button" @click="handleReset">
@@ -53,45 +23,24 @@
           </button>
         </div>
       </div>
-      <ul
-        v-else
-        ref="rootRef"
-        tabindex="-1"
-        role="radiogroup"
-        :class="ns.e('list')"
-        @keydown="handleKeydown"
-      >
-        <li
-          role="radio"
-          :class="[
-            ns.e('list-item'),
-            ns.is('active', isPropAbsent(filterValue)),
-          ]"
-          :tabindex="checkedIndex === 0 ? 0 : -1"
-          :aria-checked="isPropAbsent(filterValue)"
-          @click="handleSelect(null, 0)"
-        >
+      <ul v-else ref="rootRef" tabindex="-1" role="radiogroup" :class="ns.e('list')" @keydown="handleKeydown">
+        <li role="radio" :class="[
+          ns.e('list-item'),
+          ns.is('active', isPropAbsent(filterValue)),
+        ]" :tabindex="checkedIndex === 0 ? 0 : -1" :aria-checked="isPropAbsent(filterValue)"
+          @click="handleSelect(null, 0)">
           {{ t('el.table.clearFilter') }}
         </li>
-        <li
-          v-for="(filter, idx) in filters"
-          :key="filter.value"
-          role="radio"
-          :class="[ns.e('list-item'), ns.is('active', isActive(filter))]"
-          :tabindex="checkedIndex === idx + 1 ? 0 : -1"
-          :aria-checked="isActive(filter)"
-          @click="handleSelect(filter.value, idx + 1)"
-        >
+        <li v-for="(filter, idx) in filters" :key="filter.value" role="radio"
+          :class="[ns.e('list-item'), ns.is('active', isActive(filter))]" :tabindex="checkedIndex === idx + 1 ? 0 : -1"
+          :aria-checked="isActive(filter)" @click="handleSelect(filter.value, idx + 1)">
           {{ filter.text }}
         </li>
       </ul>
     </template>
     <template #default>
-      <button
-        type="button"
-        :class="`${ns.namespace.value}-table__column-filter-trigger`"
-        :aria-label="t('el.table.filterLabel', { column: column?.label || '' })"
-      >
+      <button type="button" :class="`${ns.namespace.value}-table__column-filter-trigger`"
+        :aria-label="t('el.table.filterLabel', { column: column?.label || '' })">
         <el-icon>
           <slot name="filter-icon">
             <arrow-up v-if="column?.filterOpened" />
@@ -105,21 +54,21 @@
 
 <script lang="ts">
 import { computed, defineComponent, getCurrentInstance, ref } from 'vue'
-import { ElCheckbox, ElCheckboxGroup } from '@element-plus/components/checkbox'
-import { ElIcon } from '@element-plus/components/icon'
+import { ElCheckbox, ElCheckboxGroup } from '@cery929-ui/components/checkbox'
+import { ElIcon } from '@cery929-ui/components/icon'
 import { ArrowDown, ArrowUp } from '@cery929-ui/icons-vue'
-import { EVENT_CODE } from '@element-plus/constants'
-import { useLocale, useNamespace } from '@element-plus/hooks'
+import { EVENT_CODE } from '@cery929-ui/constants'
+import { useLocale, useNamespace } from '@cery929-ui/hooks'
 import {
   ElTooltip,
   useTooltipContentProps,
-} from '@element-plus/components/tooltip'
-import ElScrollbar from '@element-plus/components/scrollbar'
-import { getEventCode, isPropAbsent } from '@element-plus/utils'
+} from '@cery929-ui/components/tooltip'
+import ElScrollbar from '@cery929-ui/components/scrollbar'
+import { getEventCode, isPropAbsent } from '@cery929-ui/utils'
 
 import type { DefaultRow } from './table/defaults'
-import type { TooltipInstance } from '@element-plus/components/tooltip'
-import type { Placement } from '@element-plus/components/popper'
+import type { TooltipInstance } from '@cery929-ui/components/tooltip'
+import type { Placement } from '@cery929-ui/components/popper'
 import type { PropType, WritableComputedRef } from 'vue'
 import type { TableColumnCtx } from './table-column/defaults'
 import type { TableHeader } from './table-header'

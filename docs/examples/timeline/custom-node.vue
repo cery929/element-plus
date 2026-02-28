@@ -1,15 +1,7 @@
 <template>
   <el-timeline>
-    <el-timeline-item
-      v-for="(activity, index) in activities"
-      :key="index"
-      :icon="activity.icon"
-      :type="activity.type"
-      :color="activity.color"
-      :size="activity.size"
-      :hollow="activity.hollow"
-      :timestamp="activity.timestamp"
-    >
+    <el-timeline-item v-for="(activity, index) in activities" :key="index" :icon="activity.icon" :type="activity.type"
+      :color="activity.color" :size="activity.size" :hollow="activity.hollow" :timestamp="activity.timestamp">
       {{ activity.content }}
     </el-timeline-item>
   </el-timeline>
@@ -18,7 +10,7 @@
 <script lang="ts" setup>
 import { MoreFilled } from '@cery929-ui/icons-vue'
 
-import type { TimelineItemProps } from 'element-plus'
+import type { TimelineItemProps } from 'cery929-ui'
 
 interface ActivityType extends Partial<TimelineItemProps> {
   content: string

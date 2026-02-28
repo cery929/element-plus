@@ -1,23 +1,10 @@
 <template>
-  <li
-    v-if="divided"
-    role="separator"
-    :class="ns.bem('menu', 'item', 'divided')"
-  />
-  <li
-    :ref="itemRef"
-    v-bind="{ ...dataset, ...$attrs }"
-    :aria-disabled="disabled"
-    :class="[ns.be('menu', 'item'), ns.is('disabled', disabled)]"
-    :tabindex="tabIndex"
-    :role="role"
-    @click="(e) => $emit('clickimpl', e)"
-    @focus="handleFocus"
-    @keydown.self="handleKeydown"
-    @mousedown="handleMousedown"
-    @pointermove="(e) => $emit('pointermove', e)"
-    @pointerleave="(e) => $emit('pointerleave', e)"
-  >
+  <li v-if="divided" role="separator" :class="ns.bem('menu', 'item', 'divided')" />
+  <li :ref="itemRef" v-bind="{ ...dataset, ...$attrs }" :aria-disabled="disabled"
+    :class="[ns.be('menu', 'item'), ns.is('disabled', disabled)]" :tabindex="tabIndex" :role="role"
+    @click="(e) => $emit('clickimpl', e)" @focus="handleFocus" @keydown.self="handleKeydown"
+    @mousedown="handleMousedown" @pointermove="(e) => $emit('pointermove', e)"
+    @pointerleave="(e) => $emit('pointerleave', e)">
     <el-icon v-if="icon || $slots.icon">
       <slot name="icon">
         <component :is="icon" />
@@ -32,16 +19,16 @@ import { computed, defineComponent, inject } from 'vue'
 import {
   ROVING_FOCUS_GROUP_ITEM_INJECTION_KEY,
   ROVING_FOCUS_ITEM_COLLECTION_INJECTION_KEY,
-} from '@element-plus/components/roving-focus-group'
-import { COLLECTION_ITEM_SIGN } from '@element-plus/components/collection'
-import { ElIcon } from '@element-plus/components/icon'
-import { useNamespace } from '@element-plus/hooks'
+} from '@cery929-ui/components/roving-focus-group'
+import { COLLECTION_ITEM_SIGN } from '@cery929-ui/components/collection'
+import { ElIcon } from '@cery929-ui/components/icon'
+import { useNamespace } from '@cery929-ui/hooks'
 import {
   composeEventHandlers,
   composeRefs,
   getEventCode,
-} from '@element-plus/utils'
-import { EVENT_CODE } from '@element-plus/constants'
+} from '@cery929-ui/utils'
+import { EVENT_CODE } from '@cery929-ui/constants'
 import { dropdownItemProps } from './dropdown'
 import { DROPDOWN_INJECTION_KEY } from './tokens'
 

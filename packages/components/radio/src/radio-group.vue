@@ -1,19 +1,9 @@
 <template>
-  <div
-    :id="groupId"
-    ref="radioGroupRef"
-    :class="ns.b('group')"
-    role="radiogroup"
+  <div :id="groupId" ref="radioGroupRef" :class="ns.b('group')" role="radiogroup"
     :aria-label="!isLabeledByFormItem ? ariaLabel || 'radio-group' : undefined"
-    :aria-labelledby="isLabeledByFormItem ? formItem!.labelId : undefined"
-  >
+    :aria-labelledby="isLabeledByFormItem ? formItem!.labelId : undefined">
     <slot>
-      <component
-        :is="optionComponent"
-        v-for="(item, index) in options"
-        :key="index"
-        v-bind="getOptionProps(item)"
-      />
+      <component :is="optionComponent" v-for="(item, index) in options" :key="index" v-bind="getOptionProps(item)" />
     </slot>
   </div>
 </template>
@@ -29,10 +19,10 @@ import {
   toRefs,
   watch,
 } from 'vue'
-import { useFormItem, useFormItemInputId } from '@element-plus/components/form'
-import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@element-plus/constants'
-import { useId, useNamespace } from '@element-plus/hooks'
-import { debugWarn } from '@element-plus/utils'
+import { useFormItem, useFormItemInputId } from '@cery929-ui/components/form'
+import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@cery929-ui/constants'
+import { useId, useNamespace } from '@cery929-ui/hooks'
+import { debugWarn } from '@cery929-ui/utils'
 import {
   type RadioGroupProps,
   radioDefaultProps,

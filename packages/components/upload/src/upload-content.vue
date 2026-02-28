@@ -1,50 +1,30 @@
 <template>
-  <div
-    :class="[
-      ns.b(),
-      ns.m(listType),
-      ns.is('drag', drag),
-      ns.is('disabled', disabled),
-    ]"
-    :tabindex="disabled ? undefined : 0"
-    :aria-disabled="disabled"
-    role="button"
-    @click="handleClick"
-    @keydown.self.enter.space="handleKeydown"
-  >
+  <div :class="[
+    ns.b(),
+    ns.m(listType),
+    ns.is('drag', drag),
+    ns.is('disabled', disabled),
+  ]" :tabindex="disabled ? undefined : 0" :aria-disabled="disabled" role="button" @click="handleClick"
+    @keydown.self.enter.space="handleKeydown">
     <template v-if="drag">
-      <upload-dragger
-        :disabled="disabled"
-        :directory="directory"
-        @file="uploadFiles"
-      >
+      <upload-dragger :disabled="disabled" :directory="directory" @file="uploadFiles">
         <slot />
       </upload-dragger>
     </template>
     <template v-else>
       <slot />
     </template>
-    <input
-      ref="inputRef"
-      :class="ns.e('input')"
-      :name="name"
-      :disabled="disabled"
-      :multiple="multiple"
-      :accept="accept"
-      :webkitdirectory="directory || undefined"
-      type="file"
-      @change="handleChange"
-      @click.stop
-    />
+    <input ref="inputRef" :class="ns.e('input')" :name="name" :disabled="disabled" :multiple="multiple" :accept="accept"
+      :webkitdirectory="directory || undefined" type="file" @change="handleChange" @click.stop />
   </div>
 </template>
 
 <script lang="ts" setup>
 import { shallowRef } from 'vue'
 import { cloneDeep, isEqual } from 'lodash-unified'
-import { entriesOf, isFunction, isPlainObject } from '@element-plus/utils'
-import { useNamespace } from '@element-plus/hooks'
-import { useFormDisabled } from '@element-plus/components/form'
+import { entriesOf, isFunction, isPlainObject } from '@cery929-ui/utils'
+import { useNamespace } from '@cery929-ui/hooks'
+import { useFormDisabled } from '@cery929-ui/components/form'
 import UploadDragger from './upload-dragger.vue'
 import { genFileId } from './upload'
 import { uploadContentPropsDefaults } from './upload-content'

@@ -53,9 +53,9 @@
 </template>
 
 <script lang="ts" setup>
-import { ElIcon } from '@element-plus/components/icon'
-import { ElDivider } from '@element-plus/components/divider'
-import { useLocale, useNamespace } from '@element-plus/hooks'
+import { ElIcon } from '@cery929-ui/components/icon'
+import { ElDivider } from '@cery929-ui/components/divider'
+import { useLocale, useNamespace } from '@cery929-ui/hooks'
 import { Back as IconBack } from '@cery929-ui/icons-vue'
 import { pageHeaderEmits } from './page-header'
 

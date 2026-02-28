@@ -1,4 +1,4 @@
-import '@element-plus/components/base/style'
-import '@element-plus/theme-chalk/src/tree.scss'
-import '@element-plus/components/checkbox/style'
-import '@element-plus/components/text/style'
+import '@cery929-ui/components/base/style'
+import '@cery929-ui/theme-chalk/src/tree.scss'
+import '@cery929-ui/components/checkbox/style'
+import '@cery929-ui/components/text/style'

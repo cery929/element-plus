@@ -14,16 +14,10 @@
       </template>
       <template #content>
         <div class="flex items-center">
-          <el-avatar
-            class="mr-3"
-            :size="32"
-            src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"
-          />
+          <el-avatar class="mr-3" :size="32"
+            src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png" />
           <span class="text-large font-600 mr-3"> Title </span>
-          <span
-            class="text-sm mr-2"
-            style="color: var(--el-text-color-regular)"
-          >
+          <span class="text-sm mr-2" style="color: var(--el-text-color-regular)">
             Sub title
           </span>
           <el-tag>Default</el-tag>
@@ -61,7 +55,7 @@
 </template>
 
 <script setup lang="ts">
-import { ElNotification as notify } from 'element-plus'
+import { ElNotification as notify } from 'cery929-ui'
 
 const onBack = () => {
   notify('Back')

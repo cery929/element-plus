@@ -6,15 +6,15 @@ import {
   isNumber,
   isString,
   isValidComponentSize,
-} from '@element-plus/utils'
+} from '@cery929-ui/utils'
 import {
   CHANGE_EVENT,
   INPUT_EVENT,
   UPDATE_MODEL_EVENT,
-} from '@element-plus/constants'
-import { useAriaProps } from '@element-plus/hooks'
+} from '@cery929-ui/constants'
+import { useAriaProps } from '@cery929-ui/hooks'
 
-import type { ComponentSize } from '@element-plus/constants'
+import type { ComponentSize } from '@cery929-ui/constants'
 import type { Component, ExtractPublicPropTypes, PropType } from 'vue'
 import type Switch from './switch.vue'
 

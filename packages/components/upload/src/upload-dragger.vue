@@ -1,19 +1,15 @@
 <template>
-  <div
-    :class="[ns.b('dragger'), ns.is('dragover', dragover)]"
-    @drop.prevent="onDrop"
-    @dragover.prevent="onDragover"
-    @dragleave.prevent="onDragleave"
-  >
+  <div :class="[ns.b('dragger'), ns.is('dragover', dragover)]" @drop.prevent="onDrop" @dragover.prevent="onDragover"
+    @dragleave.prevent="onDragleave">
     <slot />
   </div>
 </template>
 
 <script lang="ts" setup>
 import { inject, ref } from 'vue'
-import { useNamespace } from '@element-plus/hooks'
-import { useFormDisabled } from '@element-plus/components/form'
-import { throwError } from '@element-plus/utils/error'
+import { useNamespace } from '@cery929-ui/hooks'
+import { useFormDisabled } from '@cery929-ui/components/form'
+import { throwError } from '@cery929-ui/utils/error'
 import { flatten } from 'lodash-unified'
 import { uploadContextKey } from './constants'
 import { uploadDraggerEmits } from './upload-dragger'

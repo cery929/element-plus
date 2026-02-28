@@ -4,20 +4,20 @@ import {
   EVENT_CODE,
   INPUT_EVENT,
   UPDATE_MODEL_EVENT,
-} from '@element-plus/constants'
+} from '@cery929-ui/constants'
 import {
   debugWarn,
   ensureArray,
   getEventCode,
   isAndroid,
   isUndefined,
-} from '@element-plus/utils'
-import { useComposition, useFocusController } from '@element-plus/hooks'
-import { useFormDisabled, useFormSize } from '@element-plus/components/form'
+} from '@cery929-ui/utils'
+import { useComposition, useFocusController } from '@cery929-ui/hooks'
+import { useFormDisabled, useFormSize } from '@cery929-ui/components/form'
 
-import type { TooltipInstance } from '@element-plus/components/tooltip'
-import type { EmitFn } from '@element-plus/utils'
-import type { FormItemContext } from '@element-plus/components/form'
+import type { TooltipInstance } from '@cery929-ui/components/tooltip'
+import type { EmitFn } from '@cery929-ui/utils'
+import type { FormItemContext } from '@cery929-ui/components/form'
 import type { InputTagEmits, InputTagProps } from '../input-tag'
 
 interface UseInputTagOptions {

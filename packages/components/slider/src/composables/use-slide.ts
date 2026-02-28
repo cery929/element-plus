@@ -3,11 +3,11 @@ import {
   CHANGE_EVENT,
   INPUT_EVENT,
   UPDATE_MODEL_EVENT,
-} from '@element-plus/constants'
-import { useFormDisabled, useFormItem } from '@element-plus/components/form'
+} from '@cery929-ui/constants'
+import { useFormDisabled, useFormItem } from '@cery929-ui/components/form'
 
 import type { CSSProperties, Ref, SetupContext } from 'vue'
-import type { Arrayable } from '@element-plus/utils'
+import type { Arrayable } from '@cery929-ui/utils'
 import type { SliderEmits, SliderInitData, SliderProps } from '../slider'
 import type { ButtonRefs, SliderButtonInstance } from '../button'
 

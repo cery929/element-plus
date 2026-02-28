@@ -7,15 +7,15 @@
 <script lang="ts" setup>
 import { computed, provide, reactive, ref, toRefs, watch } from 'vue'
 import { has } from 'lodash-unified'
-import { debugWarn, getProp, isFunction } from '@element-plus/utils'
-import { useNamespace } from '@element-plus/hooks'
+import { debugWarn, getProp, isFunction } from '@cery929-ui/utils'
+import { useNamespace } from '@cery929-ui/hooks'
 import { useFormSize } from './hooks'
 import { formContextKey } from './constants'
 import { formEmits } from './form'
 import { filterFields, useFormLabelWidth } from './utils'
 
 import type { ValidateFieldsError } from 'async-validator'
-import type { Arrayable } from '@element-plus/utils'
+import type { Arrayable } from '@cery929-ui/utils'
 import type { FormProps } from './form'
 import type {
   FormContext,

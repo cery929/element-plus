@@ -1,52 +1,25 @@
 <template>
   <div ref="wrapperRef" :class="ns.b()">
-    <el-input
-      v-bind="mergeProps(passInputProps, $attrs)"
-      ref="elInputRef"
-      :model-value="modelValue"
-      :disabled="disabled"
-      :role="dropdownVisible ? 'combobox' : undefined"
+    <el-input v-bind="mergeProps(passInputProps, $attrs)" ref="elInputRef" :model-value="modelValue"
+      :disabled="disabled" :role="dropdownVisible ? 'combobox' : undefined"
       :aria-activedescendant="dropdownVisible ? hoveringId || '' : undefined"
-      :aria-controls="dropdownVisible ? contentId : undefined"
-      :aria-expanded="dropdownVisible || undefined"
-      :aria-label="ariaLabel"
-      :aria-autocomplete="dropdownVisible ? 'none' : undefined"
-      :aria-haspopup="dropdownVisible ? 'listbox' : undefined"
-      @input="handleInputChange"
-      @keydown="handleInputKeyDown"
-      @mousedown="handleInputMouseDown"
-    >
+      :aria-controls="dropdownVisible ? contentId : undefined" :aria-expanded="dropdownVisible || undefined"
+      :aria-label="ariaLabel" :aria-autocomplete="dropdownVisible ? 'none' : undefined"
+      :aria-haspopup="dropdownVisible ? 'listbox' : undefined" @input="handleInputChange" @keydown="handleInputKeyDown"
+      @mousedown="handleInputMouseDown">
       <template v-for="(_, name) in $slots" #[name]="slotProps">
         <slot :name="name" v-bind="slotProps" />
       </template>
     </el-input>
-    <el-tooltip
-      ref="tooltipRef"
-      :visible="dropdownVisible"
-      :popper-class="[ns.e('popper'), popperClass!]"
-      :popper-style="popperStyle"
-      :popper-options="popperOptions"
-      :placement="computedPlacement"
-      :fallback-placements="computedFallbackPlacements"
-      effect="light"
-      pure
-      :offset="offset"
-      :show-arrow="showArrow"
-    >
+    <el-tooltip ref="tooltipRef" :visible="dropdownVisible" :popper-class="[ns.e('popper'), popperClass!]"
+      :popper-style="popperStyle" :popper-options="popperOptions" :placement="computedPlacement"
+      :fallback-placements="computedFallbackPlacements" effect="light" pure :offset="offset" :show-arrow="showArrow">
       <template #default>
         <div :style="cursorStyle" />
       </template>
       <template #content>
-        <el-mention-dropdown
-          ref="dropdownRef"
-          :options="filteredOptions"
-          :disabled="disabled"
-          :loading="loading"
-          :content-id="contentId"
-          :aria-label="ariaLabel"
-          @select="handleSelect"
-          @click.stop="elInputRef?.focus()"
-        >
+        <el-mention-dropdown ref="dropdownRef" :options="filteredOptions" :disabled="disabled" :loading="loading"
+          :content-id="contentId" :aria-label="ariaLabel" @select="handleSelect" @click.stop="elInputRef?.focus()">
           <template v-for="(_, name) in $slots" #[name]="slotProps">
             <slot :name="name" v-bind="slotProps" />
           </template>
@@ -59,19 +32,19 @@
 <script lang="ts" setup>
 import { computed, mergeProps, nextTick, ref } from 'vue'
 import { pick } from 'lodash-unified'
-import { useFocusController, useId, useNamespace } from '@element-plus/hooks'
+import { useFocusController, useId, useNamespace } from '@cery929-ui/hooks'
 import ElInput, {
   inputProps,
   inputPropsDefaults,
-} from '@element-plus/components/input'
-import ElTooltip from '@element-plus/components/tooltip'
+} from '@cery929-ui/components/input'
+import ElTooltip from '@cery929-ui/components/tooltip'
 import {
   EVENT_CODE,
   INPUT_EVENT,
   UPDATE_MODEL_EVENT,
-} from '@element-plus/constants'
-import { useFormDisabled } from '@element-plus/components/form'
-import { getEventCode, isFunction } from '@element-plus/utils'
+} from '@cery929-ui/constants'
+import { useFormDisabled } from '@cery929-ui/components/form'
+import { getEventCode, isFunction } from '@cery929-ui/utils'
 import { mentionDefaultProps, mentionEmits } from './mention'
 import { filterOption, getCursorPosition, getMentionCtx } from './helper'
 import ElMentionDropdown from './mention-dropdown.vue'
@@ -79,8 +52,8 @@ import ElMentionDropdown from './mention-dropdown.vue'
 import type { MentionProps } from './mention'
 import type { Placement } from '@popperjs/core'
 import type { CSSProperties } from 'vue'
-import type { InputInstance } from '@element-plus/components/input'
-import type { TooltipInstance } from '@element-plus/components/tooltip'
+import type { InputInstance } from '@cery929-ui/components/input'
+import type { TooltipInstance } from '@cery929-ui/components/tooltip'
 import type { MentionCtx, MentionOption } from './types'
 
 defineOptions({

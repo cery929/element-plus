@@ -1,34 +1,16 @@
 <template>
-  <transition
-    :name="ns.b('fade')"
-    @before-enter="isStartTransition = true"
-    @before-leave="onClose"
-    @after-leave="$emit('destroy')"
-  >
-    <div
-      v-show="visible"
-      :id="id"
-      ref="messageRef"
-      :class="[
-        ns.b(),
-        { [ns.m(type)]: type },
-        ns.is('closable', showClose),
-        ns.is('plain', plain),
-        ns.is('bottom', verticalProperty === 'bottom'),
-        horizontalClass,
-        customClass,
-      ]"
-      :style="customStyle"
-      role="alert"
-      @mouseenter="clearTimer"
-      @mouseleave="startTimer"
-    >
-      <el-badge
-        v-if="repeatNum > 1"
-        :value="repeatNum"
-        :type="badgeType"
-        :class="ns.e('badge')"
-      />
+  <transition :name="ns.b('fade')" @before-enter="isStartTransition = true" @before-leave="onClose"
+    @after-leave="$emit('destroy')">
+    <div v-show="visible" :id="id" ref="messageRef" :class="[
+      ns.b(),
+      { [ns.m(type)]: type },
+      ns.is('closable', showClose),
+      ns.is('plain', plain),
+      ns.is('bottom', verticalProperty === 'bottom'),
+      horizontalClass,
+      customClass,
+    ]" :style="customStyle" role="alert" @mouseenter="clearTimer" @mouseleave="startTimer">
+      <el-badge v-if="repeatNum > 1" :value="repeatNum" :type="badgeType" :class="ns.e('badge')" />
       <el-icon v-if="iconComponent" :class="[ns.e('icon'), typeClass]">
         <component :is="iconComponent" />
       </el-icon>
@@ -53,11 +35,11 @@ import {
   TypeComponents,
   TypeComponentsMap,
   getEventCode,
-} from '@element-plus/utils'
-import { EVENT_CODE } from '@element-plus/constants'
-import ElBadge from '@element-plus/components/badge'
-import { useGlobalComponentSettings } from '@element-plus/components/config-provider'
-import { ElIcon } from '@element-plus/components/icon'
+} from '@cery929-ui/utils'
+import { EVENT_CODE } from '@cery929-ui/constants'
+import ElBadge from '@cery929-ui/components/badge'
+import { useGlobalComponentSettings } from '@cery929-ui/components/config-provider'
+import { ElIcon } from '@cery929-ui/components/icon'
 import {
   MESSAGE_DEFAULT_PLACEMENT,
   messageDefaults,
@@ -66,7 +48,7 @@ import {
 import { getLastOffset, getOffsetOrSpace } from './instance'
 import { omit } from 'lodash-unified'
 
-import type { BadgeProps } from '@element-plus/components/badge'
+import type { BadgeProps } from '@cery929-ui/components/badge'
 import type { CSSProperties } from 'vue'
 import type { MessageProps } from './message'
 
@@ -130,9 +112,9 @@ const customStyle = computed<CSSProperties>(() => ({
 
 function startTimer() {
   if (props.duration === 0) return
-  ;({ stop: stopTimer } = useTimeoutFn(() => {
-    close()
-  }, props.duration))
+    ; ({ stop: stopTimer } = useTimeoutFn(() => {
+      close()
+    }, props.duration))
 }
 
 function clearTimer() {

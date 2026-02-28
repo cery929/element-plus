@@ -1,11 +1,9 @@
 <template>
   <div v-if="visible" :class="ns.e('mask')" :style="maskStyle" v-bind="$attrs">
-    <svg
-      :style="{
-        width: '100%',
-        height: '100%',
-      }"
-    >
+    <svg :style="{
+      width: '100%',
+      height: '100%',
+    }">
       <path :class="ns.e('hollow')" :style="pathStyle" :d="path" />
     </svg>
   </div>
@@ -13,7 +11,7 @@
 
 <script lang="ts" setup>
 import { computed, inject, toRef } from 'vue'
-import { useLockscreen } from '@element-plus/hooks'
+import { useLockscreen } from '@cery929-ui/hooks'
 import { useWindowSize } from '@vueuse/core'
 import { tourKey } from './helper'
 
@@ -53,13 +51,10 @@ const path = computed(() => {
   const _path = `M${width},0 L0,0 L0,${height} L${width},${height} L${width},0 Z`
   const _radius = radius.value
   return props.pos
-    ? `${_path} M${props.pos.left + _radius},${props.pos.top} h${
-        props.pos.width - _radius * 2
-      } ${info.topRight} v${props.pos.height - _radius * 2} ${
-        info.bottomRight
-      } h${-props.pos.width + _radius * 2} ${info.bottomLeft} v${
-        -props.pos.height + _radius * 2
-      } ${info.topLeft} z`
+    ? `${_path} M${props.pos.left + _radius},${props.pos.top} h${props.pos.width - _radius * 2
+    } ${info.topRight} v${props.pos.height - _radius * 2} ${info.bottomRight
+    } h${-props.pos.width + _radius * 2} ${info.bottomLeft} v${-props.pos.height + _radius * 2
+    } ${info.topLeft} z`
     : _path
 })
 

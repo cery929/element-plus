@@ -1,14 +1,6 @@
 <template>
-  <el-table-v2
-    :columns="columns"
-    :data="data"
-    :sort-by="sort"
-    :estimated-row-height="40"
-    :width="700"
-    :height="400"
-    fixed
-    @column-sort="onColumnSort"
-  />
+  <el-table-v2 :columns="columns" :data="data" :sort-by="sort" :estimated-row-height="40" :width="700" :height="400"
+    fixed @column-sort="onColumnSort" />
 </template>
 
 <script lang="tsx" setup>
@@ -18,9 +10,9 @@ import {
   ElTag,
   TableV2FixedDir,
   TableV2SortOrder,
-} from 'element-plus'
+} from 'cery929-ui'
 
-import type { Column, SortBy } from 'element-plus'
+import type { Column, SortBy } from 'cery929-ui'
 
 const longText =
   'Quaerat ipsam necessitatibus eum quibusdam est id voluptatem cumque mollitia.'

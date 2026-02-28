@@ -1,10 +1,6 @@
 <template>
-  <el-upload
-    v-model:file-list="fileList"
-    class="upload-demo"
-    action="https://run.mocky.io/v3/9d059bf9-4660-45f2-925d-ce80ad6c4d15"
-    :on-change="handleChange"
-  >
+  <el-upload v-model:file-list="fileList" class="upload-demo"
+    action="https://run.mocky.io/v3/9d059bf9-4660-45f2-925d-ce80ad6c4d15" :on-change="handleChange">
     <el-button type="primary">Click to upload</el-button>
     <template #tip>
       <div class="el-upload__tip">
@@ -17,7 +13,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-import type { UploadProps, UploadUserFile } from 'element-plus'
+import type { UploadProps, UploadUserFile } from 'cery929-ui'
 
 const fileList = ref<UploadUserFile[]>([
   {

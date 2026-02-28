@@ -1,19 +1,8 @@
 <template>
-  <el-tree
-    style="max-width: 600px"
-    :allow-drop="allowDrop"
-    :allow-drag="allowDrag"
-    :data="data"
-    draggable
-    default-expand-all
-    node-key="id"
-    @node-drag-start="handleDragStart"
-    @node-drag-enter="handleDragEnter"
-    @node-drag-leave="handleDragLeave"
-    @node-drag-over="handleDragOver"
-    @node-drag-end="handleDragEnd"
-    @node-drop="handleDrop"
-  />
+  <el-tree style="max-width: 600px" :allow-drop="allowDrop" :allow-drag="allowDrag" :data="data" draggable
+    default-expand-all node-key="id" @node-drag-start="handleDragStart" @node-drag-enter="handleDragEnter"
+    @node-drag-leave="handleDragLeave" @node-drag-over="handleDragOver" @node-drag-end="handleDragEnd"
+    @node-drop="handleDrop" />
 </template>
 
 <script lang="ts" setup>
@@ -21,7 +10,7 @@ import type {
   AllowDropType,
   NodeDropType,
   RenderContentContext,
-} from 'element-plus'
+} from 'cery929-ui'
 
 type Node = RenderContentContext['node']
 

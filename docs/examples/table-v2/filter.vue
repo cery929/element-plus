@@ -1,11 +1,5 @@
 <template>
-  <el-table-v2
-    fixed
-    :columns="fixedColumns"
-    :data="data"
-    :width="700"
-    :height="400"
-  />
+  <el-table-v2 fixed :columns="fixedColumns" :data="data" :width="700" :height="400" />
 </template>
 
 <script lang="tsx" setup>
@@ -17,10 +11,10 @@ import {
   ElPopover,
   TableV2FixedDir,
   useLocale,
-} from 'element-plus'
+} from 'cery929-ui'
 import { Filter } from '@cery929-ui/icons-vue'
 
-import type { HeaderCellSlotProps } from 'element-plus'
+import type { HeaderCellSlotProps } from 'cery929-ui'
 
 const generateColumns = (length = 10, prefix = 'column-', props?: any) =>
   Array.from({ length }).map((_, columnIndex) => ({
@@ -75,7 +69,7 @@ const onReset = () => {
 
 const handleShowPopover = () => {
   const button = document.querySelector('.el-table-v2__demo-filter button')
-  ;(button as HTMLElement)?.focus()
+    ; (button as HTMLElement)?.focus()
 }
 
 columns[0].headerCellRenderer = (props: HeaderCellSlotProps) => {
@@ -139,6 +133,7 @@ const fixedColumns = columns.map((column, columnIndex) => {
   display: flex;
   justify-content: space-between;
 }
+
 .el-table-v2__demo-filter-btn {
   display: flex;
   cursor: pointer;

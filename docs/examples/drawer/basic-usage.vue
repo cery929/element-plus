@@ -13,12 +13,7 @@
     with footer
   </el-button>
 
-  <el-drawer
-    v-model="drawer"
-    title="I am the title"
-    :direction="direction"
-    :before-close="handleClose"
-  >
+  <el-drawer v-model="drawer" title="I am the title" :direction="direction" :before-close="handleClose">
     <span>Hi, there!</span>
   </el-drawer>
   <el-drawer v-model="drawer2" :direction="direction">
@@ -46,9 +41,9 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { ElMessageBox } from 'element-plus'
+import { ElMessageBox } from 'cery929-ui'
 
-import type { DrawerProps } from 'element-plus'
+import type { DrawerProps } from 'cery929-ui'
 
 const drawer = ref(false)
 const drawer2 = ref(false)

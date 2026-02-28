@@ -1,8 +1,6 @@
 <template>
-  <div
-    :class="[ns.b('dropdown'), ns.is('multiple', isMultiple), popperClass]"
-    :style="{ [isFitInputWidth ? 'width' : 'minWidth']: minWidth }"
-  >
+  <div :class="[ns.b('dropdown'), ns.is('multiple', isMultiple), popperClass]"
+    :style="{ [isFitInputWidth ? 'width' : 'minWidth']: minWidth }">
     <div v-if="$slots.header" :class="ns.be('dropdown', 'header')">
       <slot name="header" />
     </div>
@@ -16,9 +14,9 @@
 <script lang="ts">
 import { computed, defineComponent, inject, onMounted, ref } from 'vue'
 import { useResizeObserver } from '@vueuse/core'
-import { useNamespace } from '@element-plus/hooks'
+import { useNamespace } from '@cery929-ui/hooks'
 import { selectKey } from './token'
-import { BORDER_HORIZONTAL_WIDTH } from '@element-plus/constants'
+import { BORDER_HORIZONTAL_WIDTH } from '@cery929-ui/constants'
 
 export default defineComponent({
   name: 'ElSelectDropdown',

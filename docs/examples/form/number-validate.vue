@@ -1,24 +1,10 @@
 <template>
-  <el-form
-    ref="formRef"
-    style="max-width: 600px"
-    :model="numberValidateForm"
-    label-width="auto"
-    class="demo-ruleForm"
-  >
-    <el-form-item
-      label="age"
-      prop="age"
-      :rules="[
-        { required: true, message: 'age is required' },
-        { type: 'number', message: 'age must be a number' },
-      ]"
-    >
-      <el-input
-        v-model.number="numberValidateForm.age"
-        type="text"
-        autocomplete="off"
-      />
+  <el-form ref="formRef" style="max-width: 600px" :model="numberValidateForm" label-width="auto" class="demo-ruleForm">
+    <el-form-item label="age" prop="age" :rules="[
+      { required: true, message: 'age is required' },
+      { type: 'number', message: 'age must be a number' },
+    ]">
+      <el-input v-model.number="numberValidateForm.age" type="text" autocomplete="off" />
     </el-form-item>
     <el-form-item>
       <el-button type="primary" @click="submitForm(formRef)">Submit</el-button>
@@ -30,7 +16,7 @@
 <script lang="ts" setup>
 import { reactive, ref } from 'vue'
 
-import type { FormInstance } from 'element-plus'
+import type { FormInstance } from 'cery929-ui'
 
 const formRef = ref<FormInstance>()
 

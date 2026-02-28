@@ -1,19 +1,19 @@
 import { Comment, h, nextTick, reactive, ref } from 'vue'
 import { mount } from '@vue/test-utils'
 import { afterEach, describe, expect, it, test, vi } from 'vitest'
-import { EVENT_CODE } from '@element-plus/constants'
-import triggerEvent from '@element-plus/test-utils/trigger-event'
+import { EVENT_CODE } from '@cery929-ui/constants'
+import triggerEvent from '@cery929-ui/test-utils/trigger-event'
 import { ArrowDown, Check, CircleClose } from '@cery929-ui/icons-vue'
-import { usePopperContainerId } from '@element-plus/hooks'
-import { hasClass } from '@element-plus/utils'
-import ElForm, { ElFormItem } from '@element-plus/components/form'
-import ElScrollbar from '@element-plus/components/scrollbar'
-import ElTag from '@element-plus/components/tag'
-import ElTooltip from '@element-plus/components/tooltip'
+import { usePopperContainerId } from '@cery929-ui/hooks'
+import { hasClass } from '@cery929-ui/utils'
+import ElForm, { ElFormItem } from '@cery929-ui/components/form'
+import ElScrollbar from '@cery929-ui/components/scrollbar'
+import ElTag from '@cery929-ui/components/tag'
+import ElTooltip from '@cery929-ui/components/tooltip'
 import Cascader from '../src/cascader.vue'
 
 import type { VNode } from 'vue'
-import type ElCascader from '@element-plus/components/cascader'
+import type ElCascader from '@cery929-ui/components/cascader'
 
 vi.mock('lodash-unified', async () => {
   return {

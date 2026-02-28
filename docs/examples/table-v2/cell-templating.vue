@@ -1,11 +1,5 @@
 <template>
-  <el-table-v2
-    :columns="columns"
-    :data="data"
-    :width="700"
-    :height="400"
-    fixed
-  />
+  <el-table-v2 :columns="columns" :data="data" :width="700" :height="400" fixed />
 </template>
 
 <script lang="tsx" setup>
@@ -17,10 +11,10 @@ import {
   ElTag,
   ElTooltip,
   TableV2FixedDir,
-} from 'element-plus'
+} from 'cery929-ui'
 import { Timer } from '@cery929-ui/icons-vue'
 
-import type { Column } from 'element-plus'
+import type { Column } from 'cery929-ui'
 
 let id = 0
 

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { inBrowser, useData, withBase } from 'vitepress'
-import { version as epVersion } from 'element-plus'
+import { version as epVersion } from 'cery929-ui'
 import VPNavbarSearch from './navbar/vp-search.vue'
 import VPNavbarMenu from './navbar/vp-menu.vue'
 import VPNavbarThemeToggler from './navbar/vp-theme-toggler.vue'
@@ -34,15 +34,11 @@ const currentLink = computed(() => {
     <div class="header-container">
       <div class="logo-container">
         <a :href="withBase(currentLink)">
-          <img
-            class="logo"
-            src="/images/element-plus-logo.svg"
-            alt="Element Plus Logo"
-          />
+          <img class="logo" src="/images/element-plus-logo.svg" alt="Element Plus Logo" />
         </a>
         <el-tag round size="small" title="latest version">{{
           epVersion.replace('0.0.0-staging.', '')
-        }}</el-tag>
+          }}</el-tag>
       </div>
       <div class="content">
         <VPNavbarSearch class="search" :options="theme.agolia" multilang />
@@ -50,11 +46,7 @@ const currentLink = computed(() => {
         <VPNavbarThemeToggler class="theme-toggler" />
         <VPNavbarTranslation class="translation" />
         <VPNavbarSocialLinks class="social-links" />
-        <VPNavbarHamburger
-          :active="fullScreen"
-          class="hamburger"
-          @click="$emit('toggle')"
-        />
+        <VPNavbarHamburger :active="fullScreen" class="hamburger" @click="$emit('toggle')" />
       </div>
     </div>
   </div>
@@ -65,15 +57,18 @@ const currentLink = computed(() => {
   display: flex;
   align-items: center;
   height: var(--header-height);
-  > a {
+
+  >a {
     height: 28px;
     width: 128px;
   }
+
   .logo {
     position: relative;
     height: 100%;
   }
 }
+
 .dark {
   .logo {
     filter: drop-shadow(2px 2px 6px #409eff);

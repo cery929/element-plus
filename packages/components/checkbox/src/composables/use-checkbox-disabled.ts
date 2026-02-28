@@ -1,6 +1,6 @@
 import { computed, inject } from 'vue'
-import { formContextKey, useFormDisabled } from '@element-plus/components/form'
-import { isUndefined } from '@element-plus/utils'
+import { formContextKey, useFormDisabled } from '@cery929-ui/components/form'
+import { isUndefined } from '@cery929-ui/utils'
 import { checkboxGroupContextKey } from '../constants'
 
 import type { CheckboxModel, CheckboxStatus } from '../composables'

@@ -102,9 +102,9 @@
 import { computed, inject, ref, toRef, unref, useSlots, watch } from 'vue'
 import dayjs from 'dayjs'
 import { DArrowLeft, DArrowRight } from '@cery929-ui/icons-vue'
-import ElIcon from '@element-plus/components/icon'
-import { useLocale } from '@element-plus/hooks'
-import { PICKER_BASE_INJECTION_KEY } from '@element-plus/components/time-picker'
+import ElIcon from '@cery929-ui/components/icon'
+import { useLocale } from '@cery929-ui/hooks'
+import { PICKER_BASE_INJECTION_KEY } from '@cery929-ui/components/time-picker'
 import {
   panelYearRangeEmits,
   panelYearRangeProps,
@@ -118,7 +118,7 @@ import {
 } from '../utils'
 import { ROOT_PICKER_IS_DEFAULT_FORMAT_INJECTION_KEY } from '../constants'
 import YearTable from './basic-year-table.vue'
-import { useFormDisabled } from '@element-plus/components/form'
+import { useFormDisabled } from '@cery929-ui/components/form'
 
 import type { Dayjs } from 'dayjs'
 

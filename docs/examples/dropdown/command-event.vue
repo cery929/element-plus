@@ -16,7 +16,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ElMessage } from 'element-plus'
+import { ElMessage } from 'cery929-ui'
 import { ArrowDown } from '@cery929-ui/icons-vue'
 
 const handleCommand = (command: string | number | object) => {

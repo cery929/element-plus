@@ -2,13 +2,7 @@
   <div style="height: 400px">
     <el-auto-resizer>
       <template #default="{ height, width }">
-        <el-table-v2
-          :columns="columns"
-          :data="data"
-          :width="width"
-          :height="height"
-          fixed
-        />
+        <el-table-v2 :columns="columns" :data="data" :width="width" :height="height" fixed />
       </template>
     </el-auto-resizer>
   </div>
@@ -16,10 +10,10 @@
 
 <script lang="tsx" setup>
 import { ref, withKeys } from 'vue'
-import { ElInput } from 'element-plus'
+import { ElInput } from 'cery929-ui'
 
 import type { FunctionalComponent } from 'vue'
-import type { Column, InputInstance } from 'element-plus'
+import type { Column, InputInstance } from 'cery929-ui'
 
 type SelectionCellProps = {
   value: string

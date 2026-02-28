@@ -1,21 +1,13 @@
 <template>
   <div :ref="composedDialogRef" :class="dialogKls" :style="style" tabindex="-1">
-    <header
-      ref="headerRef"
-      :class="[ns.e('header'), headerClass, { 'show-close': showClose }]"
-    >
+    <header ref="headerRef" :class="[ns.e('header'), headerClass, { 'show-close': showClose }]">
       <slot name="header">
         <span role="heading" :aria-level="ariaLevel" :class="ns.e('title')">
           {{ title }}
         </span>
       </slot>
-      <button
-        v-if="showClose"
-        :aria-label="t('el.dialog.close')"
-        :class="ns.e('headerbtn')"
-        type="button"
-        @click="$emit('close')"
-      >
+      <button v-if="showClose" :aria-label="t('el.dialog.close')" :class="ns.e('headerbtn')" type="button"
+        @click="$emit('close')">
         <el-icon :class="ns.e('close')">
           <component :is="closeIcon || Close" />
         </el-icon>
@@ -32,10 +24,10 @@
 
 <script lang="ts" setup>
 import { computed, inject } from 'vue'
-import { ElIcon } from '@element-plus/components/icon'
-import { FOCUS_TRAP_INJECTION_KEY } from '@element-plus/components/focus-trap'
-import { useDraggable, useLocale } from '@element-plus/hooks'
-import { CloseComponents, composeRefs } from '@element-plus/utils'
+import { ElIcon } from '@cery929-ui/components/icon'
+import { FOCUS_TRAP_INJECTION_KEY } from '@cery929-ui/components/focus-trap'
+import { useDraggable, useLocale } from '@cery929-ui/hooks'
+import { CloseComponents, composeRefs } from '@cery929-ui/utils'
 import { dialogInjectionKey } from './constants'
 import {
   dialogContentEmits,

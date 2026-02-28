@@ -25,8 +25,8 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { useNamespace } from '@element-plus/hooks'
-import { isFunction, isNumber } from '@element-plus/utils'
+import { useNamespace } from '@cery929-ui/hooks'
+import { isFunction, isNumber } from '@cery929-ui/utils'
 
 import type { StatisticProps } from './statistic'
 
@@ -49,7 +49,7 @@ const displayValue = computed(() => {
 
   if (isFunction(formatter)) return formatter(value)
 
-  // https://github.com/element-plus/element-plus/issues/17784
+  // https://github.com/cery929-ui/cery929-ui/issues/17784
   if (!isNumber(value) || Number.isNaN(value)) return value
 
   let [integer, decimal = ''] = String(value).split('.')

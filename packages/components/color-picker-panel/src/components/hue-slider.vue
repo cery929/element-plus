@@ -1,27 +1,16 @@
 <template>
   <div :class="rootKls">
     <div ref="bar" :class="barKls" @click="handleClick" />
-    <div
-      ref="thumb"
-      :class="thumbKls"
-      :style="thumbStyle"
-      :aria-label="ariaLabel"
-      :aria-valuenow="currentValue"
-      :aria-valuetext="ariaValuetext"
-      :aria-orientation="vertical ? 'vertical' : 'horizontal'"
-      :aria-valuemin="minValue"
-      :aria-valuemax="maxValue"
-      role="slider"
-      :tabindex="disabled ? undefined : 0"
-      :aria-disabled="disabled"
-      @keydown="handleKeydown"
-    />
+    <div ref="thumb" :class="thumbKls" :style="thumbStyle" :aria-label="ariaLabel" :aria-valuenow="currentValue"
+      :aria-valuetext="ariaValuetext" :aria-orientation="vertical ? 'vertical' : 'horizontal'" :aria-valuemin="minValue"
+      :aria-valuemax="maxValue" role="slider" :tabindex="disabled ? undefined : 0" :aria-disabled="disabled"
+      @keydown="handleKeydown" />
   </div>
 </template>
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { useLocale } from '@element-plus/hooks'
+import { useLocale } from '@cery929-ui/hooks'
 import { useSlider, useSliderDOM } from '../composables/use-slider'
 
 import type { HueSliderProps } from '../props/slider'

@@ -1,7 +1,7 @@
 import { computed, getCurrentInstance, onMounted, ref, watch } from 'vue'
-import { EVENT_CODE } from '@element-plus/constants'
-import { useNamespace } from '@element-plus/hooks'
-import { addUnit, getClientXY, getEventCode } from '@element-plus/utils'
+import { EVENT_CODE } from '@cery929-ui/constants'
+import { useNamespace } from '@cery929-ui/hooks'
+import { addUnit, getClientXY, getEventCode } from '@cery929-ui/utils'
 import { draggable } from '../utils/draggable'
 
 import type { SvPanelProps } from '../props/sv-panel'

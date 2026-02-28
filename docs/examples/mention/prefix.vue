@@ -1,18 +1,12 @@
 <template>
-  <el-mention
-    v-model="value"
-    :options="options"
-    :prefix="['@', '#']"
-    style="width: 320px"
-    placeholder="input @ to mention people, # to mention tag"
-    @search="handleSearch"
-  />
+  <el-mention v-model="value" :options="options" :prefix="['@', '#']" style="width: 320px"
+    placeholder="input @ to mention people, # to mention tag" @search="handleSearch" />
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
 
-import type { MentionOption } from 'element-plus'
+import type { MentionOption } from 'cery929-ui'
 
 const MOCK_DATA: Record<string, string[]> = {
   '@': ['Fuphoenixes', 'kooriookami', 'Jeremy', 'btea'],

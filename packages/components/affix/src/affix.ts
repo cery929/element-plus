@@ -3,9 +3,9 @@ import {
   definePropType,
   isBoolean,
   isNumber,
-} from '@element-plus/utils'
-import { CHANGE_EVENT } from '@element-plus/constants'
-import { teleportProps } from '@element-plus/components/teleport'
+} from '@cery929-ui/utils'
+import { CHANGE_EVENT } from '@cery929-ui/constants'
+import { teleportProps } from '@cery929-ui/components/teleport'
 
 import type { CSSProperties, ExtractPublicPropTypes } from 'vue'
 import type Affix from './affix.vue'

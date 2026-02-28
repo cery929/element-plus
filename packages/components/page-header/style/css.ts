@@ -1,3 +1,3 @@
-import '@element-plus/components/base/style/css'
-import '@element-plus/components/divider/style/css'
-import '@element-plus/theme-chalk/el-page-header.css'
+import '@cery929-ui/components/base/style/css'
+import '@cery929-ui/components/divider/style/css'
+import '@cery929-ui/theme-chalk/el-page-header.css'

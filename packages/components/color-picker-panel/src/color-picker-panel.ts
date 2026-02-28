@@ -1,6 +1,6 @@
 import { isNil } from 'lodash-unified'
-import { buildProps, definePropType, isString } from '@element-plus/utils'
-import { UPDATE_MODEL_EVENT } from '@element-plus/constants'
+import { buildProps, definePropType, isString } from '@cery929-ui/utils'
+import { UPDATE_MODEL_EVENT } from '@cery929-ui/constants'
 
 import type { ComputedRef, ExtractPublicPropTypes, InjectionKey } from 'vue'
 import type ColorPickerPanel from './color-picker-panel.vue'

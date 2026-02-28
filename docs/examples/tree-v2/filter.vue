@@ -1,24 +1,13 @@
 <template>
-  <el-input
-    v-model="query"
-    style="width: 240px"
-    placeholder="Please enter keyword"
-    @input="onQueryChanged"
-  />
-  <el-tree-v2
-    ref="treeRef"
-    style="max-width: 600px"
-    :data="data"
-    :props="props"
-    :filter-method="filterMethod"
-    :height="200"
-  />
+  <el-input v-model="query" style="width: 240px" placeholder="Please enter keyword" @input="onQueryChanged" />
+  <el-tree-v2 ref="treeRef" style="max-width: 600px" :data="data" :props="props" :filter-method="filterMethod"
+    :height="200" />
 </template>
 
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-import type { TreeNodeData, TreeV2Instance } from 'element-plus'
+import type { TreeNodeData, TreeV2Instance } from 'cery929-ui'
 
 interface Tree {
   id: string

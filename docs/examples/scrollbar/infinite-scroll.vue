@@ -9,7 +9,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-import type { ScrollbarDirection } from 'element-plus'
+import type { ScrollbarDirection } from 'cery929-ui'
 
 const num = ref(30)
 
@@ -32,6 +32,7 @@ const loadMore = (direction: ScrollbarDirection) => {
   background: var(--el-color-primary-light-9);
   color: var(--el-color-primary);
 }
+
 .el-slider {
   margin-top: 20px;
 }

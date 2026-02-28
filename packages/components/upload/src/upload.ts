@@ -1,7 +1,7 @@
-import { NOOP, buildProps, definePropType, mutable } from '@element-plus/utils'
+import { NOOP, buildProps, definePropType, mutable } from '@cery929-ui/utils'
 import { ajaxUpload } from './ajax'
 
-import type { Awaitable, Mutable } from '@element-plus/utils'
+import type { Awaitable, Mutable } from '@cery929-ui/utils'
 import type { UploadAjaxError } from './ajax'
 import type { ExtractPublicPropTypes } from 'vue'
 import type Upload from './upload.vue'

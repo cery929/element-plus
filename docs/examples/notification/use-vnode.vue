@@ -7,7 +7,7 @@
 
 <script lang="ts" setup>
 import { h, ref } from 'vue'
-import { ElNotification, ElSwitch } from 'element-plus'
+import { ElNotification, ElSwitch } from 'cery929-ui'
 
 const open = () => {
   ElNotification({

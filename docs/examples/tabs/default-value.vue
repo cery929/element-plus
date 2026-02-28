@@ -1,16 +1,6 @@
 <template>
-  <el-tabs
-    v-model="activeName"
-    class="demo-tabs"
-    default-value="third"
-    @tab-click="handleClick"
-  >
-    <el-tab-pane
-      v-for="tab in tabs"
-      :key="tab.name"
-      :label="tab.label"
-      :name="tab.name"
-    >
+  <el-tabs v-model="activeName" class="demo-tabs" default-value="third" @tab-click="handleClick">
+    <el-tab-pane v-for="tab in tabs" :key="tab.name" :label="tab.label" :name="tab.name">
       default-value: third
       <br />
       active: {{ activeName }}
@@ -21,7 +11,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-import type { TabsPaneContext } from 'element-plus'
+import type { TabsPaneContext } from 'cery929-ui'
 
 const tabs = ref([
   { label: 'User', name: 'first' },
@@ -38,7 +28,7 @@ const handleClick = (tab: TabsPaneContext, event: Event) => {
 </script>
 
 <style>
-.demo-tabs > .el-tabs__content {
+.demo-tabs>.el-tabs__content {
   padding: 32px;
   color: #6b778c;
   font-size: 32px;

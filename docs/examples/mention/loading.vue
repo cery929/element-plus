@@ -1,18 +1,12 @@
 <template>
-  <el-mention
-    v-model="value"
-    :options="options"
-    :loading="loading"
-    style="width: 320px"
-    placeholder="Please input"
-    @search="handleSearch"
-  />
+  <el-mention v-model="value" :options="options" :loading="loading" style="width: 320px" placeholder="Please input"
+    @search="handleSearch" />
 </template>
 
 <script setup lang="ts">
 import { onBeforeUnmount, ref } from 'vue'
 
-import type { MentionOption } from 'element-plus'
+import type { MentionOption } from 'cery929-ui'
 
 const value = ref('')
 const loading = ref(false)

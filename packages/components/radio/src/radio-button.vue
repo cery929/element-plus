@@ -1,30 +1,15 @@
 <template>
-  <label
-    :class="[
-      ns.b('button'),
-      ns.is('active', modelValue === actualValue),
-      ns.is('disabled', disabled),
-      ns.is('focus', focus),
-      ns.bm('button', size),
-    ]"
-  >
-    <input
-      ref="radioRef"
-      v-model="modelValue"
-      :class="ns.be('button', 'original-radio')"
-      :value="actualValue"
-      type="radio"
-      :name="name || radioGroup?.name"
-      :disabled="disabled"
-      @focus="focus = true"
-      @blur="focus = false"
-      @click.stop
-    />
-    <span
-      :class="ns.be('button', 'inner')"
-      :style="modelValue === actualValue ? activeStyle : {}"
-      @keydown.stop
-    >
+  <label :class="[
+    ns.b('button'),
+    ns.is('active', modelValue === actualValue),
+    ns.is('disabled', disabled),
+    ns.is('focus', focus),
+    ns.bm('button', size),
+  ]">
+    <input ref="radioRef" v-model="modelValue" :class="ns.be('button', 'original-radio')" :value="actualValue"
+      type="radio" :name="name || radioGroup?.name" :disabled="disabled" @focus="focus = true" @blur="focus = false"
+      @click.stop />
+    <span :class="ns.be('button', 'inner')" :style="modelValue === actualValue ? activeStyle : {}" @keydown.stop>
       <slot>
         {{ label }}
       </slot>
@@ -34,7 +19,7 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { useNamespace } from '@element-plus/hooks'
+import { useNamespace } from '@cery929-ui/hooks'
 import { useRadio } from './use-radio'
 import { radioButtonPropsDefaults } from './radio-button'
 

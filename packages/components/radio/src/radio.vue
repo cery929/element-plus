@@ -42,8 +42,8 @@
 
 <script lang="ts" setup>
 import { nextTick } from 'vue'
-import { useNamespace } from '@element-plus/hooks'
-import { CHANGE_EVENT } from '@element-plus/constants'
+import { useNamespace } from '@cery929-ui/hooks'
+import { CHANGE_EVENT } from '@cery929-ui/constants'
 import { type RadioProps, radioEmits, radioPropsDefaults } from './radio'
 import { useRadio } from './use-radio'
 

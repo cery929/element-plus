@@ -1,3 +1,3 @@
-import '@element-plus/components/base/style'
-import '@element-plus/theme-chalk/src/virtual-list.scss'
-import '@element-plus/components/scrollbar/style'
+import '@cery929-ui/components/base/style'
+import '@cery929-ui/theme-chalk/src/virtual-list.scss'
+import '@cery929-ui/components/scrollbar/style'

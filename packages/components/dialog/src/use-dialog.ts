@@ -12,8 +12,8 @@ import {
   useId,
   useLockscreen,
   useZIndex,
-} from '@element-plus/hooks'
-import { UPDATE_MODEL_EVENT } from '@element-plus/constants'
+} from '@cery929-ui/hooks'
+import { UPDATE_MODEL_EVENT } from '@cery929-ui/constants'
 import {
   addUnit,
   debugWarn,
@@ -21,12 +21,12 @@ import {
   isClient,
   isFunction,
   isObject,
-} from '@element-plus/utils'
-import { useGlobalConfig } from '@element-plus/components/config-provider'
+} from '@cery929-ui/utils'
+import { useGlobalConfig } from '@cery929-ui/components/config-provider'
 import { DEFAULT_DIALOG_TRANSITION } from './constants'
 
 import type { CSSProperties, Ref, SetupContext, TransitionProps } from 'vue'
-import type { Arrayable } from '@element-plus/utils'
+import type { Arrayable } from '@cery929-ui/utils'
 import type { DialogEmits, DialogProps } from './dialog'
 
 const COMPONENT_NAME = 'ElDialog'

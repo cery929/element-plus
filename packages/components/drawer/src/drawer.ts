@@ -1,9 +1,9 @@
-import { buildProps } from '@element-plus/utils'
-import { dialogEmits, dialogProps } from '@element-plus/components/dialog'
+import { buildProps } from '@cery929-ui/utils'
+import { dialogEmits, dialogProps } from '@cery929-ui/components/dialog'
 
 import type { ExtractPublicPropTypes } from 'vue'
 import type Drawer from './drawer.vue'
-import type { DialogProps } from '@element-plus/components/dialog'
+import type { DialogProps } from '@cery929-ui/components/dialog'
 
 export interface DrawerProps extends DialogProps {
   /**

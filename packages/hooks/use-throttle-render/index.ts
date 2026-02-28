@@ -1,5 +1,5 @@
 import { onMounted, ref, watch } from 'vue'
-import { isNumber, isObject, isUndefined } from '@element-plus/utils'
+import { isNumber, isObject, isUndefined } from '@cery929-ui/utils'
 
 import type { Ref } from 'vue'
 

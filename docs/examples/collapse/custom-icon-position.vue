@@ -2,14 +2,8 @@
   <div class="demo-collapse-position">
     <div class="flex items-center mb-4">
       <span class="mr-4">expand icon position: </span>
-      <el-switch
-        v-model="position"
-        inactive-value="left"
-        active-value="right"
-        inactive-text="left"
-        active-text="right"
-        style="--el-switch-off-color: #88b8fe"
-      />
+      <el-switch v-model="position" inactive-value="left" active-value="right" inactive-text="left" active-text="right"
+        style="--el-switch-off-color: #88b8fe" />
     </div>
 
     <el-collapse :expand-icon-position="position">
@@ -53,7 +47,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-import type { CollapseIconPositionType } from 'element-plus'
+import type { CollapseIconPositionType } from 'cery929-ui'
 
 const position = ref<CollapseIconPositionType>('left')
 </script>

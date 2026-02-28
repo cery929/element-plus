@@ -1,12 +1,6 @@
 <template>
-  <el-upload
-    ref="upload"
-    class="upload-demo"
-    action="https://run.mocky.io/v3/9d059bf9-4660-45f2-925d-ce80ad6c4d15"
-    :limit="1"
-    :on-exceed="handleExceed"
-    :auto-upload="false"
-  >
+  <el-upload ref="upload" class="upload-demo" action="https://run.mocky.io/v3/9d059bf9-4660-45f2-925d-ce80ad6c4d15"
+    :limit="1" :on-exceed="handleExceed" :auto-upload="false">
     <template #trigger>
       <el-button type="primary">select file</el-button>
     </template>
@@ -23,9 +17,9 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { genFileId } from 'element-plus'
+import { genFileId } from 'cery929-ui'
 
-import type { UploadInstance, UploadProps, UploadRawFile } from 'element-plus'
+import type { UploadInstance, UploadProps, UploadRawFile } from 'cery929-ui'
 
 const upload = ref<UploadInstance>()
 

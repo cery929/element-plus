@@ -1,5 +1,5 @@
-import { buildProps, definePropType, mutable } from '@element-plus/utils'
-import { componentSizes } from '@element-plus/constants'
+import { buildProps, definePropType, mutable } from '@cery929-ui/utils'
+import { componentSizes } from '@cery929-ui/constants'
 
 import type {
   CSSProperties,

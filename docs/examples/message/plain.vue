@@ -9,7 +9,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ElMessage } from 'element-plus'
+import { ElMessage } from 'cery929-ui'
 
 const open1 = () => {
   ElMessage({

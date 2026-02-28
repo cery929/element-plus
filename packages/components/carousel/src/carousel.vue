@@ -90,9 +90,9 @@
 
 <script lang="ts" setup>
 import { computed, unref } from 'vue'
-import { ElIcon } from '@element-plus/components/icon'
+import { ElIcon } from '@cery929-ui/components/icon'
 import { ArrowLeft, ArrowRight } from '@cery929-ui/icons-vue'
-import { useLocale, useNamespace } from '@element-plus/hooks'
+import { useLocale, useNamespace } from '@cery929-ui/hooks'
 import { carouselEmits } from './carousel'
 import { useCarousel } from './use-carousel'
 

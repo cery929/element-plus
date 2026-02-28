@@ -1,5 +1,5 @@
-import { buildProps, definePropType, isNumber } from '@element-plus/utils'
-import { useAriaProps } from '@element-plus/hooks'
+import { buildProps, definePropType, isNumber } from '@cery929-ui/utils'
+import { useAriaProps } from '@cery929-ui/hooks'
 
 import type { ExtractPublicPropTypes, StyleValue } from 'vue'
 import type Scrollbar from './scrollbar.vue'

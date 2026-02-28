@@ -1,4 +1,4 @@
-import '@element-plus/components/base/style/css'
-import '@element-plus/theme-chalk/el-table-column.css'
-import '@element-plus/components/checkbox/style/css'
-import '@element-plus/components/tag/style/css'
+import '@cery929-ui/components/base/style/css'
+import '@cery929-ui/theme-chalk/el-table-column.css'
+import '@cery929-ui/components/checkbox/style/css'
+import '@cery929-ui/components/tag/style/css'

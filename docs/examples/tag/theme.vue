@@ -1,34 +1,19 @@
 <template>
   <div class="flex gap-2">
     <span>Dark</span>
-    <el-tag
-      v-for="item in items"
-      :key="item.label"
-      :type="item.type"
-      effect="dark"
-    >
+    <el-tag v-for="item in items" :key="item.label" :type="item.type" effect="dark">
       {{ item.label }}
     </el-tag>
   </div>
   <div class="flex gap-2 mt-4">
     <span>Light</span>
-    <el-tag
-      v-for="item in items"
-      :key="item.label"
-      :type="item.type"
-      effect="light"
-    >
+    <el-tag v-for="item in items" :key="item.label" :type="item.type" effect="light">
       {{ item.label }}
     </el-tag>
   </div>
   <div class="flex gap-2 mt-4">
     <span>Plain</span>
-    <el-tag
-      v-for="item in items"
-      :key="item.label"
-      :type="item.type"
-      effect="plain"
-    >
+    <el-tag v-for="item in items" :key="item.label" :type="item.type" effect="plain">
       {{ item.label }}
     </el-tag>
   </div>
@@ -37,7 +22,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-import type { TagProps } from 'element-plus'
+import type { TagProps } from 'cery929-ui'
 
 type Item = { type: TagProps['type']; label: string }
 

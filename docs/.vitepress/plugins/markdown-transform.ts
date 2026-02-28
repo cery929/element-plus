@@ -2,8 +2,8 @@ import fs from 'fs'
 import path from 'path'
 import { camelize } from '@vue/shared'
 import { glob } from 'tinyglobby'
-import { docRoot, docsDirName, projRoot } from '@element-plus/build-utils'
-import { REPO_BRANCH, REPO_PATH } from '@element-plus/build-constants'
+import { docRoot, docsDirName, projRoot } from '@cery929-ui/build-utils'
+import { REPO_BRANCH, REPO_PATH } from '@cery929-ui/build-constants'
 import { getLang, languages } from '../utils/lang'
 import footerLocale from '../i18n/component/footer.json'
 
@@ -15,7 +15,7 @@ let compPaths: string[]
 
 export function MarkdownTransform(): Plugin {
   return {
-    name: 'element-plus-md-transform',
+    name: 'cery929-ui-md-transform',
 
     enforce: 'pre',
 

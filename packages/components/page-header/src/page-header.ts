@@ -1,4 +1,4 @@
-import { buildProps, iconPropType } from '@element-plus/utils'
+import { buildProps, iconPropType } from '@cery929-ui/utils'
 import { Back } from '@cery929-ui/icons-vue'
 
 import type { Component, ExtractPublicPropTypes } from 'vue'

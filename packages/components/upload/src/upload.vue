@@ -1,14 +1,7 @@
 <template>
   <div>
-    <upload-list
-      v-if="isPictureCard && showFileList"
-      :disabled="disabled"
-      :list-type="listType"
-      :files="uploadFiles"
-      :crossorigin="crossorigin"
-      :handle-preview="onPreview"
-      @remove="handleRemove"
-    >
+    <upload-list v-if="isPictureCard && showFileList" :disabled="disabled" :list-type="listType" :files="uploadFiles"
+      :crossorigin="crossorigin" :handle-preview="onPreview" @remove="handleRemove">
       <template v-if="$slots.file" #default="{ file, index }">
         <slot name="file" :file="file" :index="index" />
       </template>
@@ -20,26 +13,16 @@
       </template>
     </upload-list>
 
-    <upload-content
-      v-if="!isPictureCard || (isPictureCard && !showFileList)"
-      ref="uploadRef"
-      v-bind="uploadContentProps"
-    >
+    <upload-content v-if="!isPictureCard || (isPictureCard && !showFileList)" ref="uploadRef"
+      v-bind="uploadContentProps">
       <slot v-if="$slots.trigger" name="trigger" />
       <slot v-if="!$slots.trigger && $slots.default" />
     </upload-content>
 
     <slot v-if="$slots.trigger" />
     <slot name="tip" />
-    <upload-list
-      v-if="!isPictureCard && showFileList"
-      :disabled="disabled"
-      :list-type="listType"
-      :files="uploadFiles"
-      :crossorigin="crossorigin"
-      :handle-preview="onPreview"
-      @remove="handleRemove"
-    >
+    <upload-list v-if="!isPictureCard && showFileList" :disabled="disabled" :list-type="listType" :files="uploadFiles"
+      :crossorigin="crossorigin" :handle-preview="onPreview" @remove="handleRemove">
       <template v-if="$slots.file" #default="{ file, index }">
         <slot name="file" :file="file" :index="index" />
       </template>
@@ -49,7 +32,7 @@
 
 <script lang="ts" setup>
 import { computed, onBeforeUnmount, provide, shallowRef, toRef } from 'vue'
-import { useFormDisabled } from '@element-plus/components/form'
+import { useFormDisabled } from '@cery929-ui/components/form'
 import { uploadContextKey } from './constants'
 import UploadList from './upload-list.vue'
 import UploadContent from './upload-content.vue'

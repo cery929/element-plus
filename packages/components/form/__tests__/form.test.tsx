@@ -10,20 +10,20 @@ import {
   it,
   vi,
 } from 'vitest'
-import { rAF } from '@element-plus/test-utils/tick'
-import installStyle from '@element-plus/test-utils/style-plugin'
+import { rAF } from '@cery929-ui/test-utils/tick'
+import installStyle from '@cery929-ui/test-utils/style-plugin'
 import {
   ElCheckbox as Checkbox,
   ElCheckboxGroup as CheckboxGroup,
-} from '@element-plus/components/checkbox'
-import Button from '@element-plus/components/button/src/button.vue'
-import Input from '@element-plus/components/input'
+} from '@cery929-ui/components/checkbox'
+import Button from '@cery929-ui/components/button/src/button.vue'
+import Input from '@cery929-ui/components/input'
 import Form from '../src/form.vue'
 import FormItem from '../src/form-item.vue'
 import DynamicDomainForm, { formatDomainError } from './mock-data'
 
 import type { VueWrapper } from '@vue/test-utils'
-import type { FormRules } from '@element-plus/components/form'
+import type { FormRules } from '@cery929-ui/components/form'
 
 type FormInstance = InstanceType<typeof Form>
 type FormItemInstance = InstanceType<typeof FormItem>

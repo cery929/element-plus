@@ -1,1 +1,1 @@
-import '@element-plus/theme-chalk/src/base.scss'
+import '@cery929-ui/theme-chalk/src/base.scss'

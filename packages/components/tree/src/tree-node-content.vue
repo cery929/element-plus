@@ -1,7 +1,7 @@
 <script lang="ts">
 import { defineComponent, h, inject, renderSlot } from 'vue'
-import ElText from '@element-plus/components/text'
-import { useNamespace } from '@element-plus/hooks'
+import ElText from '@cery929-ui/components/text'
+import { useNamespace } from '@cery929-ui/hooks'
 import { NODE_INSTANCE_INJECTION_KEY, ROOT_TREE_INJECTION_KEY } from './tokens'
 
 import type { ComponentInternalInstance } from 'vue'
@@ -28,12 +28,12 @@ export default defineComponent({
       return props.renderContent
         ? props.renderContent(h, { _self: nodeInstance, node, data, store })
         : renderSlot(tree.ctx.slots, 'default', { node, data }, () => [
-            h(
-              ElText,
-              { tag: 'span', truncated: true, class: ns.be('node', 'label') },
-              () => [node.label]
-            ),
-          ])
+          h(
+            ElText,
+            { tag: 'span', truncated: true, class: ns.be('node', 'label') },
+            () => [node.label]
+          ),
+        ])
     }
   },
 })

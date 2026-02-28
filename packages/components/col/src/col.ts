@@ -1,4 +1,4 @@
-import { buildProps, definePropType, mutable } from '@element-plus/utils'
+import { buildProps, definePropType, mutable } from '@cery929-ui/utils'
 
 import type { ExtractPublicPropTypes } from 'vue'
 import type Col from './col.vue'

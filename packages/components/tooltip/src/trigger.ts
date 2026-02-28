@@ -1,9 +1,9 @@
-import { buildProps, definePropType } from '@element-plus/utils'
-import { popperTriggerProps } from '@element-plus/components/popper'
-import { EVENT_CODE } from '@element-plus/constants'
+import { buildProps, definePropType } from '@cery929-ui/utils'
+import { popperTriggerProps } from '@cery929-ui/components/popper'
+import { EVENT_CODE } from '@cery929-ui/constants'
 
-import type { PopperTriggerProps } from '@element-plus/components/popper'
-import type { Arrayable } from '@element-plus/utils'
+import type { PopperTriggerProps } from '@cery929-ui/components/popper'
+import type { Arrayable } from '@cery929-ui/utils'
 import type { ExtractPublicPropTypes } from 'vue'
 
 export type TooltipTriggerType = 'hover' | 'focus' | 'click' | 'contextmenu'

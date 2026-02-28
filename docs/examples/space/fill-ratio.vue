@@ -8,13 +8,7 @@
     <div style="margin-bottom: 15px">
       fillRatio:<el-slider v-model="fillRatio" />
     </div>
-    <el-space
-      fill
-      wrap
-      :fill-ratio="fillRatio"
-      :direction="direction"
-      style="width: 100%"
-    >
+    <el-space fill wrap :fill-ratio="fillRatio" :direction="direction" style="width: 100%">
       <el-card v-for="i in 5" :key="i" class="box-card">
         <template #header>
           <div class="card-header">
@@ -33,7 +27,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-import type { SpaceInstance } from 'element-plus'
+import type { SpaceInstance } from 'cery929-ui'
 
 const direction = ref<SpaceInstance['direction']>('horizontal')
 const fillRatio = ref(30)

@@ -1,32 +1,11 @@
 <template>
-  <el-select
-    ref="select"
-    :model-value="value"
-    :disabled="_disabled"
-    :clearable="clearable"
-    :clear-icon="clearIcon"
-    :size="size"
-    :effect="effect"
-    :placeholder="placeholder"
-    default-first-option
-    :filterable="editable"
-    :empty-values="emptyValues"
-    :value-on-clear="valueOnClear"
-    :popper-class="popperClass"
-    :popper-style="popperStyle"
-    @update:model-value="(event) => $emit(UPDATE_MODEL_EVENT, event)"
-    @change="(event) => $emit(CHANGE_EVENT, event)"
-    @blur="(event) => $emit('blur', event)"
-    @focus="(event) => $emit('focus', event)"
-    @clear="() => $emit('clear')"
-  >
-    <el-option
-      v-for="item in items"
-      :key="item.value"
-      :label="item.value"
-      :value="item.value"
-      :disabled="item.disabled"
-    />
+  <el-select ref="select" :model-value="value" :disabled="_disabled" :clearable="clearable" :clear-icon="clearIcon"
+    :size="size" :effect="effect" :placeholder="placeholder" default-first-option :filterable="editable"
+    :empty-values="emptyValues" :value-on-clear="valueOnClear" :popper-class="popperClass" :popper-style="popperStyle"
+    @update:model-value="(event) => $emit(UPDATE_MODEL_EVENT, event)" @change="(event) => $emit(CHANGE_EVENT, event)"
+    @blur="(event) => $emit('blur', event)" @focus="(event) => $emit('focus', event)" @clear="() => $emit('clear')">
+    <el-option v-for="item in items" :key="item.value" :label="item.value" :value="item.value"
+      :disabled="item.disabled" />
     <template #prefix>
       <el-icon v-if="prefixIcon" :class="nsInput.e('prefix-icon')">
         <component :is="prefixIcon" />
@@ -39,11 +18,11 @@
 import { computed, ref } from 'vue'
 import dayjs from 'dayjs'
 import customParseFormat from 'dayjs/plugin/customParseFormat.js'
-import ElSelect from '@element-plus/components/select'
-import { useFormDisabled } from '@element-plus/components/form'
-import ElIcon from '@element-plus/components/icon'
-import { useLocale, useNamespace } from '@element-plus/hooks'
-import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@element-plus/constants'
+import ElSelect from '@cery929-ui/components/select'
+import { useFormDisabled } from '@cery929-ui/components/form'
+import ElIcon from '@cery929-ui/components/icon'
+import { useLocale, useNamespace } from '@cery929-ui/hooks'
+import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@cery929-ui/constants'
 import {
   CircleClose as IconCircleClose,
   Clock as IconClock,

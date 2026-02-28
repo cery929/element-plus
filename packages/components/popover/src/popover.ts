@@ -1,19 +1,19 @@
-import { buildProps, isBoolean } from '@element-plus/utils'
+import { buildProps, isBoolean } from '@cery929-ui/utils'
 import {
   useTooltipContentProps,
   useTooltipTriggerProps,
-} from '@element-plus/components/tooltip'
-import { dropdownProps } from '@element-plus/components/dropdown'
-import { EVENT_CODE } from '@element-plus/constants'
+} from '@cery929-ui/components/tooltip'
+import { dropdownProps } from '@cery929-ui/components/dropdown'
+import { EVENT_CODE } from '@cery929-ui/constants'
 
 import type { ExtractPublicPropTypes, PropType } from 'vue'
 import type Popover from './popover.vue'
-import type { Placement } from '@element-plus/components/popper'
+import type { Placement } from '@cery929-ui/components/popper'
 import type { Options } from '@popperjs/core'
 import type {
   ElTooltipContentProps,
   UseTooltipTriggerProps,
-} from '@element-plus/components/tooltip'
+} from '@cery929-ui/components/tooltip'
 
 export interface PopoverProps {
   /**
@@ -101,7 +101,7 @@ export interface PopoverProps {
    */
   autoClose?: number
   /**
-   * @description whether a tooltip arrow is displayed or not. For more info, please refer to [ElPopper](https://github.com/element-plus/element-plus/tree/dev/packages/components/popper)
+   * @description whether a tooltip arrow is displayed or not. For more info, please refer to [ElPopper](https://github.com/cery929-ui/cery929-ui/tree/dev/packages/components/popper)
    */
   showArrow?: boolean
   /**
@@ -221,7 +221,7 @@ export const popoverProps = buildProps({
     default: 0,
   },
   /**
-   * @description whether a tooltip arrow is displayed or not. For more info, please refer to [ElPopper](https://github.com/element-plus/element-plus/tree/dev/packages/components/popper)
+   * @description whether a tooltip arrow is displayed or not. For more info, please refer to [ElPopper](https://github.com/cery929-ui/cery929-ui/tree/dev/packages/components/popper)
    */
   showArrow: {
     type: Boolean,

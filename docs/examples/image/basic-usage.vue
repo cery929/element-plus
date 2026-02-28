@@ -8,7 +8,7 @@
 </template>
 
 <script lang="ts" setup>
-import type { ImageProps } from 'element-plus'
+import type { ImageProps } from 'cery929-ui'
 
 const fits = [
   'fill',
@@ -32,9 +32,11 @@ const url =
   box-sizing: border-box;
   vertical-align: top;
 }
+
 .demo-image .block:last-child {
   border-right: none;
 }
+
 .demo-image .demonstration {
   display: block;
   color: var(--el-text-color-secondary);

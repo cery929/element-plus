@@ -1,4 +1,4 @@
-import '@element-plus/components/base/style'
-import '@element-plus/theme-chalk/src/pagination.scss'
-import '@element-plus/components/select/style'
-import '@element-plus/components/input/style'
+import '@cery929-ui/components/base/style'
+import '@cery929-ui/theme-chalk/src/pagination.scss'
+import '@cery929-ui/components/select/style'
+import '@cery929-ui/components/input/style'

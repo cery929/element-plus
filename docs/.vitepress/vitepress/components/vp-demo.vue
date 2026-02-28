@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, getCurrentInstance, ref, toRef } from 'vue'
 import { useClipboard, useToggle } from '@vueuse/core'
-import { EVENT_CODE } from 'element-plus'
+import { EVENT_CODE } from 'cery929-ui'
 import { CaretTop } from '@cery929-ui/icons-vue'
 import { useLang } from '../composables/lang'
 import { useSourceCode } from '../composables/source-code'
@@ -71,73 +71,31 @@ const copyCode = async () => {
     <ElDivider class="m-0" />
 
     <div class="op-btns">
-      <ElTooltip
-        :content="locale['edit-in-editor']"
-        :show-arrow="false"
-        :trigger="['hover', 'focus']"
-        :trigger-keys="[]"
-      >
+      <ElTooltip :content="locale['edit-in-editor']" :show-arrow="false" :trigger="['hover', 'focus']"
+        :trigger-keys="[]">
         <ElIcon :size="16" class="op-btn">
-          <a
-            :href="playgroundUrl"
-            :aria-label="locale['edit-in-editor']"
-            rel="noreferrer noopener"
-            target="_blank"
-          >
+          <a :href="playgroundUrl" :aria-label="locale['edit-in-editor']" rel="noreferrer noopener" target="_blank">
             <i-ri-flask-line />
           </a>
         </ElIcon>
       </ElTooltip>
-      <ElTooltip
-        :content="locale['edit-on-github']"
-        :show-arrow="false"
-        :trigger="['hover', 'focus']"
-        :trigger-keys="[]"
-      >
+      <ElTooltip :content="locale['edit-on-github']" :show-arrow="false" :trigger="['hover', 'focus']"
+        :trigger-keys="[]">
         <ElIcon :size="16" class="op-btn github">
-          <a
-            :href="demoSourceUrl"
-            :aria-label="locale['edit-on-github']"
-            rel="noreferrer noopener"
-            target="_blank"
-          >
+          <a :href="demoSourceUrl" :aria-label="locale['edit-on-github']" rel="noreferrer noopener" target="_blank">
             <i-ri-github-line />
           </a>
         </ElIcon>
       </ElTooltip>
-      <ElTooltip
-        :content="locale['copy-code']"
-        :show-arrow="false"
-        :trigger="['hover', 'focus']"
-        :trigger-keys="[]"
-      >
-        <ElIcon
-          :size="16"
-          :aria-label="locale['copy-code']"
-          class="op-btn"
-          tabindex="0"
-          role="button"
-          @click="copyCode"
-          @keydown.prevent.enter="copyCode"
-          @keydown.prevent.space="copyCode"
-        >
+      <ElTooltip :content="locale['copy-code']" :show-arrow="false" :trigger="['hover', 'focus']" :trigger-keys="[]">
+        <ElIcon :size="16" :aria-label="locale['copy-code']" class="op-btn" tabindex="0" role="button" @click="copyCode"
+          @keydown.prevent.enter="copyCode" @keydown.prevent.space="copyCode">
           <i-ri-file-copy-line />
         </ElIcon>
       </ElTooltip>
-      <ElTooltip
-        :content="locale['view-source']"
-        :show-arrow="false"
-        :trigger="['hover', 'focus']"
-        :trigger-keys="[]"
-      >
-        <button
-          ref="sourceCodeRef"
-          :aria-label="
-            sourceVisible ? locale['hide-source'] : locale['view-source']
-          "
-          class="reset-btn el-icon op-btn"
-          @click="toggleSourceVisible()"
-        >
+      <ElTooltip :content="locale['view-source']" :show-arrow="false" :trigger="['hover', 'focus']" :trigger-keys="[]">
+        <button ref="sourceCodeRef" :aria-label="sourceVisible ? locale['hide-source'] : locale['view-source']
+          " class="reset-btn el-icon op-btn" @click="toggleSourceVisible()">
           <ElIcon :size="16">
             <i-ri-code-line />
           </ElIcon>
@@ -150,14 +108,8 @@ const copyCode = async () => {
     </ElCollapseTransition>
 
     <Transition name="el-fade-in-linear">
-      <div
-        v-show="sourceVisible"
-        class="example-float-control"
-        tabindex="0"
-        role="button"
-        @click="toggleSourceVisible(false)"
-        @keydown="onSourceVisibleKeydown"
-      >
+      <div v-show="sourceVisible" class="example-float-control" tabindex="0" role="button"
+        @click="toggleSourceVisible(false)" @keydown="onSourceVisibleKeydown">
         <ElIcon :size="16">
           <CaretTop />
         </ElIcon>
@@ -178,6 +130,7 @@ const copyCode = async () => {
     background-color: var(--bg-color);
     border-radius: var(--el-border-radius-base);
     overflow: auto;
+
     &:has(.el-affix) {
       overflow: visible;
     }
@@ -231,6 +184,7 @@ const copyCode = async () => {
     right: 0;
     bottom: 0;
     z-index: 10;
+
     span {
       font-size: 14px;
       margin-left: 10px;

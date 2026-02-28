@@ -1,44 +1,21 @@
 <template>
-  <el-table
-    :data="tableData"
-    show-overflow-tooltip
-    :tooltip-formatter="tableRowFormatter"
-    style="width: 100%"
-  >
-    <el-table-column
-      prop="address"
-      label="extends table formatter"
-      width="240"
-    />
-    <el-table-column
-      prop="tags"
-      label="formatter object"
-      width="240"
-      :tooltip-formatter="({ row }) => row.tags.join(', ')"
-    >
+  <el-table :data="tableData" show-overflow-tooltip :tooltip-formatter="tableRowFormatter" style="width: 100%">
+    <el-table-column prop="address" label="extends table formatter" width="240" />
+    <el-table-column prop="tags" label="formatter object" width="240"
+      :tooltip-formatter="({ row }) => row.tags.join(', ')">
       <template #default="{ row }">
-        <el-tag
-          v-for="tag in row.tags"
-          :key="tag"
-          class="tag-item"
-          type="primary"
-        >
+        <el-tag v-for="tag in row.tags" :key="tag" class="tag-item" type="primary">
           {{ tag }}
         </el-tag>
       </template>
     </el-table-column>
-    <el-table-column
-      prop="url"
-      label="with vnode"
-      width="240"
-      :tooltip-formatter="withVNode"
-    />
+    <el-table-column prop="url" label="with vnode" width="240" :tooltip-formatter="withVNode" />
   </el-table>
 </template>
 
 <script lang="ts" setup>
 import { h } from 'vue'
-import { ElLink, type TableTooltipData } from 'element-plus'
+import { ElLink, type TableTooltipData } from 'cery929-ui'
 
 type TableData = {
   address: string
@@ -85,7 +62,8 @@ p {
   margin: 10px;
   padding: 0;
 }
-.tag-item + .tag-item {
+
+.tag-item+.tag-item {
   margin-left: 5px;
 }
 </style>

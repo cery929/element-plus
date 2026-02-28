@@ -4,11 +4,11 @@ import {
   iconPropType,
   isBoolean,
   mutable,
-} from '@element-plus/utils'
+} from '@cery929-ui/utils'
 
-import type { CheckboxValueType } from '@element-plus/components/checkbox'
+import type { CheckboxValueType } from '@cery929-ui/components/checkbox'
 import type { InjectionKey } from 'vue'
-import type { TreeNodeData } from '@element-plus/components/tree/src/tree.type'
+import type { TreeNodeData } from '@cery929-ui/components/tree/src/tree.type'
 import type {
   CheckedInfo,
   FilterMethod,

@@ -4,7 +4,7 @@
       <el-icon>
         <ElementPlus />
       </el-icon>
-      Element-Plus
+      cery929-ui
     </el-text>
     <el-row>
       <el-text>Rate</el-text>

@@ -45,14 +45,14 @@
 
 <script lang="ts" setup>
 import { computed, ref, useSlots } from 'vue'
-import { ElIcon } from '@element-plus/components/icon'
+import { ElIcon } from '@cery929-ui/components/icon'
 import {
   TypeComponents,
   TypeComponentsMap,
   flattedChildren,
   isComment,
-} from '@element-plus/utils'
-import { useNamespace } from '@element-plus/hooks'
+} from '@cery929-ui/utils'
+import { useNamespace } from '@cery929-ui/hooks'
 import { alertEmits } from './alert'
 
 import type { AlertProps } from './alert'

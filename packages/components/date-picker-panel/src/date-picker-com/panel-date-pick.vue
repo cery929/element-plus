@@ -1,148 +1,74 @@
 <template>
-  <div
-    :class="[
-      ppNs.b(),
-      dpNs.b(),
-      ppNs.is('border', border),
-      ppNs.is('disabled', dateDisabled),
-      {
-        'has-sidebar': $slots.sidebar || hasShortcuts,
-        'has-time': showTime,
-      },
-    ]"
-  >
+  <div :class="[
+    ppNs.b(),
+    dpNs.b(),
+    ppNs.is('border', border),
+    ppNs.is('disabled', dateDisabled),
+    {
+      'has-sidebar': $slots.sidebar || hasShortcuts,
+      'has-time': showTime,
+    },
+  ]">
     <div :class="ppNs.e('body-wrapper')">
       <slot name="sidebar" :class="ppNs.e('sidebar')" />
       <div v-if="hasShortcuts" :class="ppNs.e('sidebar')">
-        <button
-          v-for="(shortcut, key) in shortcuts"
-          :key="key"
-          type="button"
-          :disabled="dateDisabled"
-          :class="ppNs.e('shortcut')"
-          @click="handleShortcutClick(shortcut)"
-        >
+        <button v-for="(shortcut, key) in shortcuts" :key="key" type="button" :disabled="dateDisabled"
+          :class="ppNs.e('shortcut')" @click="handleShortcutClick(shortcut)">
           {{ shortcut.text }}
         </button>
       </div>
       <div :class="ppNs.e('body')">
         <div v-if="showTime" :class="dpNs.e('time-header')">
           <span :class="dpNs.e('editor-wrap')">
-            <el-input
-              :placeholder="t('el.datepicker.selectDate')"
-              :model-value="visibleDate"
-              size="small"
-              :validate-event="false"
-              :disabled="dateDisabled"
-              :readonly="!editable"
-              @input="(val) => (userInputDate = val)"
-              @change="handleVisibleDateChange"
-            />
+            <el-input :placeholder="t('el.datepicker.selectDate')" :model-value="visibleDate" size="small"
+              :validate-event="false" :disabled="dateDisabled" :readonly="!editable"
+              @input="(val) => (userInputDate = val)" @change="handleVisibleDateChange" />
           </span>
-          <span
-            v-click-outside="handleTimePickClose"
-            :class="dpNs.e('editor-wrap')"
-          >
-            <el-input
-              :placeholder="t('el.datepicker.selectTime')"
-              :model-value="visibleTime"
-              size="small"
-              :validate-event="false"
-              :disabled="dateDisabled"
-              :readonly="!editable"
-              @focus="onTimePickerInputFocus"
-              @input="(val) => (userInputTime = val)"
-              @change="handleVisibleTimeChange"
-            />
-            <time-pick-panel
-              :visible="timePickerVisible"
-              :format="timeFormat"
-              :parsed-value="innerDate"
-              @pick="handleTimePick"
-            />
+          <span v-click-outside="handleTimePickClose" :class="dpNs.e('editor-wrap')">
+            <el-input :placeholder="t('el.datepicker.selectTime')" :model-value="visibleTime" size="small"
+              :validate-event="false" :disabled="dateDisabled" :readonly="!editable" @focus="onTimePickerInputFocus"
+              @input="(val) => (userInputTime = val)" @change="handleVisibleTimeChange" />
+            <time-pick-panel :visible="timePickerVisible" :format="timeFormat" :parsed-value="innerDate"
+              @pick="handleTimePick" />
           </span>
         </div>
-        <div
-          v-show="currentView !== 'time'"
-          :class="[
-            dpNs.e('header'),
-            (currentView === 'year' || currentView === 'month') &&
-              dpNs.em('header', 'bordered'),
-          ]"
-        >
+        <div v-show="currentView !== 'time'" :class="[
+          dpNs.e('header'),
+          (currentView === 'year' || currentView === 'month') &&
+          dpNs.em('header', 'bordered'),
+        ]">
           <span :class="dpNs.e('prev-btn')">
-            <button
-              type="button"
-              :aria-label="t(`el.datepicker.prevYear`)"
-              class="d-arrow-left"
-              :class="ppNs.e('icon-btn')"
-              :disabled="dateDisabled"
-              @click="moveByYear(false)"
-            >
+            <button type="button" :aria-label="t(`el.datepicker.prevYear`)" class="d-arrow-left"
+              :class="ppNs.e('icon-btn')" :disabled="dateDisabled" @click="moveByYear(false)">
               <slot name="prev-year">
                 <el-icon><d-arrow-left /></el-icon>
               </slot>
             </button>
-            <button
-              v-show="currentView === 'date'"
-              type="button"
-              :aria-label="t(`el.datepicker.prevMonth`)"
-              :class="ppNs.e('icon-btn')"
-              class="arrow-left"
-              :disabled="dateDisabled"
-              @click="moveByMonth(false)"
-            >
+            <button v-show="currentView === 'date'" type="button" :aria-label="t(`el.datepicker.prevMonth`)"
+              :class="ppNs.e('icon-btn')" class="arrow-left" :disabled="dateDisabled" @click="moveByMonth(false)">
               <slot name="prev-month">
                 <el-icon><arrow-left /></el-icon>
               </slot>
             </button>
           </span>
-          <span
-            role="button"
-            :class="dpNs.e('header-label')"
-            aria-live="polite"
-            :tabindex="disabled ? undefined : 0"
-            :aria-disabled="disabled"
-            @keydown.enter="showPicker('year')"
-            @click="showPicker('year')"
-            >{{ yearLabel }}</span
-          >
-          <span
-            v-show="currentView === 'date'"
-            role="button"
-            aria-live="polite"
-            :tabindex="disabled ? undefined : 0"
-            :aria-disabled="disabled"
-            :class="[
+          <span role="button" :class="dpNs.e('header-label')" aria-live="polite" :tabindex="disabled ? undefined : 0"
+            :aria-disabled="disabled" @keydown.enter="showPicker('year')" @click="showPicker('year')">{{ yearLabel
+            }}</span>
+          <span v-show="currentView === 'date'" role="button" aria-live="polite" :tabindex="disabled ? undefined : 0"
+            :aria-disabled="disabled" :class="[
               dpNs.e('header-label'),
               { active: currentView === 'month' },
-            ]"
-            @keydown.enter="showPicker('month')"
-            @click="showPicker('month')"
-            >{{ t(`el.datepicker.month${month + 1}`) }}</span
-          >
+            ]" @keydown.enter="showPicker('month')" @click="showPicker('month')">{{ t(`el.datepicker.month${month +
+            1}`) }}</span>
           <span :class="dpNs.e('next-btn')">
-            <button
-              v-show="currentView === 'date'"
-              type="button"
-              :aria-label="t(`el.datepicker.nextMonth`)"
-              :class="ppNs.e('icon-btn')"
-              class="arrow-right"
-              :disabled="dateDisabled"
-              @click="moveByMonth(true)"
-            >
+            <button v-show="currentView === 'date'" type="button" :aria-label="t(`el.datepicker.nextMonth`)"
+              :class="ppNs.e('icon-btn')" class="arrow-right" :disabled="dateDisabled" @click="moveByMonth(true)">
               <slot name="next-month">
                 <el-icon><arrow-right /></el-icon>
               </slot>
             </button>
-            <button
-              type="button"
-              :aria-label="t(`el.datepicker.nextYear`)"
-              :class="ppNs.e('icon-btn')"
-              class="d-arrow-right"
-              :disabled="dateDisabled"
-              @click="moveByYear(true)"
-            >
+            <button type="button" :aria-label="t(`el.datepicker.nextYear`)" :class="ppNs.e('icon-btn')"
+              class="d-arrow-right" :disabled="dateDisabled" @click="moveByYear(true)">
               <slot name="next-year">
                 <el-icon><d-arrow-right /></el-icon>
               </slot>
@@ -150,65 +76,25 @@
           </span>
         </div>
         <div :class="ppNs.e('content')" @keydown="handleKeydownTable">
-          <date-table
-            v-if="currentView === 'date'"
-            ref="currentViewRef"
-            :selection-mode="selectionMode"
-            :date="innerDate"
-            :parsed-value="parsedValue"
-            :disabled-date="disabledDate"
-            :disabled="dateDisabled"
-            :cell-class-name="cellClassName"
-            :show-week-number="showWeekNumber"
-            @pick="handleDatePick"
-          />
-          <year-table
-            v-if="currentView === 'year'"
-            ref="currentViewRef"
-            :selection-mode="selectionMode"
-            :date="innerDate"
-            :disabled-date="disabledDate"
-            :disabled="dateDisabled"
-            :parsed-value="parsedValue"
-            :cell-class-name="cellClassName"
-            @pick="handleYearPick"
-          />
-          <month-table
-            v-if="currentView === 'month'"
-            ref="currentViewRef"
-            :selection-mode="selectionMode"
-            :date="innerDate"
-            :parsed-value="parsedValue"
-            :disabled-date="disabledDate"
-            :disabled="dateDisabled"
-            :cell-class-name="cellClassName"
-            @pick="handleMonthPick"
-          />
+          <date-table v-if="currentView === 'date'" ref="currentViewRef" :selection-mode="selectionMode"
+            :date="innerDate" :parsed-value="parsedValue" :disabled-date="disabledDate" :disabled="dateDisabled"
+            :cell-class-name="cellClassName" :show-week-number="showWeekNumber" @pick="handleDatePick" />
+          <year-table v-if="currentView === 'year'" ref="currentViewRef" :selection-mode="selectionMode"
+            :date="innerDate" :disabled-date="disabledDate" :disabled="dateDisabled" :parsed-value="parsedValue"
+            :cell-class-name="cellClassName" @pick="handleYearPick" />
+          <month-table v-if="currentView === 'month'" ref="currentViewRef" :selection-mode="selectionMode"
+            :date="innerDate" :parsed-value="parsedValue" :disabled-date="disabledDate" :disabled="dateDisabled"
+            :cell-class-name="cellClassName" @pick="handleMonthPick" />
         </div>
       </div>
     </div>
-    <div
-      v-if="showFooter && footerVisible && footerFilled"
-      :class="ppNs.e('footer')"
-    >
-      <el-button
-        v-show="!isMultipleType && showNow"
-        text
-        size="small"
-        :class="ppNs.e('link-btn')"
-        :disabled="disabledNow"
-        @click="changeToNow"
-      >
+    <div v-if="showFooter && footerVisible && footerFilled" :class="ppNs.e('footer')">
+      <el-button v-show="!isMultipleType && showNow" text size="small" :class="ppNs.e('link-btn')"
+        :disabled="disabledNow" @click="changeToNow">
         {{ t('el.datepicker.now') }}
       </el-button>
-      <el-button
-        v-if="showConfirm"
-        plain
-        size="small"
-        :class="ppNs.e('link-btn')"
-        :disabled="disabledConfirm"
-        @click="onConfirm"
-      >
+      <el-button v-if="showConfirm" plain size="small" :class="ppNs.e('link-btn')" :disabled="disabledConfirm"
+        @click="onConfirm">
         {{ t('el.datepicker.confirm') }}
       </el-button>
     </div>
@@ -227,10 +113,10 @@ import {
   watch,
 } from 'vue'
 import dayjs from 'dayjs'
-import ElButton from '@element-plus/components/button'
-import { ClickOutside as vClickOutside } from '@element-plus/directives'
-import { useLocale, useNamespace } from '@element-plus/hooks'
-import ElInput from '@element-plus/components/input'
+import ElButton from '@cery929-ui/components/button'
+import { ClickOutside as vClickOutside } from '@cery929-ui/directives'
+import { useLocale, useNamespace } from '@cery929-ui/hooks'
+import ElInput from '@cery929-ui/components/input'
 import {
   DEFAULT_FORMATS_DATE,
   DEFAULT_FORMATS_TIME,
@@ -238,15 +124,15 @@ import {
   TimePickPanel,
   extractDateFormat,
   extractTimeFormat,
-} from '@element-plus/components/time-picker'
-import { ElIcon } from '@element-plus/components/icon'
+} from '@cery929-ui/components/time-picker'
+import { ElIcon } from '@cery929-ui/components/icon'
 import {
   extractFirst,
   getEventCode,
   isArray,
   isFunction,
-} from '@element-plus/utils'
-import { EVENT_CODE } from '@element-plus/constants'
+} from '@cery929-ui/utils'
+import { EVENT_CODE } from '@cery929-ui/constants'
 import {
   ArrowLeft,
   ArrowRight,
@@ -263,7 +149,7 @@ import { ROOT_PICKER_IS_DEFAULT_FORMAT_INJECTION_KEY } from '../constants'
 import DateTable from './basic-date-table.vue'
 import MonthTable from './basic-month-table.vue'
 import YearTable from './basic-year-table.vue'
-import { useFormDisabled } from '@element-plus/components/form'
+import { useFormDisabled } from '@cery929-ui/components/form'
 
 import type { SetupContext } from 'vue'
 import type { ConfigType, Dayjs } from 'dayjs'
@@ -359,9 +245,9 @@ const handleDatePick = async (value: DateTableEmits, keepOpen?: boolean) => {
     const parsedDateValue = extractFirst(props.parsedValue)
     let newDate = parsedDateValue
       ? parsedDateValue
-          .year(value.year())
-          .month(value.month())
-          .date(value.date())
+        .year(value.year())
+        .month(value.month())
+        .date(value.date())
       : value
     // change default time while out of selectableRange
     if (!checkDateWithinRange(newDate)) {
@@ -404,9 +290,8 @@ const yearLabel = computed(() => {
   if (currentView.value === 'year') {
     const startYear = Math.floor(year.value / 10) * 10
     if (yearTranslation) {
-      return `${startYear} ${yearTranslation} - ${
-        startYear + 9
-      } ${yearTranslation}`
+      return `${startYear} ${yearTranslation} - ${startYear + 9
+        } ${yearTranslation}`
     }
     return `${startYear} - ${startYear + 9}`
   }
@@ -757,9 +642,9 @@ const handleKeyControl = (code: string) => {
   type KeyControlMappingCallableOffset = (date: Date, step?: number) => number
   type KeyControl = {
     [key: string]:
-      | number
-      | KeyControlMappingCallableOffset
-      | ((date: Date, step: number) => any)
+    | number
+    | KeyControlMappingCallableOffset
+    | ((date: Date, step: number) => any)
     offset: (date: Date, step: number) => any
   }
   interface KeyControlMapping {

@@ -13,9 +13,9 @@ import {
 } from 'vue'
 import { throttle } from 'lodash-unified'
 import { useResizeObserver } from '@vueuse/core'
-import { debugWarn, flattedChildren, isString } from '@element-plus/utils'
-import { useOrderedChildren } from '@element-plus/hooks'
-import { CHANGE_EVENT } from '@element-plus/constants'
+import { debugWarn, flattedChildren, isString } from '@cery929-ui/utils'
+import { useOrderedChildren } from '@cery929-ui/hooks'
+import { CHANGE_EVENT } from '@cery929-ui/constants'
 import { CAROUSEL_ITEM_NAME, carouselContextKey } from './constants'
 
 import type { SetupContext } from 'vue'

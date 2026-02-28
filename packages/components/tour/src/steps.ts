@@ -1,7 +1,7 @@
 import { defineComponent } from 'vue'
-import { flattedChildren, isArray } from '@element-plus/utils'
+import { flattedChildren, isArray } from '@cery929-ui/utils'
 
-import type { FlattenVNodes } from '@element-plus/utils'
+import type { FlattenVNodes } from '@cery929-ui/utils'
 import type { Component, VNode } from 'vue'
 
 export default defineComponent({

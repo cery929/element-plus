@@ -3,7 +3,7 @@ import {
   isNumber,
   isUndefined,
   throwError,
-} from '@element-plus/utils'
+} from '@cery929-ui/utils'
 import createGrid from '../builders/build-grid'
 import {
   AUTO_ALIGNMENT,

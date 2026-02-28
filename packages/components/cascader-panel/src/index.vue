@@ -39,13 +39,13 @@ import {
   isEmpty,
   scrollIntoView,
   unique,
-} from '@element-plus/utils'
+} from '@cery929-ui/utils'
 import {
   CHANGE_EVENT,
   EVENT_CODE,
   UPDATE_MODEL_EVENT,
-} from '@element-plus/constants'
-import { useNamespace } from '@element-plus/hooks'
+} from '@cery929-ui/constants'
+import { useNamespace } from '@cery929-ui/hooks'
 import ElCascaderMenu from './menu.vue'
 import Store from './store'
 import Node from './node'

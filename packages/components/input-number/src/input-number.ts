@@ -1,14 +1,14 @@
 import { isNil } from 'lodash-unified'
-import { buildProps, definePropType, isNumber } from '@element-plus/utils'
-import { useAriaProps, useSizeProp } from '@element-plus/hooks'
+import { buildProps, definePropType, isNumber } from '@cery929-ui/utils'
+import { useAriaProps, useSizeProp } from '@cery929-ui/hooks'
 import {
   CHANGE_EVENT,
   INPUT_EVENT,
   UPDATE_MODEL_EVENT,
-} from '@element-plus/constants'
+} from '@cery929-ui/constants'
 
 import type { ExtractPublicPropTypes, HTMLAttributes } from 'vue'
-import type { ComponentSize } from '@element-plus/constants'
+import type { ComponentSize } from '@cery929-ui/constants'
 import type InputNumber from './input-number.vue'
 
 /**

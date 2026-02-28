@@ -11,11 +11,11 @@ import {
   withCtx,
   withDirectives,
 } from 'vue'
-import { removeClass } from '@element-plus/utils'
-import { useGlobalComponentSettings } from '@element-plus/components/config-provider'
+import { removeClass } from '@cery929-ui/utils'
+import { useGlobalComponentSettings } from '@cery929-ui/components/config-provider'
 
 import type { AppContext, VNode } from 'vue'
-import type { UseNamespaceReturn } from '@element-plus/hooks'
+import type { UseNamespaceReturn } from '@cery929-ui/hooks'
 import type { LoadingOptionsResolved } from './types'
 
 export function createLoadingComponent(

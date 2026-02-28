@@ -10,8 +10,8 @@ import {
   toRefs,
   watch,
 } from 'vue'
-import { useNamespace } from '@element-plus/hooks'
-import { throwError } from '@element-plus/utils'
+import { useNamespace } from '@cery929-ui/hooks'
+import { throwError } from '@cery929-ui/utils'
 import { getCollapsible, isCollapsible } from './hooks/usePanel'
 import SplitBar from './split-bar.vue'
 import { splitterPanelEmits } from './split-panel'
@@ -178,27 +178,12 @@ defineExpose({
 </script>
 
 <template>
-  <div
-    ref="panelEl"
-    :class="[ns.b()]"
-    :style="{ flexBasis: `${panelSize}px` }"
-    v-bind="$attrs"
-  >
+  <div ref="panelEl" :class="[ns.b()]" :style="{ flexBasis: `${panelSize}px` }" v-bind="$attrs">
     <slot />
   </div>
-  <SplitBar
-    v-if="isShowBar"
-    :index="index"
-    :layout="layout"
-    :lazy="lazy"
-    :resizable="isResizable"
-    :start-collapsible="startCollapsible"
-    :end-collapsible="endCollapsible"
-    @move-start="onMoveStart"
-    @moving="onMoving"
-    @move-end="onMoveEnd"
-    @collapse="onCollapse"
-  >
+  <SplitBar v-if="isShowBar" :index="index" :layout="layout" :lazy="lazy" :resizable="isResizable"
+    :start-collapsible="startCollapsible" :end-collapsible="endCollapsible" @move-start="onMoveStart" @moving="onMoving"
+    @move-end="onMoveEnd" @collapse="onCollapse">
     <template #start-collapsible>
       <slot name="start-collapsible" />
     </template>

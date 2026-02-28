@@ -1,6 +1,6 @@
-import { buildProps, definePropType, isBoolean } from '@element-plus/utils'
-import { UPDATE_MODEL_EVENT } from '@element-plus/constants'
-import { teleportProps } from '@element-plus/components/teleport'
+import { buildProps, definePropType, isBoolean } from '@cery929-ui/utils'
+import { UPDATE_MODEL_EVENT } from '@cery929-ui/constants'
+import { teleportProps } from '@cery929-ui/components/teleport'
 import {
   dialogContentProps,
   dialogContentPropsDefaults,

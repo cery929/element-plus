@@ -1,11 +1,6 @@
 <template>
   <transition :name="`${ns.namespace.value}-fade-in`">
-    <div
-      v-if="visible"
-      :style="backTopStyle"
-      :class="ns.b()"
-      @click.stop="handleClick"
-    >
+    <div v-if="visible" :style="backTopStyle" :class="ns.b()" @click.stop="handleClick">
       <slot>
         <el-icon :class="ns.e('icon')"><caret-top /></el-icon>
       </slot>
@@ -15,9 +10,9 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { ElIcon } from '@element-plus/components/icon'
+import { ElIcon } from '@cery929-ui/components/icon'
 import { CaretTop } from '@cery929-ui/icons-vue'
-import { useNamespace } from '@element-plus/hooks'
+import { useNamespace } from '@cery929-ui/hooks'
 import { backtopEmits } from './backtop'
 import { useBackTop } from './use-backtop'
 

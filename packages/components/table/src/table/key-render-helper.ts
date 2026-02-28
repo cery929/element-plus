@@ -18,7 +18,7 @@ export default function useKeyRender(table: Table<[]>) {
   }
 
   onMounted(() => {
-    // fix https://github.com/element-plus/element-plus/issues/8528
+    // fix https://github.com/cery929-ui/cery929-ui/issues/8528
     initWatchDom()
   })
 

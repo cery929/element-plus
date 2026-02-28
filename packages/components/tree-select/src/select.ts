@@ -2,14 +2,14 @@
 import { computed, nextTick, onMounted, toRefs, watch } from 'vue'
 import { useEventListener } from '@vueuse/core'
 import { pick } from 'lodash-unified'
-import ElSelect from '@element-plus/components/select'
-import { useNamespace } from '@element-plus/hooks'
-import { EVENT_CODE, UPDATE_MODEL_EVENT } from '@element-plus/constants'
-import { getEventCode } from '@element-plus/utils'
+import ElSelect from '@cery929-ui/components/select'
+import { useNamespace } from '@cery929-ui/hooks'
+import { EVENT_CODE, UPDATE_MODEL_EVENT } from '@cery929-ui/constants'
+import { getEventCode } from '@cery929-ui/utils'
 
 import type { Ref } from 'vue'
-import type { SelectInstance } from '@element-plus/components/select'
-import type { TreeInstance } from '@element-plus/components/tree'
+import type { SelectInstance } from '@cery929-ui/components/select'
+import type { TreeInstance } from '@cery929-ui/components/tree'
 
 export const useSelect = (
   props,
@@ -92,7 +92,7 @@ export const useSelect = (
     style: computed(() => attrs.style),
     // attrs is not reactive, when v-model binding source changes,
     // this listener is still old, see the bug(or test 'v-model source change'):
-    // https://github.com/element-plus/element-plus/issues/14204
+    // https://github.com/cery929-ui/cery929-ui/issues/14204
     'onUpdate:modelValue': (value) => emit(UPDATE_MODEL_EVENT, value),
     valueKey: key,
     popperClass: computed(() => {

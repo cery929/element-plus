@@ -1,69 +1,36 @@
 <template>
   <ul :class="nsPager.b()" @click="onPagerClick" @keyup.enter="onEnter">
-    <li
-      v-if="pageCount > 0"
-      :class="[
-        nsPager.is('active', currentPage === 1),
-        nsPager.is('disabled', disabled),
-      ]"
-      class="number"
-      :aria-current="currentPage === 1"
-      :aria-label="t('el.pagination.currentPage', { pager: 1 })"
-      :tabindex="tabindex"
-    >
+    <li v-if="pageCount > 0" :class="[
+      nsPager.is('active', currentPage === 1),
+      nsPager.is('disabled', disabled),
+    ]" class="number" :aria-current="currentPage === 1" :aria-label="t('el.pagination.currentPage', { pager: 1 })"
+      :tabindex="tabindex">
       1
     </li>
-    <li
-      v-if="showPrevMore"
-      :class="prevMoreKls"
-      :tabindex="tabindex"
-      :aria-label="t('el.pagination.prevPages', { pager: pagerCount - 2 })"
-      @mouseenter="onMouseEnter(true)"
-      @mouseleave="quickPrevHover = false"
-      @focus="onFocus(true)"
-      @blur="quickPrevFocus = false"
-    >
+    <li v-if="showPrevMore" :class="prevMoreKls" :tabindex="tabindex"
+      :aria-label="t('el.pagination.prevPages', { pager: pagerCount - 2 })" @mouseenter="onMouseEnter(true)"
+      @mouseleave="quickPrevHover = false" @focus="onFocus(true)" @blur="quickPrevFocus = false">
       <d-arrow-left v-if="(quickPrevHover || quickPrevFocus) && !disabled" />
       <more-filled v-else />
     </li>
-    <li
-      v-for="pager in pagers"
-      :key="pager"
-      :class="[
-        nsPager.is('active', currentPage === pager),
-        nsPager.is('disabled', disabled),
-      ]"
-      class="number"
-      :aria-current="currentPage === pager"
-      :aria-label="t('el.pagination.currentPage', { pager })"
-      :tabindex="tabindex"
-    >
+    <li v-for="pager in pagers" :key="pager" :class="[
+      nsPager.is('active', currentPage === pager),
+      nsPager.is('disabled', disabled),
+    ]" class="number" :aria-current="currentPage === pager" :aria-label="t('el.pagination.currentPage', { pager })"
+      :tabindex="tabindex">
       {{ pager }}
     </li>
-    <li
-      v-if="showNextMore"
-      :class="nextMoreKls"
-      :tabindex="tabindex"
-      :aria-label="t('el.pagination.nextPages', { pager: pagerCount - 2 })"
-      @mouseenter="onMouseEnter()"
-      @mouseleave="quickNextHover = false"
-      @focus="onFocus()"
-      @blur="quickNextFocus = false"
-    >
+    <li v-if="showNextMore" :class="nextMoreKls" :tabindex="tabindex"
+      :aria-label="t('el.pagination.nextPages', { pager: pagerCount - 2 })" @mouseenter="onMouseEnter()"
+      @mouseleave="quickNextHover = false" @focus="onFocus()" @blur="quickNextFocus = false">
       <d-arrow-right v-if="(quickNextHover || quickNextFocus) && !disabled" />
       <more-filled v-else />
     </li>
-    <li
-      v-if="pageCount > 1"
-      :class="[
-        nsPager.is('active', currentPage === pageCount),
-        nsPager.is('disabled', disabled),
-      ]"
-      class="number"
-      :aria-current="currentPage === pageCount"
-      :aria-label="t('el.pagination.currentPage', { pager: pageCount })"
-      :tabindex="tabindex"
-    >
+    <li v-if="pageCount > 1" :class="[
+      nsPager.is('active', currentPage === pageCount),
+      nsPager.is('disabled', disabled),
+    ]" class="number" :aria-current="currentPage === pageCount"
+      :aria-label="t('el.pagination.currentPage', { pager: pageCount })" :tabindex="tabindex">
       {{ pageCount }}
     </li>
   </ul>
@@ -72,8 +39,8 @@
 <script lang="ts" setup>
 import { computed, ref, watch } from 'vue'
 import { DArrowLeft, DArrowRight, MoreFilled } from '@cery929-ui/icons-vue'
-import { useLocale, useNamespace } from '@element-plus/hooks'
-import { CHANGE_EVENT } from '@element-plus/constants'
+import { useLocale, useNamespace } from '@cery929-ui/hooks'
+import { CHANGE_EVENT } from '@cery929-ui/constants'
 import { paginationPagerProps } from './pager'
 
 defineOptions({

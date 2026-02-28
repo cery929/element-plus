@@ -61,17 +61,17 @@
 
 <script lang="ts" setup>
 import { computed, inject } from 'vue'
-import ElCheckbox from '@element-plus/components/checkbox'
-import ElRadio from '@element-plus/components/radio'
-import ElIcon from '@element-plus/components/icon'
-import { useNamespace } from '@element-plus/hooks'
+import ElCheckbox from '@cery929-ui/components/checkbox'
+import ElRadio from '@cery929-ui/components/radio'
+import ElIcon from '@cery929-ui/components/icon'
+import { useNamespace } from '@cery929-ui/hooks'
 import { ArrowRight, Check, Loading } from '@cery929-ui/icons-vue'
 import NodeContent from './node-content'
 import { CASCADER_PANEL_INJECTION_KEY } from './types'
 
 import type { CascaderNode } from './types'
 import type { PropType } from 'vue'
-import type { CheckboxValueType } from '@element-plus/components/checkbox'
+import type { CheckboxValueType } from '@cery929-ui/components/checkbox'
 
 defineOptions({
   name: 'ElCascaderNode',

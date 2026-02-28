@@ -1,26 +1,14 @@
 <template>
-  <div
-    ref="el$"
-    :class="[
-      ns.b(),
-      ns.is('dragging', !!dragState.draggingNode),
-      ns.is('drop-not-allow', !dragState.allowDrop),
-      ns.is('drop-inner', dragState.dropType === 'inner'),
-      { [ns.m('highlight-current')]: highlightCurrent },
-    ]"
-    role="tree"
-  >
-    <el-tree-node
-      v-for="child in root.childNodes"
-      :key="getNodeKey(child)"
-      :node="child"
-      :props="props"
-      :accordion="accordion"
-      :render-after-expand="renderAfterExpand"
-      :show-checkbox="showCheckbox"
-      :render-content="renderContent"
-      @node-expand="handleNodeExpand"
-    />
+  <div ref="el$" :class="[
+    ns.b(),
+    ns.is('dragging', !!dragState.draggingNode),
+    ns.is('drop-not-allow', !dragState.allowDrop),
+    ns.is('drop-inner', dragState.dropType === 'inner'),
+    { [ns.m('highlight-current')]: highlightCurrent },
+  ]" role="tree">
+    <el-tree-node v-for="child in root.childNodes" :key="getNodeKey(child)" :node="child" :props="props"
+      :accordion="accordion" :render-after-expand="renderAfterExpand" :show-checkbox="showCheckbox"
+      :render-content="renderContent" @node-expand="handleNodeExpand" />
     <div v-if="isEmpty" :class="ns.e('empty-block')">
       <slot name="empty">
         <span :class="ns.e('empty-text')">
@@ -28,11 +16,7 @@
         </span>
       </slot>
     </div>
-    <div
-      v-show="dragState.showDropIndicator"
-      ref="dropIndicator$"
-      :class="ns.e('drop-indicator')"
-    />
+    <div v-show="dragState.showDropIndicator" ref="dropIndicator$" :class="ns.e('drop-indicator')" />
   </div>
 </template>
 
@@ -46,8 +30,8 @@ import {
   watch,
 } from 'vue'
 import { isEqual } from 'lodash-unified'
-import { useLocale, useNamespace } from '@element-plus/hooks'
-import { formItemContextKey } from '@element-plus/components/form'
+import { useLocale, useNamespace } from '@cery929-ui/hooks'
+import { formItemContextKey } from '@cery929-ui/components/form'
 import TreeStore from './model/tree-store'
 import { getNodeKey as getNodeKeyUtil, handleCurrentChange } from './model/util'
 import ElTreeNode from './tree-node.vue'
@@ -59,7 +43,7 @@ import { treeEmits, treeProps } from './tree'
 
 import type Node from './model/node'
 import type { ComponentInternalInstance } from 'vue'
-import type { Nullable } from '@element-plus/utils'
+import type { Nullable } from '@cery929-ui/utils'
 import type { FilterValue, TreeData, TreeKey, TreeNodeData } from './tree.type'
 
 export default defineComponent({

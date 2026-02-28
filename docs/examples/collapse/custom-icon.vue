@@ -58,7 +58,7 @@
 import { ref } from 'vue'
 import { CaretRight } from '@cery929-ui/icons-vue'
 
-import type { CollapseModelValue } from 'element-plus'
+import type { CollapseModelValue } from 'cery929-ui'
 
 const activeNames = ref(['1'])
 const handleChange = (val: CollapseModelValue) => {

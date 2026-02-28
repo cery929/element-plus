@@ -4,18 +4,18 @@ import {
   DEFAULT_FORMATS_DATE,
   DEFAULT_FORMATS_DATEPICKER,
   PICKER_POPPER_OPTIONS_INJECTION_KEY,
-} from '@element-plus/components/time-picker'
-import { UPDATE_MODEL_EVENT } from '@element-plus/constants'
+} from '@cery929-ui/components/time-picker'
+import { UPDATE_MODEL_EVENT } from '@cery929-ui/constants'
 import {
   ElDatePickerPanel,
   ROOT_PICKER_IS_DEFAULT_FORMAT_INJECTION_KEY,
-} from '@element-plus/components/date-picker-panel'
+} from '@cery929-ui/components/date-picker-panel'
 import { datePickerProps } from './props'
 
 import type {
   DateModelType,
   SingleOrRange,
-} from '@element-plus/components/time-picker'
+} from '@cery929-ui/components/time-picker'
 import type { DatePickerExpose } from './instance'
 
 export default defineComponent({

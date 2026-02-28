@@ -1,41 +1,15 @@
 <template>
-  <div
-    :class="[ns.b(), ns.is('disabled', disabled), ns.is('border', border)]"
-    @focusout="handleFocusout"
-  >
+  <div :class="[ns.b(), ns.is('disabled', disabled), ns.is('border', border)]" @focusout="handleFocusout">
     <div :class="ns.e('wrapper')">
-      <hue-slider
-        ref="hueRef"
-        class="hue-slider"
-        :color="color"
-        vertical
-        :disabled="disabled"
-      />
+      <hue-slider ref="hueRef" class="hue-slider" :color="color" vertical :disabled="disabled" />
       <sv-panel ref="svRef" :color="color" :disabled="disabled" />
     </div>
-    <alpha-slider
-      v-if="showAlpha"
-      ref="alphaRef"
-      :color="color"
-      :disabled="disabled"
-    />
-    <predefine
-      v-if="predefine"
-      ref="predefine"
-      :enable-alpha="showAlpha"
-      :color="color"
-      :colors="predefine"
-      :disabled="disabled"
-    />
+    <alpha-slider v-if="showAlpha" ref="alphaRef" :color="color" :disabled="disabled" />
+    <predefine v-if="predefine" ref="predefine" :enable-alpha="showAlpha" :color="color" :colors="predefine"
+      :disabled="disabled" />
     <div :class="ns.e('footer')">
-      <el-input
-        ref="inputRef"
-        v-model="customInput"
-        :validate-event="false"
-        size="small"
-        :disabled="disabled"
-        @change="handleConfirm"
-      />
+      <el-input ref="inputRef" v-model="customInput" :validate-event="false" size="small" :disabled="disabled"
+        @change="handleConfirm" />
       <slot name="footer" />
     </div>
   </div>
@@ -43,11 +17,11 @@
 
 <script lang="ts" setup>
 import { computed, inject, nextTick, onMounted, provide, ref, watch } from 'vue'
-import { ElInput } from '@element-plus/components/input'
-import { useFormDisabled, useFormItem } from '@element-plus/components/form'
-import { useNamespace } from '@element-plus/hooks'
-import { debugWarn } from '@element-plus/utils'
-import { UPDATE_MODEL_EVENT } from '@element-plus/constants'
+import { ElInput } from '@cery929-ui/components/input'
+import { useFormDisabled, useFormItem } from '@cery929-ui/components/form'
+import { useNamespace } from '@cery929-ui/hooks'
+import { debugWarn } from '@cery929-ui/utils'
+import { UPDATE_MODEL_EVENT } from '@cery929-ui/constants'
 import AlphaSlider from './components/alpha-slider.vue'
 import HueSlider from './components/hue-slider.vue'
 import Predefine from './components/predefine.vue'
@@ -60,7 +34,7 @@ import {
 import { useCommonColor } from './composables/use-common-color'
 
 import type { ColorPickerPanelProps } from './color-picker-panel'
-import type { InputInstance } from '@element-plus/components/input'
+import type { InputInstance } from '@cery929-ui/components/input'
 
 defineOptions({
   name: 'ElColorPickerPanel',

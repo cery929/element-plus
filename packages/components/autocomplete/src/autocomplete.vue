@@ -124,28 +124,28 @@ import {
 import { pick } from 'lodash-unified'
 import { onClickOutside, useDebounceFn } from '@vueuse/core'
 import { Loading } from '@cery929-ui/icons-vue'
-import { useId, useNamespace } from '@element-plus/hooks'
-import { NOOP, getEventCode, isArray, throwError } from '@element-plus/utils'
+import { useId, useNamespace } from '@cery929-ui/hooks'
+import { NOOP, getEventCode, isArray, throwError } from '@cery929-ui/utils'
 import {
   CHANGE_EVENT,
   EVENT_CODE,
   INPUT_EVENT,
   UPDATE_MODEL_EVENT,
-} from '@element-plus/constants'
+} from '@cery929-ui/constants'
 import ElInput, {
   inputProps,
   inputPropsDefaults,
-} from '@element-plus/components/input'
-import ElScrollbar from '@element-plus/components/scrollbar'
-import ElTooltip from '@element-plus/components/tooltip'
-import ElIcon from '@element-plus/components/icon'
-import { useFormDisabled } from '@element-plus/components/form'
+} from '@cery929-ui/components/input'
+import ElScrollbar from '@cery929-ui/components/scrollbar'
+import ElTooltip from '@cery929-ui/components/tooltip'
+import ElIcon from '@cery929-ui/components/icon'
+import { useFormDisabled } from '@cery929-ui/components/form'
 import { autocompleteEmits } from './autocomplete'
 
 import type { AutocompleteData, AutocompleteProps } from './autocomplete'
 import type { StyleValue } from 'vue'
-import type { TooltipInstance } from '@element-plus/components/tooltip'
-import type { InputInstance } from '@element-plus/components/input'
+import type { TooltipInstance } from '@cery929-ui/components/tooltip'
+import type { InputInstance } from '@cery929-ui/components/input'
 
 const COMPONENT_NAME = 'ElAutocomplete'
 defineOptions({

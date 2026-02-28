@@ -1,4 +1,4 @@
-import { buildProps } from '@element-plus/utils'
+import { buildProps } from '@cery929-ui/utils'
 
 export const COMPONENT_NAME = 'ElOption'
 export const optionProps = buildProps({

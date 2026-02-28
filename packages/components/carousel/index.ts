@@ -1,8 +1,8 @@
-import { withInstall, withNoopInstall } from '@element-plus/utils'
+import { withInstall, withNoopInstall } from '@cery929-ui/utils'
 import Carousel from './src/carousel.vue'
 import CarouselItem from './src/carousel-item.vue'
 
-import type { SFCWithInstall } from '@element-plus/utils'
+import type { SFCWithInstall } from '@cery929-ui/utils'
 
 export const ElCarousel: SFCWithInstall<typeof Carousel> & {
   CarouselItem: typeof CarouselItem

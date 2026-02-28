@@ -1,24 +1,10 @@
 <template>
   <el-teleport :to="appendTo">
     <div :class="kls" v-bind="$attrs">
-      <el-tour-mask
-        :visible="mergedShowMask"
-        :fill="mergedMaskStyle?.color"
-        :style="mergedMaskStyle?.style"
-        :pos="pos"
-        :z-index="mergedZIndex"
-        :target-area-clickable="targetAreaClickable"
-      />
-      <el-tour-content
-        v-if="modelValue"
-        :key="current"
-        :reference="triggerTarget"
-        :placement="mergedPlacement"
-        :show-arrow="mergedShowArrow"
-        :z-index="mergedZIndex"
-        :style="mergedContentStyle"
-        @close="onEscClose"
-      >
+      <el-tour-mask :visible="mergedShowMask" :fill="mergedMaskStyle?.color" :style="mergedMaskStyle?.style" :pos="pos"
+        :z-index="mergedZIndex" :target-area-clickable="targetAreaClickable" />
+      <el-tour-content v-if="modelValue" :key="current" :reference="triggerTarget" :placement="mergedPlacement"
+        :show-arrow="mergedShowArrow" :z-index="mergedZIndex" :style="mergedContentStyle" @close="onEscClose">
         <el-tour-steps :current="current" @update-total="onUpdateTotal">
           <slot />
         </el-tour-steps>
@@ -32,10 +18,10 @@
 <script lang="ts" setup>
 import { computed, provide, ref, toRef, useSlots, watch } from 'vue'
 import { useVModel } from '@vueuse/core'
-import { useNamespace, useZIndex } from '@element-plus/hooks'
-import { isBoolean } from '@element-plus/utils'
-import ElTeleport from '@element-plus/components/teleport'
-import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@element-plus/constants'
+import { useNamespace, useZIndex } from '@cery929-ui/hooks'
+import { isBoolean } from '@cery929-ui/utils'
+import ElTeleport from '@cery929-ui/components/teleport'
+import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@cery929-ui/constants'
 import ElTourMask from './mask.vue'
 import ElTourContent from './content.vue'
 import ElTourSteps from './steps'

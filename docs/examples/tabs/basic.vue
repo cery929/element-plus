@@ -10,7 +10,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-import type { TabsPaneContext } from 'element-plus'
+import type { TabsPaneContext } from 'cery929-ui'
 
 const activeName = ref('first')
 
@@ -20,7 +20,7 @@ const handleClick = (tab: TabsPaneContext, event: Event) => {
 </script>
 
 <style>
-.demo-tabs > .el-tabs__content {
+.demo-tabs>.el-tabs__content {
   padding: 32px;
   color: #6b778c;
   font-size: 32px;

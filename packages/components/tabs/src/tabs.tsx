@@ -17,16 +17,16 @@ import {
   isNumber,
   isString,
   isUndefined,
-} from '@element-plus/utils'
-import { EVENT_CODE, UPDATE_MODEL_EVENT } from '@element-plus/constants'
-import ElIcon from '@element-plus/components/icon'
+} from '@cery929-ui/utils'
+import { EVENT_CODE, UPDATE_MODEL_EVENT } from '@cery929-ui/constants'
+import ElIcon from '@cery929-ui/components/icon'
 import { Plus } from '@cery929-ui/icons-vue'
-import { useNamespace, useOrderedChildren } from '@element-plus/hooks'
+import { useNamespace, useOrderedChildren } from '@cery929-ui/hooks'
 import { tabsRootContextKey } from './constants'
 import TabNav from './tab-nav'
 
 import type { ExtractPropTypes, ExtractPublicPropTypes, VNode } from 'vue'
-import type { Awaitable } from '@element-plus/utils'
+import type { Awaitable } from '@cery929-ui/utils'
 import type { TabNavInstance } from './tab-nav'
 import type { TabPaneName, TabsPaneContext } from './constants'
 

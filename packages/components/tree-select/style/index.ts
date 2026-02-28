@@ -1,3 +1,3 @@
-import '@element-plus/components/select/style'
-import '@element-plus/components/tree/style'
-import '@element-plus/theme-chalk/src/tree-select.scss'
+import '@cery929-ui/components/select/style'
+import '@cery929-ui/components/tree/style'
+import '@cery929-ui/theme-chalk/src/tree-select.scss'

@@ -1,37 +1,14 @@
 <template>
-  <div
-    :class="[ns.b(), { [ns.m('highlight-current')]: highlightCurrent }]"
-    role="tree"
-  >
-    <fixed-size-list
-      v-if="isNotEmpty"
-      ref="listRef"
-      :class-name="ns.b('virtual-list')"
-      :data="flattenTree"
-      :total="flattenTree.length"
-      :height="height"
-      :item-size="treeNodeSize"
-      :perf-mode="perfMode"
-      :scrollbar-always-on="scrollbarAlwaysOn"
-    >
+  <div :class="[ns.b(), { [ns.m('highlight-current')]: highlightCurrent }]" role="tree">
+    <fixed-size-list v-if="isNotEmpty" ref="listRef" :class-name="ns.b('virtual-list')" :data="flattenTree"
+      :total="flattenTree.length" :height="height" :item-size="treeNodeSize" :perf-mode="perfMode"
+      :scrollbar-always-on="scrollbarAlwaysOn">
       <template #default="{ data, index, style }">
-        <el-tree-node
-          :key="data[index].key"
-          :style="style"
-          :node="data[index]"
-          :expanded="data[index].expanded"
-          :show-checkbox="showCheckbox"
-          :checked="isChecked(data[index])"
-          :indeterminate="isIndeterminate(data[index])"
-          :item-size="treeNodeSize"
-          :disabled="isDisabled(data[index])"
-          :current="isCurrent(data[index])"
-          :hidden-expand-icon="isForceHiddenExpandIcon(data[index])"
-          @click="handleNodeClick"
-          @toggle="toggleExpand"
-          @check="handleNodeCheck"
-          @drop="handleNodeDrop"
-        />
+        <el-tree-node :key="data[index].key" :style="style" :node="data[index]" :expanded="data[index].expanded"
+          :show-checkbox="showCheckbox" :checked="isChecked(data[index])" :indeterminate="isIndeterminate(data[index])"
+          :item-size="treeNodeSize" :disabled="isDisabled(data[index])" :current="isCurrent(data[index])"
+          :hidden-expand-icon="isForceHiddenExpandIcon(data[index])" @click="handleNodeClick" @toggle="toggleExpand"
+          @check="handleNodeCheck" @drop="handleNodeDrop" />
       </template>
     </fixed-size-list>
     <div v-else :class="ns.e('empty-block')">
@@ -46,9 +23,9 @@
 
 <script lang="ts" setup>
 import { computed, getCurrentInstance, provide, useSlots } from 'vue'
-import { useLocale, useNamespace } from '@element-plus/hooks'
-import { formItemContextKey } from '@element-plus/components/form'
-import { FixedSizeList } from '@element-plus/components/virtual-list'
+import { useLocale, useNamespace } from '@cery929-ui/hooks'
+import { formItemContextKey } from '@cery929-ui/components/form'
+import { FixedSizeList } from '@cery929-ui/components/virtual-list'
 import { useTree } from './composables/useTree'
 import ElTreeNode from './tree-node.vue'
 import {
@@ -56,7 +33,7 @@ import {
   TreeOptionsEnum,
   treeEmits,
 } from './virtual-tree'
-import { mutable } from '@element-plus/utils'
+import { mutable } from '@cery929-ui/utils'
 
 import type { TreeProps } from './types'
 

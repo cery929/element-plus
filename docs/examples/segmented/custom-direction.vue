@@ -1,33 +1,18 @@
 <template>
   <div>
-    <el-segmented
-      v-model="size"
-      :options="sizeOptions"
-      style="margin-bottom: 1rem"
-    />
+    <el-segmented v-model="size" :options="sizeOptions" style="margin-bottom: 1rem" />
     <br />
-    <el-segmented
-      v-model="direction"
-      :options="directionOptions"
-      style="margin-bottom: 1rem"
-    />
+    <el-segmented v-model="direction" :options="directionOptions" style="margin-bottom: 1rem" />
     <br />
-    <el-segmented
-      v-model="value"
-      :options="options"
-      :direction="direction"
-      :size="size"
-    >
+    <el-segmented v-model="value" :options="options" :direction="direction" :size="size">
       <template #default="scope">
-        <div
-          :class="[
-            'flex',
-            'items-center',
-            'gap-2',
-            'flex-col',
-            direction === 'horizontal' && 'p-2',
-          ]"
-        >
+        <div :class="[
+          'flex',
+          'items-center',
+          'gap-2',
+          'flex-col',
+          direction === 'horizontal' && 'p-2',
+        ]">
           <el-icon size="20">
             <component :is="scope.item.icon" />
           </el-icon>
@@ -49,7 +34,7 @@ import {
   Watermelon,
 } from '@cery929-ui/icons-vue'
 
-import type { SegmentedProps } from 'element-plus'
+import type { SegmentedProps } from 'cery929-ui'
 
 const value = ref('Apple')
 const direction = ref<SegmentedProps['direction']>('horizontal')

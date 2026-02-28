@@ -1,11 +1,11 @@
 import { defineComponent, provide } from 'vue'
 import { mount } from '@vue/test-utils'
 import { describe, expect, it } from 'vitest'
-import { NOOP } from '@element-plus/utils'
+import { NOOP } from '@cery929-ui/utils'
 import {
   ElButton,
   buttonGroupContextKey,
-} from '@element-plus/components/button'
+} from '@cery929-ui/components/button'
 import { formContextKey, formItemContextKey } from '../src/constants'
 
 import type { FormContext, FormItemContext } from '../src/types'

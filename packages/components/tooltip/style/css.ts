@@ -1,3 +1,3 @@
-import '@element-plus/components/base/style/css'
-import '@element-plus/theme-chalk/el-tooltip.css'
-import '@element-plus/components/popper/style/css'
+import '@cery929-ui/components/base/style/css'
+import '@cery929-ui/theme-chalk/el-tooltip.css'
+import '@cery929-ui/components/popper/style/css'

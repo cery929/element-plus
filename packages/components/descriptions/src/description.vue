@@ -26,9 +26,9 @@
 
 <script lang="ts" setup>
 import { computed, provide, useSlots } from 'vue'
-import { flattedChildren } from '@element-plus/utils'
-import { useNamespace } from '@element-plus/hooks'
-import { useFormSize } from '@element-plus/components/form'
+import { flattedChildren } from '@cery929-ui/utils'
+import { useNamespace } from '@cery929-ui/hooks'
+import { useFormSize } from '@cery929-ui/components/form'
 import ElDescriptionsRow from './descriptions-row.vue'
 import { descriptionsKey } from './token'
 import { COMPONENT_NAME } from './constants'

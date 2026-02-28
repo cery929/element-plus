@@ -1,10 +1,10 @@
 {
-  "name": "@element-plus/build-utils",
+  "name": "@cery929-ui/build-utils",
   "version": "0.0.1",
   "private": true,
   "description": "Build utils for Element Plus",
   "keywords": [
-    "element-plus"
+    "cery929-ui"
   ],
   "license": "MIT",
   "main": "./dist/index.cjs",

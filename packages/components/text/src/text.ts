@@ -1,8 +1,8 @@
-import { buildProps } from '@element-plus/utils'
-import { componentSizes } from '@element-plus/constants'
+import { buildProps } from '@cery929-ui/utils'
+import { componentSizes } from '@cery929-ui/constants'
 
 import type { ExtractPublicPropTypes } from 'vue'
-import type { ComponentSize } from '@element-plus/constants'
+import type { ComponentSize } from '@cery929-ui/constants'
 
 export interface TextProps {
   /**

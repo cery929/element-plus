@@ -1,4 +1,4 @@
-import { buildProps } from '@element-plus/utils'
+import { buildProps } from '@cery929-ui/utils'
 import { panelRangeSharedProps } from './shared'
 
 import type { ExtractPropTypes, ExtractPublicPropTypes } from 'vue'

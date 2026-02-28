@@ -1,19 +1,14 @@
 <template>
-  <component
-    :is="tag"
-    ref="textRef"
-    :class="textKls"
-    :style="{ '-webkit-line-clamp': lineClamp }"
-  >
+  <component :is="tag" ref="textRef" :class="textKls" :style="{ '-webkit-line-clamp': lineClamp }">
     <slot />
   </component>
 </template>
 
 <script lang="ts" setup>
 import { computed, onMounted, onUpdated, ref, useAttrs } from 'vue'
-import { useNamespace } from '@element-plus/hooks'
-import { useFormSize } from '@element-plus/components/form'
-import { isUndefined } from '@element-plus/utils'
+import { useNamespace } from '@cery929-ui/hooks'
+import { useFormSize } from '@cery929-ui/components/form'
+import { isUndefined } from '@cery929-ui/utils'
 
 import type { TextProps } from './text'
 

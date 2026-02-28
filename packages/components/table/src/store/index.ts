@@ -1,6 +1,6 @@
 import { getCurrentInstance, nextTick, unref } from 'vue'
 import { isNull } from 'lodash-unified'
-import { useLocale, useNamespace } from '@element-plus/hooks'
+import { useLocale, useNamespace } from '@cery929-ui/hooks'
 import useWatcher from './watcher'
 
 import type { Ref } from 'vue'
@@ -165,7 +165,7 @@ function useStore<T extends DefaultRow>() {
 
     changeSortCondition(states: StoreStates, options: Sort) {
       // 修复 pr https://github.com/ElemeFE/element/pull/15012 导致的 bug
-      // https://github.com/element-plus/element-plus/pull/4640
+      // https://github.com/cery929-ui/cery929-ui/pull/4640
       const { sortingColumn, sortProp, sortOrder } = states
       const columnValue = unref(sortingColumn),
         propValue = unref(sortProp),

@@ -1,19 +1,11 @@
 <template>
-  <el-select-v2
-    v-model="value"
-    :options="options"
-    :empty-values="[null, undefined]"
-    :value-on-clear="null"
-    clearable
-    placeholder="Select"
-    style="width: 240px"
-    @clear="handleClear"
-  />
+  <el-select-v2 v-model="value" :options="options" :empty-values="[null, undefined]" :value-on-clear="null" clearable
+    placeholder="Select" style="width: 240px" @clear="handleClear" />
 </template>
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { ElMessage } from 'element-plus'
+import { ElMessage } from 'cery929-ui'
 
 const value = ref('')
 

@@ -1,3 +1,3 @@
-import '@element-plus/components/base/style/css'
-import '@element-plus/theme-chalk/el-color-picker-panel.css'
-import '@element-plus/components/input/style/css'
+import '@cery929-ui/components/base/style/css'
+import '@cery929-ui/theme-chalk/el-color-picker-panel.css'
+import '@cery929-ui/components/input/style/css'

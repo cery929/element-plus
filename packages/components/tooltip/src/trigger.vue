@@ -1,37 +1,26 @@
 <template>
-  <el-popper-trigger
-    :id="id"
-    :virtual-ref="virtualRef"
-    :open="open"
-    :virtual-triggering="virtualTriggering"
-    :class="ns.e('trigger')"
-    @blur="onBlur"
-    @click="onClick"
-    @contextmenu="onContextMenu"
-    @focus="onFocus"
-    @mouseenter="onMouseenter"
-    @mouseleave="onMouseleave"
-    @keydown="onKeydown"
-  >
+  <el-popper-trigger :id="id" :virtual-ref="virtualRef" :open="open" :virtual-triggering="virtualTriggering"
+    :class="ns.e('trigger')" @blur="onBlur" @click="onClick" @contextmenu="onContextMenu" @focus="onFocus"
+    @mouseenter="onMouseenter" @mouseleave="onMouseleave" @keydown="onKeydown">
     <slot />
   </el-popper-trigger>
 </template>
 
 <script lang="ts" setup>
 import { inject, nextTick, ref, toRef, unref } from 'vue'
-import { ElPopperTrigger } from '@element-plus/components/popper'
+import { ElPopperTrigger } from '@cery929-ui/components/popper'
 import {
   composeEventHandlers,
   focusElement,
   getEventCode,
-} from '@element-plus/utils'
-import { useNamespace } from '@element-plus/hooks'
+} from '@cery929-ui/utils'
+import { useNamespace } from '@cery929-ui/hooks'
 import { TOOLTIP_INJECTION_KEY } from './constants'
 import { whenTrigger } from './utils'
 import { useTooltipTriggerPropsDefaults } from './trigger'
 
 import type { UseTooltipTriggerProps } from './trigger'
-import type { OnlyChildExpose } from '@element-plus/components/slot'
+import type { OnlyChildExpose } from '@cery929-ui/components/slot'
 
 defineOptions({
   name: 'ElTooltipTrigger',

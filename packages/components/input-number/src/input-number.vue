@@ -1,23 +1,14 @@
 <template>
-  <div
-    :class="[
-      ns.b(),
-      ns.m(inputNumberSize),
-      ns.is('disabled', inputNumberDisabled),
-      ns.is('without-controls', !controls),
-      ns.is('controls-right', controlsAtRight),
-      ns.is(align, !!align),
-    ]"
-    @dragstart.prevent
-  >
-    <span
-      v-if="controls"
-      v-repeat-click="decrease"
-      role="button"
-      :aria-label="t('el.inputNumber.decrease')"
-      :class="[ns.e('decrease'), ns.is('disabled', minDisabled)]"
-      @keydown.enter="decrease"
-    >
+  <div :class="[
+    ns.b(),
+    ns.m(inputNumberSize),
+    ns.is('disabled', inputNumberDisabled),
+    ns.is('without-controls', !controls),
+    ns.is('controls-right', controlsAtRight),
+    ns.is(align, !!align),
+  ]" @dragstart.prevent>
+    <span v-if="controls" v-repeat-click="decrease" role="button" :aria-label="t('el.inputNumber.decrease')"
+      :class="[ns.e('decrease'), ns.is('disabled', minDisabled)]" @keydown.enter="decrease">
       <slot name="decrease-icon">
         <el-icon>
           <arrow-down v-if="controlsAtRight" />
@@ -25,14 +16,8 @@
         </el-icon>
       </slot>
     </span>
-    <span
-      v-if="controls"
-      v-repeat-click="increase"
-      role="button"
-      :aria-label="t('el.inputNumber.increase')"
-      :class="[ns.e('increase'), ns.is('disabled', maxDisabled)]"
-      @keydown.enter="increase"
-    >
+    <span v-if="controls" v-repeat-click="increase" role="button" :aria-label="t('el.inputNumber.increase')"
+      :class="[ns.e('increase'), ns.is('disabled', maxDisabled)]" @keydown.enter="increase">
       <slot name="increase-icon">
         <el-icon>
           <arrow-up v-if="controlsAtRight" />
@@ -40,28 +25,10 @@
         </el-icon>
       </slot>
     </span>
-    <el-input
-      :id="id"
-      ref="input"
-      type="number"
-      :step="step"
-      :model-value="displayValue"
-      :placeholder="placeholder"
-      :readonly="readonly"
-      :disabled="inputNumberDisabled"
-      :size="inputNumberSize"
-      :max="max"
-      :min="min"
-      :name="name"
-      :aria-label="ariaLabel"
-      :validate-event="false"
-      :inputmode="inputmode"
-      @keydown="handleKeydown"
-      @blur="handleBlur"
-      @focus="handleFocus"
-      @input="handleInput"
-      @change="handleInputChange"
-    >
+    <el-input :id="id" ref="input" type="number" :step="step" :model-value="displayValue" :placeholder="placeholder"
+      :readonly="readonly" :disabled="inputNumberDisabled" :size="inputNumberSize" :max="max" :min="min" :name="name"
+      :aria-label="ariaLabel" :validate-event="false" :inputmode="inputmode" @keydown="handleKeydown" @blur="handleBlur"
+      @focus="handleFocus" @input="handleInput" @change="handleInputChange">
       <template v-if="$slots.prefix" #prefix>
         <slot name="prefix" />
       </template>
@@ -75,15 +42,15 @@
 <script lang="ts" setup>
 import { computed, onMounted, onUpdated, reactive, ref, watch } from 'vue'
 import { isNil } from 'lodash-unified'
-import { ElInput } from '@element-plus/components/input'
-import { ElIcon } from '@element-plus/components/icon'
+import { ElInput } from '@cery929-ui/components/input'
+import { ElIcon } from '@cery929-ui/components/icon'
 import {
   useFormDisabled,
   useFormItem,
   useFormSize,
-} from '@element-plus/components/form'
-import { vRepeatClick } from '@element-plus/directives'
-import { useLocale, useNamespace } from '@element-plus/hooks'
+} from '@cery929-ui/components/form'
+import { vRepeatClick } from '@cery929-ui/directives'
+import { useLocale, useNamespace } from '@cery929-ui/hooks'
 import {
   debugWarn,
   getEventCode,
@@ -92,17 +59,17 @@ import {
   isString,
   isUndefined,
   throwError,
-} from '@element-plus/utils'
+} from '@cery929-ui/utils'
 import { ArrowDown, ArrowUp, Minus, Plus } from '@cery929-ui/icons-vue'
 import {
   CHANGE_EVENT,
   EVENT_CODE,
   INPUT_EVENT,
   UPDATE_MODEL_EVENT,
-} from '@element-plus/constants'
+} from '@cery929-ui/constants'
 import { inputNumberEmits } from './input-number'
 
-import type { InputInstance } from '@element-plus/components/input'
+import type { InputInstance } from '@cery929-ui/components/input'
 import type { InputNumberProps } from './input-number'
 
 defineOptions({

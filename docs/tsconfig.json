@@ -12,7 +12,7 @@
     "skipLibCheck": true,
     "lib": ["ESNext", "DOM"],
     "paths": {
-      "element-plus": ["../packages/element-plus"],
+      "cery929-ui": ["../packages/cery929-ui"],
       "~/*": ["./.vitepress/vitepress/*"],
       "vue": ["./node_modules/vue"]
     },

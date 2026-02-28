@@ -1,9 +1,9 @@
-import { useSizeProp } from '@element-plus/hooks'
-import { buildProps, definePropType, iconPropType } from '@element-plus/utils'
+import { useSizeProp } from '@cery929-ui/hooks'
+import { buildProps, definePropType, iconPropType } from '@cery929-ui/utils'
 import { Loading } from '@cery929-ui/icons-vue'
 
 import type { Component, ExtractPublicPropTypes } from 'vue'
-import type { ComponentSize } from '@element-plus/constants'
+import type { ComponentSize } from '@cery929-ui/constants'
 
 export const buttonTypes = [
   'default',

@@ -81,10 +81,10 @@
 
 <script lang="ts" setup>
 import { computed, provide, ref, useSlots } from 'vue'
-import { ElOverlay } from '@element-plus/components/overlay'
-import { useDeprecated, useNamespace, useSameTarget } from '@element-plus/hooks'
-import ElFocusTrap from '@element-plus/components/focus-trap'
-import ElTeleport from '@element-plus/components/teleport'
+import { ElOverlay } from '@cery929-ui/components/overlay'
+import { useDeprecated, useNamespace, useSameTarget } from '@cery929-ui/hooks'
+import ElFocusTrap from '@cery929-ui/components/focus-trap'
+import ElTeleport from '@cery929-ui/components/teleport'
 import ElDialogContent from './dialog-content.vue'
 import { dialogInjectionKey } from './constants'
 import { dialogEmits, dialogPropsDefaults } from './dialog'

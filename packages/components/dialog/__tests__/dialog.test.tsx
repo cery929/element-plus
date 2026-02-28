@@ -1,12 +1,12 @@
 import { markRaw, nextTick, ref } from 'vue'
 import { mount } from '@vue/test-utils'
 import { describe, expect, test, vi } from 'vitest'
-import { rAF } from '@element-plus/test-utils/tick'
-import triggerCompositeClick from '@element-plus/test-utils/composite-click'
+import { rAF } from '@cery929-ui/test-utils/tick'
+import triggerCompositeClick from '@cery929-ui/test-utils/composite-click'
 import { Delete } from '@cery929-ui/icons-vue'
 import Dialog from '../src/dialog.vue'
-import triggerEvent from '@element-plus/test-utils/trigger-event'
-import { EVENT_CODE } from '@element-plus/constants'
+import triggerEvent from '@cery929-ui/test-utils/trigger-event'
+import { EVENT_CODE } from '@cery929-ui/constants'
 
 const AXIOM = 'Rem is the best girl'
 

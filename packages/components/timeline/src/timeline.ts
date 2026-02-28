@@ -1,9 +1,9 @@
 import { computed, defineComponent, h, provide } from 'vue'
-import { useNamespace } from '@element-plus/hooks'
+import { useNamespace } from '@cery929-ui/hooks'
 import { TIMELINE_INJECTION_KEY } from './tokens'
-import { buildProps, flattedChildren } from '@element-plus/utils'
+import { buildProps, flattedChildren } from '@cery929-ui/utils'
 
-import type { VNodeChildAtom } from '@element-plus/utils'
+import type { VNodeChildAtom } from '@cery929-ui/utils'
 import type { ExtractPropTypes, ExtractPublicPropTypes } from 'vue'
 import type { TimelineProvider } from './tokens'
 

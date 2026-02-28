@@ -1,13 +1,13 @@
-import { buildProps, definePropType } from '@element-plus/utils'
-import { useEmptyValuesProps, useSizeProp } from '@element-plus/hooks'
+import { buildProps, definePropType } from '@cery929-ui/utils'
+import { useEmptyValuesProps, useSizeProp } from '@cery929-ui/hooks'
 
 import type { ExtractPropTypes, ExtractPublicPropTypes } from 'vue'
-import type { Language } from '@element-plus/locale'
-import type { ButtonConfigContext } from '@element-plus/components/button'
-import type { CardConfigContext } from '@element-plus/components/card'
-import type { DialogConfigContext } from '@element-plus/components/dialog'
-import type { MessageConfigContext } from '@element-plus/components/message'
-import type { LinkConfigContext } from '@element-plus/components/link'
+import type { Language } from '@cery929-ui/locale'
+import type { ButtonConfigContext } from '@cery929-ui/components/button'
+import type { CardConfigContext } from '@cery929-ui/components/card'
+import type { DialogConfigContext } from '@cery929-ui/components/dialog'
+import type { MessageConfigContext } from '@cery929-ui/components/message'
+import type { LinkConfigContext } from '@cery929-ui/components/link'
 
 // eslint-disable-next-line @typescript-eslint/no-empty-object-type
 export type ExperimentalFeatures = {

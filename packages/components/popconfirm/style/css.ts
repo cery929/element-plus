@@ -1,4 +1,4 @@
-import '@element-plus/components/base/style/css'
-import '@element-plus/theme-chalk/el-popconfirm.css'
-import '@element-plus/components/popover/style/css'
-import '@element-plus/components/button/style/css'
+import '@cery929-ui/components/base/style/css'
+import '@cery929-ui/theme-chalk/el-popconfirm.css'
+import '@cery929-ui/components/popover/style/css'
+import '@cery929-ui/components/button/style/css'

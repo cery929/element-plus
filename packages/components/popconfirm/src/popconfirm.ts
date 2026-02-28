@@ -1,17 +1,17 @@
-import { buttonTypes } from '@element-plus/components/button'
+import { buttonTypes } from '@cery929-ui/components/button'
 import { QuestionFilled } from '@cery929-ui/icons-vue'
-import { buildProps, iconPropType } from '@element-plus/utils'
+import { buildProps, iconPropType } from '@cery929-ui/utils'
 import {
   useTooltipContentProps,
   useTooltipTriggerProps,
-} from '@element-plus/components/tooltip'
+} from '@cery929-ui/components/tooltip'
 
 import type { Component, ExtractPublicPropTypes } from 'vue'
-import type { ButtonType } from '@element-plus/components/button'
+import type { ButtonType } from '@cery929-ui/components/button'
 import type {
   ElTooltipContentProps,
   ElTooltipTriggerProps,
-} from '@element-plus/components/tooltip'
+} from '@cery929-ui/components/tooltip'
 import type Popconfirm from './popconfirm.vue'
 
 export interface PopconfirmProps {

@@ -6,7 +6,7 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { useNamespace } from '@element-plus/hooks'
+import { useNamespace } from '@cery929-ui/hooks'
 
 import type { CSSProperties } from 'vue'
 
@@ -29,8 +29,8 @@ const ns = useNamespace('header')
 const style = computed(() => {
   return props.height
     ? (ns.cssVarBlock({
-        height: props.height,
-      }) as CSSProperties)
+      height: props.height,
+    }) as CSSProperties)
     : {}
 })
 </script>

@@ -1,17 +1,13 @@
 <template>
-  <div
-    v-if="renderActiveBar"
-    ref="barRef"
-    :class="[ns.e('active-bar'), ns.is(rootTabs!.props.tabPosition)]"
-    :style="barStyle"
-  />
+  <div v-if="renderActiveBar" ref="barRef" :class="[ns.e('active-bar'), ns.is(rootTabs!.props.tabPosition)]"
+    :style="barStyle" />
 </template>
 
 <script lang="ts" setup>
 import { computed, inject, nextTick, onBeforeUnmount, ref, watch } from 'vue'
 import { useResizeObserver } from '@vueuse/core'
-import { capitalize, isUndefined, throwError } from '@element-plus/utils'
-import { useNamespace } from '@element-plus/hooks'
+import { capitalize, isUndefined, throwError } from '@cery929-ui/utils'
+import { useNamespace } from '@cery929-ui/hooks'
 import { tabsRootContextKey } from './constants'
 
 import type { TabBarProps } from './tab-bar'

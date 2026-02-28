@@ -1,28 +1,15 @@
 <template>
-  <div
-    v-if="actualVisible"
-    :class="[nsTime.b('range-picker'), nsPicker.b('panel')]"
-  >
+  <div v-if="actualVisible" :class="[nsTime.b('range-picker'), nsPicker.b('panel')]">
     <div :class="nsTime.be('range-picker', 'content')">
       <div :class="nsTime.be('range-picker', 'cell')">
         <div :class="nsTime.be('range-picker', 'header')">
           {{ t('el.datepicker.startTime') }}
         </div>
         <div :class="startContainerKls">
-          <time-spinner
-            ref="minSpinner"
-            role="start"
-            :show-seconds="showSeconds"
-            :am-pm-mode="amPmMode"
-            :arrow-control="arrowControl"
-            :spinner-date="startTime"
-            :disabled-hours="disabledHours_"
-            :disabled-minutes="disabledMinutes_"
-            :disabled-seconds="disabledSeconds_"
-            @change="handleMinChange"
-            @set-option="onSetOption"
-            @select-range="setMinSelectionRange"
-          />
+          <time-spinner ref="minSpinner" role="start" :show-seconds="showSeconds" :am-pm-mode="amPmMode"
+            :arrow-control="arrowControl" :spinner-date="startTime" :disabled-hours="disabledHours_"
+            :disabled-minutes="disabledMinutes_" :disabled-seconds="disabledSeconds_" @change="handleMinChange"
+            @set-option="onSetOption" @select-range="setMinSelectionRange" />
         </div>
       </div>
       <div :class="nsTime.be('range-picker', 'cell')">
@@ -30,37 +17,19 @@
           {{ t('el.datepicker.endTime') }}
         </div>
         <div :class="endContainerKls">
-          <time-spinner
-            ref="maxSpinner"
-            role="end"
-            :show-seconds="showSeconds"
-            :am-pm-mode="amPmMode"
-            :arrow-control="arrowControl"
-            :spinner-date="endTime"
-            :disabled-hours="disabledHours_"
-            :disabled-minutes="disabledMinutes_"
-            :disabled-seconds="disabledSeconds_"
-            @change="handleMaxChange"
-            @set-option="onSetOption"
-            @select-range="setMaxSelectionRange"
-          />
+          <time-spinner ref="maxSpinner" role="end" :show-seconds="showSeconds" :am-pm-mode="amPmMode"
+            :arrow-control="arrowControl" :spinner-date="endTime" :disabled-hours="disabledHours_"
+            :disabled-minutes="disabledMinutes_" :disabled-seconds="disabledSeconds_" @change="handleMaxChange"
+            @set-option="onSetOption" @select-range="setMaxSelectionRange" />
         </div>
       </div>
     </div>
     <div :class="nsTime.be('panel', 'footer')">
-      <button
-        type="button"
-        :class="[nsTime.be('panel', 'btn'), 'cancel']"
-        @click="handleCancel()"
-      >
+      <button type="button" :class="[nsTime.be('panel', 'btn'), 'cancel']" @click="handleCancel()">
         {{ t('el.datepicker.cancel') }}
       </button>
-      <button
-        type="button"
-        :class="[nsTime.be('panel', 'btn'), 'confirm']"
-        :disabled="btnConfirmDisabled"
-        @click="handleConfirm()"
-      >
+      <button type="button" :class="[nsTime.be('panel', 'btn'), 'confirm']" :disabled="btnConfirmDisabled"
+        @click="handleConfirm()">
         {{ t('el.datepicker.confirm') }}
       </button>
     </div>
@@ -71,9 +40,9 @@
 import { computed, inject, nextTick, ref, unref } from 'vue'
 import dayjs from 'dayjs'
 import { union } from 'lodash-unified'
-import { useLocale, useNamespace } from '@element-plus/hooks'
-import { getEventCode, isArray } from '@element-plus/utils'
-import { EVENT_CODE } from '@element-plus/constants'
+import { useLocale, useNamespace } from '@cery929-ui/hooks'
+import { getEventCode, isArray } from '@cery929-ui/utils'
+import { EVENT_CODE } from '@cery929-ui/constants'
 import { PICKER_BASE_INJECTION_KEY } from '../constants'
 import { panelTimeRangeProps } from '../props/panel-time-range'
 import { useTimePanel } from '../composables/use-time-panel'

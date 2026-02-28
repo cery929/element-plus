@@ -4,24 +4,13 @@
       <el-button @click="handleClick">
         openPreview with showPreview method
       </el-button>
-      <el-image
-        ref="imageRef"
-        style="width: 100px; height: 100px"
-        :src="url"
-        show-progress
-        :preview-src-list="srcList"
-        fit="cover"
-      />
+      <el-image ref="imageRef" style="width: 100px; height: 100px" :src="url" show-progress :preview-src-list="srcList"
+        fit="cover" />
     </div>
     <div>
       <el-button @click="showPreview = true"> preview controlled </el-button>
-      <el-image-viewer
-        v-if="showPreview"
-        :url-list="srcList"
-        show-progress
-        :initial-index="4"
-        @close="showPreview = false"
-      />
+      <el-image-viewer v-if="showPreview" :url-list="srcList" show-progress :initial-index="4"
+        @close="showPreview = false" />
     </div>
   </div>
 </template>
@@ -29,7 +18,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-import type { ImageInstance } from 'element-plus'
+import type { ImageInstance } from 'cery929-ui'
 
 const url =
   'https://fuss10.elemecdn.com/a/3f/3302e58f9a181d2509f3dc0fa68b0jpeg.jpeg'

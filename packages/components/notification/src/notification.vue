@@ -1,29 +1,13 @@
 <template>
-  <transition
-    :name="ns.b('fade')"
-    @before-leave="onClose"
-    @after-leave="$emit('destroy')"
-  >
-    <div
-      v-show="visible"
-      :id="id"
-      :class="[ns.b(), customClass, horizontalClass]"
-      :style="positionStyle"
-      role="alert"
-      @mouseenter="clearTimer"
-      @mouseleave="startTimer"
-      @click="onClick"
-    >
+  <transition :name="ns.b('fade')" @before-leave="onClose" @after-leave="$emit('destroy')">
+    <div v-show="visible" :id="id" :class="[ns.b(), customClass, horizontalClass]" :style="positionStyle" role="alert"
+      @mouseenter="clearTimer" @mouseleave="startTimer" @click="onClick">
       <el-icon v-if="iconComponent" :class="[ns.e('icon'), typeClass]">
         <component :is="iconComponent" />
       </el-icon>
       <div :class="ns.e('group')">
         <h2 :class="ns.e('title')" v-text="title" />
-        <div
-          v-show="message"
-          :class="ns.e('content')"
-          :style="!!title ? undefined : { margin: 0 }"
-        >
+        <div v-show="message" :class="ns.e('content')" :style="!!title ? undefined : { margin: 0 }">
           <slot>
             <p v-if="!dangerouslyUseHTMLString">{{ message }}</p>
             <!-- Caution here, message could've been compromised, never use user's input as message -->
@@ -41,10 +25,10 @@
 <script lang="ts" setup>
 import { computed, markRaw, onMounted, ref } from 'vue'
 import { useEventListener, useTimeoutFn } from '@vueuse/core'
-import { TypeComponentsMap, getEventCode } from '@element-plus/utils'
-import { EVENT_CODE } from '@element-plus/constants'
-import { ElIcon } from '@element-plus/components/icon'
-import { useGlobalComponentSettings } from '@element-plus/components/config-provider'
+import { TypeComponentsMap, getEventCode } from '@cery929-ui/utils'
+import { EVENT_CODE } from '@cery929-ui/constants'
+import { ElIcon } from '@cery929-ui/components/icon'
+import { useGlobalComponentSettings } from '@cery929-ui/components/config-provider'
 import { notificationEmits } from './notification'
 import { Close } from '@cery929-ui/icons-vue'
 
@@ -103,7 +87,7 @@ const positionStyle = computed<CSSProperties>(() => {
 
 function startTimer() {
   if (props.duration > 0) {
-    ;({ stop: timer } = useTimeoutFn(() => {
+    ; ({ stop: timer } = useTimeoutFn(() => {
       if (visible.value) close()
     }, props.duration))
   }

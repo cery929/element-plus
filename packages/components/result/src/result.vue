@@ -2,11 +2,7 @@
   <div :class="ns.b()">
     <div :class="ns.e('icon')">
       <slot name="icon">
-        <component
-          :is="resultIcon.component"
-          v-if="resultIcon.component"
-          :class="resultIcon.class"
-        />
+        <component :is="resultIcon.component" v-if="resultIcon.component" :class="resultIcon.class" />
       </slot>
     </div>
     <div v-if="title || $slots.title" :class="ns.e('title')">
@@ -27,7 +23,7 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { useNamespace } from '@element-plus/hooks'
+import { useNamespace } from '@cery929-ui/hooks'
 import { IconComponentMap, IconMap } from './result'
 
 import type { ResultProps } from './result'

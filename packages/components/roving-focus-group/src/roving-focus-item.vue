@@ -1,18 +1,14 @@
 <template>
-  <el-roving-focus-collection-item
-    :id="id"
-    :focusable="focusable"
-    :active="active"
-  >
+  <el-roving-focus-collection-item :id="id" :focusable="focusable" :active="active">
     <slot />
   </el-roving-focus-collection-item>
 </template>
 
 <script lang="ts">
 import { computed, defineComponent, inject, provide, ref, unref } from 'vue'
-import { useId } from '@element-plus/hooks'
-import { composeEventHandlers, getEventCode } from '@element-plus/utils'
-import { EVENT_CODE } from '@element-plus/constants'
+import { useId } from '@cery929-ui/hooks'
+import { composeEventHandlers, getEventCode } from '@cery929-ui/utils'
+import { EVENT_CODE } from '@cery929-ui/constants'
 import { ElCollectionItem as ElRovingFocusCollectionItem } from './roving-focus-group'
 import {
   ROVING_FOCUS_GROUP_INJECTION_KEY,

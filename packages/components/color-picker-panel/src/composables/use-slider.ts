@@ -6,9 +6,9 @@ import {
   shallowRef,
   watch,
 } from 'vue'
-import { addUnit, getClientXY, getEventCode } from '@element-plus/utils'
-import { useNamespace } from '@element-plus/hooks'
-import { EVENT_CODE } from '@element-plus/constants'
+import { addUnit, getClientXY, getEventCode } from '@cery929-ui/utils'
+import { useNamespace } from '@cery929-ui/hooks'
+import { EVENT_CODE } from '@cery929-ui/constants'
 import { draggable } from '../utils/draggable'
 
 import type { AlphaSliderProps } from '../props/slider'

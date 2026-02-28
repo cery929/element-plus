@@ -1,17 +1,12 @@
 <template>
-  <div
-    ref="breadcrumb"
-    :class="ns.b()"
-    :aria-label="t('el.breadcrumb.label')"
-    role="navigation"
-  >
+  <div ref="breadcrumb" :class="ns.b()" :aria-label="t('el.breadcrumb.label')" role="navigation">
     <slot />
   </div>
 </template>
 
 <script lang="ts" setup>
 import { onMounted, provide, ref } from 'vue'
-import { useLocale, useNamespace } from '@element-plus/hooks'
+import { useLocale, useNamespace } from '@cery929-ui/hooks'
 import { breadcrumbKey } from './constants'
 
 import type { BreadcrumbProps } from './breadcrumb'

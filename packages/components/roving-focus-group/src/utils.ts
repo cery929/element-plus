@@ -1,5 +1,5 @@
-import { EVENT_CODE } from '@element-plus/constants'
-import { getEventCode } from '@element-plus/utils'
+import { EVENT_CODE } from '@cery929-ui/constants'
+import { getEventCode } from '@cery929-ui/utils'
 
 import type { HTMLAttributes } from 'vue'
 

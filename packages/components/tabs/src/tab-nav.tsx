@@ -24,12 +24,12 @@ import {
   mutable,
   rAF,
   throwError,
-} from '@element-plus/utils'
-import { EVENT_CODE } from '@element-plus/constants'
-import { ElIcon } from '@element-plus/components/icon'
+} from '@cery929-ui/utils'
+import { EVENT_CODE } from '@cery929-ui/constants'
+import { ElIcon } from '@cery929-ui/components/icon'
 import { ArrowLeft, ArrowRight, Close } from '@cery929-ui/icons-vue'
-import { useNamespace } from '@element-plus/hooks'
-import useWheel from '@element-plus/components/virtual-list/src/hooks/use-wheel'
+import { useNamespace } from '@cery929-ui/hooks'
+import useWheel from '@cery929-ui/components/virtual-list/src/hooks/use-wheel'
 import { clamp } from 'lodash-unified'
 import TabBar from './tab-bar.vue'
 import { tabsRootContextKey } from './constants'

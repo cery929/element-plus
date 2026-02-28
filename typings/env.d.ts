@@ -1,4 +1,4 @@
-import type { INSTALLED_KEY } from '@element-plus/constants'
+import type { INSTALLED_KEY } from '@cery929-ui/constants'
 
 declare global {
   const process: {

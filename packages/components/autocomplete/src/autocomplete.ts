@@ -5,21 +5,21 @@ import {
   isNumber,
   isObject,
   isString,
-} from '@element-plus/utils'
-import { useTooltipContentProps } from '@element-plus/components/tooltip'
+} from '@cery929-ui/utils'
+import { useTooltipContentProps } from '@cery929-ui/components/tooltip'
 import {
   CHANGE_EVENT,
   INPUT_EVENT,
   UPDATE_MODEL_EVENT,
-} from '@element-plus/constants'
-import { inputProps } from '@element-plus/components/input'
+} from '@cery929-ui/constants'
+import { inputProps } from '@cery929-ui/components/input'
 
 import type { ExtractPublicPropTypes } from 'vue'
 import type Autocomplete from './autocomplete.vue'
-import type { Placement } from '@element-plus/components/popper'
-import type { Awaitable } from '@element-plus/utils'
-import type { InputProps } from '@element-plus/components/input'
-import type { ElTooltipContentProps } from '@element-plus/components/tooltip'
+import type { Placement } from '@cery929-ui/components/popper'
+import type { Awaitable } from '@cery929-ui/utils'
+import type { InputProps } from '@cery929-ui/components/input'
+import type { ElTooltipContentProps } from '@cery929-ui/components/tooltip'
 
 export type AutocompleteData = Record<string, any>[]
 export type AutocompleteFetchSuggestionsCallback = (

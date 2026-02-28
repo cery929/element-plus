@@ -1,4 +1,4 @@
-import { buildProps, definePropType, iconPropType } from '@element-plus/utils'
+import { buildProps, definePropType, iconPropType } from '@cery929-ui/utils'
 import { ArrowRight } from '@cery929-ui/icons-vue'
 
 import type { Component, ExtractPublicPropTypes } from 'vue'

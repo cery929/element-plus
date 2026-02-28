@@ -1,9 +1,9 @@
 import installer from './defaults'
 
-export * from '@element-plus/components'
-export * from '@element-plus/constants'
-export * from '@element-plus/directives'
-export * from '@element-plus/hooks'
+export * from '@cery929-ui/components'
+export * from '@cery929-ui/constants'
+export * from '@cery929-ui/directives'
+export * from '@cery929-ui/hooks'
 export * from './make-installer'
 
 export const install = installer.install

@@ -1,11 +1,11 @@
-import { buildProps, definePropType } from '@element-plus/utils'
-import { disabledTimeListsProps } from '@element-plus/components/time-picker/src/props/shared'
+import { buildProps, definePropType } from '@cery929-ui/utils'
+import { disabledTimeListsProps } from '@cery929-ui/components/time-picker/src/props/shared'
 
 import type { ExtractPropTypes, ExtractPublicPropTypes } from 'vue'
 import type {
   ModelValueType,
   SingleOrRange,
-} from '@element-plus/components/time-picker'
+} from '@cery929-ui/components/time-picker'
 import type { DatePickerType } from '../types'
 
 export const datePickerPanelProps = buildProps({

@@ -1,13 +1,6 @@
 <template>
-  <el-table-v2
-    fixed
-    :columns="fixedColumns"
-    :data="data"
-    :header-height="[50, 40, 50]"
-    :header-class="headerClass"
-    :width="700"
-    :height="400"
-  >
+  <el-table-v2 fixed :columns="fixedColumns" :data="data" :header-height="[50, 40, 50]" :header-class="headerClass"
+    :width="700" :height="400">
     <template #header="props">
       <customized-header v-bind="props" />
     </template>
@@ -15,13 +8,13 @@
 </template>
 
 <script lang="tsx" setup>
-import { TableV2FixedDir, TableV2Placeholder } from 'element-plus'
+import { TableV2FixedDir, TableV2Placeholder } from 'cery929-ui'
 
 import type { FunctionalComponent } from 'vue'
 import type {
   HeaderClassNameGetter,
   TableV2CustomizedHeaderSlotParam,
-} from 'element-plus'
+} from 'cery929-ui'
 
 const generateColumns = (length = 10, prefix = 'column-', props?: any) =>
   Array.from({ length }).map((_, columnIndex) => ({

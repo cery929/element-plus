@@ -1,5 +1,5 @@
 import 'normalize.css'
-// import 'element-plus/dist/index.css'
+// import 'cery929-ui/dist/index.css'
 
 // for dev
 // reset

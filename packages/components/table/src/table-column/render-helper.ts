@@ -10,8 +10,8 @@ import {
   unref,
   watchEffect,
 } from 'vue'
-import { debugWarn, isArray, isUndefined } from '@element-plus/utils'
-import { useNamespace } from '@element-plus/hooks'
+import { debugWarn, isArray, isUndefined } from '@cery929-ui/utils'
+import { useNamespace } from '@cery929-ui/hooks'
 import {
   cellForced,
   defaultRenderCell,

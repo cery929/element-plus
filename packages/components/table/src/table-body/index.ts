@@ -6,8 +6,8 @@ import {
   onUnmounted,
   watch,
 } from 'vue'
-import { addClass, isClient, rAF, removeClass } from '@element-plus/utils'
-import { useNamespace } from '@element-plus/hooks'
+import { addClass, isClient, rAF, removeClass } from '@cery929-ui/utils'
+import { useNamespace } from '@cery929-ui/hooks'
 import useLayoutObserver from '../layout-observer'
 import { removePopper } from '../util'
 import { TABLE_INJECTION_KEY } from '../tokens'

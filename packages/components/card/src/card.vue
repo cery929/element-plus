@@ -18,8 +18,8 @@
 </template>
 
 <script lang="ts" setup>
-import { useNamespace } from '@element-plus/hooks'
-import { useGlobalConfig } from '@element-plus/components/config-provider'
+import { useNamespace } from '@cery929-ui/hooks'
+import { useGlobalConfig } from '@cery929-ui/components/config-provider'
 
 import type { CardProps } from './card'
 

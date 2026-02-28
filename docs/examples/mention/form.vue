@@ -1,10 +1,5 @@
 <template>
-  <el-form
-    ref="ruleFormRef"
-    style="max-width: 600px"
-    :model="ruleForm"
-    :rules="rules"
-  >
+  <el-form ref="ruleFormRef" style="max-width: 600px" :model="ruleForm" :rules="rules">
     <el-form-item label="name" prop="name">
       <el-mention v-model="ruleForm.name" :options="options" />
     </el-form-item>
@@ -23,7 +18,7 @@
 <script lang="ts" setup>
 import { reactive, ref } from 'vue'
 
-import type { FormInstance, FormRules } from 'element-plus'
+import type { FormInstance, FormRules } from 'cery929-ui'
 
 interface RuleForm {
   name: string

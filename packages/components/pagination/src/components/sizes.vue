@@ -1,22 +1,8 @@
 <template>
   <span :class="ns.e('sizes')">
-    <el-select
-      :model-value="innerPageSize"
-      :disabled="disabled"
-      :popper-class="popperClass"
-      :popper-style="popperStyle"
-      :size="size"
-      :teleported="teleported"
-      :validate-event="false"
-      :append-to="appendSizeTo"
-      @change="handleChange"
-    >
-      <el-option
-        v-for="item in innerPageSizes"
-        :key="item"
-        :value="item"
-        :label="item + t('el.pagination.pagesize')"
-      />
+    <el-select :model-value="innerPageSize" :disabled="disabled" :popper-class="popperClass" :popper-style="popperStyle"
+      :size="size" :teleported="teleported" :validate-event="false" :append-to="appendSizeTo" @change="handleChange">
+      <el-option v-for="item in innerPageSizes" :key="item" :value="item" :label="item + t('el.pagination.pagesize')" />
     </el-select>
   </span>
 </template>
@@ -24,9 +10,9 @@
 <script lang="ts" setup>
 import { computed, ref, watch } from 'vue'
 import { isEqual } from 'lodash-unified'
-import { ElOption, ElSelect } from '@element-plus/components/select'
-import { useLocale, useNamespace } from '@element-plus/hooks'
-import { isArray } from '@element-plus/utils'
+import { ElOption, ElSelect } from '@cery929-ui/components/select'
+import { useLocale, useNamespace } from '@cery929-ui/hooks'
+import { isArray } from '@cery929-ui/utils'
 import { usePagination } from '../usePagination'
 import { paginationSizesProps } from './sizes'
 

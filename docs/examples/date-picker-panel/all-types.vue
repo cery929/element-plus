@@ -4,11 +4,7 @@
       <div class="flex flex-col basis-150px gap-1">
         <span>Type:</span>
         <el-select v-model="type">
-          <el-option
-            v-for="optionType in types"
-            :key="optionType"
-            :value="optionType"
-          />
+          <el-option v-for="optionType in types" :key="optionType" :value="optionType" />
         </el-select>
       </div>
     </div>
@@ -22,7 +18,7 @@
 <script lang="ts" setup>
 import { ref, watch } from 'vue'
 
-import type { DatePickerType } from 'element-plus'
+import type { DatePickerType } from 'cery929-ui'
 
 const date = ref()
 const type = ref<DatePickerType>('date')

@@ -1,9 +1,9 @@
-import { provideGlobalConfig } from '@element-plus/components/config-provider'
-import { INSTALLED_KEY } from '@element-plus/constants'
+import { provideGlobalConfig } from '@cery929-ui/components/config-provider'
+import { INSTALLED_KEY } from '@cery929-ui/constants'
 import { version } from './version'
 
 import type { App, Plugin } from 'vue'
-import type { ConfigProviderContext } from '@element-plus/components/config-provider'
+import type { ConfigProviderContext } from '@cery929-ui/components/config-provider'
 
 export const makeInstaller = (components: Plugin[] = []) => {
   const install = (app: App, options?: ConfigProviderContext) => {

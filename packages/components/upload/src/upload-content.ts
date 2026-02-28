@@ -1,4 +1,4 @@
-import { NOOP, buildProps, definePropType } from '@element-plus/utils'
+import { NOOP, buildProps, definePropType } from '@cery929-ui/utils'
 import {
   UploadBaseProps,
   uploadBaseProps,

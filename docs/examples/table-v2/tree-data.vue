@@ -1,22 +1,14 @@
 <template>
-  <el-table-v2
-    v-model:expanded-row-keys="expandedRowKeys"
-    :columns="columns"
-    :data="treeData"
-    :width="700"
-    :expand-column-key="expandColumnKey"
-    :height="400"
-    fixed
-    @row-expand="onRowExpanded"
-    @expanded-rows-change="onExpandedRowsChange"
-  />
+  <el-table-v2 v-model:expanded-row-keys="expandedRowKeys" :columns="columns" :data="treeData" :width="700"
+    :expand-column-key="expandColumnKey" :height="400" fixed @row-expand="onRowExpanded"
+    @expanded-rows-change="onExpandedRowsChange" />
 </template>
 
 <script lang="ts" setup>
 import { computed, ref } from 'vue'
-import { TableV2FixedDir } from 'element-plus'
+import { TableV2FixedDir } from 'cery929-ui'
 
-import type { ExpandedRowsChangeHandler, RowExpandHandler } from 'element-plus'
+import type { ExpandedRowsChangeHandler, RowExpandHandler } from 'cery929-ui'
 
 const generateColumns = (length = 10, prefix = 'column-', props?: any) =>
   Array.from({ length }).map((_, columnIndex) => ({

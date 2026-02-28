@@ -2,13 +2,7 @@
   <div style="height: 400px">
     <el-auto-resizer>
       <template #default="{ height, width }">
-        <el-table-v2
-          :columns="columns"
-          :data="data"
-          :width="width"
-          :height="height"
-          fixed
-        />
+        <el-table-v2 :columns="columns" :data="data" :width="width" :height="height" fixed />
       </template>
     </el-auto-resizer>
   </div>
@@ -16,10 +10,10 @@
 
 <script lang="tsx" setup>
 import { ref, unref } from 'vue'
-import { ElCheckbox, useLocale } from 'element-plus'
+import { ElCheckbox, useLocale } from 'cery929-ui'
 
 import type { FunctionalComponent } from 'vue'
-import type { CheckboxValueType, Column } from 'element-plus'
+import type { CheckboxValueType, Column } from 'cery929-ui'
 
 type SelectionCellProps = {
   value: boolean
@@ -92,10 +86,10 @@ columns.unshift({
   headerCellRenderer: () => {
     const _data = unref(data)
     const onChange = (value: CheckboxValueType) =>
-      (data.value = _data.map((row) => {
-        row.checked = value
-        return row
-      }))
+    (data.value = _data.map((row) => {
+      row.checked = value
+      return row
+    }))
     const allSelected = _data.every((row) => row.checked)
     const containsChecked = _data.some((row) => row.checked)
 

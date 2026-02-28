@@ -1,16 +1,16 @@
 import { Star, StarFilled } from '@cery929-ui/icons-vue'
-import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@element-plus/constants'
+import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@cery929-ui/constants'
 import {
   buildProps,
   definePropType,
   iconPropType,
   isNumber,
   mutable,
-} from '@element-plus/utils'
-import { useAriaProps, useSizeProp } from '@element-plus/hooks'
+} from '@cery929-ui/utils'
+import { useAriaProps, useSizeProp } from '@cery929-ui/hooks'
 
 import type { Component, ExtractPublicPropTypes } from 'vue'
-import type { ComponentSize } from '@element-plus/constants'
+import type { ComponentSize } from '@cery929-ui/constants'
 import type Rate from './rate.vue'
 
 export interface RateProps {

@@ -6,23 +6,15 @@
         <i :class="ns.e('line-inner')" :style="lineStyle" />
       </div>
 
-      <div
-        :class="[ns.e('icon'), ns.is(icon || $slots.icon ? 'icon' : 'text')]"
-      >
+      <div :class="[ns.e('icon'), ns.is(icon || $slots.icon ? 'icon' : 'text')]">
         <slot name="icon">
           <el-icon v-if="icon" :class="ns.e('icon-inner')">
             <component :is="icon" />
           </el-icon>
-          <el-icon
-            v-else-if="currentStatus === 'success'"
-            :class="[ns.e('icon-inner'), ns.is('status')]"
-          >
+          <el-icon v-else-if="currentStatus === 'success'" :class="[ns.e('icon-inner'), ns.is('status')]">
             <Check />
           </el-icon>
-          <el-icon
-            v-else-if="currentStatus === 'error'"
-            :class="[ns.e('icon-inner'), ns.is('status')]"
-          >
+          <el-icon v-else-if="currentStatus === 'error'" :class="[ns.e('icon-inner'), ns.is('status')]">
             <Close />
           </el-icon>
           <div v-else-if="!isSimple" :class="ns.e('icon-inner')">
@@ -54,10 +46,10 @@ import {
   ref,
   watch,
 } from 'vue'
-import { useNamespace } from '@element-plus/hooks'
-import { ElIcon } from '@element-plus/components/icon'
+import { useNamespace } from '@cery929-ui/hooks'
+import { ElIcon } from '@cery929-ui/components/icon'
 import { Check, Close } from '@cery929-ui/icons-vue'
-import { isNumber } from '@element-plus/utils'
+import { isNumber } from '@cery929-ui/utils'
 import { STEPS_INJECTION_KEY } from './tokens'
 
 import type { StepProps } from './item'

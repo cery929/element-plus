@@ -1,5 +1,5 @@
 {
-  "name": "@element-plus/metadata",
+  "name": "@cery929-ui/metadata",
   "version": "0.0.1",
   "description": "Metadata for Element Plus",
   "keywords": [
@@ -22,9 +22,9 @@
     "url": "git+https://github.com/element-plus/element-plus.git"
   },
   "devDependencies": {
-    "@element-plus/build": "workspace:*",
-    "@element-plus/build-constants": "workspace:*",
-    "@element-plus/build-utils": "workspace:*",
+    "@cery929-ui/build": "workspace:*",
+    "@cery929-ui/build-constants": "workspace:*",
+    "@cery929-ui/build-utils": "workspace:*",
     "@types/lodash-es": "^4.17.12",
     "chalk": "^5.3.0",
     "consola": "^2.15.3",

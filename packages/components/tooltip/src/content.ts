@@ -1,17 +1,17 @@
-import { buildProps, definePropType } from '@element-plus/utils'
+import { buildProps, definePropType } from '@cery929-ui/utils'
 import {
   popperContentProps,
   popperContentPropsDefaults,
-} from '@element-plus/components/popper'
+} from '@cery929-ui/components/popper'
 import {
   useAriaProps,
   useDelayedToggleProps,
   useDelayedTogglePropsDefaults,
-} from '@element-plus/hooks'
-import { teleportProps } from '@element-plus/components/teleport'
+} from '@cery929-ui/hooks'
+import { teleportProps } from '@cery929-ui/components/teleport'
 
-import type { AriaProps, UseDelayedToggleProps } from '@element-plus/hooks'
-import type { PopperContentProps } from '@element-plus/components/popper'
+import type { AriaProps, UseDelayedToggleProps } from '@cery929-ui/hooks'
+import type { PopperContentProps } from '@cery929-ui/components/popper'
 import type TooltipContent from './content.vue'
 import type { ExtractPublicPropTypes } from 'vue'
 

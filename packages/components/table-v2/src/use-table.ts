@@ -7,8 +7,8 @@ import {
   unref,
   watch,
 } from 'vue'
-import { isArray, isNumber } from '@element-plus/utils'
-import { useNamespace } from '@element-plus/hooks'
+import { isArray, isNumber } from '@cery929-ui/utils'
+import { useNamespace } from '@cery929-ui/hooks'
 import {
   useColumns,
   useData,

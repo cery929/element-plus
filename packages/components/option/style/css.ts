@@ -1,2 +1,2 @@
-import '@element-plus/components/base/style/css'
-import '@element-plus/theme-chalk/el-option.css'
+import '@cery929-ui/components/base/style/css'
+import '@cery929-ui/theme-chalk/el-option.css'

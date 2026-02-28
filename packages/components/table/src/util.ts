@@ -12,10 +12,10 @@ import {
   isString,
   isUndefined,
   throwError,
-} from '@element-plus/utils'
+} from '@cery929-ui/utils'
 import ElTooltip, {
   type ElTooltipProps,
-} from '@element-plus/components/tooltip'
+} from '@cery929-ui/components/tooltip'
 
 import type { DefaultRow, Table, TreeProps } from './table/defaults'
 import type { TableColumnCtx } from './table-column/defaults'

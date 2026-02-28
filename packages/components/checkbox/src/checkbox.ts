@@ -1,9 +1,9 @@
-import { UPDATE_MODEL_EVENT } from '@element-plus/constants'
-import { AriaProps, useAriaProps, useSizeProp } from '@element-plus/hooks'
-import { isBoolean, isNumber, isString } from '@element-plus/utils'
+import { UPDATE_MODEL_EVENT } from '@cery929-ui/constants'
+import { AriaProps, useAriaProps, useSizeProp } from '@cery929-ui/hooks'
+import { isBoolean, isNumber, isString } from '@cery929-ui/utils'
 
 import type { ExtractPublicPropTypes } from 'vue'
-import type { ComponentSize } from '@element-plus/constants'
+import type { ComponentSize } from '@cery929-ui/constants'
 import type Checkbox from './checkbox.vue'
 
 export type CheckboxValueType = string | number | boolean

@@ -5,12 +5,7 @@
   <el-button text @click="dialog = true">
     Open Drawer with nested form
   </el-button>
-  <el-drawer
-    v-model="table"
-    title="I have a nested table inside!"
-    direction="rtl"
-    size="50%"
-  >
+  <el-drawer v-model="table" title="I have a nested table inside!" direction="rtl" size="50%">
     <el-table :data="gridData">
       <el-table-column property="date" label="Date" width="150" />
       <el-table-column property="name" label="Name" width="200" />
@@ -18,23 +13,15 @@
     </el-table>
   </el-drawer>
 
-  <el-drawer
-    v-model="dialog"
-    title="I have a nested form inside!"
-    :before-close="handleClose"
-    direction="ltr"
-    class="demo-drawer"
-  >
+  <el-drawer v-model="dialog" title="I have a nested form inside!" :before-close="handleClose" direction="ltr"
+    class="demo-drawer">
     <div class="demo-drawer__content">
       <el-form :model="form">
         <el-form-item label="Name" :label-width="formLabelWidth">
           <el-input v-model="form.name" autocomplete="off" />
         </el-form-item>
         <el-form-item label="Area" :label-width="formLabelWidth">
-          <el-select
-            v-model="form.region"
-            placeholder="Please select activity area"
-          >
+          <el-select v-model="form.region" placeholder="Please select activity area">
             <el-option label="Area1" value="shanghai" />
             <el-option label="Area2" value="beijing" />
           </el-select>
@@ -52,7 +39,7 @@
 
 <script lang="ts" setup>
 import { reactive, ref } from 'vue'
-import { ElMessageBox } from 'element-plus'
+import { ElMessageBox } from 'cery929-ui'
 
 const formLabelWidth = '80px'
 let timer

@@ -1,11 +1,7 @@
 <template>
   <el-roving-focus-item :focusable="!disabled">
-    <el-dropdown-item-impl
-      v-bind="propsAndAttrs"
-      @pointerleave="handlePointerLeave"
-      @pointermove="handlePointerMove"
-      @clickimpl="handleClick"
-    >
+    <el-dropdown-item-impl v-bind="propsAndAttrs" @pointerleave="handlePointerLeave" @pointermove="handlePointerMove"
+      @clickimpl="handleClick">
       <template v-if="$slots.icon" #icon>
         <slot name="icon" />
       </template>
@@ -17,8 +13,8 @@
 
 <script lang="ts">
 import { computed, defineComponent, getCurrentInstance, inject } from 'vue'
-import { ElRovingFocusItem } from '@element-plus/components/roving-focus-group'
-import { composeEventHandlers, whenMouse } from '@element-plus/utils'
+import { ElRovingFocusItem } from '@cery929-ui/components/roving-focus-group'
+import { composeEventHandlers, whenMouse } from '@cery929-ui/utils'
 import ElDropdownItemImpl from './dropdown-item-impl.vue'
 import { useDropdown } from './useDropdown'
 import { dropdownItemProps } from './dropdown'

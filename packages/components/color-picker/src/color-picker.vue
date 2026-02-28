@@ -1,52 +1,19 @@
 <template>
-  <el-tooltip
-    ref="popper"
-    :visible="showPicker"
-    :show-arrow="false"
-    :fallback-placements="['bottom', 'top', 'right', 'left']"
-    :offset="0"
-    :gpu-acceleration="false"
-    :popper-class="[ns.be('picker', 'panel'), popperClass!]"
-    :popper-style="popperStyle"
-    :stop-popper-mouse-event="false"
-    pure
-    loop
-    role="dialog"
-    effect="light"
-    trigger="click"
-    :teleported="teleported"
-    :transition="`${ns.namespace.value}-zoom-in-top`"
-    :persistent="persistent"
-    :append-to="appendTo"
-    @show="handleShowTooltip"
-    @hide="setShowPicker(false)"
-  >
+  <el-tooltip ref="popper" :visible="showPicker" :show-arrow="false"
+    :fallback-placements="['bottom', 'top', 'right', 'left']" :offset="0" :gpu-acceleration="false"
+    :popper-class="[ns.be('picker', 'panel'), popperClass!]" :popper-style="popperStyle"
+    :stop-popper-mouse-event="false" pure loop role="dialog" effect="light" trigger="click" :teleported="teleported"
+    :transition="`${ns.namespace.value}-zoom-in-top`" :persistent="persistent" :append-to="appendTo"
+    @show="handleShowTooltip" @hide="setShowPicker(false)">
     <template #content>
-      <el-color-picker-panel
-        ref="pickerPanelRef"
-        v-bind="panelProps"
-        v-click-outside:[triggerRef]="handleClickOutside"
-        :border="false"
-        :validate-event="false"
-        @keydown.esc="handleEsc"
-      >
+      <el-color-picker-panel ref="pickerPanelRef" v-bind="panelProps" v-click-outside:[triggerRef]="handleClickOutside"
+        :border="false" :validate-event="false" @keydown.esc="handleEsc">
         <template #footer>
           <div>
-            <el-button
-              v-if="clearable"
-              :class="ns.be('footer', 'link-btn')"
-              text
-              size="small"
-              @click="clear"
-            >
+            <el-button v-if="clearable" :class="ns.be('footer', 'link-btn')" text size="small" @click="clear">
               {{ t('el.colorpicker.clear') }}
             </el-button>
-            <el-button
-              plain
-              size="small"
-              :class="ns.be('footer', 'btn')"
-              @click="confirmValue"
-            >
+            <el-button plain size="small" :class="ns.be('footer', 'btn')" @click="confirmValue">
               {{ t('el.colorpicker.confirm') }}
             </el-button>
           </div>
@@ -54,41 +21,20 @@
       </el-color-picker-panel>
     </template>
     <template #default>
-      <div
-        :id="buttonId"
-        ref="triggerRef"
-        v-bind="$attrs"
-        :class="btnKls"
-        role="button"
-        :aria-label="buttonAriaLabel"
-        :aria-labelledby="buttonAriaLabelledby"
-        :aria-description="
-          t('el.colorpicker.description', { color: modelValue || '' })
-        "
-        :aria-disabled="colorDisabled"
-        :tabindex="colorDisabled ? undefined : tabindex"
-        @keydown="handleKeyDown"
-        @focus="handleFocus"
-        @blur="handleBlur"
-      >
+      <div :id="buttonId" ref="triggerRef" v-bind="$attrs" :class="btnKls" role="button" :aria-label="buttonAriaLabel"
+        :aria-labelledby="buttonAriaLabelledby" :aria-description="t('el.colorpicker.description', { color: modelValue || '' })
+          " :aria-disabled="colorDisabled" :tabindex="colorDisabled ? undefined : tabindex" @keydown="handleKeyDown"
+        @focus="handleFocus" @blur="handleBlur">
         <div :class="ns.be('picker', 'trigger')" @click="handleTrigger">
           <span :class="[ns.be('picker', 'color'), ns.is('alpha', showAlpha)]">
-            <span
-              :class="ns.be('picker', 'color-inner')"
-              :style="{
-                backgroundColor: displayedColor,
-              }"
-            >
-              <el-icon
-                v-show="modelValue || showPanelColor"
-                :class="[ns.be('picker', 'icon'), ns.is('icon-arrow-down')]"
-              >
+            <span :class="ns.be('picker', 'color-inner')" :style="{
+              backgroundColor: displayedColor,
+            }">
+              <el-icon v-show="modelValue || showPanelColor"
+                :class="[ns.be('picker', 'icon'), ns.is('icon-arrow-down')]">
                 <arrow-down />
               </el-icon>
-              <el-icon
-                v-show="!modelValue && !showPanelColor"
-                :class="[ns.be('picker', 'empty'), ns.is('icon-close')]"
-              >
+              <el-icon v-show="!modelValue && !showPanelColor" :class="[ns.be('picker', 'empty'), ns.is('icon-close')]">
                 <close />
               </el-icon>
             </span>
@@ -102,41 +48,41 @@
 <script lang="ts" setup>
 import { computed, nextTick, provide, ref, watch } from 'vue'
 import { debounce, pick } from 'lodash-unified'
-import { ElIcon } from '@element-plus/components/icon'
+import { ElIcon } from '@cery929-ui/components/icon'
 import { reactiveComputed } from '@vueuse/core'
-import { ClickOutside as vClickOutside } from '@element-plus/directives'
-import { ElTooltip } from '@element-plus/components/tooltip'
-import { ElButton } from '@element-plus/components/button'
+import { ClickOutside as vClickOutside } from '@cery929-ui/directives'
+import { ElTooltip } from '@cery929-ui/components/tooltip'
+import { ElButton } from '@cery929-ui/components/button'
 import {
   useFormDisabled,
   useFormItem,
   useFormItemInputId,
   useFormSize,
-} from '@element-plus/components/form'
+} from '@cery929-ui/components/form'
 import {
   useEmptyValues,
   useFocusController,
   useLocale,
   useNamespace,
-} from '@element-plus/hooks'
+} from '@cery929-ui/hooks'
 import {
   CHANGE_EVENT,
   EVENT_CODE,
   UPDATE_MODEL_EVENT,
-} from '@element-plus/constants'
-import { debugWarn, getEventCode } from '@element-plus/utils'
+} from '@cery929-ui/constants'
+import { debugWarn, getEventCode } from '@cery929-ui/utils'
 import { ArrowDown, Close } from '@cery929-ui/icons-vue'
 import { colorPickerEmits, colorPickerPropsDefaults } from './color-picker'
 import {
   ElColorPickerPanel,
   ROOT_COMMON_COLOR_INJECTION_KEY,
   colorPickerPanelProps,
-} from '@element-plus/components/color-picker-panel'
-import Color from '@element-plus/components/color-picker-panel/src/utils/color'
-import { useCommonColor } from '@element-plus/components/color-picker-panel/src/composables/use-common-color'
+} from '@cery929-ui/components/color-picker-panel'
+import Color from '@cery929-ui/components/color-picker-panel/src/utils/color'
+import { useCommonColor } from '@cery929-ui/components/color-picker-panel/src/composables/use-common-color'
 
-import type { ColorPickerPanelInstance } from '@element-plus/components/color-picker-panel'
-import type { TooltipInstance } from '@element-plus/components/tooltip'
+import type { ColorPickerPanelInstance } from '@cery929-ui/components/color-picker-panel'
+import type { TooltipInstance } from '@cery929-ui/components/tooltip'
 import type { ColorPickerProps } from './color-picker'
 
 defineOptions({

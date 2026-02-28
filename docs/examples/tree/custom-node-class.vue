@@ -1,19 +1,12 @@
 <template>
   <div class="custom-tree-node-container">
-    <el-tree
-      style="max-width: 600px"
-      :data="data"
-      show-checkbox
-      node-key="id"
-      default-expand-all
-      :expand-on-click-node="false"
-      :props="{ class: customNodeClass }"
-    />
+    <el-tree style="max-width: 600px" :data="data" show-checkbox node-key="id" default-expand-all
+      :expand-on-click-node="false" :props="{ class: customNodeClass }" />
   </div>
 </template>
 
 <script lang="ts" setup>
-import type { TreeNodeData } from 'element-plus'
+import type { TreeNodeData } from 'cery929-ui'
 
 interface Tree {
   id: number
@@ -81,16 +74,18 @@ const data: Tree[] = [
 </script>
 
 <style>
-.is-penultimate > .el-tree-node__content .el-tree-node__label {
+.is-penultimate>.el-tree-node__content .el-tree-node__label {
   color: #626aef;
 }
-.is-penultimate > .el-tree-node__children > div {
+
+.is-penultimate>.el-tree-node__children>div {
   display: inline-block;
   margin-right: 4px;
 
   &:not(:first-child) .el-tree-node__content {
     padding-left: 0px !important;
   }
+
   .el-tree-node__content {
     padding-right: 16px;
   }

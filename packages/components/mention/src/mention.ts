@@ -4,18 +4,18 @@ import {
   isFunction,
   isObject,
   isString,
-} from '@element-plus/utils'
-import { UPDATE_MODEL_EVENT } from '@element-plus/constants'
-import { inputProps } from '@element-plus/components/input'
+} from '@cery929-ui/utils'
+import { UPDATE_MODEL_EVENT } from '@cery929-ui/constants'
+import { inputProps } from '@cery929-ui/components/input'
 import { filterOption } from './helper'
-import { useTooltipContentProps } from '@element-plus/components/tooltip'
+import { useTooltipContentProps } from '@cery929-ui/components/tooltip'
 
 import type { ExtractPublicPropTypes } from 'vue'
 import type Mention from './mention.vue'
 import type { MentionOption } from './types'
-import type { Options } from '@element-plus/components/popper'
-import type { InputProps } from '@element-plus/components/input'
-import type { ElTooltipContentProps } from '@element-plus/components/tooltip'
+import type { Options } from '@cery929-ui/components/popper'
+import type { InputProps } from '@cery929-ui/components/input'
+import type { ElTooltipContentProps } from '@cery929-ui/components/tooltip'
 
 export interface MentionProps extends InputProps {
   /**

@@ -3,10 +3,10 @@ import {
   definePropType,
   iconPropType,
   isBoolean,
-} from '@element-plus/utils'
+} from '@cery929-ui/utils'
 
 import type { ComponentInternalInstance, PropType } from 'vue'
-import type { EmitFn } from '@element-plus/utils'
+import type { EmitFn } from '@cery929-ui/utils'
 import type Node from './model/node'
 import type {
   AllowDragFunction,

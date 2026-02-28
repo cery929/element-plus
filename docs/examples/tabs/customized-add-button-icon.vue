@@ -1,21 +1,10 @@
 addIcon
 <template>
-  <el-tabs
-    v-model="editableTabsValue"
-    type="card"
-    class="demo-tabs"
-    editable
-    @edit="handleTabsEdit"
-  >
+  <el-tabs v-model="editableTabsValue" type="card" class="demo-tabs" editable @edit="handleTabsEdit">
     <template #add-icon>
       <el-icon><Select /></el-icon>
     </template>
-    <el-tab-pane
-      v-for="item in editableTabs"
-      :key="item.name"
-      :label="item.title"
-      :name="item.name"
-    >
+    <el-tab-pane v-for="item in editableTabs" :key="item.name" :label="item.title" :name="item.name">
       {{ item.content }}
     </el-tab-pane>
   </el-tabs>
@@ -25,7 +14,7 @@ addIcon
 import { ref } from 'vue'
 import { Select } from '@cery929-ui/icons-vue'
 
-import type { TabPaneName } from 'element-plus'
+import type { TabPaneName } from 'cery929-ui'
 
 let tabIndex = 2
 const editableTabsValue = ref('2')
@@ -75,7 +64,7 @@ const handleTabsEdit = (
 </script>
 
 <style>
-.demo-tabs > .el-tabs__content {
+.demo-tabs>.el-tabs__content {
   padding: 32px;
   color: #6b778c;
   font-size: 32px;

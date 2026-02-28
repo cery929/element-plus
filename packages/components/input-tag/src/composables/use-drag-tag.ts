@@ -1,6 +1,6 @@
 import { ref, shallowRef } from 'vue'
-import { useNamespace } from '@element-plus/hooks'
-import { getStyle, isUndefined, setStyle } from '@element-plus/utils'
+import { useNamespace } from '@cery929-ui/hooks'
+import { getStyle, isUndefined, setStyle } from '@cery929-ui/utils'
 
 import type { ShallowRef } from 'vue'
 

@@ -15,9 +15,9 @@
 
 <script lang="ts" setup>
 import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
-import { ElStatistic } from '@element-plus/components/statistic'
-import { cAF, rAF } from '@element-plus/utils'
-import { CHANGE_EVENT } from '@element-plus/constants'
+import { ElStatistic } from '@cery929-ui/components/statistic'
+import { cAF, rAF } from '@cery929-ui/utils'
+import { CHANGE_EVENT } from '@cery929-ui/constants'
 import { countdownEmits } from './countdown'
 import { formatTime, getTime } from './utils'
 

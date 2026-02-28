@@ -1,5 +1,5 @@
 import { defineComponent, provide, unref } from 'vue'
-import { useLocale, useNamespace } from '@element-plus/hooks'
+import { useLocale, useNamespace } from '@cery929-ui/hooks'
 import { useTable } from './use-table'
 import { TableV2InjectionKey } from './tokens'
 import { tableV2Props } from './table'

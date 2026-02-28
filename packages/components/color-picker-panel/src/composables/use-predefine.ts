@@ -1,5 +1,5 @@
 import { computed, inject, ref, watch, watchEffect } from 'vue'
-import { useNamespace } from '@element-plus/hooks'
+import { useNamespace } from '@cery929-ui/hooks'
 import { PredefineProps } from '../props/predefine'
 import { colorPickerPanelContextKey } from '../color-picker-panel'
 import Color from '../utils/color'

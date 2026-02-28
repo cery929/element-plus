@@ -1,9 +1,9 @@
-import { withInstall } from '@element-plus/utils'
+import { withInstall } from '@cery929-ui/utils'
 import TimePicker from './src/time-picker'
 import CommonPicker from './src/common/picker.vue'
 import TimePickPanel from './src/time-picker-com/panel-time-pick.vue'
 
-import type { SFCWithInstall } from '@element-plus/utils'
+import type { SFCWithInstall } from '@cery929-ui/utils'
 
 export type TimePickerInstance = InstanceType<typeof TimePicker> &
   TimePickerExpose

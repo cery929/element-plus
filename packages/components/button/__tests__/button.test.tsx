@@ -2,12 +2,12 @@ import { markRaw, nextTick, ref } from 'vue'
 import { mount } from '@vue/test-utils'
 import { describe, expect, it, test } from 'vitest'
 import { Loading, Search } from '@cery929-ui/icons-vue'
-import Form from '@element-plus/components/form'
-import { useNamespace } from '@element-plus/hooks'
+import Form from '@cery929-ui/components/form'
+import { useNamespace } from '@cery929-ui/hooks'
 import Button from '../src/button.vue'
 import ButtonGroup from '../src/button-group.vue'
 
-import type { ComponentSize } from '@element-plus/constants'
+import type { ComponentSize } from '@cery929-ui/constants'
 
 const AXIOM = 'Rem is the best girl'
 const ns = useNamespace('button')

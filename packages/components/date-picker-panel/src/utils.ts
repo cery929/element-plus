@@ -1,6 +1,6 @@
 import dayjs from 'dayjs'
-import { isArray, isString } from '@element-plus/utils'
-import { rangeArr } from '@element-plus/components/time-picker'
+import { isArray, isString } from '@cery929-ui/utils'
+import { rangeArr } from '@cery929-ui/components/time-picker'
 
 import type { ComputedRef } from 'vue'
 import type { Dayjs } from 'dayjs'

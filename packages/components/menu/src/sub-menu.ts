@@ -16,8 +16,8 @@ import {
   withDirectives,
 } from 'vue'
 import { useTimeoutFn } from '@vueuse/core'
-import ElCollapseTransition from '@element-plus/components/collapse-transition'
-import ElTooltip from '@element-plus/components/tooltip'
+import ElCollapseTransition from '@cery929-ui/components/collapse-transition'
+import ElTooltip from '@cery929-ui/components/tooltip'
 import {
   buildProps,
   definePropType,
@@ -26,16 +26,16 @@ import {
   isString,
   isUndefined,
   throwError,
-} from '@element-plus/utils'
-import { useNamespace } from '@element-plus/hooks'
+} from '@cery929-ui/utils'
+import { useNamespace } from '@cery929-ui/hooks'
 import { ArrowDown, ArrowRight } from '@cery929-ui/icons-vue'
-import { ElIcon } from '@element-plus/components/icon'
+import { ElIcon } from '@cery929-ui/components/icon'
 import useMenu from './use-menu'
 import { useMenuCssVar } from './use-menu-css-var'
 import { MENU_INJECTION_KEY, SUB_MENU_INJECTION_KEY } from './tokens'
 
-import type { Placement } from '@element-plus/components/popper'
-import type { TooltipInstance } from '@element-plus/components/tooltip'
+import type { Placement } from '@cery929-ui/components/popper'
+import type { TooltipInstance } from '@cery929-ui/components/tooltip'
 import type {
   CSSProperties,
   ExtractPropTypes,

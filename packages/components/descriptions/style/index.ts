@@ -1,3 +1,3 @@
-import '@element-plus/components/base/style'
-import '@element-plus/theme-chalk/src/descriptions.scss'
-import '@element-plus/components/descriptions-item/style'
+import '@cery929-ui/components/base/style'
+import '@cery929-ui/theme-chalk/src/descriptions.scss'
+import '@cery929-ui/components/descriptions-item/style'

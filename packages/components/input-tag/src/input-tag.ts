@@ -6,21 +6,21 @@ import {
   isNumber,
   isString,
   isUndefined,
-} from '@element-plus/utils'
-import { useSizeProp } from '@element-plus/hooks'
+} from '@cery929-ui/utils'
+import { useSizeProp } from '@cery929-ui/hooks'
 import {
   CHANGE_EVENT,
   EVENT_CODE,
   INPUT_EVENT,
   UPDATE_MODEL_EVENT,
-} from '@element-plus/constants'
-import { tagProps } from '@element-plus/components/tag/src/tag'
+} from '@cery929-ui/constants'
+import { tagProps } from '@cery929-ui/components/tag/src/tag'
 import { CircleClose } from '@cery929-ui/icons-vue'
 
 import type { Component, ExtractPublicPropTypes } from 'vue'
-import type { ComponentSize } from '@element-plus/constants'
-import type { PopperEffect } from '@element-plus/components/popper'
-import type { TagProps } from '@element-plus/components/tag'
+import type { ComponentSize } from '@cery929-ui/constants'
+import type { PopperEffect } from '@cery929-ui/components/popper'
+import type { TagProps } from '@cery929-ui/components/tag'
 
 export interface InputTagProps {
   /**

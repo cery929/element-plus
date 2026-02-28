@@ -1,11 +1,6 @@
 <template>
-  <el-table
-    ref="singleTableRef"
-    :data="tableData"
-    highlight-current-row
-    style="width: 100%"
-    @current-change="handleCurrentChange"
-  >
+  <el-table ref="singleTableRef" :data="tableData" highlight-current-row style="width: 100%"
+    @current-change="handleCurrentChange">
     <el-table-column type="index" width="50" />
     <el-table-column property="date" label="Date" width="120" />
     <el-table-column property="name" label="Name" width="120" />
@@ -20,7 +15,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-import type { TableInstance } from 'element-plus'
+import type { TableInstance } from 'cery929-ui'
 
 interface User {
   date: string

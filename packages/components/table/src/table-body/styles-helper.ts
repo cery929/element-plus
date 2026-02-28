@@ -1,6 +1,6 @@
 import { inject } from 'vue'
-import { useNamespace } from '@element-plus/hooks'
-import { isArray, isFunction, isObject, isString } from '@element-plus/utils'
+import { useNamespace } from '@cery929-ui/hooks'
+import { isArray, isFunction, isObject, isString } from '@cery929-ui/utils'
 import {
   ensurePosition,
   getFixedColumnOffset,

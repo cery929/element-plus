@@ -23,14 +23,14 @@
 <script lang="ts" setup>
 import { computed, nextTick, provide, toRefs, watch } from 'vue'
 import { isEqual, omit, pick } from 'lodash-unified'
-import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@element-plus/constants'
-import { debugWarn } from '@element-plus/utils'
-import { useNamespace } from '@element-plus/hooks'
+import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@cery929-ui/constants'
+import { debugWarn } from '@cery929-ui/utils'
+import { useNamespace } from '@cery929-ui/hooks'
 import {
   useFormDisabled,
   useFormItem,
   useFormItemInputId,
-} from '@element-plus/components/form'
+} from '@cery929-ui/components/form'
 import { checkboxDefaultProps, checkboxGroupEmits } from './checkbox-group'
 import { checkboxGroupContextKey } from './constants'
 import ElCheckbox from './checkbox.vue'

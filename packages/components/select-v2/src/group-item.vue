@@ -1,15 +1,12 @@
 <template>
-  <div
-    :class="ns.be('group', 'title')"
-    :style="{ ...style, lineHeight: `${height}px` }"
-  >
+  <div :class="ns.be('group', 'title')" :style="{ ...style, lineHeight: `${height}px` }">
     {{ item.label }}
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { useNamespace } from '@element-plus/hooks'
+import { useNamespace } from '@cery929-ui/hooks'
 
 import type { CSSProperties, PropType } from 'vue'
 

@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { computed, nextTick, ref, shallowReactive } from 'vue'
 
-import type { ButtonInstance, DialogTransition } from 'element-plus'
+import type { ButtonInstance, DialogTransition } from 'cery929-ui'
 
 type GlobalConfig = {
   alignCenter: boolean
@@ -148,28 +148,15 @@ const globalConfig = computed<GlobalConfig>(() => {
     </div>
     <div class="flex items-center gap-4">
       <el-switch v-model="config.draggable" active-text="draggable" />
-      <el-switch
-        v-model="config.overflow"
-        :disabled="!config.draggable"
-        active-text="overflow"
-      />
+      <el-switch v-model="config.overflow" :disabled="!config.draggable" active-text="overflow" />
     </div>
     <div class="flex items-center gap-2">
       <el-switch v-model="enableTransition" active-text="enable transition" />
-      <el-switch
-        v-model="isObjectTransition"
-        :disabled="!enableTransition"
-        active-text="transition: object"
-        inactive-text="transition: string"
-      />
+      <el-switch v-model="isObjectTransition" :disabled="!enableTransition" active-text="transition: object"
+        inactive-text="transition: string" />
     </div>
     <div class="flex items-center gap-2">
-      <el-button
-        ref="buttonRef"
-        type="primary"
-        size="small"
-        @click="visible = true"
-      >
+      <el-button ref="buttonRef" type="primary" size="small" @click="visible = true">
         Open Dialog
       </el-button>
     </div>

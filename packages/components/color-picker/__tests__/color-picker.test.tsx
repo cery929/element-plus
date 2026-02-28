@@ -1,11 +1,11 @@
 import { nextTick, ref } from 'vue'
 import { mount } from '@vue/test-utils'
 import { describe, expect, it, vi } from 'vitest'
-import { ElForm, ElFormItem } from '@element-plus/components/form'
-import { EVENT_CODE } from '@element-plus/constants'
-import { rAF } from '@element-plus/test-utils/tick'
+import { ElForm, ElFormItem } from '@cery929-ui/components/form'
+import { EVENT_CODE } from '@cery929-ui/constants'
+import { rAF } from '@cery929-ui/test-utils/tick'
 import ColorPicker from '../src/color-picker.vue'
-import ColorPickerPanel from '@element-plus/components/color-picker-panel'
+import ColorPickerPanel from '@cery929-ui/components/color-picker-panel'
 
 import type { ComponentPublicInstance } from 'vue'
 

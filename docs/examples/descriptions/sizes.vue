@@ -5,13 +5,7 @@
     <el-radio value="small">Small</el-radio>
   </el-radio-group>
 
-  <el-descriptions
-    class="margin-top"
-    title="With border"
-    :column="3"
-    :size="size"
-    border
-  >
+  <el-descriptions class="margin-top" title="With border" :column="3" :size="size" border>
     <template #extra>
       <el-button type="primary">Operation</el-button>
     </template>
@@ -72,13 +66,7 @@
     </el-descriptions-item>
   </el-descriptions>
 
-  <el-descriptions
-    class="margin-top"
-    title="Without border"
-    :column="3"
-    :size="size"
-    :style="blockMargin"
-  >
+  <el-descriptions class="margin-top" title="Without border" :column="3" :size="size" :style="blockMargin">
     <template #extra>
       <el-button type="primary">Operation</el-button>
     </template>
@@ -104,7 +92,7 @@ import {
   User,
 } from '@cery929-ui/icons-vue'
 
-import type { ComponentSize } from 'element-plus'
+import type { ComponentSize } from 'cery929-ui'
 
 const size = ref<ComponentSize>('default')
 
@@ -134,10 +122,12 @@ const blockMargin = computed(() => {
 .el-descriptions {
   margin-top: 20px;
 }
+
 .cell-item {
   display: flex;
   align-items: center;
 }
+
 .margin-top {
   margin-top: 20px;
 }

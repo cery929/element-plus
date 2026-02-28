@@ -1,20 +1,12 @@
 <template>
-  <li
-    :id="`${contentId}-${index}`"
-    role="option"
-    :aria-selected="selected"
-    :aria-disabled="disabled || undefined"
-    :style="style"
-    :class="[
+  <li :id="`${contentId}-${index}`" role="option" :aria-selected="selected" :aria-disabled="disabled || undefined"
+    :style="style" :class="[
       ns.be('dropdown', 'item'),
       ns.is('selected', selected),
       ns.is('disabled', disabled),
       ns.is('created', created),
       ns.is('hovering', hovering),
-    ]"
-    @mousemove="hoverItem"
-    @click.stop="selectOptionClick"
-  >
+    ]" @mousemove="hoverItem" @click.stop="selectOptionClick">
     <slot :item="item" :index="index" :disabled="disabled">
       <span>{{ getLabel(item) }}</span>
     </slot>
@@ -23,7 +15,7 @@
 
 <script lang="ts">
 import { defineComponent, inject } from 'vue'
-import { useNamespace } from '@element-plus/hooks'
+import { useNamespace } from '@cery929-ui/hooks'
 import { useOption } from './useOption'
 import { useProps } from './useProps'
 import { optionV2Emits, optionV2Props } from './defaults'

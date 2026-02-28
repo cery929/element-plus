@@ -28,9 +28,9 @@
 
 <script lang="ts" setup>
 import { computed, markRaw } from 'vue'
-import { ElIcon } from '@element-plus/components/icon'
+import { ElIcon } from '@cery929-ui/components/icon'
 import { Loading } from '@cery929-ui/icons-vue'
-import { useNamespace } from '@element-plus/hooks'
+import { useNamespace } from '@cery929-ui/hooks'
 import { useButton } from './use-button'
 import { buttonEmits } from './button'
 import { useButtonCustomStyle } from './button-custom'

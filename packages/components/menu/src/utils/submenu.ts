@@ -1,6 +1,6 @@
 // @ts-nocheck
-import { getEventCode, triggerEvent } from '@element-plus/utils'
-import { EVENT_CODE } from '@element-plus/constants'
+import { getEventCode, triggerEvent } from '@cery929-ui/utils'
+import { EVENT_CODE } from '@cery929-ui/constants'
 
 import type MenuItem from './menu-item'
 

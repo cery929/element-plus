@@ -1,3 +1,3 @@
-import '@element-plus/components/base/style/css'
-import '@element-plus/theme-chalk/el-image.css'
-import '@element-plus/components/image-viewer/style/css'
+import '@cery929-ui/components/base/style/css'
+import '@cery929-ui/theme-chalk/el-image.css'
+import '@cery929-ui/components/image-viewer/style/css'

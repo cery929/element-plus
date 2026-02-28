@@ -1,4 +1,4 @@
-import { buildProps } from '@element-plus/utils'
+import { buildProps } from '@cery929-ui/utils'
 
 import type { ExtractPublicPropTypes } from 'vue'
 import type Splitter from './splitter.vue'

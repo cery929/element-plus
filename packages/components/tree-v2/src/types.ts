@@ -1,4 +1,4 @@
-import { IconPropType } from '@element-plus/utils'
+import { IconPropType } from '@cery929-ui/utils'
 
 import type {
   ComponentInternalInstance,

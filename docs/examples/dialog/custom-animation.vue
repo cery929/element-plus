@@ -7,13 +7,8 @@
     <el-button plain @click="openDialogWithObject"> Object Config </el-button>
   </div>
 
-  <el-dialog
-    v-model="dialogVisible"
-    class="custom-transition-dialog"
-    :title="`${currentAnimation} Animation Dialog`"
-    width="30%"
-    :transition="transitionConfig"
-  >
+  <el-dialog v-model="dialogVisible" class="custom-transition-dialog" :title="`${currentAnimation} Animation Dialog`"
+    width="30%" :transition="transitionConfig">
     <div>
       <p>
         Current animation: <strong>{{ currentAnimation }}</strong>
@@ -38,7 +33,7 @@
 <script lang="ts" setup>
 import { computed, ref } from 'vue'
 
-import type { DialogTransition } from 'element-plus'
+import type { DialogTransition } from 'cery929-ui'
 
 const dialogVisible = ref(false)
 const currentAnimation = ref('fade')

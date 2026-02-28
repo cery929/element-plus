@@ -1,5 +1,5 @@
 {
-  "name": "@element-plus/docs",
+  "name": "@cery929-ui/docs",
   "private": true,
   "scripts": {
     "dev": "pnpm gen-locale && vitepress dev .",
@@ -12,19 +12,19 @@
   "dependencies": {
     "@docsearch/js": "^3.1.0",
     "@cery929-ui/icons-vue": "^1.0.1",
-    "@element-plus/metadata": "workspace:*",
+    "@cery929-ui/metadata": "workspace:*",
     "@vue/shared": "catalog:",
     "@vueuse/core": "catalog:",
     "clipboard-copy": "^4.0.1",
-    "element-plus": "2.13.2",
+    "cery929-ui": "1.0.3",
     "normalize.css": "^8.0.1",
     "nprogress": "^0.2.0"
   },
   "devDependencies": {
     "@crowdin/cli": "^4.5.0",
-    "@element-plus/build": "workspace:*",
-    "@element-plus/build-constants": "workspace:*",
-    "@element-plus/build-utils": "workspace:*",
+    "@cery929-ui/build": "workspace:*",
+    "@cery929-ui/build-constants": "workspace:*",
+    "@cery929-ui/build-utils": "workspace:*",
     "@iconify-json/ri": "^1.1.3",
     "@mdit-vue/shared": "^2.1.3",
     "@vitejs/plugin-vue-jsx": "catalog:",

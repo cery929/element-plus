@@ -4,8 +4,8 @@ import {
   definePropType,
   isArray,
   mutable,
-} from '@element-plus/utils'
-import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@element-plus/constants'
+} from '@cery929-ui/utils'
+import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@cery929-ui/constants'
 
 import type { ExtractPublicPropTypes, h as H, VNode } from 'vue'
 import type Transfer from './transfer.vue'

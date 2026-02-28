@@ -191,7 +191,7 @@ export default defineConfig([
               position: 'before',
             },
             {
-              pattern: '@element-plus/**',
+              pattern: '@cery929-ui/**',
               group: 'internal',
             },
           ],
@@ -363,20 +363,18 @@ export default defineConfig([
       'no-restricted-imports': [
         'error',
         {
-          paths: [
-            { name: '@element-plus', message: 'Use element-plus instead.' },
-          ],
+          paths: [{ name: '@cery929-ui', message: 'Use cery929-ui instead.' }],
           patterns: [
             {
               group: [
-                '@element-plus/*',
+                '@cery929-ui/*',
                 '!@cery929-ui/icons-vue',
-                'element-plus/es/*',
-                '!element-plus/es/locale',
-                'element-plus/lib/*',
-                '!element-plus/lib/locale',
+                'cery929-ui/es/*',
+                '!cery929-ui/es/locale',
+                'cery929-ui/lib/*',
+                '!cery929-ui/lib/locale',
               ],
-              message: 'Use element-plus instead.',
+              message: 'Use cery929-ui instead.',
             },
           ],
         },
@@ -400,8 +398,8 @@ export default defineConfig([
             { name: 'lodash', message: 'Use lodash-unified instead.' },
             { name: 'lodash-es', message: 'Use lodash-unified instead.' },
             {
-              name: 'element-plus',
-              message: 'Use @element-plus/* instead.',
+              name: 'cery929-ui',
+              message: 'Use @cery929-ui/* instead.',
             },
           ],
           patterns: [
@@ -410,20 +408,20 @@ export default defineConfig([
               message: 'Use lodash-unified instead.',
             },
             {
-              group: ['element-plus/*'],
-              message: 'Use @element-plus/* instead.',
+              group: ['cery929-ui/*'],
+              message: 'Use @cery929-ui/* instead.',
             },
             {
               group: [
-                '@element-plus/components',
-                '@element-plus/constants',
-                '@element-plus/directives',
-                '@element-plus/element-plus',
-                '@element-plus/hooks',
-                '@element-plus/locale',
-                '@element-plus/test-utils',
-                '@element-plus/theme-chalk',
-                '@element-plus/utils',
+                '@cery929-ui/components',
+                '@cery929-ui/constants',
+                '@cery929-ui/directives',
+                '@cery929-ui/cery929-ui',
+                '@cery929-ui/hooks',
+                '@cery929-ui/locale',
+                '@cery929-ui/test-utils',
+                '@cery929-ui/theme-chalk',
+                '@cery929-ui/utils',
               ],
               message: 'Please do not use this dependency in the current file.',
             },
@@ -446,8 +444,8 @@ export default defineConfig([
             { name: 'lodash', message: 'Use lodash-unified instead.' },
             { name: 'lodash-es', message: 'Use lodash-unified instead.' },
             {
-              name: 'element-plus',
-              message: 'Use @element-plus/* instead.',
+              name: 'cery929-ui',
+              message: 'Use @cery929-ui/* instead.',
             },
           ],
           patterns: [
@@ -456,19 +454,19 @@ export default defineConfig([
               message: 'Use lodash-unified instead.',
             },
             {
-              group: ['element-plus/*'],
-              message: 'Use @element-plus/* instead.',
+              group: ['cery929-ui/*'],
+              message: 'Use @cery929-ui/* instead.',
             },
             {
               group: [
-                '@element-plus/components',
-                '@element-plus/element-plus',
-                '@element-plus/theme-chalk',
-                '@element-plus/build',
-                '@element-plus/build-constants',
-                '@element-plus/build-utils',
-                '@element-plus/eslint-config',
-                '@element-plus/metadata',
+                '@cery929-ui/components',
+                '@cery929-ui/cery929-ui',
+                '@cery929-ui/theme-chalk',
+                '@cery929-ui/build',
+                '@cery929-ui/build-constants',
+                '@cery929-ui/build-utils',
+                '@cery929-ui/eslint-config',
+                '@cery929-ui/metadata',
               ],
               message: 'Please do not use this dependency in the current file.',
             },
@@ -480,7 +478,7 @@ export default defineConfig([
   {
     files: [
       'packages/components/**/*.{js,jsx,ts,tsx,vue}',
-      'packages/element-plus/**/*.{js,jsx,ts,tsx,vue}',
+      'packages/cery929-ui/**/*.{js,jsx,ts,tsx,vue}',
     ],
     rules: {
       'no-restricted-imports': [
@@ -490,8 +488,8 @@ export default defineConfig([
             { name: 'lodash', message: 'Use lodash-unified instead.' },
             { name: 'lodash-es', message: 'Use lodash-unified instead.' },
             {
-              name: 'element-plus',
-              message: 'Use @element-plus/* instead.',
+              name: 'cery929-ui',
+              message: 'Use @cery929-ui/* instead.',
             },
           ],
           patterns: [
@@ -500,32 +498,32 @@ export default defineConfig([
               message: 'Use lodash-unified instead.',
             },
             {
-              group: ['element-plus/*'],
-              message: 'Use @element-plus/* instead.',
+              group: ['cery929-ui/*'],
+              message: 'Use @cery929-ui/* instead.',
             },
             {
               group: [
-                '@element-plus/theme-chalk/**/*.scss',
-                '!@element-plus/theme-chalk/src/*.scss',
-                '@element-plus/theme-chalk/src/el-*.scss',
+                '@cery929-ui/theme-chalk/**/*.scss',
+                '!@cery929-ui/theme-chalk/src/*.scss',
+                '@cery929-ui/theme-chalk/src/el-*.scss',
               ],
-              message: 'Use @element-plus/theme-chalk/src/*.scss instead.',
+              message: 'Use @cery929-ui/theme-chalk/src/*.scss instead.',
             },
             {
               group: [
-                '@element-plus/theme-chalk/**/*.css',
-                '!@element-plus/theme-chalk/el-*.css',
-                '!@element-plus/theme-chalk/base.css',
+                '@cery929-ui/theme-chalk/**/*.css',
+                '!@cery929-ui/theme-chalk/el-*.css',
+                '!@cery929-ui/theme-chalk/base.css',
               ],
-              message: 'Use @element-plus/theme-chalk/el-*.css instead.',
+              message: 'Use @cery929-ui/theme-chalk/el-*.css instead.',
             },
             {
               group: [
-                '@element-plus/build',
-                '@element-plus/build-constants',
-                '@element-plus/build-utils',
-                '@element-plus/eslint-config',
-                '@element-plus/metadata',
+                '@cery929-ui/build',
+                '@cery929-ui/build-constants',
+                '@cery929-ui/build-utils',
+                '@cery929-ui/eslint-config',
+                '@cery929-ui/metadata',
               ],
               message: 'Please do not use this dependency in the current file.',
             },

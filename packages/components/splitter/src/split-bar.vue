@@ -6,7 +6,7 @@ import {
   ArrowRight,
   ArrowUp,
 } from '@cery929-ui/icons-vue'
-import { useNamespace } from '@element-plus/hooks'
+import { useNamespace } from '@cery929-ui/hooks'
 
 const ns = useNamespace('splitter-bar')
 
@@ -129,32 +129,21 @@ const EndIcon = computed(() => (isHorizontal.value ? ArrowRight : ArrowDown))
 
 <template>
   <div :class="[ns.b()]" :style="barWrapStyles">
-    <div
-      v-if="startCollapsible"
-      :class="[ns.e('collapse-icon'), ns.e(`${layout}-collapse-icon-start`)]"
-      @click="emit('collapse', index, 'start')"
-    >
+    <div v-if="startCollapsible" :class="[ns.e('collapse-icon'), ns.e(`${layout}-collapse-icon-start`)]"
+      @click="emit('collapse', index, 'start')">
       <slot name="start-collapsible">
         <component :is="StartIcon" style="width: 12px; height: 12px" />
       </slot>
     </div>
 
-    <div
-      :class="[
-        ns.e('dragger'),
-        draggerPseudoClass,
-        ns.is('disabled', !resizable),
-        ns.is('lazy', resizable && lazy),
-      ]"
-      :style="draggerStyles"
-      @mousedown="onMousedown"
-      @touchstart="onTouchStart"
-    />
-    <div
-      v-if="endCollapsible"
-      :class="[ns.e('collapse-icon'), ns.e(`${layout}-collapse-icon-end`)]"
-      @click="emit('collapse', index, 'end')"
-    >
+    <div :class="[
+      ns.e('dragger'),
+      draggerPseudoClass,
+      ns.is('disabled', !resizable),
+      ns.is('lazy', resizable && lazy),
+    ]" :style="draggerStyles" @mousedown="onMousedown" @touchstart="onTouchStart" />
+    <div v-if="endCollapsible" :class="[ns.e('collapse-icon'), ns.e(`${layout}-collapse-icon-end`)]"
+      @click="emit('collapse', index, 'end')">
       <slot name="end-collapsible">
         <component :is="EndIcon" style="width: 12px; height: 12px" />
       </slot>

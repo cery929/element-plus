@@ -1,7 +1,7 @@
 import ElementPlus, {
   ID_INJECTION_KEY,
   ZINDEX_INJECTION_KEY,
-} from 'element-plus'
+} from 'cery929-ui'
 import { isClient } from '@vueuse/core'
 import VPApp, { NotFound, globals } from '../vitepress'
 import { define } from '../utils/types'

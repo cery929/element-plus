@@ -9,9 +9,9 @@ import {
   watch,
   withModifiers,
 } from 'vue'
-import { BAR_MAP } from '@element-plus/components/scrollbar'
-import { cAF, rAF } from '@element-plus/utils'
-import { useNamespace } from '@element-plus/hooks'
+import { BAR_MAP } from '@cery929-ui/components/scrollbar'
+import { cAF, rAF } from '@cery929-ui/utils'
+import { useNamespace } from '@cery929-ui/hooks'
 import { HORIZONTAL, SCROLLBAR_MIN_SIZE, ScrollbarDirKey } from '../defaults'
 import { virtualizedScrollbarProps } from '../props'
 import { renderThumbStyle } from '../utils'

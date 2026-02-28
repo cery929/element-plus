@@ -12,43 +12,25 @@
     </el-radio-group>
   </div>
   <br />
-  <el-form
-    style="max-width: 600px"
-    :model="sizeForm"
-    label-width="auto"
-    :label-position="labelPosition"
-    :size="size"
-  >
+  <el-form style="max-width: 600px" :model="sizeForm" label-width="auto" :label-position="labelPosition" :size="size">
     <el-form-item label="Activity name">
       <el-input v-model="sizeForm.name" />
     </el-form-item>
     <el-form-item label="Activity zone">
-      <el-select
-        v-model="sizeForm.region"
-        placeholder="please select your zone"
-      >
+      <el-select v-model="sizeForm.region" placeholder="please select your zone">
         <el-option label="Zone one" value="shanghai" />
         <el-option label="Zone two" value="beijing" />
       </el-select>
     </el-form-item>
     <el-form-item label="Activity time">
       <el-col :span="11">
-        <el-date-picker
-          v-model="sizeForm.date1"
-          type="date"
-          aria-label="Pick a date"
-          placeholder="Pick a date"
-          style="width: 100%"
-        />
+        <el-date-picker v-model="sizeForm.date1" type="date" aria-label="Pick a date" placeholder="Pick a date"
+          style="width: 100%" />
       </el-col>
       <el-col class="text-center" :span="1" style="margin: 0 0.5rem">-</el-col>
       <el-col :span="11">
-        <el-time-picker
-          v-model="sizeForm.date2"
-          aria-label="Pick a time"
-          placeholder="Pick a time"
-          style="width: 100%"
-        />
+        <el-time-picker v-model="sizeForm.date2" aria-label="Pick a time" placeholder="Pick a time"
+          style="width: 100%" />
       </el-col>
     </el-form-item>
     <el-form-item label="Activity type">
@@ -77,7 +59,7 @@
 <script lang="ts" setup>
 import { reactive, ref } from 'vue'
 
-import type { ComponentSize, FormProps } from 'element-plus'
+import type { ComponentSize, FormProps } from 'cery929-ui'
 
 const size = ref<ComponentSize>('default')
 const labelPosition = ref<FormProps['labelPosition']>('right')

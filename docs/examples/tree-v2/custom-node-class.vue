@@ -1,15 +1,10 @@
 <template>
-  <el-tree-v2
-    style="max-width: 600px"
-    :data="data"
-    show-checkbox
-    :expand-on-click-node="false"
-    :props="{ class: customNodeClass }"
-  />
+  <el-tree-v2 style="max-width: 600px" :data="data" show-checkbox :expand-on-click-node="false"
+    :props="{ class: customNodeClass }" />
 </template>
 
 <script lang="ts" setup>
-import type { TreeNode, TreeNodeData } from 'element-plus'
+import type { TreeNode, TreeNodeData } from 'cery929-ui'
 
 interface Tree {
   id?: string

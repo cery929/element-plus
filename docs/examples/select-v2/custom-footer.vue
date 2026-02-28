@@ -1,22 +1,11 @@
 <template>
-  <el-select-v2
-    ref="select"
-    v-model="value"
-    :options="options"
-    placeholder="Select"
-    style="width: 240px"
-  >
+  <el-select-v2 ref="select" v-model="value" :options="options" placeholder="Select" style="width: 240px">
     <template #footer>
       <el-button v-if="!isAdding" text bg size="small" @click="onAddOption">
         Add an option
       </el-button>
       <div v-else class="select-footer">
-        <el-input
-          v-model="optionName"
-          class="option-input"
-          placeholder="input option name"
-          size="small"
-        />
+        <el-input v-model="optionName" class="option-input" placeholder="input option name" size="small" />
         <div>
           <el-button type="primary" size="small" @click="onConfirm">
             confirm
@@ -31,7 +20,7 @@
 <script lang="ts" setup>
 import { nextTick, ref } from 'vue'
 
-import type { CheckboxValueType, SelectV2Instance } from 'element-plus'
+import type { CheckboxValueType, SelectV2Instance } from 'cery929-ui'
 
 const initials = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
 const select = ref<SelectV2Instance>()

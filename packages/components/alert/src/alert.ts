@@ -1,4 +1,4 @@
-import { TypeComponentsMap, buildProps, keysOf } from '@element-plus/utils'
+import { TypeComponentsMap, buildProps, keysOf } from '@cery929-ui/utils'
 
 import type { ExtractPublicPropTypes } from 'vue'
 

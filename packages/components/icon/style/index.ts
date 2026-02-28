@@ -1,1 +1,1 @@
-import '@element-plus/components/base/style'
+import '@cery929-ui/components/base/style'

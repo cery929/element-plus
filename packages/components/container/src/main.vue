@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts" setup>
-import { useNamespace } from '@element-plus/hooks'
+import { useNamespace } from '@cery929-ui/hooks'
 
 defineOptions({
   name: 'ElMain',

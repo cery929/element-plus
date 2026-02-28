@@ -1,22 +1,19 @@
 <template>
-  <el-upload
-    class="avatar-uploader"
-    action="https://run.mocky.io/v3/9d059bf9-4660-45f2-925d-ce80ad6c4d15"
-    :show-file-list="false"
-    :on-success="handleAvatarSuccess"
-    :before-upload="beforeAvatarUpload"
-  >
+  <el-upload class="avatar-uploader" action="https://run.mocky.io/v3/9d059bf9-4660-45f2-925d-ce80ad6c4d15"
+    :show-file-list="false" :on-success="handleAvatarSuccess" :before-upload="beforeAvatarUpload">
     <img v-if="imageUrl" :src="imageUrl" class="avatar" />
-    <el-icon v-else class="avatar-uploader-icon"><Plus /></el-icon>
+    <el-icon v-else class="avatar-uploader-icon">
+      <Plus />
+    </el-icon>
   </el-upload>
 </template>
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { ElMessage } from 'element-plus'
+import { ElMessage } from 'cery929-ui'
 import { Plus } from '@cery929-ui/icons-vue'
 
-import type { UploadProps } from 'element-plus'
+import type { UploadProps } from 'cery929-ui'
 
 const imageUrl = ref('')
 

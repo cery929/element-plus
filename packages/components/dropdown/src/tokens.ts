@@ -1,4 +1,4 @@
-import type { PopperProps } from '@element-plus/components/popper'
+import type { PopperProps } from '@cery929-ui/components/popper'
 import type { ComputedRef, InjectionKey, Ref } from 'vue'
 
 export type ElDropdownInjectionContext = {

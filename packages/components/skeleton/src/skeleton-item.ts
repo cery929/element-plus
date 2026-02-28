@@ -1,4 +1,4 @@
-import { buildProps } from '@element-plus/utils'
+import { buildProps } from '@cery929-ui/utils'
 
 import type SkeletonItem from './skeleton-item.vue'
 import type { ExtractPublicPropTypes } from 'vue'

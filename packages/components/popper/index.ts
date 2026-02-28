@@ -1,10 +1,10 @@
-import { withInstall } from '@element-plus/utils'
+import { withInstall } from '@cery929-ui/utils'
 import Popper from './src/popper.vue'
 import ElPopperArrow from './src/arrow.vue'
 import ElPopperTrigger from './src/trigger.vue'
 import ElPopperContent from './src/content.vue'
 
-import type { SFCWithInstall } from '@element-plus/utils'
+import type { SFCWithInstall } from '@cery929-ui/utils'
 
 export { ElPopperArrow, ElPopperTrigger, ElPopperContent }
 

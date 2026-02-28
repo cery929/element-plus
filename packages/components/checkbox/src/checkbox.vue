@@ -35,7 +35,7 @@
 
 <script lang="ts" setup>
 import { computed, useSlots } from 'vue'
-import { useNamespace } from '@element-plus/hooks'
+import { useNamespace } from '@cery929-ui/hooks'
 import { checkboxEmits, checkboxPropsDefaults } from './checkbox'
 import { useCheckbox } from './composables'
 

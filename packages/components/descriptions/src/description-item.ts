@@ -1,6 +1,6 @@
 import { defineComponent } from 'vue'
-import { columnAlignment } from '@element-plus/constants'
-import { buildProps } from '@element-plus/utils'
+import { columnAlignment } from '@cery929-ui/constants'
+import { buildProps } from '@cery929-ui/utils'
 import { COMPONENT_NAME } from './constants'
 
 import type { ExtractPropTypes, ExtractPublicPropTypes, Slot, VNode } from 'vue'

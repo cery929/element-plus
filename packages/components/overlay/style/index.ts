@@ -1,2 +1,2 @@
-import '@element-plus/components/base/style'
-import '@element-plus/theme-chalk/src/overlay.scss'
+import '@cery929-ui/components/base/style'
+import '@cery929-ui/theme-chalk/src/overlay.scss'

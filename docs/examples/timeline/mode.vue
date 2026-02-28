@@ -7,11 +7,7 @@
   </el-radio-group>
 
   <el-timeline class="mt-4" :mode="mode">
-    <el-timeline-item
-      v-for="(activity, index) in activities"
-      :key="index"
-      :timestamp="activity.timestamp"
-    >
+    <el-timeline-item v-for="(activity, index) in activities" :key="index" :timestamp="activity.timestamp">
       {{ activity.content }}
     </el-timeline-item>
   </el-timeline>
@@ -20,7 +16,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-import type { TimelineProps } from 'element-plus'
+import type { TimelineProps } from 'cery929-ui'
 
 const activities = [
   {

@@ -1,12 +1,6 @@
 <template>
-  <button
-    type="button"
-    class="btn-next"
-    :disabled="internalDisabled"
-    :aria-label="nextText || t('el.pagination.next')"
-    :aria-disabled="internalDisabled"
-    @click="$emit('click', $event)"
-  >
+  <button type="button" class="btn-next" :disabled="internalDisabled" :aria-label="nextText || t('el.pagination.next')"
+    :aria-disabled="internalDisabled" @click="$emit('click', $event)">
     <span v-if="nextText">{{ nextText }}</span>
     <el-icon v-else>
       <component :is="nextIcon" />
@@ -16,8 +10,8 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { useLocale } from '@element-plus/hooks'
-import { ElIcon } from '@element-plus/components/icon'
+import { useLocale } from '@cery929-ui/hooks'
+import { ElIcon } from '@cery929-ui/components/icon'
 import { paginationNextProps } from './next'
 
 defineOptions({

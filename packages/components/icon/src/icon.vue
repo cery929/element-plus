@@ -6,8 +6,8 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { addUnit } from '@element-plus/utils'
-import { useNamespace } from '@element-plus/hooks'
+import { addUnit } from '@cery929-ui/utils'
+import { useNamespace } from '@cery929-ui/hooks'
 
 import type { CSSProperties } from 'vue'
 import type { IconProps } from './icon'

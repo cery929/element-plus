@@ -4,18 +4,8 @@
       <div :class="ns.e('error')">{{ t('el.image.error') }}</div>
     </slot>
     <template v-else>
-      <img
-        v-if="imageSrc !== undefined"
-        v-bind="imgAttrs"
-        :src="imageSrc"
-        :loading="loading"
-        :style="imageStyle"
-        :class="imageKls"
-        :crossorigin="crossorigin"
-        @click="clickHandler"
-        @load="handleLoad"
-        @error="handleError"
-      />
+      <img v-if="imageSrc !== undefined" v-bind="imgAttrs" :src="imageSrc" :loading="loading" :style="imageStyle"
+        :class="imageKls" :crossorigin="crossorigin" @click="clickHandler" @load="handleLoad" @error="handleError" />
       <div v-if="isLoading" :class="ns.e('wrapper')">
         <slot name="placeholder">
           <div :class="ns.e('placeholder')" />
@@ -23,24 +13,11 @@
       </div>
     </template>
     <template v-if="preview">
-      <image-viewer
-        v-if="showViewer"
-        :z-index="zIndex"
-        :initial-index="imageIndex"
-        :infinite="infinite"
-        :zoom-rate="zoomRate"
-        :min-scale="minScale"
-        :max-scale="maxScale"
-        :show-progress="showProgress"
-        :url-list="previewSrcList"
-        :scale="scale"
-        :crossorigin="crossorigin"
-        :hide-on-click-modal="hideOnClickModal"
-        :teleported="previewTeleported"
-        :close-on-press-escape="closeOnPressEscape"
-        @close="closeViewer"
-        @switch="switchViewer"
-      >
+      <image-viewer v-if="showViewer" :z-index="zIndex" :initial-index="imageIndex" :infinite="infinite"
+        :zoom-rate="zoomRate" :min-scale="minScale" :max-scale="maxScale" :show-progress="showProgress"
+        :url-list="previewSrcList" :scale="scale" :crossorigin="crossorigin" :hide-on-click-modal="hideOnClickModal"
+        :teleported="previewTeleported" :close-on-press-escape="closeOnPressEscape" @close="closeViewer"
+        @switch="switchViewer">
         <div v-if="$slots.viewer">
           <slot name="viewer" />
         </div>
@@ -69,8 +46,8 @@ import {
 } from 'vue'
 import { useIntersectionObserver, useThrottleFn } from '@vueuse/core'
 import { fromPairs } from 'lodash-unified'
-import { useAttrs, useLocale, useNamespace } from '@element-plus/hooks'
-import ImageViewer from '@element-plus/components/image-viewer'
+import { useAttrs, useLocale, useNamespace } from '@cery929-ui/hooks'
+import ImageViewer from '@cery929-ui/components/image-viewer'
 import {
   getScrollContainer,
   isArray,
@@ -78,7 +55,7 @@ import {
   isElement,
   isString,
   isWindow,
-} from '@element-plus/utils'
+} from '@cery929-ui/utils'
 import { imageEmits } from './image'
 
 import type { ImageProps } from './image'

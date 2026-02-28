@@ -1,15 +1,8 @@
 <template>
   <div :class="rootKls">
     <div :class="colorsKls">
-      <button
-        v-for="(item, index) in rgbaColors"
-        :key="colors[index]"
-        type="button"
-        :disabled="disabled"
-        :aria-label="ariaLabel(item.value)"
-        :class="colorSelectorKls(item)"
-        @click="handleSelect(index)"
-      >
+      <button v-for="(item, index) in rgbaColors" :key="colors[index]" type="button" :disabled="disabled"
+        :aria-label="ariaLabel(item.value)" :class="colorSelectorKls(item)" @click="handleSelect(index)">
         <div :style="{ backgroundColor: item.value }" />
       </button>
     </div>
@@ -18,7 +11,7 @@
 
 <script lang="ts" setup>
 import { usePredefine, usePredefineDOM } from '../composables/use-predefine'
-import { useLocale } from '@element-plus/hooks/use-locale'
+import { useLocale } from '@cery929-ui/hooks/use-locale'
 
 import type { PredefineProps } from '../props/predefine'
 

@@ -1,22 +1,9 @@
 <template>
-  <div
-    ref="formItemRef"
-    :class="formItemClasses"
-    :role="isGroup ? 'group' : undefined"
-    :aria-labelledby="isGroup ? labelId : undefined"
-  >
-    <form-label-wrap
-      :is-auto-width="labelStyle.width === 'auto'"
-      :update-all="formContext?.labelWidth === 'auto'"
-    >
-      <component
-        :is="labelFor ? 'label' : 'div'"
-        v-if="!!(label || $slots.label)"
-        :id="labelId"
-        :for="labelFor"
-        :class="ns.e('label')"
-        :style="labelStyle"
-      >
+  <div ref="formItemRef" :class="formItemClasses" :role="isGroup ? 'group' : undefined"
+    :aria-labelledby="isGroup ? labelId : undefined">
+    <form-label-wrap :is-auto-width="labelStyle.width === 'auto'" :update-all="formContext?.labelWidth === 'auto'">
+      <component :is="labelFor ? 'label' : 'div'" v-if="!!(label || $slots.label)" :id="labelId" :for="labelFor"
+        :class="ns.e('label')" :style="labelStyle">
         <slot name="label" :label="currentLabel">
           {{ currentLabel }}
         </slot>
@@ -60,15 +47,15 @@ import {
   isArray,
   isBoolean,
   isFunction,
-} from '@element-plus/utils'
-import { useId, useNamespace } from '@element-plus/hooks'
+} from '@cery929-ui/utils'
+import { useId, useNamespace } from '@cery929-ui/hooks'
 import { useFormSize } from './hooks'
 import FormLabelWrap from './form-label-wrap'
 import { formContextKey, formItemContextKey } from './constants'
 
 import type { CSSProperties } from 'vue'
 import type { RuleItem } from 'async-validator'
-import type { Arrayable } from '@element-plus/utils'
+import type { Arrayable } from '@cery929-ui/utils'
 import type {
   FormItemContext,
   FormItemRule,

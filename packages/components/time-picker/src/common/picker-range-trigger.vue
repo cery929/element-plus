@@ -1,51 +1,26 @@
 <template>
-  <div
-    ref="wrapperRef"
-    :class="[nsDate.is('active', isFocused), $attrs.class]"
-    :style="
-      // https://github.com/vuejs/language-tools/issues/2104#issuecomment-3092541527
-      $attrs.style as CSSProperties
-    "
-    @click="handleClick"
-    @mouseenter="handleMouseEnter"
-    @mouseleave="handleMouseLeave"
-    @touchstart.passive="handleTouchStart"
-  >
+  <div ref="wrapperRef" :class="[nsDate.is('active', isFocused), $attrs.class]" :style="
+    // https://github.com/vuejs/language-tools/issues/2104#issuecomment-3092541527
+    $attrs.style as CSSProperties
+    " @click="handleClick" @mouseenter="handleMouseEnter" @mouseleave="handleMouseLeave"
+    @touchstart.passive="handleTouchStart">
     <slot name="prefix" />
-    <input
-      v-bind="attrs"
-      :id="inputId"
-      ref="inputRef"
-      :name="name && name[0]"
-      :placeholder="startPlaceholder"
-      :value="modelValue && modelValue[0]"
-      :class="nsRange.b('input')"
-      :disabled="disabled"
-      @input="handleStartInput"
-      @change="handleStartChange"
-    />
+    <input v-bind="attrs" :id="inputId" ref="inputRef" :name="name && name[0]" :placeholder="startPlaceholder"
+      :value="modelValue && modelValue[0]" :class="nsRange.b('input')" :disabled="disabled" @input="handleStartInput"
+      @change="handleStartChange" />
     <slot name="range-separator" />
-    <input
-      v-bind="attrs"
-      :id="id && id[1]"
-      ref="endInputRef"
-      :name="name && name[1]"
-      :placeholder="endPlaceholder"
-      :value="modelValue && modelValue[1]"
-      :class="nsRange.b('input')"
-      :disabled="disabled"
-      @input="handleEndInput"
-      @change="handleEndChange"
-    />
+    <input v-bind="attrs" :id="id && id[1]" ref="endInputRef" :name="name && name[1]" :placeholder="endPlaceholder"
+      :value="modelValue && modelValue[1]" :class="nsRange.b('input')" :disabled="disabled" @input="handleEndInput"
+      @change="handleEndChange" />
     <slot name="suffix" />
   </div>
 </template>
 
 <script lang="ts" setup>
 import { computed, reactive, ref } from 'vue'
-import { useAttrs, useFocusController, useNamespace } from '@element-plus/hooks'
+import { useAttrs, useFocusController, useNamespace } from '@cery929-ui/hooks'
 import { timePickerRangeTriggerProps } from './props'
-import { useFormItem, useFormItemInputId } from '@element-plus/components/form'
+import { useFormItem, useFormItemInputId } from '@cery929-ui/components/form'
 
 import type { CSSProperties } from 'vue'
 

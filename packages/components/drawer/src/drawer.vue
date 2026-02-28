@@ -1,68 +1,27 @@
 <template>
-  <el-teleport
-    :to="appendTo"
-    :disabled="appendTo !== 'body' ? false : !appendToBody"
-  >
-    <transition
-      :name="ns.b('fade')"
-      @after-enter="afterEnter"
-      @after-leave="afterLeave"
-      @before-leave="beforeLeave"
-    >
-      <el-overlay
-        v-show="visible"
-        :mask="modal"
-        :overlay-class="[
-          ns.is('drawer'),
-          modalClass ?? '',
-          `${ns.namespace.value}-modal-drawer`,
-          ns.is('penetrable', penetrable),
-        ]"
-        :z-index="zIndex"
-        @click="onModalClick"
-      >
-        <el-focus-trap
-          loop
-          :trapped="visible"
-          :focus-trap-el="drawerRef"
-          :focus-start-el="focusStartRef"
-          @focus-after-trapped="onOpenAutoFocus"
-          @focus-after-released="onCloseAutoFocus"
-          @focusout-prevented="onFocusoutPrevented"
-          @release-requested="onCloseRequested"
-        >
-          <div
-            ref="drawerRef"
-            aria-modal="true"
-            :aria-label="title || undefined"
-            :aria-labelledby="!title ? titleId : undefined"
-            :aria-describedby="bodyId"
-            v-bind="$attrs"
-            :class="[
+  <el-teleport :to="appendTo" :disabled="appendTo !== 'body' ? false : !appendToBody">
+    <transition :name="ns.b('fade')" @after-enter="afterEnter" @after-leave="afterLeave" @before-leave="beforeLeave">
+      <el-overlay v-show="visible" :mask="modal" :overlay-class="[
+        ns.is('drawer'),
+        modalClass ?? '',
+        `${ns.namespace.value}-modal-drawer`,
+        ns.is('penetrable', penetrable),
+      ]" :z-index="zIndex" @click="onModalClick">
+        <el-focus-trap loop :trapped="visible" :focus-trap-el="drawerRef" :focus-start-el="focusStartRef"
+          @focus-after-trapped="onOpenAutoFocus" @focus-after-released="onCloseAutoFocus"
+          @focusout-prevented="onFocusoutPrevented" @release-requested="onCloseRequested">
+          <div ref="drawerRef" aria-modal="true" :aria-label="title || undefined"
+            :aria-labelledby="!title ? titleId : undefined" :aria-describedby="bodyId" v-bind="$attrs" :class="[
               ns.b(),
               direction,
               visible && 'open',
               ns.is('dragging', isResizing),
-            ]"
-            :style="{ [isHorizontal ? 'width' : 'height']: size }"
-            role="dialog"
-            @click.stop
-          >
+            ]" :style="{ [isHorizontal ? 'width' : 'height']: size }" role="dialog" @click.stop>
             <span ref="focusStartRef" :class="ns.e('sr-focus')" tabindex="-1" />
             <header v-if="withHeader" :class="[ns.e('header'), headerClass]">
               <template v-if="!$slots.title">
-                <slot
-                  name="header"
-                  :close="handleClose"
-                  :title-id="titleId"
-                  :title-class="ns.e('title')"
-                >
-                  <span
-                    :id="titleId"
-                    role="heading"
-                    :aria-level="headerAriaLevel"
-                    :class="ns.e('title')"
-                  >
+                <slot name="header" :close="handleClose" :title-id="titleId" :title-class="ns.e('title')">
+                  <span :id="titleId" role="heading" :aria-level="headerAriaLevel" :class="ns.e('title')">
                     {{ title }}
                   </span>
                 </slot>
@@ -72,13 +31,8 @@
                   <!-- DEPRECATED SLOT -->
                 </slot>
               </template>
-              <button
-                v-if="showClose"
-                :aria-label="t('el.drawer.close')"
-                :class="ns.e('close-btn')"
-                type="button"
-                @click="handleClose"
-              >
+              <button v-if="showClose" :aria-label="t('el.drawer.close')" :class="ns.e('close-btn')" type="button"
+                @click="handleClose">
                 <el-icon :class="ns.e('close')">
                   <close />
                 </el-icon>
@@ -92,12 +46,7 @@
             <div v-if="$slots.footer" :class="[ns.e('footer'), footerClass]">
               <slot name="footer" />
             </div>
-            <div
-              v-if="resizable"
-              ref="draggerRef"
-              :style="{ zIndex }"
-              :class="ns.e('dragger')"
-            />
+            <div v-if="resizable" ref="draggerRef" :style="{ zIndex }" :class="ns.e('dragger')" />
           </div>
         </el-focus-trap>
       </el-overlay>
@@ -108,12 +57,12 @@
 <script lang="ts" setup>
 import { computed, ref, useSlots } from 'vue'
 import { Close } from '@cery929-ui/icons-vue'
-import { ElOverlay } from '@element-plus/components/overlay'
-import ElFocusTrap from '@element-plus/components/focus-trap'
-import ElTeleport from '@element-plus/components/teleport'
-import { dialogPropsDefaults, useDialog } from '@element-plus/components/dialog'
-import ElIcon from '@element-plus/components/icon'
-import { useDeprecated, useLocale, useNamespace } from '@element-plus/hooks'
+import { ElOverlay } from '@cery929-ui/components/overlay'
+import ElFocusTrap from '@cery929-ui/components/focus-trap'
+import ElTeleport from '@cery929-ui/components/teleport'
+import { dialogPropsDefaults, useDialog } from '@cery929-ui/components/dialog'
+import ElIcon from '@cery929-ui/components/icon'
+import { useDeprecated, useLocale, useNamespace } from '@cery929-ui/hooks'
 import { drawerEmits } from './drawer'
 import { useResizable } from './composables/useResizable'
 

@@ -1,4 +1,4 @@
-import { buildProps, definePropType } from '@element-plus/utils'
+import { buildProps, definePropType } from '@cery929-ui/utils'
 
 import type { ExtractPublicPropTypes, SVGAttributes } from 'vue'
 import type Progress from './progress.vue'

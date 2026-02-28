@@ -1,25 +1,14 @@
 <template>
-  <el-input
-    v-model="filterText"
-    class="w-60 mb-2"
-    placeholder="Filter keyword"
-  />
+  <el-input v-model="filterText" class="w-60 mb-2" placeholder="Filter keyword" />
 
-  <el-tree
-    ref="treeRef"
-    style="max-width: 600px"
-    class="filter-tree"
-    :data="data"
-    :props="defaultProps"
-    default-expand-all
-    :filter-node-method="filterNode"
-  />
+  <el-tree ref="treeRef" style="max-width: 600px" class="filter-tree" :data="data" :props="defaultProps"
+    default-expand-all :filter-node-method="filterNode" />
 </template>
 
 <script lang="ts" setup>
 import { ref, watch } from 'vue'
 
-import type { FilterNodeMethodFunction, TreeInstance } from 'element-plus'
+import type { FilterNodeMethodFunction, TreeInstance } from 'cery929-ui'
 
 interface Tree {
   [key: string]: any

@@ -17,9 +17,9 @@
 
 <script lang="ts" setup>
 import { computed, inject, ref, watch } from 'vue'
-import { ElIcon } from '@element-plus/components/icon'
-import { useNamespace } from '@element-plus/hooks'
-import { addUnit, isNumber, isString } from '@element-plus/utils'
+import { ElIcon } from '@cery929-ui/components/icon'
+import { useNamespace } from '@cery929-ui/hooks'
+import { addUnit, isNumber, isString } from '@cery929-ui/utils'
 import { avatarEmits } from './avatar'
 import { avatarGroupContextKey } from './constants'
 

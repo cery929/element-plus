@@ -3,7 +3,7 @@ import {
   definePropType,
   isObject,
   isString,
-} from '@element-plus/utils'
+} from '@cery929-ui/utils'
 
 import type { ExtractPublicPropTypes } from 'vue'
 import type { Dayjs } from 'dayjs'

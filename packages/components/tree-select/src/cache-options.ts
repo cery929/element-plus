@@ -1,8 +1,8 @@
 import { defineComponent, inject, watch } from 'vue'
-import { selectKey } from '@element-plus/components/select'
-import { isClient } from '@element-plus/utils'
+import { selectKey } from '@cery929-ui/components/select'
+import { isClient } from '@cery929-ui/utils'
 
-import type { SelectContext } from '@element-plus/components/select'
+import type { SelectContext } from '@cery929-ui/components/select'
 import type { PropType } from 'vue'
 
 // same as el-option instance,

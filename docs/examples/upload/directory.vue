@@ -1,12 +1,6 @@
 <template>
-  <el-upload
-    class="upload-demo"
-    drag
-    action="https://run.mocky.io/v3/9d059bf9-4660-45f2-925d-ce80ad6c4d15"
-    directory
-    multiple
-    :on-change="handleChange"
-  >
+  <el-upload class="upload-demo" drag action="https://run.mocky.io/v3/9d059bf9-4660-45f2-925d-ce80ad6c4d15" directory
+    multiple :on-change="handleChange">
     <el-icon class="el-icon--upload"><upload-filled /></el-icon>
     <div class="el-upload__text">
       Drop directory here or <em>click to upload</em>
@@ -17,7 +11,7 @@
 <script setup lang="ts">
 import { UploadFilled } from '@cery929-ui/icons-vue'
 
-import type { UploadFile, UploadFiles } from 'element-plus'
+import type { UploadFile, UploadFiles } from 'cery929-ui'
 
 const handleChange = (uploadFile: UploadFile, uploadFiles: UploadFiles) => {
   console.log(uploadFile, uploadFiles)

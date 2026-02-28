@@ -1,15 +1,7 @@
 <template>
-  <el-upload
-    v-model:file-list="fileList"
-    class="upload-demo"
-    action="https://run.mocky.io/v3/9d059bf9-4660-45f2-925d-ce80ad6c4d15"
-    multiple
-    :on-preview="handlePreview"
-    :on-remove="handleRemove"
-    :before-remove="beforeRemove"
-    :limit="3"
-    :on-exceed="handleExceed"
-  >
+  <el-upload v-model:file-list="fileList" class="upload-demo"
+    action="https://run.mocky.io/v3/9d059bf9-4660-45f2-925d-ce80ad6c4d15" multiple :on-preview="handlePreview"
+    :on-remove="handleRemove" :before-remove="beforeRemove" :limit="3" :on-exceed="handleExceed">
     <el-button type="primary">Click to upload</el-button>
     <template #tip>
       <div class="el-upload__tip">
@@ -21,9 +13,9 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { ElMessage, ElMessageBox } from 'element-plus'
+import { ElMessage, ElMessageBox } from 'cery929-ui'
 
-import type { UploadProps, UploadUserFile } from 'element-plus'
+import type { UploadProps, UploadUserFile } from 'cery929-ui'
 
 const fileList = ref<UploadUserFile[]>([
   {
@@ -46,8 +38,7 @@ const handlePreview: UploadProps['onPreview'] = (uploadFile) => {
 
 const handleExceed: UploadProps['onExceed'] = (files, uploadFiles) => {
   ElMessage.warning(
-    `The limit is 3, you selected ${files.length} files this time, add up to ${
-      files.length + uploadFiles.length
+    `The limit is 3, you selected ${files.length} files this time, add up to ${files.length + uploadFiles.length
     } totally`
   )
 }

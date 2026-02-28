@@ -1,8 +1,8 @@
-import { buildProps, definePropType } from '@element-plus/utils'
+import { buildProps, definePropType } from '@cery929-ui/utils'
 import {
   virtualizedGridProps,
   virtualizedScrollbarProps,
-} from '@element-plus/components/virtual-list'
+} from '@cery929-ui/components/virtual-list'
 import {
   classType,
   columns,

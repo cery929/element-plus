@@ -1,4 +1,4 @@
-import { NOOP, buildProps, definePropType, mutable } from '@element-plus/utils'
+import { NOOP, buildProps, definePropType, mutable } from '@cery929-ui/utils'
 import { uploadListTypes } from './upload'
 
 import type { ExtractPublicPropTypes } from 'vue'

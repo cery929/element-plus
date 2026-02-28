@@ -1,10 +1,6 @@
 <template>
   <span :class="ns.e('item')">
-    <span
-      :class="[ns.e('inner'), ns.is('link', !!to)]"
-      role="link"
-      @click="onClick"
-    >
+    <span :class="[ns.e('inner'), ns.is('link', !!to)]" role="link" @click="onClick">
       <slot />
     </span>
     <el-icon v-if="breadcrumbContext?.separatorIcon" :class="ns.e('separator')">
@@ -18,8 +14,8 @@
 
 <script lang="ts" setup>
 import { getCurrentInstance, inject } from 'vue'
-import ElIcon from '@element-plus/components/icon'
-import { useNamespace } from '@element-plus/hooks'
+import ElIcon from '@cery929-ui/components/icon'
+import { useNamespace } from '@cery929-ui/hooks'
 import { breadcrumbKey } from './constants'
 
 import type { Router } from 'vue-router'

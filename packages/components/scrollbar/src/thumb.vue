@@ -1,18 +1,8 @@
 <template>
   <transition :name="ns.b('fade')">
-    <div
-      v-show="always || visible"
-      ref="instance"
-      :class="[ns.e('bar'), ns.is(bar.key)]"
-      @mousedown="clickTrackHandler"
-      @click.stop
-    >
-      <div
-        ref="thumb"
-        :class="ns.e('thumb')"
-        :style="thumbStyle"
-        @mousedown="clickThumbHandler"
-      />
+    <div v-show="always || visible" ref="instance" :class="[ns.e('bar'), ns.is(bar.key)]" @mousedown="clickTrackHandler"
+      @click.stop>
+      <div ref="thumb" :class="ns.e('thumb')" :style="thumbStyle" @mousedown="clickThumbHandler" />
     </div>
   </transition>
 </template>
@@ -20,8 +10,8 @@
 <script lang="ts" setup>
 import { computed, inject, onBeforeUnmount, ref, toRef } from 'vue'
 import { useEventListener } from '@vueuse/core'
-import { isClient, throwError } from '@element-plus/utils'
-import { useNamespace } from '@element-plus/hooks'
+import { isClient, throwError } from '@cery929-ui/utils'
+import { useNamespace } from '@cery929-ui/hooks'
 import { scrollbarContextKey } from './constants'
 import { BAR_MAP, renderThumbStyle } from './util'
 
@@ -90,7 +80,7 @@ const clickTrackHandler = (e: MouseEvent) => {
 
   const offset = Math.abs(
     (e.target as HTMLElement).getBoundingClientRect()[bar.value.direction] -
-      e[bar.value.client]
+    e[bar.value.client]
   )
   const thumbHalf = thumb.value[bar.value.offset] / 2
   const thumbPositionPercentage =

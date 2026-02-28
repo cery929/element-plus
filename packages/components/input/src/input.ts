@@ -5,9 +5,9 @@ import {
   iconPropType,
   isString,
   mutable,
-} from '@element-plus/utils'
-import { UPDATE_MODEL_EVENT } from '@element-plus/constants'
-import { useAriaProps, useSizeProp } from '@element-plus/hooks'
+} from '@cery929-ui/utils'
+import { UPDATE_MODEL_EVENT } from '@cery929-ui/constants'
+import { useAriaProps, useSizeProp } from '@cery929-ui/hooks'
 import { CircleClose } from '@cery929-ui/icons-vue'
 
 import type {
@@ -16,7 +16,7 @@ import type {
   HTMLAttributes,
   StyleValue,
 } from 'vue'
-import type { ComponentSize } from '@element-plus/constants'
+import type { ComponentSize } from '@cery929-ui/constants'
 
 export type InputModelModifiers = {
   lazy?: true

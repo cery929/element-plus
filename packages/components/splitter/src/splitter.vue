@@ -8,7 +8,7 @@ import {
   toRef,
   watch,
 } from 'vue'
-import { useNamespace, useOrderedChildren } from '@element-plus/hooks'
+import { useNamespace, useOrderedChildren } from '@cery929-ui/hooks'
 import { useContainer, useResize, useSize } from './hooks'
 import { splitterEmits } from './splitter'
 import { splitterRootContextKey } from './type'
@@ -110,11 +110,7 @@ provide(
 </script>
 
 <template>
-  <div
-    ref="containerEl"
-    :class="[ns.b(), ns.e(layout)]"
-    :style="splitterStyles"
-  >
+  <div ref="containerEl" :class="[ns.b(), ns.e(layout)]" :style="splitterStyles">
     <slot />
     <panels-sorter />
     <!-- Prevent iframe touch events from breaking -->

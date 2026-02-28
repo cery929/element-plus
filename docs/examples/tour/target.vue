@@ -10,17 +10,9 @@
   </el-space>
 
   <el-tour v-model="open">
-    <el-tour-step
-      target="#btn1"
-      title="Upload File"
-      description="Put you files here."
-    />
+    <el-tour-step target="#btn1" title="Upload File" description="Put you files here." />
     <el-tour-step :target="el" title="Save" description="Save your changes" />
-    <el-tour-step
-      :target="btnRef?.$el"
-      title="Other Actions"
-      description="Click to see other"
-    />
+    <el-tour-step :target="btnRef?.$el" title="Other Actions" description="Click to see other" />
   </el-tour>
 </template>
 
@@ -28,7 +20,7 @@
 import { ref } from 'vue'
 import { MoreFilled } from '@cery929-ui/icons-vue'
 
-import type { ButtonInstance } from 'element-plus'
+import type { ButtonInstance } from 'cery929-ui'
 
 const el = () => document.querySelector<HTMLElement>('#btn2')
 const btnRef = ref<ButtonInstance>()

@@ -1,56 +1,30 @@
 <template>
   <div :class="ns.b()">
-    <transfer-panel
-      ref="leftPanel"
-      :data="sourceData"
-      :option-render="optionRender"
-      :placeholder="panelFilterPlaceholder"
-      :title="leftPanelTitle"
-      :filterable="filterable"
-      :format="format"
-      :filter-method="filterMethod"
-      :default-checked="leftDefaultChecked"
-      :props="props.props"
-      @checked-change="onSourceCheckedChange"
-    >
+    <transfer-panel ref="leftPanel" :data="sourceData" :option-render="optionRender"
+      :placeholder="panelFilterPlaceholder" :title="leftPanelTitle" :filterable="filterable" :format="format"
+      :filter-method="filterMethod" :default-checked="leftDefaultChecked" :props="props.props"
+      @checked-change="onSourceCheckedChange">
       <template #empty>
         <slot name="left-empty" />
       </template>
       <slot name="left-footer" />
     </transfer-panel>
     <div :class="ns.e('buttons')">
-      <el-button
-        type="primary"
-        :class="[ns.e('button'), ns.is('with-texts', hasButtonTexts)]"
-        :disabled="isEmpty(checkedState.rightChecked)"
-        @click="addToLeft"
-      >
+      <el-button type="primary" :class="[ns.e('button'), ns.is('with-texts', hasButtonTexts)]"
+        :disabled="isEmpty(checkedState.rightChecked)" @click="addToLeft">
         <el-icon><arrow-left /></el-icon>
         <span v-if="!isUndefined(buttonTexts[0])">{{ buttonTexts[0] }}</span>
       </el-button>
-      <el-button
-        type="primary"
-        :class="[ns.e('button'), ns.is('with-texts', hasButtonTexts)]"
-        :disabled="isEmpty(checkedState.leftChecked)"
-        @click="addToRight"
-      >
+      <el-button type="primary" :class="[ns.e('button'), ns.is('with-texts', hasButtonTexts)]"
+        :disabled="isEmpty(checkedState.leftChecked)" @click="addToRight">
         <span v-if="!isUndefined(buttonTexts[1])">{{ buttonTexts[1] }}</span>
         <el-icon><arrow-right /></el-icon>
       </el-button>
     </div>
-    <transfer-panel
-      ref="rightPanel"
-      :data="targetData"
-      :option-render="optionRender"
-      :placeholder="panelFilterPlaceholder"
-      :filterable="filterable"
-      :format="format"
-      :filter-method="filterMethod"
-      :title="rightPanelTitle"
-      :default-checked="rightDefaultChecked"
-      :props="props.props"
-      @checked-change="onTargetCheckedChange"
-    >
+    <transfer-panel ref="rightPanel" :data="targetData" :option-render="optionRender"
+      :placeholder="panelFilterPlaceholder" :filterable="filterable" :format="format" :filter-method="filterMethod"
+      :title="rightPanelTitle" :default-checked="rightDefaultChecked" :props="props.props"
+      @checked-change="onTargetCheckedChange">
       <template #empty>
         <slot name="right-empty" />
       </template>
@@ -61,11 +35,11 @@
 
 <script lang="ts" setup>
 import { Comment, computed, h, reactive, ref, useSlots, watch } from 'vue'
-import { debugWarn, isEmpty, isUndefined } from '@element-plus/utils'
-import { useLocale, useNamespace } from '@element-plus/hooks'
-import { ElButton } from '@element-plus/components/button'
-import { ElIcon } from '@element-plus/components/icon'
-import { useFormItem } from '@element-plus/components/form'
+import { debugWarn, isEmpty, isUndefined } from '@cery929-ui/utils'
+import { useLocale, useNamespace } from '@cery929-ui/hooks'
+import { ElButton } from '@cery929-ui/components/button'
+import { ElIcon } from '@cery929-ui/components/icon'
+import { useFormItem } from '@cery929-ui/components/form'
 import { ArrowLeft, ArrowRight } from '@cery929-ui/icons-vue'
 import { transferEmits } from './transfer'
 import {

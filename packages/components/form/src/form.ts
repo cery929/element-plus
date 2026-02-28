@@ -1,14 +1,14 @@
-import { componentSizes } from '@element-plus/constants'
+import { componentSizes } from '@cery929-ui/constants'
 import {
   buildProps,
   definePropType,
   isArray,
   isBoolean,
   isString,
-} from '@element-plus/utils'
+} from '@cery929-ui/utils'
 
 import type { ExtractPublicPropTypes } from 'vue'
-import type { ComponentSize } from '@element-plus/constants'
+import type { ComponentSize } from '@cery929-ui/constants'
 import type { FormItemProp } from './form-item'
 import type { FormRules } from './types'
 

@@ -1,40 +1,18 @@
 <template>
-  <li
-    :id="`${menuId}-${node.uid}`"
-    role="menuitem"
-    :aria-haspopup="!isLeaf"
-    :aria-owns="isLeaf ? undefined : menuId"
-    :aria-expanded="inExpandingPath"
-    :tabindex="expandable ? -1 : undefined"
-    :class="[
+  <li :id="`${menuId}-${node.uid}`" role="menuitem" :aria-haspopup="!isLeaf" :aria-owns="isLeaf ? undefined : menuId"
+    :aria-expanded="inExpandingPath" :tabindex="expandable ? -1 : undefined" :class="[
       ns.b(),
       ns.is('selectable', checkStrictly),
       ns.is('active', node.checked),
       ns.is('disabled', !expandable),
       inExpandingPath && 'in-active-path',
       inCheckedPath && 'in-checked-path',
-    ]"
-    @mouseenter="handleHoverExpand"
-    @focus="handleHoverExpand"
-    @click="handleClick"
-  >
+    ]" @mouseenter="handleHoverExpand" @focus="handleHoverExpand" @click="handleClick">
     <!-- prefix -->
-    <el-checkbox
-      v-if="multiple && showPrefix"
-      :model-value="node.checked"
-      :indeterminate="node.indeterminate"
-      :disabled="isDisabled"
-      @click.stop
-      @update:model-value="handleSelectCheck"
-    />
-    <el-radio
-      v-else-if="checkStrictly && showPrefix"
-      :model-value="checkedNodeId"
-      :label="node.uid"
-      :disabled="isDisabled"
-      @update:model-value="handleSelectCheck"
-      @click.stop
-    >
+    <el-checkbox v-if="multiple && showPrefix" :model-value="node.checked" :indeterminate="node.indeterminate"
+      :disabled="isDisabled" @click.stop @update:model-value="handleSelectCheck" />
+    <el-radio v-else-if="checkStrictly && showPrefix" :model-value="checkedNodeId" :label="node.uid"
+      :disabled="isDisabled" @update:model-value="handleSelectCheck" @click.stop>
       <!--
         Add an empty element to avoid render label,
         do not use empty fragment here for https://github.com/vuejs/vue-next/pull/2485
@@ -61,17 +39,17 @@
 
 <script lang="ts" setup>
 import { computed, inject } from 'vue'
-import ElCheckbox from '@cery929-ui/components/checkbox'
-import ElRadio from '@cery929-ui/components/radio'
-import ElIcon from '@cery929-ui/components/icon'
-import { useNamespace } from '@cery929-ui/hooks'
-import { ArrowRight, Check, Loading } from '@cery929-ui/icons-vue'
+import ElCheckbox from '@kn-ui/components/checkbox'
+import ElRadio from '@kn-ui/components/radio'
+import ElIcon from '@kn-ui/components/icon'
+import { useNamespace } from '@kn-ui/hooks'
+import { ArrowRight, Check, Loading } from '@kn-ui/icons-vue'
 import NodeContent from './node-content'
 import { CASCADER_PANEL_INJECTION_KEY } from './types'
 
 import type { CascaderNode } from './types'
 import type { PropType } from 'vue'
-import type { CheckboxValueType } from '@cery929-ui/components/checkbox'
+import type { CheckboxValueType } from '@kn-ui/components/checkbox'
 
 defineOptions({
   name: 'ElCascaderNode',

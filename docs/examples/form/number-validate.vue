@@ -16,7 +16,7 @@
 <script lang="ts" setup>
 import { reactive, ref } from 'vue'
 
-import type { FormInstance } from 'cery929-ui'
+import type { FormInstance } from 'kn-ui'
 
 const formRef = ref<FormInstance>()
 

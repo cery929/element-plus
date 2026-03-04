@@ -25,7 +25,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-import type { CalendarDateType, CalendarInstance } from 'cery929-ui'
+import type { CalendarDateType, CalendarInstance } from 'kn-ui'
 
 const calendar = ref<CalendarInstance>()
 const selectDate = (val: CalendarDateType) => {

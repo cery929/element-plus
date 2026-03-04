@@ -21,7 +21,7 @@
 import { h } from 'vue'
 
 import type { VNode } from 'vue'
-import type { TableColumnCtx } from 'cery929-ui'
+import type { TableColumnCtx } from 'kn-ui'
 
 interface Product {
   id: string

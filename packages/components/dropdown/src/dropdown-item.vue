@@ -13,8 +13,8 @@
 
 <script lang="ts">
 import { computed, defineComponent, getCurrentInstance, inject } from 'vue'
-import { ElRovingFocusItem } from '@cery929-ui/components/roving-focus-group'
-import { composeEventHandlers, whenMouse } from '@cery929-ui/utils'
+import { ElRovingFocusItem } from '@kn-ui/components/roving-focus-group'
+import { composeEventHandlers, whenMouse } from '@kn-ui/utils'
 import ElDropdownItemImpl from './dropdown-item-impl.vue'
 import { useDropdown } from './useDropdown'
 import { dropdownItemProps } from './dropdown'

@@ -1,8 +1,8 @@
-import { buttonTypes } from '@cery929-ui/components/button'
+import { buttonTypes } from '@kn-ui/components/button'
 
 import type { AppContext, CSSProperties, Component, VNode } from 'vue'
-import type { ComponentSize } from '@cery929-ui/constants'
-import type { InputType } from '@cery929-ui/components/input/src/input'
+import type { ComponentSize } from '@kn-ui/constants'
+import type { InputType } from '@kn-ui/components/input/src/input'
 
 type MessageType = '' | 'primary' | 'success' | 'warning' | 'info' | 'error'
 type MessageBoxButtonType = (typeof buttonTypes)[number]

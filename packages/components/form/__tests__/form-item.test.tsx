@@ -10,15 +10,15 @@ import {
   it,
   vi,
 } from 'vitest'
-import { rAF } from '@cery929-ui/test-utils/tick'
-import Input from '@cery929-ui/components/input'
+import { rAF } from '@kn-ui/test-utils/tick'
+import Input from '@kn-ui/components/input'
 import Form from '../src/form.vue'
 import FormItem from '../src/form-item.vue'
 import DynamicFormItem from './mock-data'
 
 import type { VueWrapper } from '@vue/test-utils'
 import type { MockInstance } from 'vitest'
-import type { InputInstance } from '@cery929-ui/components/input'
+import type { InputInstance } from '@kn-ui/components/input'
 
 type FormItemInstance = InstanceType<typeof FormItem>
 

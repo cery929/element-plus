@@ -1,5 +1,5 @@
 import { computed } from 'vue'
-import { debugWarn } from '@cery929-ui/utils'
+import { debugWarn } from '@kn-ui/utils'
 
 import type { CSSProperties, ComputedRef } from 'vue'
 import type { SliderInitData, SliderProps } from '../slider'

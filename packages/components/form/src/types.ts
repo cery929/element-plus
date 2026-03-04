@@ -4,8 +4,8 @@ import type {
   ValidateError,
   ValidateFieldsError,
 } from 'async-validator'
-import type { ComponentSize } from '@cery929-ui/constants'
-import type { Arrayable, FieldPath } from '@cery929-ui/utils'
+import type { ComponentSize } from '@kn-ui/constants'
+import type { Arrayable, FieldPath } from '@kn-ui/utils'
 import type { MaybeRef } from '@vueuse/core'
 import type {
   FormItemProp,

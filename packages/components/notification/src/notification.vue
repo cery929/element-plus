@@ -25,12 +25,12 @@
 <script lang="ts" setup>
 import { computed, markRaw, onMounted, ref } from 'vue'
 import { useEventListener, useTimeoutFn } from '@vueuse/core'
-import { TypeComponentsMap, getEventCode } from '@cery929-ui/utils'
-import { EVENT_CODE } from '@cery929-ui/constants'
-import { ElIcon } from '@cery929-ui/components/icon'
-import { useGlobalComponentSettings } from '@cery929-ui/components/config-provider'
+import { TypeComponentsMap, getEventCode } from '@kn-ui/utils'
+import { EVENT_CODE } from '@kn-ui/constants'
+import { ElIcon } from '@kn-ui/components/icon'
+import { useGlobalComponentSettings } from '@kn-ui/components/config-provider'
 import { notificationEmits } from './notification'
-import { Close } from '@cery929-ui/icons-vue'
+import { Close } from '@kn-ui/icons-vue'
 
 import type { CSSProperties } from 'vue'
 import type { NotificationProps } from './notification'

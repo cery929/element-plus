@@ -1,13 +1,13 @@
 import { onUnmounted } from 'vue'
 import { isClient } from '@vueuse/core'
-import { defaultNamespace } from '@cery929-ui/hooks/use-namespace'
+import { defaultNamespace } from '@kn-ui/hooks/use-namespace'
 import {
   addClass,
   getScrollBarWidth,
   getStyle,
   hasClass,
   removeClass,
-} from '@cery929-ui/utils'
+} from '@kn-ui/utils'
 
 export const useLockScreen = () => {
   let scrollBarWidth = 0

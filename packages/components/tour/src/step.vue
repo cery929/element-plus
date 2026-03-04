@@ -43,12 +43,12 @@
 
 <script lang="ts" setup>
 import { computed, inject, onBeforeUnmount, onMounted, watch } from 'vue'
-import { EVENT_CODE } from '@cery929-ui/constants'
+import { EVENT_CODE } from '@kn-ui/constants'
 import { omit } from 'lodash-unified'
-import { ElButton } from '@cery929-ui/components/button'
-import { ElIcon } from '@cery929-ui/components/icon'
-import { CloseComponents, getEventCode } from '@cery929-ui/utils'
-import { useLocale } from '@cery929-ui/hooks'
+import { ElButton } from '@kn-ui/components/button'
+import { ElIcon } from '@kn-ui/components/icon'
+import { CloseComponents, getEventCode } from '@kn-ui/utils'
+import { useLocale } from '@kn-ui/hooks'
 import { tourStepEmits } from './step'
 import { tourKey } from './helper'
 

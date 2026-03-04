@@ -1,5 +1,5 @@
 import { defineComponent } from 'vue'
-import { isArray } from '@cery929-ui/utils'
+import { isArray } from '@kn-ui/utils'
 import { tableV2HeaderRowProps } from '../header-row'
 
 import type { CSSProperties } from 'vue'

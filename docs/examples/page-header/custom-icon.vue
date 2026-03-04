@@ -7,5 +7,5 @@
 </template>
 
 <script lang="ts" setup>
-import { ArrowLeft } from '@cery929-ui/icons-vue'
+import { ArrowLeft } from '@kn-ui/icons-vue'
 </script>

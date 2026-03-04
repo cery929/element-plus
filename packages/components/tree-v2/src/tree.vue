@@ -23,9 +23,9 @@
 
 <script lang="ts" setup>
 import { computed, getCurrentInstance, provide, useSlots } from 'vue'
-import { useLocale, useNamespace } from '@cery929-ui/hooks'
-import { formItemContextKey } from '@cery929-ui/components/form'
-import { FixedSizeList } from '@cery929-ui/components/virtual-list'
+import { useLocale, useNamespace } from '@kn-ui/hooks'
+import { formItemContextKey } from '@kn-ui/components/form'
+import { FixedSizeList } from '@kn-ui/components/virtual-list'
 import { useTree } from './composables/useTree'
 import ElTreeNode from './tree-node.vue'
 import {
@@ -33,7 +33,7 @@ import {
   TreeOptionsEnum,
   treeEmits,
 } from './virtual-tree'
-import { mutable } from '@cery929-ui/utils'
+import { mutable } from '@kn-ui/utils'
 
 import type { TreeProps } from './types'
 

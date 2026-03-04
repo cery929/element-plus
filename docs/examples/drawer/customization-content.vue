@@ -39,7 +39,7 @@
 
 <script lang="ts" setup>
 import { reactive, ref } from 'vue'
-import { ElMessageBox } from 'cery929-ui'
+import { ElMessageBox } from 'kn-ui'
 
 const formLabelWidth = '80px'
 let timer

@@ -1,7 +1,7 @@
-import { withInstall } from '@cery929-ui/utils'
+import { withInstall } from '@kn-ui/utils'
 import Switch from './src/switch.vue'
 
-import type { SFCWithInstall } from '@cery929-ui/utils'
+import type { SFCWithInstall } from '@kn-ui/utils'
 
 export const ElSwitch: SFCWithInstall<typeof Switch> = withInstall(Switch)
 export default ElSwitch

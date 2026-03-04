@@ -8,7 +8,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-import type { MentionOption } from 'cery929-ui'
+import type { MentionOption } from 'kn-ui'
 
 const MOCK_DATA: Record<string, string[]> = {
   '@': ['Fuphoenixes', 'kooriookami', 'Jeremy', 'btea'],

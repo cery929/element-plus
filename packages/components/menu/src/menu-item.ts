@@ -3,7 +3,7 @@ import {
   definePropType,
   isArray,
   isString,
-} from '@cery929-ui/utils'
+} from '@kn-ui/utils'
 
 import type { ExtractPublicPropTypes } from 'vue'
 import type { RouteLocationRaw } from 'vue-router'

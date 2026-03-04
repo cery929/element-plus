@@ -1,4 +1,4 @@
-import { isFirefox, isNumber } from '@cery929-ui/utils'
+import { isFirefox, isNumber } from '@kn-ui/utils'
 
 let hiddenTextarea: HTMLTextAreaElement | undefined = undefined
 

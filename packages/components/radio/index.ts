@@ -1,9 +1,9 @@
-import { withInstall, withNoopInstall } from '@cery929-ui/utils'
+import { withInstall, withNoopInstall } from '@kn-ui/utils'
 import Radio from './src/radio.vue'
 import RadioButton from './src/radio-button.vue'
 import RadioGroup from './src/radio-group.vue'
 
-import type { SFCWithInstall } from '@cery929-ui/utils'
+import type { SFCWithInstall } from '@kn-ui/utils'
 
 export const ElRadio: SFCWithInstall<typeof Radio> & {
   RadioButton: typeof RadioButton

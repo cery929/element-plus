@@ -9,7 +9,7 @@
 
 <script lang="ts" setup>
 import { h } from 'vue'
-import { ElMessage } from 'cery929-ui'
+import { ElMessage } from 'kn-ui'
 
 const open = () => {
   ElMessage('This is a message.')

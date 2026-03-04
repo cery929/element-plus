@@ -5,15 +5,15 @@
 import { DefineComponent, defineComponent, nextTick, reactive } from 'vue'
 import { mount } from '@vue/test-utils'
 import { beforeEach, describe, expect, it, test, vi } from 'vitest'
-import { NOOP } from '@cery929-ui/utils'
-import { usePopperContainerId } from '@cery929-ui/hooks'
-import { ElFormItem as FormItem } from '@cery929-ui/components/form'
+import { NOOP } from '@kn-ui/utils'
+import { usePopperContainerId } from '@kn-ui/hooks'
+import { ElFormItem as FormItem } from '@kn-ui/components/form'
 import Autocomplete from '../src/autocomplete.vue'
 import {
   AutocompleteFetchSuggestionsCallback,
   AutocompletePropsPublic,
 } from '../src/autocomplete'
-import { EVENT_CODE } from '@cery929-ui/constants'
+import { EVENT_CODE } from '@kn-ui/constants'
 
 vi.unmock('lodash')
 

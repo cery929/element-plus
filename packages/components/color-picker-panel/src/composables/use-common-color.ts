@@ -1,6 +1,6 @@
 import { reactive, watch } from 'vue'
 import Color from '../utils/color'
-import { UPDATE_MODEL_EVENT } from '@cery929-ui/constants'
+import { UPDATE_MODEL_EVENT } from '@kn-ui/constants'
 
 type CommonColorProps = {
   modelValue?: string | null

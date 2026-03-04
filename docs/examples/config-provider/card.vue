@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { reactive } from 'vue'
 
-import type { CardConfigContext } from 'cery929-ui'
+import type { CardConfigContext } from 'kn-ui'
 
 const config = reactive<CardConfigContext>({
   shadow: 'always',

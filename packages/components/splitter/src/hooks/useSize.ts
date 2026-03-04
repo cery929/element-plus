@@ -1,5 +1,5 @@
 import { computed, ref, watch } from 'vue'
-import { isString } from '@cery929-ui/utils'
+import { isString } from '@kn-ui/utils'
 
 import type { ComputedRef, Ref } from 'vue'
 import type { PanelItemState } from '../type'

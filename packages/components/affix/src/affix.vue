@@ -25,10 +25,10 @@ import {
   useEventListener,
   useWindowSize,
 } from '@vueuse/core'
-import ElTeleport from '@cery929-ui/components/teleport'
-import { addUnit, getScrollContainer, throwError } from '@cery929-ui/utils'
-import { useNamespace } from '@cery929-ui/hooks'
-import { CHANGE_EVENT } from '@cery929-ui/constants'
+import ElTeleport from '@kn-ui/components/teleport'
+import { addUnit, getScrollContainer, throwError } from '@kn-ui/utils'
+import { useNamespace } from '@kn-ui/hooks'
+import { CHANGE_EVENT } from '@kn-ui/constants'
 import { affixEmits } from './affix'
 
 import type { CSSProperties } from 'vue'

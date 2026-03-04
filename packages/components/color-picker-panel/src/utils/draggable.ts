@@ -1,4 +1,4 @@
-import { isClient } from '@cery929-ui/utils'
+import { isClient } from '@kn-ui/utils'
 
 let isDragging = false
 

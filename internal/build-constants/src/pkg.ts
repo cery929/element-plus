@@ -1,5 +1,5 @@
-export const PKG_PREFIX = '@cery929-ui'
-export const PKG_NAME = 'cery929-ui'
+export const PKG_PREFIX = '@kn-ui'
+export const PKG_NAME = 'kn-ui'
 export const PKG_CAMELCASE_NAME = 'Cery929Ui'
 export const PKG_CAMELCASE_LOCAL_NAME = 'Cery929UiLocale'
 export const PKG_BRAND_NAME = 'Cery929 Ui'

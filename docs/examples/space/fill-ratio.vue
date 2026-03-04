@@ -27,7 +27,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-import type { SpaceInstance } from 'cery929-ui'
+import type { SpaceInstance } from 'kn-ui'
 
 const direction = ref<SpaceInstance['direction']>('horizontal')
 const fillRatio = ref(30)

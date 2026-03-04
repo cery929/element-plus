@@ -55,7 +55,7 @@
 </template>
 
 <script setup lang="ts">
-import { ElNotification as notify } from 'cery929-ui'
+import { ElNotification as notify } from 'kn-ui'
 
 const onBack = () => {
   notify('Back')

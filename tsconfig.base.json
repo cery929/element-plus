@@ -16,16 +16,16 @@
     "rootDir": ".",
     "types": [],
     "paths": {
-      "@cery929-ui/components": ["packages/components"],
-      "@cery929-ui/components/*": ["packages/components/*"],
-      "@cery929-ui/utils": ["packages/utils"],
-      "@cery929-ui/utils/*": ["packages/utils/*"],
-      "@cery929-ui/hooks": ["packages/hooks"],
-      "@cery929-ui/directives": ["packages/directives"],
-      "@cery929-ui/constants": ["packages/constants"],
-      "@cery929-ui/locale": ["packages/locale"],
-      "@cery929-ui/locale/*": ["packages/locale/*"],
-      "cery929-ui": ["packages/cery929-ui"]
+      "@kn-ui/components": ["packages/components"],
+      "@kn-ui/components/*": ["packages/components/*"],
+      "@kn-ui/utils": ["packages/utils"],
+      "@kn-ui/utils/*": ["packages/utils/*"],
+      "@kn-ui/hooks": ["packages/hooks"],
+      "@kn-ui/directives": ["packages/directives"],
+      "@kn-ui/constants": ["packages/constants"],
+      "@kn-ui/locale": ["packages/locale"],
+      "@kn-ui/locale/*": ["packages/locale/*"],
+      "kn-ui": ["packages/kn-ui"]
     },
     "preserveSymlinks": true
   }

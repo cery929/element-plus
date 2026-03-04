@@ -5,11 +5,11 @@ import {
   IMAGE_FAIL,
   IMAGE_SUCCESS,
   mockImageEvent,
-} from '@cery929-ui/test-utils/mock'
+} from '@kn-ui/test-utils/mock'
 import Image from '../src/image.vue'
-import triggerEvent from '@cery929-ui/test-utils/trigger-event'
-import { EVENT_CODE } from '@cery929-ui/constants'
-import { stableLoad } from '@cery929-ui/test-utils/stable-load'
+import triggerEvent from '@kn-ui/test-utils/trigger-event'
+import { EVENT_CODE } from '@kn-ui/constants'
+import { stableLoad } from '@kn-ui/test-utils/stable-load'
 
 import type { AnchorHTMLAttributes, ImgHTMLAttributes } from 'vue'
 import type { VueWrapper } from '@vue/test-utils'

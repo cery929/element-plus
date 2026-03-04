@@ -32,21 +32,21 @@ import {
   CHANGE_EVENT,
   EVENT_CODE,
   UPDATE_MODEL_EVENT,
-} from '@cery929-ui/constants'
-import { getEventCode, isArray, isObject, isString } from '@cery929-ui/utils'
+} from '@kn-ui/constants'
+import { getEventCode, isArray, isObject, isString } from '@kn-ui/utils'
 import {
   formItemContextKey,
   useFormDisabled,
   useFormItemInputId,
   useFormSize,
-} from '@cery929-ui/components/form'
-import { ElIcon } from '@cery929-ui/components/icon'
-import { Star, StarFilled } from '@cery929-ui/icons-vue'
-import { useNamespace } from '@cery929-ui/hooks'
+} from '@kn-ui/components/form'
+import { ElIcon } from '@kn-ui/components/icon'
+import { Star, StarFilled } from '@kn-ui/icons-vue'
+import { useNamespace } from '@kn-ui/hooks'
 import { rateEmits } from './rate'
 
 import type { CSSProperties, Component } from 'vue'
-import type { IconInstance } from '@cery929-ui/components/icon'
+import type { IconInstance } from '@kn-ui/components/icon'
 import type { RateProps } from './rate'
 
 function getValueFromMap<T>(

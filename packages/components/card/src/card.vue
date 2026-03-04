@@ -1,10 +1,8 @@
 <template>
-  <div
-    :class="[
-      ns.b(),
-      ns.is(`${shadow || globalConfig?.shadow || 'always'}-shadow`),
-    ]"
-  >
+  <div :class="[
+    ns.b(),
+    ns.is(`${shadow || globalConfig?.shadow || 'always'}-shadow`),
+  ]">
     <div v-if="$slots.header || header" :class="[ns.e('header'), headerClass]">
       <slot name="header">{{ header }}</slot>
     </div>
@@ -18,8 +16,8 @@
 </template>
 
 <script lang="ts" setup>
-import { useNamespace } from '@cery929-ui/hooks'
-import { useGlobalConfig } from '@cery929-ui/components/config-provider'
+import { useNamespace } from '@kn-ui/hooks'
+import { useGlobalConfig } from '@kn-ui/components/config-provider'
 
 import type { CardProps } from './card'
 

@@ -22,9 +22,9 @@
 <script lang="ts" setup>
 import { shallowRef } from 'vue'
 import { cloneDeep, isEqual } from 'lodash-unified'
-import { entriesOf, isFunction, isPlainObject } from '@cery929-ui/utils'
-import { useNamespace } from '@cery929-ui/hooks'
-import { useFormDisabled } from '@cery929-ui/components/form'
+import { entriesOf, isFunction, isPlainObject } from '@kn-ui/utils'
+import { useNamespace } from '@kn-ui/hooks'
+import { useFormDisabled } from '@kn-ui/components/form'
 import UploadDragger from './upload-dragger.vue'
 import { genFileId } from './upload'
 import { uploadContentPropsDefaults } from './upload-content'

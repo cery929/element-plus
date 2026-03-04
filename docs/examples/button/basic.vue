@@ -46,7 +46,7 @@ import {
   Message,
   Search,
   Star,
-} from '@cery929-ui/icons-vue'
+} from '@kn-ui/icons-vue'
 </script>
 
 <style scoped>
@@ -63,7 +63,7 @@ import {
   align-items: center;
 }
 
-.button-row > * {
+.button-row>* {
   margin: 0;
 }
 </style>

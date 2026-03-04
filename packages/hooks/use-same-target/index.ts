@@ -1,4 +1,4 @@
-import { NOOP } from '@cery929-ui/utils'
+import { NOOP } from '@kn-ui/utils'
 
 export const useSameTarget = (handleClick?: (e: MouseEvent) => void) => {
   if (!handleClick) {

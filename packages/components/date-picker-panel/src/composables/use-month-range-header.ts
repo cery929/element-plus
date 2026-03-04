@@ -1,5 +1,5 @@
 import { computed } from 'vue'
-import { useLocale } from '@cery929-ui/hooks'
+import { useLocale } from '@kn-ui/hooks'
 
 import type { Ref, ToRef } from 'vue'
 import type { Dayjs } from 'dayjs'

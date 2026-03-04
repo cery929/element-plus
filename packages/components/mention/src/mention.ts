@@ -4,18 +4,18 @@ import {
   isFunction,
   isObject,
   isString,
-} from '@cery929-ui/utils'
-import { UPDATE_MODEL_EVENT } from '@cery929-ui/constants'
-import { inputProps } from '@cery929-ui/components/input'
+} from '@kn-ui/utils'
+import { UPDATE_MODEL_EVENT } from '@kn-ui/constants'
+import { inputProps } from '@kn-ui/components/input'
 import { filterOption } from './helper'
-import { useTooltipContentProps } from '@cery929-ui/components/tooltip'
+import { useTooltipContentProps } from '@kn-ui/components/tooltip'
 
 import type { ExtractPublicPropTypes } from 'vue'
 import type Mention from './mention.vue'
 import type { MentionOption } from './types'
-import type { Options } from '@cery929-ui/components/popper'
-import type { InputProps } from '@cery929-ui/components/input'
-import type { ElTooltipContentProps } from '@cery929-ui/components/tooltip'
+import type { Options } from '@kn-ui/components/popper'
+import type { InputProps } from '@kn-ui/components/input'
+import type { ElTooltipContentProps } from '@kn-ui/components/tooltip'
 
 export interface MentionProps extends InputProps {
   /**

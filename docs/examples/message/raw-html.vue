@@ -3,7 +3,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ElMessage } from 'cery929-ui'
+import { ElMessage } from 'kn-ui'
 
 const openHTML = () => {
   ElMessage({

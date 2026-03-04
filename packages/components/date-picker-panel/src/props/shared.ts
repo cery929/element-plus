@@ -1,10 +1,10 @@
-import { buildProps, definePropType, isArray } from '@cery929-ui/utils'
-import { datePickTypes } from '@cery929-ui/constants'
+import { buildProps, definePropType, isArray } from '@kn-ui/utils'
+import { datePickTypes } from '@kn-ui/constants'
 
 import type { ExtractPropTypes, ExtractPublicPropTypes } from 'vue'
 import type { Dayjs } from 'dayjs'
-import type { DatePickType } from '@cery929-ui/constants'
-import type { DayOrDays } from '@cery929-ui/components/time-picker'
+import type { DatePickType } from '@kn-ui/constants'
+import type { DayOrDays } from '@kn-ui/components/time-picker'
 
 const selectionModes = [
   'date',

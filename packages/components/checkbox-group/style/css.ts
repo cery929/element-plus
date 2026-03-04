@@ -1,3 +1,3 @@
-import '@cery929-ui/components/base/style/css'
-import '@cery929-ui/components/checkbox/style/css'
-import '@cery929-ui/theme-chalk/el-checkbox-group.css'
+import '@kn-ui/components/base/style/css'
+import '@kn-ui/components/checkbox/style/css'
+import '@kn-ui/theme-chalk/el-checkbox-group.css'

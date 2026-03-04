@@ -1,6 +1,6 @@
 import { inject } from 'vue'
-import { useNamespace } from '@cery929-ui/hooks'
-import { isArray, isFunction, isObject, isString } from '@cery929-ui/utils'
+import { useNamespace } from '@kn-ui/hooks'
+import { isArray, isFunction, isObject, isString } from '@kn-ui/utils'
 import {
   ensurePosition,
   getFixedColumnOffset,

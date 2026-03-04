@@ -18,9 +18,9 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { MoreFilled } from '@cery929-ui/icons-vue'
+import { MoreFilled } from '@kn-ui/icons-vue'
 
-import type { ButtonInstance } from 'cery929-ui'
+import type { ButtonInstance } from 'kn-ui'
 
 const ref1 = ref<ButtonInstance>()
 const ref2 = ref<ButtonInstance>()

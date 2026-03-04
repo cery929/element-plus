@@ -1,4 +1,4 @@
-import { buildProps } from '@cery929-ui/utils'
+import { buildProps } from '@kn-ui/utils'
 
 import type Total from './total.vue'
 import type { ExtractPropTypes, ExtractPublicPropTypes } from 'vue'

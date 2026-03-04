@@ -1,11 +1,11 @@
-import { withInstall, withNoopInstall } from '@cery929-ui/utils'
+import { withInstall, withNoopInstall } from '@kn-ui/utils'
 import Container from './src/container.vue'
 import Aside from './src/aside.vue'
 import Footer from './src/footer.vue'
 import Header from './src/header.vue'
 import Main from './src/main.vue'
 
-import type { SFCWithInstall } from '@cery929-ui/utils'
+import type { SFCWithInstall } from '@kn-ui/utils'
 
 export const ElContainer: SFCWithInstall<typeof Container> & {
   Aside: typeof Aside

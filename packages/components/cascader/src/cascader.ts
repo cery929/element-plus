@@ -1,27 +1,27 @@
 import { placements } from '@popperjs/core'
-import { CommonProps } from '@cery929-ui/components/cascader-panel'
+import { CommonProps } from '@kn-ui/components/cascader-panel'
 import {
   buildProps,
   definePropType,
   iconPropType,
   isBoolean,
-} from '@cery929-ui/utils'
-import { useEmptyValuesProps, useSizeProp } from '@cery929-ui/hooks'
-import { useTooltipContentProps } from '@cery929-ui/components/tooltip'
-import { tagProps } from '@cery929-ui/components/tag'
-import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@cery929-ui/constants'
-import { CircleClose } from '@cery929-ui/icons-vue'
+} from '@kn-ui/utils'
+import { useEmptyValuesProps, useSizeProp } from '@kn-ui/hooks'
+import { useTooltipContentProps } from '@kn-ui/components/tooltip'
+import { tagProps } from '@kn-ui/components/tag'
+import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@kn-ui/constants'
+import { CircleClose } from '@kn-ui/icons-vue'
 
 import type { Component, StyleValue } from 'vue'
-import type { UseEmptyValuesProps } from '@cery929-ui/hooks'
-import type { ComponentSize } from '@cery929-ui/constants'
-import type { Placement, PopperEffect } from '@cery929-ui/components/popper'
+import type { UseEmptyValuesProps } from '@kn-ui/hooks'
+import type { ComponentSize } from '@kn-ui/constants'
+import type { Placement, PopperEffect } from '@kn-ui/components/popper'
 import type {
   CascaderCommonProps,
   CascaderNode,
   CascaderValue,
-} from '@cery929-ui/components/cascader-panel'
-import type { TagProps } from '@cery929-ui/components/tag'
+} from '@kn-ui/components/cascader-panel'
+import type { TagProps } from '@kn-ui/components/tag'
 
 type CascaderClassType = string | Record<string, boolean> | CascaderClassType[]
 

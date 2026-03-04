@@ -1,26 +1,19 @@
 <template>
-  <el-tree-v2
-    style="max-width: 600px"
-    :data="data"
-    :props="props"
-    :height="200"
-  >
+  <el-tree-v2 style="max-width: 600px" :data="data" :props="props" :height="200">
     <template #default="{ node }">
       <el-icon class="el-icon--left">
         <Document v-if="node.isLeaf" />
         <Folder v-else-if="!node.expanded" />
         <FolderOpened v-else />
       </el-icon>
-      <span class="prefix" :class="{ 'is-leaf': node.isLeaf }"
-        >[ElementPlus]</span
-      >
+      <span class="prefix" :class="{ 'is-leaf': node.isLeaf }">[ElementPlus]</span>
       <span>{{ node.label }}</span>
     </template>
   </el-tree-v2>
 </template>
 
 <script lang="ts" setup>
-import { Document, Folder, FolderOpened } from '@cery929-ui/icons-vue'
+import { Document, Folder, FolderOpened } from '@kn-ui/icons-vue'
 
 interface Tree {
   id: string
@@ -69,6 +62,7 @@ const data = createData(4, 30, 40)
   color: var(--el-color-primary);
   margin-right: 10px;
 }
+
 .prefix.is-leaf {
   color: var(--el-color-success);
 }

@@ -14,7 +14,7 @@
 <script lang="ts" setup>
 import { nextTick, ref } from 'vue'
 
-import type { InputInstance } from 'cery929-ui'
+import type { InputInstance } from 'kn-ui'
 
 const inputValue = ref('')
 const dynamicTags = ref(['Tag 1', 'Tag 2', 'Tag 3'])

@@ -14,7 +14,7 @@ import {
   watch,
 } from 'vue'
 import { useMutationObserver } from '@vueuse/core'
-import { isArray, isUndefined } from '@cery929-ui/utils'
+import { isArray, isUndefined } from '@kn-ui/utils'
 import { getPixelRatio, getStyleStr, reRendering } from './utils'
 import useClips from './useClips'
 

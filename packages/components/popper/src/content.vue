@@ -13,9 +13,9 @@
 <script lang="ts" setup>
 import { inject, onBeforeUnmount, onMounted, provide, unref, watch } from 'vue'
 import { isNil } from 'lodash-unified'
-import { NOOP, isElement } from '@cery929-ui/utils'
-import ElFocusTrap from '@cery929-ui/components/focus-trap'
-import { formItemContextKey } from '@cery929-ui/components/form'
+import { NOOP, isElement } from '@kn-ui/utils'
+import ElFocusTrap from '@kn-ui/components/focus-trap'
+import { formItemContextKey } from '@kn-ui/components/form'
 import { POPPER_CONTENT_INJECTION_KEY } from './constants'
 import { popperContentEmits, popperContentPropsDefaults } from './content'
 import {

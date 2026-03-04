@@ -19,20 +19,20 @@
 <script lang="ts" setup>
 import { computed, inject, onBeforeUnmount, ref, unref, watch } from 'vue'
 import { computedEager, onClickOutside } from '@vueuse/core'
-import { useNamespace, usePopperContainerId } from '@cery929-ui/hooks'
+import { useNamespace, usePopperContainerId } from '@kn-ui/hooks'
 import {
   castArray,
   composeEventHandlers,
   focusElement,
-} from '@cery929-ui/utils'
-import { ElPopperContent } from '@cery929-ui/components/popper'
-import ElTeleport from '@cery929-ui/components/teleport'
+} from '@kn-ui/utils'
+import { ElPopperContent } from '@kn-ui/components/popper'
+import ElTeleport from '@kn-ui/components/teleport'
 import { TOOLTIP_INJECTION_KEY } from './constants'
 import { isTriggerType } from './utils'
 import { useTooltipContentPropsDefaults } from './content'
 
 import type { ElTooltipContentProps } from './content'
-import type { PopperContentInstance } from '@cery929-ui/components/popper'
+import type { PopperContentInstance } from '@kn-ui/components/popper'
 
 defineOptions({
   name: 'ElTooltipContent',

@@ -24,7 +24,7 @@
 <script lang="ts" setup>
 import { computed, ref, watch } from 'vue'
 
-import type { CascaderOption, CheckboxValueType } from 'cery929-ui'
+import type { CascaderOption, CheckboxValueType } from 'kn-ui'
 
 const props = { multiple: true }
 const checkAll = ref(false)

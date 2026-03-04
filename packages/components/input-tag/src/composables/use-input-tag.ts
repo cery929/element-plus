@@ -4,20 +4,20 @@ import {
   EVENT_CODE,
   INPUT_EVENT,
   UPDATE_MODEL_EVENT,
-} from '@cery929-ui/constants'
+} from '@kn-ui/constants'
 import {
   debugWarn,
   ensureArray,
   getEventCode,
   isAndroid,
   isUndefined,
-} from '@cery929-ui/utils'
-import { useComposition, useFocusController } from '@cery929-ui/hooks'
-import { useFormDisabled, useFormSize } from '@cery929-ui/components/form'
+} from '@kn-ui/utils'
+import { useComposition, useFocusController } from '@kn-ui/hooks'
+import { useFormDisabled, useFormSize } from '@kn-ui/components/form'
 
-import type { TooltipInstance } from '@cery929-ui/components/tooltip'
-import type { EmitFn } from '@cery929-ui/utils'
-import type { FormItemContext } from '@cery929-ui/components/form'
+import type { TooltipInstance } from '@kn-ui/components/tooltip'
+import type { EmitFn } from '@kn-ui/utils'
+import type { FormItemContext } from '@kn-ui/components/form'
 import type { InputTagEmits, InputTagProps } from '../input-tag'
 
 interface UseInputTagOptions {

@@ -1,7 +1,7 @@
 import { markRaw, nextTick, ref } from 'vue'
 import { mount } from '@vue/test-utils'
 import { describe, expect, test } from 'vitest'
-import { Edit } from '@cery929-ui/icons-vue'
+import { Edit } from '@kn-ui/icons-vue'
 import Steps from '../src/steps.vue'
 import Step from '../src/item.vue'
 

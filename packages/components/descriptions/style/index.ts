@@ -1,3 +1,3 @@
-import '@cery929-ui/components/base/style'
-import '@cery929-ui/theme-chalk/src/descriptions.scss'
-import '@cery929-ui/components/descriptions-item/style'
+import '@kn-ui/components/base/style'
+import '@kn-ui/theme-chalk/src/descriptions.scss'
+import '@kn-ui/components/descriptions-item/style'

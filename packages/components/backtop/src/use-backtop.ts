@@ -1,6 +1,6 @@
 import { onMounted, ref, shallowRef } from 'vue'
 import { useEventListener, useThrottleFn } from '@vueuse/core'
-import { throwError } from '@cery929-ui/utils'
+import { throwError } from '@kn-ui/utils'
 
 import type { SetupContext } from 'vue'
 import type { BacktopEmits, BacktopProps } from './backtop'

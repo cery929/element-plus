@@ -1,9 +1,9 @@
 import { h, nextTick } from 'vue'
 import { describe, expect, test, vi } from 'vitest'
-import makeMount from '@cery929-ui/test-utils/make-mount'
-import { rAF } from '@cery929-ui/test-utils/tick'
-import { TypeComponentsMap } from '@cery929-ui/utils'
-import { EVENT_CODE } from '@cery929-ui/constants'
+import makeMount from '@kn-ui/test-utils/make-mount'
+import { rAF } from '@kn-ui/test-utils/tick'
+import { TypeComponentsMap } from '@kn-ui/utils'
+import { EVENT_CODE } from '@kn-ui/constants'
 import Message from '../src/message.vue'
 import { messageTypes } from '../src/message'
 

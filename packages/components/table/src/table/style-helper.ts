@@ -8,7 +8,7 @@ import {
   watchEffect,
 } from 'vue'
 import { useEventListener, useResizeObserver } from '@vueuse/core'
-import { useFormSize } from '@cery929-ui/components/form'
+import { useFormSize } from '@kn-ui/components/form'
 
 import type { DefaultRow, RenderExpanded, Table, TableProps } from './defaults'
 import type { Store } from '../store'

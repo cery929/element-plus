@@ -24,7 +24,7 @@
 </template>
 
 <script lang="ts" setup>
-import { useNamespace } from '@cery929-ui/hooks'
+import { useNamespace } from '@kn-ui/hooks'
 import { dateTableEmits } from './date-table'
 import { useDateTable } from './use-date-table'
 

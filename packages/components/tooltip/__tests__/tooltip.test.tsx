@@ -1,16 +1,16 @@
 import { nextTick } from 'vue'
 import { mount } from '@vue/test-utils'
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import { rAF } from '@cery929-ui/test-utils/tick'
-import { ElPopperTrigger } from '@cery929-ui/components/popper'
-import { ElInput } from '@cery929-ui/components/input'
+import { rAF } from '@kn-ui/test-utils/tick'
+import { ElPopperTrigger } from '@kn-ui/components/popper'
+import { ElInput } from '@kn-ui/components/input'
 import Tooltip from '../src/tooltip.vue'
 
 import type { VNode } from 'vue'
 import type { VueWrapper } from '@vue/test-utils'
 import type { TooltipInstance } from '../src/tooltip'
 
-vi.mock('@cery929-ui/utils/error', () => ({
+vi.mock('@kn-ui/utils/error', () => ({
   debugWarn: vi.fn(),
 }))
 

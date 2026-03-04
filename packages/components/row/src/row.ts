@@ -1,4 +1,4 @@
-import { buildProps } from '@cery929-ui/utils'
+import { buildProps } from '@kn-ui/utils'
 
 import type { ExtractPublicPropTypes } from 'vue'
 import type Row from './row.vue'

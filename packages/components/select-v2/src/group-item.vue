@@ -6,7 +6,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { useNamespace } from '@cery929-ui/hooks'
+import { useNamespace } from '@kn-ui/hooks'
 
 import type { CSSProperties, PropType } from 'vue'
 

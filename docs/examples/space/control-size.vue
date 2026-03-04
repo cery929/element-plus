@@ -25,7 +25,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-import type { ComponentSize } from 'cery929-ui'
+import type { ComponentSize } from 'kn-ui'
 
 const size = ref<ComponentSize>('default')
 </script>

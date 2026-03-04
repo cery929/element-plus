@@ -1,4 +1,4 @@
-import { isString, throwError } from '@cery929-ui/utils'
+import { isString, throwError } from '@kn-ui/utils'
 import buildList from '../builders/build-list'
 import { isHorizontal } from '../utils'
 import {

@@ -1,6 +1,6 @@
 import path from 'path'
-import { PKG_NAME } from '@cery929-ui/build-constants'
-import { epOutput } from '@cery929-ui/build-utils'
+import { PKG_NAME } from '@kn-ui/build-constants'
+import { epOutput } from '@kn-ui/build-utils'
 
 import type { ModuleFormat } from 'rollup'
 
@@ -13,12 +13,12 @@ export interface BuildInfo {
   output: {
     /** e.g: `es` */
     name: string
-    /** e.g: `dist/cery929-ui/es` */
+    /** e.g: `dist/kn-ui/es` */
     path: string
   }
 
   bundle: {
-    /** e.g: `cery929-ui/es` */
+    /** e.g: `kn-ui/es` */
     path: string
   }
 }

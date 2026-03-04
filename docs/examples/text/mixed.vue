@@ -4,7 +4,7 @@
       <el-icon>
         <ElementPlus />
       </el-icon>
-      cery929-ui
+      kn-ui
     </el-text>
     <el-row>
       <el-text>Rate</el-text>
@@ -22,5 +22,5 @@
 </template>
 
 <script lang="ts" setup>
-import { Bell, ElementPlus } from '@cery929-ui/icons-vue'
+import { Bell, ElementPlus } from '@kn-ui/icons-vue'
 </script>

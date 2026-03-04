@@ -10,10 +10,10 @@
 
 <script lang="tsx" setup>
 import { ref, unref } from 'vue'
-import { ElCheckbox, useLocale } from 'cery929-ui'
+import { ElCheckbox, useLocale } from 'kn-ui'
 
 import type { FunctionalComponent } from 'vue'
-import type { CheckboxValueType, Column } from 'cery929-ui'
+import type { CheckboxValueType, Column } from 'kn-ui'
 
 type SelectionCellProps = {
   value: boolean

@@ -1,7 +1,7 @@
 import { ref, unref, watch } from 'vue'
 
 import type { Ref } from 'vue'
-import type { Alignment as ScrollStrategy } from '@cery929-ui/components/virtual-list'
+import type { Alignment as ScrollStrategy } from '@kn-ui/components/virtual-list'
 import type { TableV2Props } from '../table'
 import type { TableGridInstance } from '../table-grid'
 

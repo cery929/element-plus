@@ -13,7 +13,7 @@ import {
   getPackageManifest,
   normalizePath,
   projRoot,
-} from '@cery929-ui/build-utils'
+} from '@kn-ui/build-utils'
 
 import type { TaskFunction } from 'gulp'
 import type {

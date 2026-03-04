@@ -1,9 +1,9 @@
-import { componentSizes } from '@cery929-ui/constants'
-import { buildProps, definePropType } from '@cery929-ui/utils'
+import { componentSizes } from '@kn-ui/constants'
+import { buildProps, definePropType } from '@kn-ui/utils'
 
 import type { ExtractPublicPropTypes } from 'vue'
-import type { ComponentSize } from '@cery929-ui/constants'
-import type { Arrayable } from '@cery929-ui/utils'
+import type { ComponentSize } from '@kn-ui/constants'
+import type { Arrayable } from '@kn-ui/utils'
 import type { FormItemRule } from './types'
 
 export const formItemValidateStates = [

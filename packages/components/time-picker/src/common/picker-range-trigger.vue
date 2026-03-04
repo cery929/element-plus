@@ -18,9 +18,9 @@
 
 <script lang="ts" setup>
 import { computed, reactive, ref } from 'vue'
-import { useAttrs, useFocusController, useNamespace } from '@cery929-ui/hooks'
+import { useAttrs, useFocusController, useNamespace } from '@kn-ui/hooks'
 import { timePickerRangeTriggerProps } from './props'
-import { useFormItem, useFormItemInputId } from '@cery929-ui/components/form'
+import { useFormItem, useFormItemInputId } from '@kn-ui/components/form'
 
 import type { CSSProperties } from 'vue'
 

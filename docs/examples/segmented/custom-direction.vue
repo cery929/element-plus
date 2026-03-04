@@ -32,9 +32,9 @@ import {
   Orange,
   Pear,
   Watermelon,
-} from '@cery929-ui/icons-vue'
+} from '@kn-ui/icons-vue'
 
-import type { SegmentedProps } from 'cery929-ui'
+import type { SegmentedProps } from 'kn-ui'
 
 const value = ref('Apple')
 const direction = ref<SegmentedProps['direction']>('horizontal')

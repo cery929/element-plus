@@ -1,5 +1,5 @@
 import type { InjectionKey, Ref } from 'vue'
-import type { UseNamespaceReturn } from '@cery929-ui/hooks'
+import type { UseNamespaceReturn } from '@kn-ui/hooks'
 
 export type TableV2Context = {
   isScrolling: Ref<boolean>

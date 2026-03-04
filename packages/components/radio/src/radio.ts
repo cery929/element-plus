@@ -1,9 +1,9 @@
-import { buildProps, isBoolean, isNumber, isString } from '@cery929-ui/utils'
-import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@cery929-ui/constants'
-import { useSizeProp } from '@cery929-ui/hooks'
+import { buildProps, isBoolean, isNumber, isString } from '@kn-ui/utils'
+import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@kn-ui/constants'
+import { useSizeProp } from '@kn-ui/hooks'
 
 import type { ExtractPublicPropTypes } from 'vue'
-import type { ComponentSize } from '@cery929-ui/constants'
+import type { ComponentSize } from '@kn-ui/constants'
 import type Radio from './radio.vue'
 
 export interface RadioPropsBase {

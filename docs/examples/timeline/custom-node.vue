@@ -8,9 +8,9 @@
 </template>
 
 <script lang="ts" setup>
-import { MoreFilled } from '@cery929-ui/icons-vue'
+import { MoreFilled } from '@kn-ui/icons-vue'
 
-import type { TimelineItemProps } from 'cery929-ui'
+import type { TimelineItemProps } from 'kn-ui'
 
 interface ActivityType extends Partial<TimelineItemProps> {
   content: string

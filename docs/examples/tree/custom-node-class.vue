@@ -6,7 +6,7 @@
 </template>
 
 <script lang="ts" setup>
-import type { TreeNodeData } from 'cery929-ui'
+import type { TreeNodeData } from 'kn-ui'
 
 interface Tree {
   id: number

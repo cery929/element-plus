@@ -6,9 +6,9 @@
 
 <script lang="ts">
 import { computed, defineComponent, inject, provide, ref, unref } from 'vue'
-import { useId } from '@cery929-ui/hooks'
-import { composeEventHandlers, getEventCode } from '@cery929-ui/utils'
-import { EVENT_CODE } from '@cery929-ui/constants'
+import { useId } from '@kn-ui/hooks'
+import { composeEventHandlers, getEventCode } from '@kn-ui/utils'
+import { EVENT_CODE } from '@kn-ui/constants'
 import { ElCollectionItem as ElRovingFocusCollectionItem } from './roving-focus-group'
 import {
   ROVING_FOCUS_GROUP_INJECTION_KEY,

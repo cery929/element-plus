@@ -11,7 +11,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-import type { TabsPaneContext } from 'cery929-ui'
+import type { TabsPaneContext } from 'kn-ui'
 
 const tabs = ref([
   { label: 'User', name: 'first' },

@@ -1,4 +1,4 @@
-import { isNumber } from '@cery929-ui/utils'
+import { isNumber } from '@kn-ui/utils'
 
 import type { Dayjs } from 'dayjs'
 

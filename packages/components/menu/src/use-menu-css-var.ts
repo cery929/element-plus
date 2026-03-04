@@ -1,5 +1,5 @@
 import { computed } from 'vue'
-import { useNamespace } from '@cery929-ui/hooks'
+import { useNamespace } from '@kn-ui/hooks'
 import useMenuColor from './use-menu-color'
 
 import type { MenuProps } from './menu'

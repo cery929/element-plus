@@ -47,7 +47,7 @@ import type {
   TransferDirection,
   TransferKey,
   renderContent,
-} from 'cery929-ui'
+} from 'kn-ui'
 
 interface Option {
   key: number

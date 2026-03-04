@@ -32,19 +32,19 @@
 <script lang="ts" setup>
 import { computed, mergeProps, nextTick, ref } from 'vue'
 import { pick } from 'lodash-unified'
-import { useFocusController, useId, useNamespace } from '@cery929-ui/hooks'
+import { useFocusController, useId, useNamespace } from '@kn-ui/hooks'
 import ElInput, {
   inputProps,
   inputPropsDefaults,
-} from '@cery929-ui/components/input'
-import ElTooltip from '@cery929-ui/components/tooltip'
+} from '@kn-ui/components/input'
+import ElTooltip from '@kn-ui/components/tooltip'
 import {
   EVENT_CODE,
   INPUT_EVENT,
   UPDATE_MODEL_EVENT,
-} from '@cery929-ui/constants'
-import { useFormDisabled } from '@cery929-ui/components/form'
-import { getEventCode, isFunction } from '@cery929-ui/utils'
+} from '@kn-ui/constants'
+import { useFormDisabled } from '@kn-ui/components/form'
+import { getEventCode, isFunction } from '@kn-ui/utils'
 import { mentionDefaultProps, mentionEmits } from './mention'
 import { filterOption, getCursorPosition, getMentionCtx } from './helper'
 import ElMentionDropdown from './mention-dropdown.vue'
@@ -52,8 +52,8 @@ import ElMentionDropdown from './mention-dropdown.vue'
 import type { MentionProps } from './mention'
 import type { Placement } from '@popperjs/core'
 import type { CSSProperties } from 'vue'
-import type { InputInstance } from '@cery929-ui/components/input'
-import type { TooltipInstance } from '@cery929-ui/components/tooltip'
+import type { InputInstance } from '@kn-ui/components/input'
+import type { TooltipInstance } from '@kn-ui/components/tooltip'
 import type { MentionCtx, MentionOption } from './types'
 
 defineOptions({

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { withBase } from 'vitepress'
-import { ArrowLeft, ArrowRight } from '@cery929-ui/icons-vue'
+import { ArrowLeft, ArrowRight } from '@kn-ui/icons-vue'
 import { usePageNav } from '../../composables/page-nav'
 
 const { hasLinks, prev, next } = usePageNav()
@@ -87,6 +87,7 @@ const { hasLinks, prev, next } = usePageNav()
 .icon-prev {
   margin-right: 8px;
 }
+
 .icon-next {
   margin-left: 8px;
 }

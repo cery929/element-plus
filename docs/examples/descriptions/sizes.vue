@@ -90,9 +90,9 @@ import {
   OfficeBuilding,
   Tickets,
   User,
-} from '@cery929-ui/icons-vue'
+} from '@kn-ui/icons-vue'
 
-import type { ComponentSize } from 'cery929-ui'
+import type { ComponentSize } from 'kn-ui'
 
 const size = ref<ComponentSize>('default')
 

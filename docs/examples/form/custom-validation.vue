@@ -22,7 +22,7 @@
 <script lang="ts" setup>
 import { reactive, ref } from 'vue'
 
-import type { FormInstance, FormRules } from 'cery929-ui'
+import type { FormInstance, FormRules } from 'kn-ui'
 
 const ruleFormRef = ref<FormInstance>()
 

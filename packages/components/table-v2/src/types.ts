@@ -5,7 +5,7 @@ import type {
   RendererNode,
   VNode,
 } from 'vue'
-import type { ColumnAlignment } from '@cery929-ui/constants'
+import type { ColumnAlignment } from '@kn-ui/constants'
 import type { FixedDir, SortOrder } from './constants'
 
 export type Alignment = ColumnAlignment

@@ -3,8 +3,8 @@ import {
   definePropType,
   isArray,
   isDate,
-} from '@cery929-ui/utils'
-import { INPUT_EVENT, UPDATE_MODEL_EVENT } from '@cery929-ui/constants'
+} from '@kn-ui/utils'
+import { INPUT_EVENT, UPDATE_MODEL_EVENT } from '@kn-ui/constants'
 
 import type { ExtractPublicPropTypes } from 'vue'
 

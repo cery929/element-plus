@@ -1,13 +1,13 @@
-import { buildProps } from '@cery929-ui/utils'
-import { createModelToggleComposable } from '@cery929-ui/hooks'
-import { popperArrowProps, popperProps } from '@cery929-ui/components/popper'
+import { buildProps } from '@kn-ui/utils'
+import { createModelToggleComposable } from '@kn-ui/hooks'
+import { popperArrowProps, popperProps } from '@kn-ui/components/popper'
 import { useTooltipContentProps } from './content'
 import { useTooltipTriggerProps } from './trigger'
 
 import type {
   PopperArrowProps,
   PopperProps,
-} from '@cery929-ui/components/popper'
+} from '@kn-ui/components/popper'
 import type { ElTooltipContentProps } from './content'
 import type { UseTooltipTriggerProps } from './trigger'
 import type Tooltip from './tooltip.vue'

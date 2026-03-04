@@ -58,7 +58,7 @@
 </template>
 
 <script setup lang="ts">
-import { InfoFilled } from '@cery929-ui/icons-vue'
+import { InfoFilled } from '@kn-ui/icons-vue'
 </script>
 
 <style scoped>

@@ -16,7 +16,7 @@ import {
   watch,
 } from 'vue'
 import { useEventListener } from '@vueuse/core'
-import { composeEventHandlers } from '@cery929-ui/utils'
+import { composeEventHandlers } from '@kn-ui/utils'
 import {
   ROVING_FOCUS_COLLECTION_INJECTION_KEY,
   rovingFocusGroupProps,

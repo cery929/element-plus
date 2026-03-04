@@ -1,4 +1,4 @@
-import { buildProps, isNumber } from '@cery929-ui/utils'
+import { buildProps, isNumber } from '@kn-ui/utils'
 
 import type { ExtractPublicPropTypes } from 'vue'
 

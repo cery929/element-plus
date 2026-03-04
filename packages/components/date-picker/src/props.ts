@@ -1,8 +1,8 @@
-import { timePickerDefaultProps } from '@cery929-ui/components/time-picker'
-import { buildProps, definePropType } from '@cery929-ui/utils'
+import { timePickerDefaultProps } from '@kn-ui/components/time-picker'
+import { buildProps, definePropType } from '@kn-ui/utils'
 
 import type { ExtractPropTypes, ExtractPublicPropTypes } from 'vue'
-import type { DatePickerType } from '@cery929-ui/components/date-picker-panel/src/types'
+import type { DatePickerType } from '@kn-ui/components/date-picker-panel/src/types'
 
 export const datePickerProps = buildProps({
   ...timePickerDefaultProps,

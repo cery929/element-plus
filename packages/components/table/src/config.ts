@@ -1,8 +1,8 @@
 import { h } from 'vue'
-import ElCheckbox from '@cery929-ui/components/checkbox'
-import { ElIcon } from '@cery929-ui/components/icon'
-import { ArrowRight, Loading } from '@cery929-ui/icons-vue'
-import { getProp, isBoolean, isFunction, isNumber } from '@cery929-ui/utils'
+import ElCheckbox from '@kn-ui/components/checkbox'
+import { ElIcon } from '@kn-ui/components/icon'
+import { ArrowRight, Loading } from '@kn-ui/icons-vue'
+import { getProp, isBoolean, isFunction, isNumber } from '@kn-ui/utils'
 
 import type { VNode } from 'vue'
 import type { TableColumnCtx } from './table-column/defaults'

@@ -15,7 +15,7 @@
 
 <script lang="ts" setup>
 import { h } from 'vue'
-import { ElLink, type TableTooltipData } from 'cery929-ui'
+import { ElLink, type TableTooltipData } from 'kn-ui'
 
 type TableData = {
   address: string

@@ -54,21 +54,21 @@
 
 <script lang="ts">
 import { computed, defineComponent, getCurrentInstance, ref } from 'vue'
-import { ElCheckbox, ElCheckboxGroup } from '@cery929-ui/components/checkbox'
-import { ElIcon } from '@cery929-ui/components/icon'
-import { ArrowDown, ArrowUp } from '@cery929-ui/icons-vue'
-import { EVENT_CODE } from '@cery929-ui/constants'
-import { useLocale, useNamespace } from '@cery929-ui/hooks'
+import { ElCheckbox, ElCheckboxGroup } from '@kn-ui/components/checkbox'
+import { ElIcon } from '@kn-ui/components/icon'
+import { ArrowDown, ArrowUp } from '@kn-ui/icons-vue'
+import { EVENT_CODE } from '@kn-ui/constants'
+import { useLocale, useNamespace } from '@kn-ui/hooks'
 import {
   ElTooltip,
   useTooltipContentProps,
-} from '@cery929-ui/components/tooltip'
-import ElScrollbar from '@cery929-ui/components/scrollbar'
-import { getEventCode, isPropAbsent } from '@cery929-ui/utils'
+} from '@kn-ui/components/tooltip'
+import ElScrollbar from '@kn-ui/components/scrollbar'
+import { getEventCode, isPropAbsent } from '@kn-ui/utils'
 
 import type { DefaultRow } from './table/defaults'
-import type { TooltipInstance } from '@cery929-ui/components/tooltip'
-import type { Placement } from '@cery929-ui/components/popper'
+import type { TooltipInstance } from '@kn-ui/components/tooltip'
+import type { Placement } from '@kn-ui/components/popper'
 import type { PropType, WritableComputedRef } from 'vue'
 import type { TableColumnCtx } from './table-column/defaults'
 import type { TableHeader } from './table-header'

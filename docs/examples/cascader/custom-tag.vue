@@ -20,7 +20,7 @@
 </template>
 
 <script lang="ts" setup>
-import type { Tag } from 'cery929-ui'
+import type { Tag } from 'kn-ui'
 
 const props = { multiple: true }
 const options = [

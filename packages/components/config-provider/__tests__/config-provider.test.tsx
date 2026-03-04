@@ -1,9 +1,9 @@
 import { computed, defineComponent, nextTick, reactive, ref } from 'vue'
 import { mount } from '@vue/test-utils'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import { useLocale, useNamespace } from '@cery929-ui/hooks'
-import Chinese from '@cery929-ui/locale/lang/zh-cn'
-import English from '@cery929-ui/locale/lang/en'
+import { useLocale, useNamespace } from '@kn-ui/hooks'
+import Chinese from '@kn-ui/locale/lang/zh-cn'
+import English from '@kn-ui/locale/lang/en'
 import {
   ElButton,
   ElCard,
@@ -12,9 +12,9 @@ import {
   ElMessage,
   ElPagination,
   MessageConfigContext,
-} from '@cery929-ui/components'
-import { rAF } from '@cery929-ui/test-utils/tick'
-import { getStyle } from '@cery929-ui/utils'
+} from '@kn-ui/components'
+import { rAF } from '@kn-ui/test-utils/tick'
+import { getStyle } from '@kn-ui/utils'
 import {
   provideGlobalConfig,
   useGlobalComponentSettings,
@@ -24,8 +24,8 @@ import ConfigProvider, { messageConfig } from '../src/config-provider'
 
 import type { ComponentPublicInstance, PropType } from 'vue'
 import type { VueWrapper } from '@vue/test-utils'
-import type { Language } from '@cery929-ui/locale'
-import type { ComponentSize } from '@cery929-ui/constants'
+import type { Language } from '@kn-ui/locale'
+import type { ComponentSize } from '@kn-ui/constants'
 import type { ConfigProviderProps } from '../src/config-provider-props'
 
 const TestComp = defineComponent({

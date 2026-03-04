@@ -8,13 +8,13 @@
 </template>
 
 <script lang="tsx" setup>
-import { TableV2FixedDir, TableV2Placeholder } from 'cery929-ui'
+import { TableV2FixedDir, TableV2Placeholder } from 'kn-ui'
 
 import type { FunctionalComponent } from 'vue'
 import type {
   HeaderClassNameGetter,
   TableV2CustomizedHeaderSlotParam,
-} from 'cery929-ui'
+} from 'kn-ui'
 
 const generateColumns = (length = 10, prefix = 'column-', props?: any) =>
   Array.from({ length }).map((_, columnIndex) => ({

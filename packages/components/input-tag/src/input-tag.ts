@@ -6,21 +6,21 @@ import {
   isNumber,
   isString,
   isUndefined,
-} from '@cery929-ui/utils'
-import { useSizeProp } from '@cery929-ui/hooks'
+} from '@kn-ui/utils'
+import { useSizeProp } from '@kn-ui/hooks'
 import {
   CHANGE_EVENT,
   EVENT_CODE,
   INPUT_EVENT,
   UPDATE_MODEL_EVENT,
-} from '@cery929-ui/constants'
-import { tagProps } from '@cery929-ui/components/tag/src/tag'
-import { CircleClose } from '@cery929-ui/icons-vue'
+} from '@kn-ui/constants'
+import { tagProps } from '@kn-ui/components/tag/src/tag'
+import { CircleClose } from '@kn-ui/icons-vue'
 
 import type { Component, ExtractPublicPropTypes } from 'vue'
-import type { ComponentSize } from '@cery929-ui/constants'
-import type { PopperEffect } from '@cery929-ui/components/popper'
-import type { TagProps } from '@cery929-ui/components/tag'
+import type { ComponentSize } from '@kn-ui/constants'
+import type { PopperEffect } from '@kn-ui/components/popper'
+import type { TagProps } from '@kn-ui/components/tag'
 
 export interface InputTagProps {
   /**

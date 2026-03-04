@@ -1,4 +1,4 @@
-import { ensureArray, isFirefox } from '@cery929-ui/utils'
+import { ensureArray, isFirefox } from '@kn-ui/utils'
 
 import type { MentionCtx, MentionOption } from './types'
 

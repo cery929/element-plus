@@ -35,7 +35,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-import type { DropdownInstance } from 'cery929-ui'
+import type { DropdownInstance } from 'kn-ui'
 
 const dropdown1 = ref<DropdownInstance>()
 function handleVisible2(visible: any) {

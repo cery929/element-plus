@@ -7,7 +7,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { ElLoading } from 'cery929-ui'
+import { ElLoading } from 'kn-ui'
 
 const fullscreenLoading = ref(false)
 const openFullScreen1 = () => {

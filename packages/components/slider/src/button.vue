@@ -15,8 +15,8 @@
 
 <script lang="ts" setup>
 import { computed, reactive, toRefs } from 'vue'
-import { ElTooltip } from '@cery929-ui/components/tooltip'
-import { useNamespace } from '@cery929-ui/hooks'
+import { ElTooltip } from '@kn-ui/components/tooltip'
+import { useNamespace } from '@kn-ui/hooks'
 import { useSliderButton } from './composables'
 import { sliderButtonEmits, sliderButtonProps } from './button'
 

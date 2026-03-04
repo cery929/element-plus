@@ -3,30 +3,30 @@ import {
   useAriaProps,
   useEmptyValuesProps,
   useSizeProp,
-} from '@cery929-ui/hooks'
+} from '@kn-ui/hooks'
 import {
   buildProps,
   definePropType,
   iconPropType,
   isBoolean,
   isNumber,
-} from '@cery929-ui/utils'
-import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@cery929-ui/constants'
-import { useTooltipContentProps } from '@cery929-ui/components/tooltip'
-import { ArrowDown, CircleClose } from '@cery929-ui/icons-vue'
+} from '@kn-ui/utils'
+import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@kn-ui/constants'
+import { useTooltipContentProps } from '@kn-ui/components/tooltip'
+import { ArrowDown, CircleClose } from '@kn-ui/icons-vue'
 import { tagProps } from '../../tag'
 import { defaultProps } from './useProps'
 
 import type SelectV2 from './select.vue'
 import type { Option, OptionType } from './select.types'
 import type { Props } from './useProps'
-import type { EmitFn } from '@cery929-ui/utils/vue/typescript'
+import type { EmitFn } from '@kn-ui/utils/vue/typescript'
 import type { ExtractPropTypes, ExtractPublicPropTypes } from 'vue'
 import type {
   Options,
   Placement,
   PopperEffect,
-} from '@cery929-ui/components/popper'
+} from '@kn-ui/components/popper'
 
 export const selectV2Props = buildProps({
   /**

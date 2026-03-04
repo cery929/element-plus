@@ -9,7 +9,7 @@ import rename from 'gulp-rename'
 import consola from 'consola'
 import postcss from 'postcss'
 import cssnano from 'cssnano'
-import { epOutput } from '@cery929-ui/build-utils'
+import { epOutput } from '@kn-ui/build-utils'
 
 import type { TaskFunction } from 'gulp'
 import type Vinly from 'vinyl'
@@ -98,7 +98,7 @@ function buildDarkCssVars() {
 }
 
 /**
- * copy from packages/theme-chalk/dist to dist/cery929-ui/theme-chalk
+ * copy from packages/theme-chalk/dist to dist/kn-ui/theme-chalk
  */
 export function copyThemeChalkBundle() {
   return src(`${distFolder}/**`).pipe(dest(distBundle))

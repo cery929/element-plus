@@ -1,6 +1,6 @@
 import { Comment, defineComponent, inject } from 'vue'
-import { useNamespace } from '@cery929-ui/hooks'
-import { isArray } from '@cery929-ui/utils'
+import { useNamespace } from '@kn-ui/hooks'
+import { isArray } from '@kn-ui/utils'
 import { CASCADER_PANEL_INJECTION_KEY } from './types'
 
 import type { PropType, VNode } from 'vue'

@@ -11,7 +11,7 @@
 
 <script lang="ts" setup>
 import { h } from 'vue'
-import { ElNotification } from 'cery929-ui'
+import { ElNotification } from 'kn-ui'
 
 const open1 = () => {
   ElNotification({

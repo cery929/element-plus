@@ -1,17 +1,17 @@
-import { buildProps, definePropType } from '@cery929-ui/utils'
+import { buildProps, definePropType } from '@kn-ui/utils'
 import {
   popperContentProps,
   popperContentPropsDefaults,
-} from '@cery929-ui/components/popper'
+} from '@kn-ui/components/popper'
 import {
   useAriaProps,
   useDelayedToggleProps,
   useDelayedTogglePropsDefaults,
-} from '@cery929-ui/hooks'
-import { teleportProps } from '@cery929-ui/components/teleport'
+} from '@kn-ui/hooks'
+import { teleportProps } from '@kn-ui/components/teleport'
 
-import type { AriaProps, UseDelayedToggleProps } from '@cery929-ui/hooks'
-import type { PopperContentProps } from '@cery929-ui/components/popper'
+import type { AriaProps, UseDelayedToggleProps } from '@kn-ui/hooks'
+import type { PopperContentProps } from '@kn-ui/components/popper'
 import type TooltipContent from './content.vue'
 import type { ExtractPublicPropTypes } from 'vue'
 

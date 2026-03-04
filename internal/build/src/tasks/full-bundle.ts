@@ -13,10 +13,10 @@ import {
   PKG_BRAND_NAME,
   PKG_CAMELCASE_LOCAL_NAME,
   PKG_CAMELCASE_NAME,
-} from '@cery929-ui/build-constants'
-import { epOutput, epRoot, localeRoot } from '@cery929-ui/build-utils'
-import { version } from '../../../../packages/cery929-ui/version'
-import { ElementPlusAlias } from '../plugins/cery929-ui-alias'
+} from '@kn-ui/build-constants'
+import { epOutput, epRoot, localeRoot } from '@kn-ui/build-utils'
+import { version } from '../../../../packages/kn-ui/version'
+import { ElementPlusAlias } from '../plugins/kn-ui-alias'
 import {
   formatBundleFilename,
   generateExternal,

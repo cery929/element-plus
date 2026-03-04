@@ -14,9 +14,9 @@
 <script lang="ts">
 import { computed, defineComponent, inject, onMounted, ref } from 'vue'
 import { useResizeObserver } from '@vueuse/core'
-import { useNamespace } from '@cery929-ui/hooks'
+import { useNamespace } from '@kn-ui/hooks'
 import { selectKey } from './token'
-import { BORDER_HORIZONTAL_WIDTH } from '@cery929-ui/constants'
+import { BORDER_HORIZONTAL_WIDTH } from '@kn-ui/constants'
 
 export default defineComponent({
   name: 'ElSelectDropdown',

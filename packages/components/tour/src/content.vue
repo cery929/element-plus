@@ -10,7 +10,7 @@
 
 <script lang="ts" setup>
 import { computed, inject, ref, toRef, watch } from 'vue'
-import ElFocusTrap from '@cery929-ui/components/focus-trap'
+import ElFocusTrap from '@kn-ui/components/focus-trap'
 import { tourContentEmits } from './content'
 import { tourKey, useFloating } from './helper'
 

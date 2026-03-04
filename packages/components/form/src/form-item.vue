@@ -47,15 +47,15 @@ import {
   isArray,
   isBoolean,
   isFunction,
-} from '@cery929-ui/utils'
-import { useId, useNamespace } from '@cery929-ui/hooks'
+} from '@kn-ui/utils'
+import { useId, useNamespace } from '@kn-ui/hooks'
 import { useFormSize } from './hooks'
 import FormLabelWrap from './form-label-wrap'
 import { formContextKey, formItemContextKey } from './constants'
 
 import type { CSSProperties } from 'vue'
 import type { RuleItem } from 'async-validator'
-import type { Arrayable } from '@cery929-ui/utils'
+import type { Arrayable } from '@kn-ui/utils'
 import type {
   FormItemContext,
   FormItemRule,

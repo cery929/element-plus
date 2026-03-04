@@ -17,7 +17,7 @@
     ]" :filter-method="filterTag" filter-placement="bottom-end">
       <template #default="scope">
         <el-tag :type="scope.row.tag === 'Home' ? 'primary' : 'success'" disable-transitions>{{ scope.row.tag
-          }}</el-tag>
+        }}</el-tag>
       </template>
     </el-table-column>
   </el-table>
@@ -26,7 +26,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-import type { TableColumnCtx, TableInstance } from 'cery929-ui'
+import type { TableColumnCtx, TableInstance } from 'kn-ui'
 
 interface User {
   date: string

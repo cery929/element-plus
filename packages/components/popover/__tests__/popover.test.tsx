@@ -1,9 +1,9 @@
 import { defineComponent, nextTick, ref } from 'vue'
 import { mount } from '@vue/test-utils'
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import { usePopperContainerId, useZIndex } from '@cery929-ui/hooks'
-import { rAF } from '@cery929-ui/test-utils/tick'
-import { ElPopperTrigger } from '@cery929-ui/components/popper'
+import { usePopperContainerId, useZIndex } from '@kn-ui/hooks'
+import { rAF } from '@kn-ui/test-utils/tick'
+import { ElPopperTrigger } from '@kn-ui/components/popper'
 import Popover from '../src/popover.vue'
 
 import type { VueWrapper } from '@vue/test-utils'

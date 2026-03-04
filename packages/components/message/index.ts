@@ -1,4 +1,4 @@
-import { withInstallFunction } from '@cery929-ui/utils'
+import { withInstallFunction } from '@kn-ui/utils'
 import Message from './src/method'
 
 export const ElMessage = withInstallFunction(Message, '$message')

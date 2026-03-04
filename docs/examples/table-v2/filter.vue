@@ -11,10 +11,10 @@ import {
   ElPopover,
   TableV2FixedDir,
   useLocale,
-} from 'cery929-ui'
-import { Filter } from '@cery929-ui/icons-vue'
+} from 'kn-ui'
+import { Filter } from '@kn-ui/icons-vue'
 
-import type { HeaderCellSlotProps } from 'cery929-ui'
+import type { HeaderCellSlotProps } from 'kn-ui'
 
 const generateColumns = (length = 10, prefix = 'column-', props?: any) =>
   Array.from({ length }).map((_, columnIndex) => ({

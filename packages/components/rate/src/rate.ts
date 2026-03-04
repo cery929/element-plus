@@ -1,16 +1,16 @@
-import { Star, StarFilled } from '@cery929-ui/icons-vue'
-import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@cery929-ui/constants'
+import { Star, StarFilled } from '@kn-ui/icons-vue'
+import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@kn-ui/constants'
 import {
   buildProps,
   definePropType,
   iconPropType,
   isNumber,
   mutable,
-} from '@cery929-ui/utils'
-import { useAriaProps, useSizeProp } from '@cery929-ui/hooks'
+} from '@kn-ui/utils'
+import { useAriaProps, useSizeProp } from '@kn-ui/hooks'
 
 import type { Component, ExtractPublicPropTypes } from 'vue'
-import type { ComponentSize } from '@cery929-ui/constants'
+import type { ComponentSize } from '@kn-ui/constants'
 import type Rate from './rate.vue'
 
 export interface RateProps {

@@ -7,7 +7,7 @@ import {
   ref,
   watch,
 } from 'vue'
-import { ArrowLeft, ArrowRight } from '@cery929-ui/icons-vue'
+import { ArrowLeft, ArrowRight } from '@kn-ui/icons-vue'
 import {
   buildProps,
   debugWarn,
@@ -15,15 +15,15 @@ import {
   iconPropType,
   isNumber,
   mutable,
-} from '@cery929-ui/utils'
+} from '@kn-ui/utils'
 import {
   useDeprecated,
   useGlobalSize,
   useLocale,
   useNamespace,
   useSizeProp,
-} from '@cery929-ui/hooks'
-import { CHANGE_EVENT } from '@cery929-ui/constants'
+} from '@kn-ui/hooks'
+import { CHANGE_EVENT } from '@kn-ui/constants'
 import { elPaginationKey } from './constants'
 import Prev from './components/prev.vue'
 import Next from './components/next.vue'

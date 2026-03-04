@@ -6,9 +6,9 @@
 
 <script lang="ts" setup>
 import { computed, inject } from 'vue'
-import { isNumber, isObject } from '@cery929-ui/utils'
-import { useNamespace } from '@cery929-ui/hooks'
-import { rowContextKey } from '@cery929-ui/components/row'
+import { isNumber, isObject } from '@kn-ui/utils'
+import { useNamespace } from '@kn-ui/hooks'
+import { rowContextKey } from '@kn-ui/components/row'
 
 import type { CSSProperties } from 'vue'
 import type { ColProps } from './col'

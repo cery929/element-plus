@@ -5,11 +5,11 @@
 import { defineComponent, markRaw, nextTick, ref } from 'vue'
 import { mount } from '@vue/test-utils'
 import { afterEach, describe, expect, it, test, vi } from 'vitest'
-import { BORDER_HORIZONTAL_WIDTH, EVENT_CODE } from '@cery929-ui/constants'
-import { ArrowDown, CaretTop, CircleClose } from '@cery929-ui/icons-vue'
-import { usePopperContainerId } from '@cery929-ui/hooks'
-import { hasClass } from '@cery929-ui/utils'
-import { ElForm, ElFormItem } from '@cery929-ui/components/form'
+import { BORDER_HORIZONTAL_WIDTH, EVENT_CODE } from '@kn-ui/constants'
+import { ArrowDown, CaretTop, CircleClose } from '@kn-ui/icons-vue'
+import { usePopperContainerId } from '@kn-ui/hooks'
+import { hasClass } from '@kn-ui/utils'
+import { ElForm, ElFormItem } from '@kn-ui/components/form'
 import Select from '../src/select.vue'
 import Group from '../src/option-group.vue'
 import Option from '../src/option.vue'
@@ -3018,7 +3018,7 @@ describe('Select', () => {
     expect(wrapper.findAll('.el-tag')[0].text()).toBe('option 1')
   })
 
-  // fix: https://github.com/cery929-ui/cery929-ui/issues/11991
+  // fix: https://github.com/kn-ui/kn-ui/issues/11991
   it('backspace key should delete selected tag but should not delete disabled options', async () => {
     const options = [
       {

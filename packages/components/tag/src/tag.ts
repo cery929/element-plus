@@ -1,7 +1,7 @@
-import { buildProps } from '@cery929-ui/utils'
-import { componentSizes } from '@cery929-ui/constants'
+import { buildProps } from '@kn-ui/utils'
+import { componentSizes } from '@kn-ui/constants'
 
-import type { ComponentSize } from '@cery929-ui/constants'
+import type { ComponentSize } from '@kn-ui/constants'
 import type Tag from './tag.vue'
 import type { ExtractPublicPropTypes } from 'vue'
 

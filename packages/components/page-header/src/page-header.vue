@@ -1,30 +1,19 @@
 <template>
-  <div
-    :class="[
-      ns.b(),
-      ns.is('contentful', !!$slots.default),
-      {
-        [ns.m('has-breadcrumb')]: !!$slots.breadcrumb,
-        [ns.m('has-extra')]: !!$slots.extra,
-      },
-    ]"
-  >
+  <div :class="[
+    ns.b(),
+    ns.is('contentful', !!$slots.default),
+    {
+      [ns.m('has-breadcrumb')]: !!$slots.breadcrumb,
+      [ns.m('has-extra')]: !!$slots.extra,
+    },
+  ]">
     <div v-if="$slots.breadcrumb" :class="ns.e('breadcrumb')">
       <slot name="breadcrumb" />
     </div>
     <div :class="ns.e('header')">
       <div :class="ns.e('left')">
-        <div
-          :class="ns.e('back')"
-          role="button"
-          tabindex="0"
-          @click="handleClick"
-        >
-          <div
-            v-if="icon || $slots.icon"
-            :aria-label="title || t('el.pageHeader.title')"
-            :class="ns.e('icon')"
-          >
+        <div :class="ns.e('back')" role="button" tabindex="0" @click="handleClick">
+          <div v-if="icon || $slots.icon" :aria-label="title || t('el.pageHeader.title')" :class="ns.e('icon')">
             <slot name="icon">
               <el-icon v-if="icon">
                 <component :is="icon" />
@@ -53,10 +42,10 @@
 </template>
 
 <script lang="ts" setup>
-import { ElIcon } from '@cery929-ui/components/icon'
-import { ElDivider } from '@cery929-ui/components/divider'
-import { useLocale, useNamespace } from '@cery929-ui/hooks'
-import { Back as IconBack } from '@cery929-ui/icons-vue'
+import { ElIcon } from '@kn-ui/components/icon'
+import { ElDivider } from '@kn-ui/components/divider'
+import { useLocale, useNamespace } from '@kn-ui/hooks'
+import { Back as IconBack } from '@kn-ui/icons-vue'
 import { pageHeaderEmits } from './page-header'
 
 import type { PageHeaderProps } from './page-header'

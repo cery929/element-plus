@@ -1,6 +1,6 @@
 import path from 'path'
 import fs from 'fs'
-import { docRoot } from '@cery929-ui/build-utils'
+import { docRoot } from '@kn-ui/build-utils'
 
 import type { MarkdownRenderer } from 'vitepress'
 

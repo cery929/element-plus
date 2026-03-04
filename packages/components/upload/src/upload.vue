@@ -32,7 +32,7 @@
 
 <script lang="ts" setup>
 import { computed, onBeforeUnmount, provide, shallowRef, toRef } from 'vue'
-import { useFormDisabled } from '@cery929-ui/components/form'
+import { useFormDisabled } from '@kn-ui/components/form'
 import { uploadContextKey } from './constants'
 import UploadList from './upload-list.vue'
 import UploadContent from './upload-content.vue'

@@ -1,4 +1,4 @@
-import { cAF, rAF } from '@cery929-ui/utils'
+import { cAF, rAF } from '@kn-ui/utils'
 
 import type { ComputedRef } from 'vue'
 

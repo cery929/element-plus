@@ -1,7 +1,7 @@
 import { nextTick, ref } from 'vue'
 import { mount } from '@vue/test-utils'
 import { describe, expect, it, test } from 'vitest'
-import Row from '@cery929-ui/components/row'
+import Row from '@kn-ui/components/row'
 import Col from '../src/col.vue'
 
 describe('Col', () => {

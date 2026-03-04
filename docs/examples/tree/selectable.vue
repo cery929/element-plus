@@ -4,7 +4,7 @@
 </template>
 
 <script lang="ts" setup>
-import type { LoadFunction } from 'cery929-ui'
+import type { LoadFunction } from 'kn-ui'
 
 interface Tree {
   name: string

@@ -10,9 +10,9 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { ClickOutside as vClickOutside } from 'cery929-ui'
+import { ClickOutside as vClickOutside } from 'kn-ui'
 
-import type { PopoverInstance } from 'cery929-ui'
+import type { PopoverInstance } from 'kn-ui'
 
 const buttonRef = ref()
 const popoverRef = ref<PopoverInstance>()

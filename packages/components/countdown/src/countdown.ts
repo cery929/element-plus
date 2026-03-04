@@ -1,5 +1,5 @@
-import { buildProps, definePropType, isNumber } from '@cery929-ui/utils'
-import { CHANGE_EVENT } from '@cery929-ui/constants'
+import { buildProps, definePropType, isNumber } from '@kn-ui/utils'
+import { CHANGE_EVENT } from '@kn-ui/constants'
 
 import type { ExtractPublicPropTypes, StyleValue } from 'vue'
 import type { Dayjs } from 'dayjs'

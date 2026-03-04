@@ -1,9 +1,6 @@
 <template>
   <div :class="descriptionKls">
-    <div
-      v-if="title || extra || $slots.title || $slots.extra"
-      :class="ns.e('header')"
-    >
+    <div v-if="title || extra || $slots.title || $slots.extra" :class="ns.e('header')">
       <div :class="ns.e('title')">
         <slot name="title">{{ title }}</slot>
       </div>
@@ -26,9 +23,9 @@
 
 <script lang="ts" setup>
 import { computed, provide, useSlots } from 'vue'
-import { flattedChildren } from '@cery929-ui/utils'
-import { useNamespace } from '@cery929-ui/hooks'
-import { useFormSize } from '@cery929-ui/components/form'
+import { flattedChildren } from '@kn-ui/utils'
+import { useNamespace } from '@kn-ui/hooks'
+import { useFormSize } from '@kn-ui/components/form'
 import ElDescriptionsRow from './descriptions-row.vue'
 import { descriptionsKey } from './token'
 import { COMPONENT_NAME } from './constants'

@@ -1,7 +1,7 @@
-import { withInstall } from '@cery929-ui/utils'
+import { withInstall } from '@kn-ui/utils'
 import Image from './src/image.vue'
 
-import type { SFCWithInstall } from '@cery929-ui/utils'
+import type { SFCWithInstall } from '@kn-ui/utils'
 
 export const ElImage: SFCWithInstall<typeof Image> = withInstall(Image)
 export default ElImage

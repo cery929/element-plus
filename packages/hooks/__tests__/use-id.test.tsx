@@ -89,13 +89,13 @@ describe('useId warns in non-client environment with default idInjection', async
     vi.doMock('@vueuse/core', () => ({
       computedEager: vi.fn(),
     }))
-    vi.doMock('@cery929-ui/utils', () => ({
+    vi.doMock('@kn-ui/utils', () => ({
       debugWarn: mockWarn,
       isClient: mockIsClient,
     }))
   })
   afterEach(() => {
-    vi.doUnmock('@cery929-ui/utils')
+    vi.doUnmock('@kn-ui/utils')
     vi.doUnmock('vue')
   })
 

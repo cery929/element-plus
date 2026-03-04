@@ -1,4 +1,4 @@
-import { useSizeProp } from '@cery929-ui/hooks'
+import { useSizeProp } from '@kn-ui/hooks'
 
 import type {
   CSSProperties,
@@ -8,8 +8,8 @@ import type {
   StyleValue,
   VNode,
 } from 'vue'
-import type { ComponentSize } from '@cery929-ui/constants'
-import type { Nullable } from '@cery929-ui/utils'
+import type { ComponentSize } from '@kn-ui/constants'
+import type { Nullable } from '@kn-ui/utils'
 import type { Store } from '../store'
 import type { TableColumnCtx } from '../table-column/defaults'
 import type TableLayout from '../table-layout'

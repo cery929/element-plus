@@ -1,11 +1,5 @@
 <template>
-  <div
-    v-show="ready"
-    ref="carouselItemRef"
-    :class="itemKls"
-    :style="itemStyle"
-    @click="handleItemClick"
-  >
+  <div v-show="ready" ref="carouselItemRef" :class="itemKls" :style="itemStyle" @click="handleItemClick">
     <div v-if="isCardType" v-show="!active" :class="ns.e('mask')" />
     <slot />
   </div>
@@ -13,7 +7,7 @@
 
 <script lang="ts" setup>
 import { computed, unref } from 'vue'
-import { useNamespace } from '@cery929-ui/hooks'
+import { useNamespace } from '@kn-ui/hooks'
 import { useCarouselItem } from './use-carousel-item'
 import { CAROUSEL_ITEM_NAME } from './constants'
 

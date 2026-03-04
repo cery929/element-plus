@@ -1,8 +1,8 @@
-import { withInstall, withNoopInstall } from '@cery929-ui/utils'
+import { withInstall, withNoopInstall } from '@kn-ui/utils'
 import Timeline from './src/timeline'
 import TimelineItem from './src/timeline-item.vue'
 
-import type { SFCWithInstall } from '@cery929-ui/utils'
+import type { SFCWithInstall } from '@kn-ui/utils'
 
 export const ElTimeline: SFCWithInstall<typeof Timeline> & {
   TimelineItem: typeof TimelineItem

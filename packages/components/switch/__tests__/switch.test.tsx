@@ -1,16 +1,16 @@
 import { markRaw, nextTick, ref } from 'vue'
 import { mount } from '@vue/test-utils'
 import { afterEach, describe, expect, test, vi } from 'vitest'
-import { debugWarn } from '@cery929-ui/utils'
-import { Checked, CircleClose, Hide, View } from '@cery929-ui/icons-vue'
-import { ElForm, ElFormItem } from '@cery929-ui/components/form'
-import { UPDATE_MODEL_EVENT } from '@cery929-ui/constants'
+import { debugWarn } from '@kn-ui/utils'
+import { Checked, CircleClose, Hide, View } from '@kn-ui/icons-vue'
+import { ElForm, ElFormItem } from '@kn-ui/components/form'
+import { UPDATE_MODEL_EVENT } from '@kn-ui/constants'
 import Switch from '../src/switch.vue'
 
 import type { VueWrapper } from '@vue/test-utils'
 import type { SwitchInstance } from '../src/switch'
 
-vi.mock('@cery929-ui/utils/error', () => ({
+vi.mock('@kn-ui/utils/error', () => ({
   debugWarn: vi.fn(),
 }))
 

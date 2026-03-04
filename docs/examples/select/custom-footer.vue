@@ -19,7 +19,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-import type { CheckboxValueType } from 'cery929-ui'
+import type { CheckboxValueType } from 'kn-ui'
 
 const isAdding = ref(false)
 const value = ref<CheckboxValueType[]>([])

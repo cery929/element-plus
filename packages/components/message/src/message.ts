@@ -4,10 +4,10 @@ import {
   iconPropType,
   isClient,
   mutable,
-} from '@cery929-ui/utils'
+} from '@kn-ui/utils'
 
 import type { AppContext, Component, ExtractPublicPropTypes, VNode } from 'vue'
-import type { Mutable } from '@cery929-ui/utils'
+import type { Mutable } from '@kn-ui/utils'
 import type MessageConstructor from './message.vue'
 
 export interface MessageProps {

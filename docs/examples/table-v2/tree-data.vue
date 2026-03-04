@@ -6,9 +6,9 @@
 
 <script lang="ts" setup>
 import { computed, ref } from 'vue'
-import { TableV2FixedDir } from 'cery929-ui'
+import { TableV2FixedDir } from 'kn-ui'
 
-import type { ExpandedRowsChangeHandler, RowExpandHandler } from 'cery929-ui'
+import type { ExpandedRowsChangeHandler, RowExpandHandler } from 'kn-ui'
 
 const generateColumns = (length = 10, prefix = 'column-', props?: any) =>
   Array.from({ length }).map((_, columnIndex) => ({

@@ -1,8 +1,8 @@
 import { createApp, nextTick } from 'vue'
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import { rAF } from '@cery929-ui/test-utils/tick'
+import { rAF } from '@kn-ui/test-utils/tick'
 import Notification, { closeAll, updateOffsets } from '../src/notify'
-import defineGetter from '@cery929-ui/test-utils/define-getter'
+import defineGetter from '@kn-ui/test-utils/define-getter'
 
 import type { NotificationHandle } from '../src/notification'
 import type { VNode } from 'vue'

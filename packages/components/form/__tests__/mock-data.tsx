@@ -1,6 +1,6 @@
 import { defineComponent, ref, toRef } from 'vue'
-import Input from '@cery929-ui/components/input'
-import Button from '@cery929-ui/components/button'
+import Input from '@kn-ui/components/input'
+import Button from '@kn-ui/components/button'
 import Form from '../src/form.vue'
 import FormItem from '../src/form-item.vue'
 

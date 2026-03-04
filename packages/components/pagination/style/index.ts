@@ -1,4 +1,4 @@
-import '@cery929-ui/components/base/style'
-import '@cery929-ui/theme-chalk/src/pagination.scss'
-import '@cery929-ui/components/select/style'
-import '@cery929-ui/components/input/style'
+import '@kn-ui/components/base/style'
+import '@kn-ui/theme-chalk/src/pagination.scss'
+import '@kn-ui/components/select/style'
+import '@kn-ui/components/input/style'

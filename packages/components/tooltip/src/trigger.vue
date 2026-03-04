@@ -8,19 +8,19 @@
 
 <script lang="ts" setup>
 import { inject, nextTick, ref, toRef, unref } from 'vue'
-import { ElPopperTrigger } from '@cery929-ui/components/popper'
+import { ElPopperTrigger } from '@kn-ui/components/popper'
 import {
   composeEventHandlers,
   focusElement,
   getEventCode,
-} from '@cery929-ui/utils'
-import { useNamespace } from '@cery929-ui/hooks'
+} from '@kn-ui/utils'
+import { useNamespace } from '@kn-ui/hooks'
 import { TOOLTIP_INJECTION_KEY } from './constants'
 import { whenTrigger } from './utils'
 import { useTooltipTriggerPropsDefaults } from './trigger'
 
 import type { UseTooltipTriggerProps } from './trigger'
-import type { OnlyChildExpose } from '@cery929-ui/components/slot'
+import type { OnlyChildExpose } from '@kn-ui/components/slot'
 
 defineOptions({
   name: 'ElTooltipTrigger',

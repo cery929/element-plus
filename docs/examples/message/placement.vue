@@ -20,9 +20,9 @@
 </template>
 
 <script lang="ts" setup>
-import { ElMessage } from 'cery929-ui'
+import { ElMessage } from 'kn-ui'
 
-import type { MessagePlacement, MessageType } from 'cery929-ui'
+import type { MessagePlacement, MessageType } from 'kn-ui'
 
 let topCount = 0
 let bottomCount = 0

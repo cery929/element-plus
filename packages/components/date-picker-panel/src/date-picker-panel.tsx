@@ -12,10 +12,10 @@ import isSameOrBefore from 'dayjs/plugin/isSameOrBefore.js'
 import {
   PICKER_BASE_INJECTION_KEY,
   ROOT_COMMON_PICKER_INJECTION_KEY,
-} from '@cery929-ui/components/time-picker'
-import { useNamespace } from '@cery929-ui/hooks'
-import { isUndefined } from '@cery929-ui/utils'
-import { UPDATE_MODEL_EVENT } from '@cery929-ui/constants'
+} from '@kn-ui/components/time-picker'
+import { useNamespace } from '@kn-ui/hooks'
+import { isUndefined } from '@kn-ui/utils'
+import { UPDATE_MODEL_EVENT } from '@kn-ui/constants'
 import { datePickerPanelProps } from './props/date-picker-panel'
 import { ROOT_PICKER_INJECTION_KEY } from './constants'
 import { getPanel } from './panel-utils'

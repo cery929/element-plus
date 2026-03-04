@@ -4,13 +4,13 @@ import {
   isBoolean,
   isNumber,
   isString,
-} from '@cery929-ui/utils'
-import { useAriaProps, useSizeProp } from '@cery929-ui/hooks'
-import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@cery929-ui/constants'
+} from '@kn-ui/utils'
+import { useAriaProps, useSizeProp } from '@kn-ui/hooks'
+import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@kn-ui/constants'
 
 import type { Option } from './types'
 import type { ExtractPublicPropTypes } from 'vue'
-import type { ComponentSize } from '@cery929-ui/constants'
+import type { ComponentSize } from '@kn-ui/constants'
 import type Segmented from './segmented.vue'
 
 export interface Props {

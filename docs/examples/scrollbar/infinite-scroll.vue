@@ -9,7 +9,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-import type { ScrollbarDirection } from 'cery929-ui'
+import type { ScrollbarDirection } from 'kn-ui'
 
 const num = ref(30)
 

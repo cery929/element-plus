@@ -10,8 +10,8 @@ import {
   toRefs,
   watch,
 } from 'vue'
-import { useNamespace } from '@cery929-ui/hooks'
-import { throwError } from '@cery929-ui/utils'
+import { useNamespace } from '@kn-ui/hooks'
+import { throwError } from '@kn-ui/utils'
 import { getCollapsible, isCollapsible } from './hooks/usePanel'
 import SplitBar from './split-bar.vue'
 import { splitterPanelEmits } from './split-panel'

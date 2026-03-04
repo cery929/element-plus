@@ -13,9 +13,9 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { ElMessage, ElMessageBox } from 'cery929-ui'
+import { ElMessage, ElMessageBox } from 'kn-ui'
 
-import type { UploadProps, UploadUserFile } from 'cery929-ui'
+import type { UploadProps, UploadUserFile } from 'kn-ui'
 
 const fileList = ref<UploadUserFile[]>([
   {

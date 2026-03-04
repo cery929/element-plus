@@ -41,9 +41,9 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { ElMessageBox } from 'cery929-ui'
+import { ElMessageBox } from 'kn-ui'
 
-import type { DrawerProps } from 'cery929-ui'
+import type { DrawerProps } from 'kn-ui'
 
 const drawer = ref(false)
 const drawer2 = ref(false)

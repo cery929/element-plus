@@ -22,7 +22,7 @@ import {
   Orange,
   Pear,
   Watermelon,
-} from '@cery929-ui/icons-vue'
+} from '@kn-ui/icons-vue'
 
 const value = ref('Apple')
 

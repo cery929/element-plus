@@ -1,13 +1,13 @@
 import { markRaw, nextTick } from 'vue'
 import { flushPromises, mount } from '@vue/test-utils'
 import { describe, expect, test } from 'vitest'
-import { User } from '@cery929-ui/icons-vue'
+import { User } from '@kn-ui/icons-vue'
 import {
   IMAGE_FAIL,
   IMAGE_SUCCESS,
   mockImageEvent,
-} from '@cery929-ui/test-utils/mock'
-import { stableLoad } from '@cery929-ui/test-utils/stable-load'
+} from '@kn-ui/test-utils/mock'
+import { stableLoad } from '@kn-ui/test-utils/stable-load'
 import Avatar from '../src/avatar.vue'
 import AvatarGroup from '../src/avatar-group'
 

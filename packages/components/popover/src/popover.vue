@@ -23,12 +23,12 @@
 
 <script lang="ts" setup>
 import { computed, ref, unref } from 'vue'
-import { ElTooltip } from '@cery929-ui/components/tooltip'
-import { addUnit } from '@cery929-ui/utils'
-import { useNamespace } from '@cery929-ui/hooks'
+import { ElTooltip } from '@kn-ui/components/tooltip'
+import { addUnit } from '@kn-ui/utils'
+import { useNamespace } from '@kn-ui/hooks'
 import { popoverEmits, popoverPropsDefaults } from './popover'
 
-import type { TooltipInstance } from '@cery929-ui/components/tooltip'
+import type { TooltipInstance } from '@kn-ui/components/tooltip'
 import type { PopoverProps } from './popover'
 
 defineOptions({

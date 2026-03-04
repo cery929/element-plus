@@ -59,7 +59,7 @@
 <script lang="ts" setup>
 import { reactive, ref } from 'vue'
 
-import type { ComponentSize, FormProps } from 'cery929-ui'
+import type { ComponentSize, FormProps } from 'kn-ui'
 
 const size = ref<ComponentSize>('default')
 const labelPosition = ref<FormProps['labelPosition']>('right')

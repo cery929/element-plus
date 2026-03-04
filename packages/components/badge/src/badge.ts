@@ -1,4 +1,4 @@
-import { buildProps, definePropType } from '@cery929-ui/utils'
+import { buildProps, definePropType } from '@kn-ui/utils'
 
 import type { ExtractPublicPropTypes, StyleValue } from 'vue'
 

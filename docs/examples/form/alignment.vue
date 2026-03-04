@@ -30,7 +30,7 @@
 <script lang="ts" setup>
 import { reactive, ref } from 'vue'
 
-import type { FormItemProps, FormProps } from 'cery929-ui'
+import type { FormItemProps, FormProps } from 'kn-ui'
 
 const labelPosition = ref<FormProps['labelPosition']>('right')
 const itemLabelPosition = ref<FormItemProps['labelPosition']>('')

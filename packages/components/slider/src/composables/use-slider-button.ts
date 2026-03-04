@@ -1,8 +1,8 @@
 import { computed, inject, nextTick, ref, watch } from 'vue'
 import { clamp, debounce } from 'lodash-unified'
 import { useEventListener } from '@vueuse/core'
-import { EVENT_CODE, UPDATE_MODEL_EVENT } from '@cery929-ui/constants'
-import { getEventCode } from '@cery929-ui/utils'
+import { EVENT_CODE, UPDATE_MODEL_EVENT } from '@kn-ui/constants'
+import { getEventCode } from '@kn-ui/utils'
 import { sliderContextKey } from '../constants'
 
 import type { CSSProperties, ComputedRef, Ref, SetupContext } from 'vue'
@@ -12,7 +12,7 @@ import type {
   SliderButtonInitData,
   SliderButtonProps,
 } from '../button'
-import type { TooltipInstance } from '@cery929-ui/components/tooltip'
+import type { TooltipInstance } from '@kn-ui/components/tooltip'
 
 const useTooltip = (
   props: SliderButtonProps,

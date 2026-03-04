@@ -14,13 +14,14 @@
 </template>
 
 <script lang="ts" setup>
-import { Bell } from '@cery929-ui/icons-vue'
+import { Bell } from '@kn-ui/icons-vue'
 </script>
 
 <style scoped>
 .el-alert {
   margin: 20px 0 0;
 }
+
 .el-alert:first-child {
   margin: 0;
 }

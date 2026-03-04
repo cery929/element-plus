@@ -1,8 +1,8 @@
-import { withInstall, withNoopInstall } from '@cery929-ui/utils'
+import { withInstall, withNoopInstall } from '@kn-ui/utils'
 import Tour from './src/tour.vue'
 import TourStep from './src/step.vue'
 
-import type { SFCWithInstall } from '@cery929-ui/utils'
+import type { SFCWithInstall } from '@kn-ui/utils'
 
 export const ElTour: SFCWithInstall<typeof Tour> & {
   TourStep: typeof TourStep

@@ -1,6 +1,6 @@
-import { buildProps, definePropType, isBoolean } from '@cery929-ui/utils'
-import { UPDATE_MODEL_EVENT } from '@cery929-ui/constants'
-import { teleportProps } from '@cery929-ui/components/teleport'
+import { buildProps, definePropType, isBoolean } from '@kn-ui/utils'
+import { UPDATE_MODEL_EVENT } from '@kn-ui/constants'
+import { teleportProps } from '@kn-ui/components/teleport'
 import {
   dialogContentProps,
   dialogContentPropsDefaults,

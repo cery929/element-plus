@@ -1,6 +1,6 @@
 import { provide, ref } from 'vue'
-import { addClass, isFunction, removeClass } from '@cery929-ui/utils'
-import { useNamespace } from '@cery929-ui/hooks'
+import { addClass, isFunction, removeClass } from '@kn-ui/utils'
+import { useNamespace } from '@kn-ui/hooks'
 
 import type { InjectionKey, Ref, SetupContext } from 'vue'
 import type {

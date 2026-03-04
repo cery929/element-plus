@@ -1,21 +1,7 @@
 <template>
-  <el-scrollbar
-    :key="menuId"
-    tag="ul"
-    role="menu"
-    :class="ns.b()"
-    :wrap-class="ns.e('wrap')"
-    :view-class="[ns.e('list'), ns.is('empty', isEmpty)]"
-    @mousemove="handleMouseMove"
-    @mouseleave="clearHoverZone"
-  >
-    <el-cascader-node
-      v-for="node in nodes"
-      :key="node.uid"
-      :node="node"
-      :menu-id="menuId"
-      @expand="handleExpand"
-    />
+  <el-scrollbar :key="menuId" tag="ul" role="menu" :class="ns.b()" :wrap-class="ns.e('wrap')"
+    :view-class="[ns.e('list'), ns.is('empty', isEmpty)]" @mousemove="handleMouseMove" @mouseleave="clearHoverZone">
+    <el-cascader-node v-for="node in nodes" :key="node.uid" :node="node" :menu-id="menuId" @expand="handleExpand" />
     <div v-if="isLoading" :class="ns.e('empty-text')">
       <el-icon size="14" :class="ns.is('loading')">
         <loading />
@@ -26,21 +12,17 @@
       <slot name="empty">{{ t('el.cascader.noData') }}</slot>
     </div>
     <!-- eslint-disable vue/html-self-closing -->
-    <svg
-      v-else-if="panel?.isHoverMenu"
-      ref="hoverZone"
-      :class="ns.e('hover-zone')"
-    ></svg>
+    <svg v-else-if="panel?.isHoverMenu" ref="hoverZone" :class="ns.e('hover-zone')"></svg>
     <!-- eslint-enable vue/html-self-closing -->
   </el-scrollbar>
 </template>
 
 <script lang="ts" setup>
 import { computed, getCurrentInstance, inject, ref } from 'vue'
-import ElScrollbar from '@cery929-ui/components/scrollbar'
-import { useId, useLocale, useNamespace } from '@cery929-ui/hooks'
-import { Loading } from '@cery929-ui/icons-vue'
-import ElIcon from '@cery929-ui/components/icon'
+import ElScrollbar from '@kn-ui/components/scrollbar'
+import { useId, useLocale, useNamespace } from '@kn-ui/hooks'
+import { Loading } from '@kn-ui/icons-vue'
+import ElIcon from '@kn-ui/components/icon'
 import ElCascaderNode from './node.vue'
 import { CASCADER_PANEL_INJECTION_KEY } from './types'
 

@@ -49,12 +49,12 @@ import {
   ref,
   watch,
 } from 'vue'
-import { debugWarn, isFunction, isString } from '@cery929-ui/utils'
-import ElCollapseTransition from '@cery929-ui/components/collapse-transition'
-import ElCheckbox from '@cery929-ui/components/checkbox'
-import { ElIcon } from '@cery929-ui/components/icon'
-import { CaretRight, Loading } from '@cery929-ui/icons-vue'
-import { useNamespace } from '@cery929-ui/hooks'
+import { debugWarn, isFunction, isString } from '@kn-ui/utils'
+import ElCollapseTransition from '@kn-ui/components/collapse-transition'
+import ElCheckbox from '@kn-ui/components/checkbox'
+import { ElIcon } from '@kn-ui/components/icon'
+import { CaretRight, Loading } from '@kn-ui/icons-vue'
+import { useNamespace } from '@kn-ui/hooks'
 import NodeContent from './tree-node-content.vue'
 import { getNodeKey as getNodeKeyUtil, handleCurrentChange } from './model/util'
 import { useNodeExpandEventBroadcast } from './model/useNodeExpandEventBroadcast'
@@ -64,7 +64,7 @@ import { NODE_INSTANCE_INJECTION_KEY, ROOT_TREE_INJECTION_KEY } from './tokens'
 
 import type { ComponentInternalInstance, PropType } from 'vue'
 import type { RootTreeType, TreeNodeData, TreeOptionProps } from './tree.type'
-import type { CheckboxValueType } from '@cery929-ui/components/checkbox'
+import type { CheckboxValueType } from '@kn-ui/components/checkbox'
 
 export default defineComponent({
   name: 'ElTreeNode',

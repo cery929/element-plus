@@ -71,10 +71,10 @@
 <script lang="ts" setup>
 import { computed, inject, ref, toRef, unref, watch } from 'vue'
 import dayjs from 'dayjs'
-import ElIcon from '@cery929-ui/components/icon'
-import { useLocale } from '@cery929-ui/hooks'
-import { DArrowLeft, DArrowRight } from '@cery929-ui/icons-vue'
-import { PICKER_BASE_INJECTION_KEY } from '@cery929-ui/components/time-picker'
+import ElIcon from '@kn-ui/components/icon'
+import { useLocale } from '@kn-ui/hooks'
+import { DArrowLeft, DArrowRight } from '@kn-ui/icons-vue'
+import { PICKER_BASE_INJECTION_KEY } from '@kn-ui/components/time-picker'
 import {
   correctlyParseUserInput,
   getDefaultValue,
@@ -88,7 +88,7 @@ import { useMonthRangeHeader } from '../composables/use-month-range-header'
 import { useRangePicker } from '../composables/use-range-picker'
 import { ROOT_PICKER_IS_DEFAULT_FORMAT_INJECTION_KEY } from '../constants'
 import MonthTable from './basic-month-table.vue'
-import { useFormDisabled } from '@cery929-ui/components/form'
+import { useFormDisabled } from '@kn-ui/components/form'
 
 import type { Dayjs } from 'dayjs'
 

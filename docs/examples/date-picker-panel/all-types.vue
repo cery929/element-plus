@@ -18,7 +18,7 @@
 <script lang="ts" setup>
 import { ref, watch } from 'vue'
 
-import type { DatePickerType } from 'cery929-ui'
+import type { DatePickerType } from 'kn-ui'
 
 const date = ref()
 const type = ref<DatePickerType>('date')

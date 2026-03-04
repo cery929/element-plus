@@ -5,9 +5,9 @@ import {
   isBoolean,
   isClient,
   isFunction,
-} from '@cery929-ui/utils'
+} from '@kn-ui/utils'
 
-import type { ExtractPropType } from '@cery929-ui/utils'
+import type { ExtractPropType } from '@kn-ui/utils'
 import type { RouteLocationNormalizedLoaded } from 'vue-router'
 import type {
   ComponentPublicInstance,

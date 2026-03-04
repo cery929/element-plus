@@ -205,10 +205,10 @@
 <script lang="ts" setup>
 import { computed, inject, nextTick, ref, toRef, unref, watch } from 'vue'
 import dayjs from 'dayjs'
-import { ClickOutside as vClickoutside } from '@cery929-ui/directives'
-import { useLocale } from '@cery929-ui/hooks'
-import ElButton from '@cery929-ui/components/button'
-import ElInput from '@cery929-ui/components/input'
+import { ClickOutside as vClickoutside } from '@kn-ui/directives'
+import { useLocale } from '@kn-ui/hooks'
+import ElButton from '@kn-ui/components/button'
+import ElInput from '@kn-ui/components/input'
 import {
   DEFAULT_FORMATS_DATE,
   DEFAULT_FORMATS_TIME,
@@ -216,14 +216,14 @@ import {
   TimePickPanel,
   extractDateFormat,
   extractTimeFormat,
-} from '@cery929-ui/components/time-picker'
-import ElIcon from '@cery929-ui/components/icon'
+} from '@kn-ui/components/time-picker'
+import ElIcon from '@kn-ui/components/icon'
 import {
   ArrowLeft,
   ArrowRight,
   DArrowLeft,
   DArrowRight,
-} from '@cery929-ui/icons-vue'
+} from '@kn-ui/icons-vue'
 import { panelDateRangeProps } from '../props/panel-date-range'
 import { useRangePicker } from '../composables/use-range-picker'
 import {
@@ -236,7 +236,7 @@ import { ROOT_PICKER_IS_DEFAULT_FORMAT_INJECTION_KEY } from '../constants'
 import YearTable from './basic-year-table.vue'
 import MonthTable from './basic-month-table.vue'
 import DateTable from './basic-date-table.vue'
-import { useFormDisabled } from '@cery929-ui/components/form'
+import { useFormDisabled } from '@kn-ui/components/form'
 
 import type { Ref } from 'vue'
 import type { Dayjs } from 'dayjs'

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { inBrowser, useData, withBase } from 'vitepress'
-import { version as epVersion } from 'cery929-ui'
+import { version as epVersion } from 'kn-ui'
 import VPNavbarSearch from './navbar/vp-search.vue'
 import VPNavbarMenu from './navbar/vp-menu.vue'
 import VPNavbarThemeToggler from './navbar/vp-theme-toggler.vue'
@@ -38,7 +38,7 @@ const currentLink = computed(() => {
         </a>
         <el-tag round size="small" title="latest version">{{
           epVersion.replace('0.0.0-staging.', '')
-          }}</el-tag>
+        }}</el-tag>
       </div>
       <div class="content">
         <VPNavbarSearch class="search" :options="theme.agolia" multilang />

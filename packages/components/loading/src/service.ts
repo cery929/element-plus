@@ -6,10 +6,10 @@ import {
   isClient,
   isString,
   removeClass,
-} from '@cery929-ui/utils'
+} from '@kn-ui/utils'
 import { createLoadingComponent } from './loading'
 
-import type { UseNamespaceReturn, UseZIndexReturn } from '@cery929-ui/hooks'
+import type { UseNamespaceReturn, UseZIndexReturn } from '@kn-ui/hooks'
 import type { LoadingInstance } from './loading'
 import type { LoadingOptionsResolved } from '..'
 import type { LoadingOptions } from './types'

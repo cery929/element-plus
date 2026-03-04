@@ -19,16 +19,16 @@ import { computed, defineComponent, inject } from 'vue'
 import {
   ROVING_FOCUS_GROUP_ITEM_INJECTION_KEY,
   ROVING_FOCUS_ITEM_COLLECTION_INJECTION_KEY,
-} from '@cery929-ui/components/roving-focus-group'
-import { COLLECTION_ITEM_SIGN } from '@cery929-ui/components/collection'
-import { ElIcon } from '@cery929-ui/components/icon'
-import { useNamespace } from '@cery929-ui/hooks'
+} from '@kn-ui/components/roving-focus-group'
+import { COLLECTION_ITEM_SIGN } from '@kn-ui/components/collection'
+import { ElIcon } from '@kn-ui/components/icon'
+import { useNamespace } from '@kn-ui/hooks'
 import {
   composeEventHandlers,
   composeRefs,
   getEventCode,
-} from '@cery929-ui/utils'
-import { EVENT_CODE } from '@cery929-ui/constants'
+} from '@kn-ui/utils'
+import { EVENT_CODE } from '@kn-ui/constants'
 import { dropdownItemProps } from './dropdown'
 import { DROPDOWN_INJECTION_KEY } from './tokens'
 

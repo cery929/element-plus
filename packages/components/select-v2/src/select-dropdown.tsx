@@ -8,13 +8,13 @@ import {
   watch,
 } from 'vue'
 import { get } from 'lodash-unified'
-import { getEventCode, isIOS, isObject, isUndefined } from '@cery929-ui/utils'
+import { getEventCode, isIOS, isObject, isUndefined } from '@kn-ui/utils'
 import {
   DynamicSizeList,
   FixedSizeList,
-} from '@cery929-ui/components/virtual-list'
-import { useNamespace } from '@cery929-ui/hooks'
-import { EVENT_CODE } from '@cery929-ui/constants'
+} from '@kn-ui/components/virtual-list'
+import { useNamespace } from '@kn-ui/hooks'
+import { EVENT_CODE } from '@kn-ui/constants'
 import GroupItem from './group-item.vue'
 import OptionItem from './option-item.vue'
 import { useProps } from './useProps'
@@ -24,7 +24,7 @@ import type {
   DynamicSizeListInstance,
   FixedSizeListInstance,
   ItemProps,
-} from '@cery929-ui/components/virtual-list'
+} from '@kn-ui/components/virtual-list'
 import type { Option, OptionItemProps } from './select.types'
 import type {
   ComponentPublicInstance,
@@ -255,7 +255,7 @@ export default defineComponent({
       const { data, width } = props
       const { height, multiple, scrollbarAlwaysOn } = select.props
       const isScrollbarAlwaysOn = computed(() => {
-        // fix https://github.com/cery929-ui/cery929-ui/issues/19127
+        // fix https://github.com/kn-ui/kn-ui/issues/19127
         return isIOS ? true : scrollbarAlwaysOn
       })
 

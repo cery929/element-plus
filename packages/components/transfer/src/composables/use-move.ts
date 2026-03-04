@@ -1,4 +1,4 @@
-import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@cery929-ui/constants'
+import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@kn-ui/constants'
 import { usePropsAlias } from './use-props-alias'
 
 import type { SetupContext } from 'vue'

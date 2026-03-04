@@ -20,9 +20,9 @@
 
 <script lang="ts" setup>
 import { reactive } from 'vue'
-import { buttonTypes } from 'cery929-ui'
+import { buttonTypes } from 'kn-ui'
 
-import type { ButtonConfigContext } from 'cery929-ui'
+import type { ButtonConfigContext } from 'kn-ui'
 
 const config = reactive<ButtonConfigContext>({
   autoInsertSpace: true,

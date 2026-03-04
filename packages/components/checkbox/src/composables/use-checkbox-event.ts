@@ -1,10 +1,10 @@
 import { computed, getCurrentInstance, inject, nextTick, watch } from 'vue'
-import { useFormItem } from '@cery929-ui/components/form'
-import { debugWarn } from '@cery929-ui/utils'
-import { CHANGE_EVENT } from '@cery929-ui/constants'
+import { useFormItem } from '@kn-ui/components/form'
+import { debugWarn } from '@kn-ui/utils'
+import { CHANGE_EVENT } from '@kn-ui/constants'
 import { checkboxGroupContextKey } from '../constants'
 
-import type { useFormItemInputId } from '@cery929-ui/components/form'
+import type { useFormItemInputId } from '@kn-ui/components/form'
 import type { CheckboxProps } from '../checkbox'
 import type {
   CheckboxDisabled,

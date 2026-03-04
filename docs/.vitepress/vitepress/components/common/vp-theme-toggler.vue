@@ -4,7 +4,7 @@ import { isDark, toggleDark } from '../../composables/dark'
 import DarkIcon from '../icons/dark.vue'
 import LightIcon from '../icons/light.vue'
 
-import type { SwitchInstance } from 'cery929-ui'
+import type { SwitchInstance } from 'kn-ui'
 
 defineOptions({ inheritAttrs: false })
 

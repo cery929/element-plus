@@ -1,5 +1,5 @@
 {
-  "name": "@cery929-ui/utils",
+  "name": "@kn-ui/utils",
   "private": true,
   "license": "MIT",
   "main": "index.ts",
@@ -8,8 +8,8 @@
     "vue": "catalog:"
   },
   "dependencies": {
-    "@cery929-ui/constants": "workspace:^",
-    "@cery929-ui/icons-vue": "catalog:",
+    "@kn-ui/constants": "workspace:^",
+    "@kn-ui/icons-vue": "catalog:",
     "@vueuse/core": "catalog:",
     "lodash-unified": "catalog:"
   },

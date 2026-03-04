@@ -1,13 +1,13 @@
 import { markRaw, nextTick, ref } from 'vue'
 import { mount } from '@vue/test-utils'
 import { describe, expect, it, test } from 'vitest'
-import { Loading, Search } from '@cery929-ui/icons-vue'
-import Form from '@cery929-ui/components/form'
-import { useNamespace } from '@cery929-ui/hooks'
+import { Loading, Search } from '@kn-ui/icons-vue'
+import Form from '@kn-ui/components/form'
+import { useNamespace } from '@kn-ui/hooks'
 import Button from '../src/button.vue'
 import ButtonGroup from '../src/button-group.vue'
 
-import type { ComponentSize } from '@cery929-ui/constants'
+import type { ComponentSize } from '@kn-ui/constants'
 
 const AXIOM = 'Rem is the best girl'
 const ns = useNamespace('button')

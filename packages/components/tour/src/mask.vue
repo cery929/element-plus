@@ -11,7 +11,7 @@
 
 <script lang="ts" setup>
 import { computed, inject, toRef } from 'vue'
-import { useLockscreen } from '@cery929-ui/hooks'
+import { useLockscreen } from '@kn-ui/hooks'
 import { useWindowSize } from '@vueuse/core'
 import { tourKey } from './helper'
 

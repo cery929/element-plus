@@ -1,9 +1,9 @@
 // @ts-nocheck
 import { computed, nextTick, toRefs, watch } from 'vue'
 import { isEqual, isNil, pick } from 'lodash-unified'
-import { UPDATE_MODEL_EVENT } from '@cery929-ui/constants'
-import { escapeStringRegexp, isEmpty, isFunction } from '@cery929-ui/utils'
-import ElTree from '@cery929-ui/components/tree'
+import { UPDATE_MODEL_EVENT } from '@kn-ui/constants'
+import { escapeStringRegexp, isEmpty, isFunction } from '@kn-ui/utils'
+import ElTree from '@kn-ui/components/tree'
 import TreeSelectOption from './tree-select-option'
 import {
   isValidArray,
@@ -15,10 +15,10 @@ import {
 
 import type { CacheOption } from './cache-options'
 import type { Ref } from 'vue'
-import type { SelectInstance } from '@cery929-ui/components/select'
-import type Node from '@cery929-ui/components/tree/src/model/node'
-import type { TreeNodeData } from '@cery929-ui/components/tree/src/tree.type'
-import type { TreeInstance } from '@cery929-ui/components/tree'
+import type { SelectInstance } from '@kn-ui/components/select'
+import type Node from '@kn-ui/components/tree/src/model/node'
+import type { TreeNodeData } from '@kn-ui/components/tree/src/tree.type'
+import type { TreeInstance } from '@kn-ui/components/tree'
 
 export const useTree = (
   props,

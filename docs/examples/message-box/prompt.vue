@@ -3,7 +3,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ElMessage, ElMessageBox } from 'cery929-ui'
+import { ElMessage, ElMessageBox } from 'kn-ui'
 
 const open = () => {
   ElMessageBox.prompt('Please input your e-mail', 'Tip', {

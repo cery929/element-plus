@@ -35,12 +35,12 @@
 
 <script lang="ts" setup>
 import { Comment, computed, h, reactive, ref, useSlots, watch } from 'vue'
-import { debugWarn, isEmpty, isUndefined } from '@cery929-ui/utils'
-import { useLocale, useNamespace } from '@cery929-ui/hooks'
-import { ElButton } from '@cery929-ui/components/button'
-import { ElIcon } from '@cery929-ui/components/icon'
-import { useFormItem } from '@cery929-ui/components/form'
-import { ArrowLeft, ArrowRight } from '@cery929-ui/icons-vue'
+import { debugWarn, isEmpty, isUndefined } from '@kn-ui/utils'
+import { useLocale, useNamespace } from '@kn-ui/hooks'
+import { ElButton } from '@kn-ui/components/button'
+import { ElIcon } from '@kn-ui/components/icon'
+import { useFormItem } from '@kn-ui/components/form'
+import { ArrowLeft, ArrowRight } from '@kn-ui/icons-vue'
 import { transferEmits } from './transfer'
 import {
   useCheckedChange,

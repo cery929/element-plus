@@ -6,7 +6,7 @@ import {
   shallowRef,
   triggerRef,
 } from 'vue'
-import { flattedChildren } from '@cery929-ui/utils'
+import { flattedChildren } from '@kn-ui/utils'
 
 import type { Component, ComponentInternalInstance, VNode } from 'vue'
 

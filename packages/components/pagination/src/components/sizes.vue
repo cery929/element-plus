@@ -10,9 +10,9 @@
 <script lang="ts" setup>
 import { computed, ref, watch } from 'vue'
 import { isEqual } from 'lodash-unified'
-import { ElOption, ElSelect } from '@cery929-ui/components/select'
-import { useLocale, useNamespace } from '@cery929-ui/hooks'
-import { isArray } from '@cery929-ui/utils'
+import { ElOption, ElSelect } from '@kn-ui/components/select'
+import { useLocale, useNamespace } from '@kn-ui/hooks'
+import { isArray } from '@kn-ui/utils'
 import { usePagination } from '../usePagination'
 import { paginationSizesProps } from './sizes'
 

@@ -1,5 +1,5 @@
-import ElIcon from '@cery929-ui/components/icon'
-import { SortDown, SortUp } from '@cery929-ui/icons-vue'
+import ElIcon from '@kn-ui/components/icon'
+import { SortDown, SortUp } from '@kn-ui/icons-vue'
 import { SortOrder } from '../constants'
 
 import type { FunctionalComponent } from 'vue'

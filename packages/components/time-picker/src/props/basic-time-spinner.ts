@@ -1,4 +1,4 @@
-import { buildProps, definePropType } from '@cery929-ui/utils'
+import { buildProps, definePropType } from '@kn-ui/utils'
 import { disabledTimeListsProps } from '../props/shared'
 
 import type { ExtractPropTypes, ExtractPublicPropTypes } from 'vue'

@@ -3,9 +3,9 @@
 </template>
 
 <script lang="ts" setup>
-import { ElMessage, ElMessageBox } from 'cery929-ui'
+import { ElMessage, ElMessageBox } from 'kn-ui'
 
-import type { Action } from 'cery929-ui'
+import type { Action } from 'kn-ui'
 
 const open = () => {
   ElMessageBox.alert('This is a message', 'Title', {

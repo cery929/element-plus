@@ -10,8 +10,8 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { useLocale } from '@cery929-ui/hooks'
-import { ElIcon } from '@cery929-ui/components/icon'
+import { useLocale } from '@kn-ui/hooks'
+import { ElIcon } from '@kn-ui/components/icon'
 import { paginationNextProps } from './next'
 
 defineOptions({

@@ -2,7 +2,7 @@ import path from 'path'
 import { readFile, writeFile } from 'fs/promises'
 import { glob } from 'tinyglobby'
 import { copy, remove } from 'fs-extra'
-import { buildOutput } from '@cery929-ui/build-utils'
+import { buildOutput } from '@kn-ui/build-utils'
 import { pathRewriter, run } from '../utils'
 
 export const generateTypesDefinitions = async () => {
@@ -19,7 +19,7 @@ export const generateTypesDefinitions = async () => {
     await writeFile(filePath, pathRewriter('esm')(content), 'utf8')
   })
   await Promise.all(rewriteTasks)
-  const sourceDir = path.join(typesDir, 'cery929-ui')
+  const sourceDir = path.join(typesDir, 'kn-ui')
   await copy(sourceDir, typesDir)
   await remove(sourceDir)
 }

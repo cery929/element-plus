@@ -63,7 +63,7 @@
 
 <script lang="ts" setup>
 import { computed, ref } from 'vue'
-import { ElIcon } from '@cery929-ui/components/icon'
+import { ElIcon } from '@kn-ui/components/icon'
 import {
   Check,
   CircleCheck,
@@ -71,12 +71,12 @@ import {
   Delete,
   Document,
   ZoomIn,
-} from '@cery929-ui/icons-vue'
-import { useLocale, useNamespace } from '@cery929-ui/hooks'
-import ElProgress from '@cery929-ui/components/progress'
-import { useFormDisabled } from '@cery929-ui/components/form'
+} from '@kn-ui/icons-vue'
+import { useLocale, useNamespace } from '@kn-ui/hooks'
+import ElProgress from '@kn-ui/components/progress'
+import { useFormDisabled } from '@kn-ui/components/form'
 import { uploadListEmits } from './upload-list'
-import { NOOP, mutable } from '@cery929-ui/utils'
+import { NOOP, mutable } from '@kn-ui/utils'
 
 import type { UploadListProps } from './upload-list'
 import type { UploadFile } from './upload'

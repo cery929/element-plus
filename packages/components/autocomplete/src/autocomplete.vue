@@ -1,46 +1,14 @@
 <template>
-  <el-tooltip
-    ref="popperRef"
-    :visible="suggestionVisible"
-    :placement="placement"
-    :fallback-placements="['bottom-start', 'top-start']"
-    :popper-class="[ns.e('popper'), popperClass!]"
-    :popper-style="popperStyle"
-    :teleported="teleported"
-    :append-to="appendTo"
-    :gpu-acceleration="false"
-    pure
-    manual-mode
-    effect="light"
-    trigger="click"
-    :transition="`${ns.namespace.value}-zoom-in-top`"
-    persistent
-    role="listbox"
-    @before-show="onSuggestionShow"
-    @hide="onHide"
-  >
-    <div
-      ref="listboxRef"
-      :class="[ns.b(), $attrs.class]"
-      :style="styles"
-      role="combobox"
-      aria-haspopup="listbox"
-      :aria-expanded="suggestionVisible"
-      :aria-owns="listboxId"
-    >
-      <el-input
-        ref="inputRef"
-        v-bind="mergeProps(passInputProps, $attrs)"
-        :model-value="modelValue"
-        :disabled="disabled"
-        @input="handleInput"
-        @change="handleChange"
-        @focus="handleFocus"
-        @blur="handleBlur"
-        @clear="handleClear"
-        @keydown="handleKeydown"
-        @mousedown="handleMouseDown"
-      >
+  <el-tooltip ref="popperRef" :visible="suggestionVisible" :placement="placement"
+    :fallback-placements="['bottom-start', 'top-start']" :popper-class="[ns.e('popper'), popperClass!]"
+    :popper-style="popperStyle" :teleported="teleported" :append-to="appendTo" :gpu-acceleration="false" pure
+    manual-mode effect="light" trigger="click" :transition="`${ns.namespace.value}-zoom-in-top`" persistent
+    role="listbox" @before-show="onSuggestionShow" @hide="onHide">
+    <div ref="listboxRef" :class="[ns.b(), $attrs.class]" :style="styles" role="combobox" aria-haspopup="listbox"
+      :aria-expanded="suggestionVisible" :aria-owns="listboxId">
+      <el-input ref="inputRef" v-bind="mergeProps(passInputProps, $attrs)" :model-value="modelValue"
+        :disabled="disabled" @input="handleInput" @change="handleChange" @focus="handleFocus" @blur="handleBlur"
+        @clear="handleClear" @keydown="handleKeydown" @mousedown="handleMouseDown">
         <template v-if="$slots.prepend" #prepend>
           <slot name="prepend" />
         </template>
@@ -56,29 +24,15 @@
       </el-input>
     </div>
     <template #content>
-      <div
-        ref="regionRef"
-        :class="[ns.b('suggestion'), ns.is('loading', suggestionLoading)]"
-        :style="{
-          [fitInputWidth ? 'width' : 'minWidth']: dropdownWidth,
-          outline: 'none',
-        }"
-        role="region"
-      >
-        <div
-          v-if="$slots.header"
-          :class="ns.be('suggestion', 'header')"
-          @click.stop
-        >
+      <div ref="regionRef" :class="[ns.b('suggestion'), ns.is('loading', suggestionLoading)]" :style="{
+        [fitInputWidth ? 'width' : 'minWidth']: dropdownWidth,
+        outline: 'none',
+      }" role="region">
+        <div v-if="$slots.header" :class="ns.be('suggestion', 'header')" @click.stop>
           <slot name="header" />
         </div>
-        <el-scrollbar
-          :id="listboxId"
-          tag="ul"
-          :wrap-class="ns.be('suggestion', 'wrap')"
-          :view-class="ns.be('suggestion', 'list')"
-          role="listbox"
-        >
+        <el-scrollbar :id="listboxId" tag="ul" :wrap-class="ns.be('suggestion', 'wrap')"
+          :view-class="ns.be('suggestion', 'list')" role="listbox">
           <li v-if="suggestionLoading">
             <slot name="loading">
               <el-icon :class="ns.is('loading')">
@@ -87,24 +41,14 @@
             </slot>
           </li>
           <template v-else>
-            <li
-              v-for="(item, index) in suggestions"
-              :id="`${listboxId}-item-${index}`"
-              :key="index"
-              :class="{ highlighted: highlightedIndex === index }"
-              role="option"
-              :aria-selected="highlightedIndex === index"
-              @click="handleSelect(item)"
-            >
+            <li v-for="(item, index) in suggestions" :id="`${listboxId}-item-${index}`" :key="index"
+              :class="{ highlighted: highlightedIndex === index }" role="option"
+              :aria-selected="highlightedIndex === index" @click="handleSelect(item)">
               <slot :item="item">{{ item[valueKey] }}</slot>
             </li>
           </template>
         </el-scrollbar>
-        <div
-          v-if="$slots.footer"
-          :class="ns.be('suggestion', 'footer')"
-          @click.stop
-        >
+        <div v-if="$slots.footer" :class="ns.be('suggestion', 'footer')" @click.stop>
           <slot name="footer" />
         </div>
       </div>
@@ -123,29 +67,29 @@ import {
 } from 'vue'
 import { pick } from 'lodash-unified'
 import { onClickOutside, useDebounceFn } from '@vueuse/core'
-import { Loading } from '@cery929-ui/icons-vue'
-import { useId, useNamespace } from '@cery929-ui/hooks'
-import { NOOP, getEventCode, isArray, throwError } from '@cery929-ui/utils'
+import { Loading } from '@kn-ui/icons-vue'
+import { useId, useNamespace } from '@kn-ui/hooks'
+import { NOOP, getEventCode, isArray, throwError } from '@kn-ui/utils'
 import {
   CHANGE_EVENT,
   EVENT_CODE,
   INPUT_EVENT,
   UPDATE_MODEL_EVENT,
-} from '@cery929-ui/constants'
+} from '@kn-ui/constants'
 import ElInput, {
   inputProps,
   inputPropsDefaults,
-} from '@cery929-ui/components/input'
-import ElScrollbar from '@cery929-ui/components/scrollbar'
-import ElTooltip from '@cery929-ui/components/tooltip'
-import ElIcon from '@cery929-ui/components/icon'
-import { useFormDisabled } from '@cery929-ui/components/form'
+} from '@kn-ui/components/input'
+import ElScrollbar from '@kn-ui/components/scrollbar'
+import ElTooltip from '@kn-ui/components/tooltip'
+import ElIcon from '@kn-ui/components/icon'
+import { useFormDisabled } from '@kn-ui/components/form'
 import { autocompleteEmits } from './autocomplete'
 
 import type { AutocompleteData, AutocompleteProps } from './autocomplete'
 import type { StyleValue } from 'vue'
-import type { TooltipInstance } from '@cery929-ui/components/tooltip'
-import type { InputInstance } from '@cery929-ui/components/input'
+import type { TooltipInstance } from '@kn-ui/components/tooltip'
+import type { InputInstance } from '@kn-ui/components/input'
 
 const COMPONENT_NAME = 'ElAutocomplete'
 defineOptions({
@@ -453,15 +397,15 @@ onBeforeUnmount(() => {
 onMounted(() => {
   const inputElement = inputRef.value?.ref
   if (!inputElement) return
-  ;[
-    { key: 'role', value: 'textbox' },
-    { key: 'aria-autocomplete', value: 'list' },
-    { key: 'aria-controls', value: listboxId.value },
-    {
-      key: 'aria-activedescendant',
-      value: `${listboxId.value}-item-${highlightedIndex.value}`,
-    },
-  ].forEach(({ key, value }) => inputElement.setAttribute(key, value))
+    ;[
+      { key: 'role', value: 'textbox' },
+      { key: 'aria-autocomplete', value: 'list' },
+      { key: 'aria-controls', value: listboxId.value },
+      {
+        key: 'aria-activedescendant',
+        value: `${listboxId.value}-item-${highlightedIndex.value}`,
+      },
+    ].forEach(({ key, value }) => inputElement.setAttribute(key, value))
   // get readonly attr
   readonly = inputElement.hasAttribute('readonly')
 })

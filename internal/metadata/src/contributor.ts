@@ -10,12 +10,12 @@ import {
   errorAndExit,
   projRoot,
   writeJson,
-} from '@cery929-ui/build-utils'
+} from '@kn-ui/build-utils'
 import {
   REPO_BRANCH,
   REPO_NAME,
   REPO_OWNER,
-} from '@cery929-ui/build-constants'
+} from '@kn-ui/build-constants'
 
 interface FetchOption {
   key: string

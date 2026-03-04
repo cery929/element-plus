@@ -6,7 +6,7 @@
 
 <script lang="ts" setup>
 import { onMounted, provide, ref } from 'vue'
-import { useLocale, useNamespace } from '@cery929-ui/hooks'
+import { useLocale, useNamespace } from '@kn-ui/hooks'
 import { breadcrumbKey } from './constants'
 
 import type { BreadcrumbProps } from './breadcrumb'

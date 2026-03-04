@@ -30,8 +30,8 @@ import {
   watch,
 } from 'vue'
 import { isEqual } from 'lodash-unified'
-import { useLocale, useNamespace } from '@cery929-ui/hooks'
-import { formItemContextKey } from '@cery929-ui/components/form'
+import { useLocale, useNamespace } from '@kn-ui/hooks'
+import { formItemContextKey } from '@kn-ui/components/form'
 import TreeStore from './model/tree-store'
 import { getNodeKey as getNodeKeyUtil, handleCurrentChange } from './model/util'
 import ElTreeNode from './tree-node.vue'
@@ -43,7 +43,7 @@ import { treeEmits, treeProps } from './tree'
 
 import type Node from './model/node'
 import type { ComponentInternalInstance } from 'vue'
-import type { Nullable } from '@cery929-ui/utils'
+import type { Nullable } from '@kn-ui/utils'
 import type { FilterValue, TreeData, TreeKey, TreeNodeData } from './tree.type'
 
 export default defineComponent({

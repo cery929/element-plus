@@ -1,4 +1,4 @@
-import { withInstall } from '@cery929-ui/utils'
+import { withInstall } from '@kn-ui/utils'
 import Segmented from './src/segmented.vue'
 
 export const ElSegmented = withInstall(Segmented)

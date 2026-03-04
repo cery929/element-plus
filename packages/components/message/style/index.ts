@@ -1,3 +1,3 @@
-import '@cery929-ui/components/base/style'
-import '@cery929-ui/components/badge/style'
-import '@cery929-ui/theme-chalk/src/message.scss'
+import '@kn-ui/components/base/style'
+import '@kn-ui/components/badge/style'
+import '@kn-ui/theme-chalk/src/message.scss'

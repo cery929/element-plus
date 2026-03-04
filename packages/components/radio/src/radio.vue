@@ -1,35 +1,20 @@
 <template>
-  <label
-    :class="[
-      ns.b(),
+  <label :class="[
+    ns.b(),
+    ns.is('disabled', disabled),
+    ns.is('focus', focus),
+    ns.is('bordered', border),
+    ns.is('checked', modelValue === actualValue),
+    ns.m(size),
+  ]">
+    <span :class="[
+      ns.e('input'),
       ns.is('disabled', disabled),
-      ns.is('focus', focus),
-      ns.is('bordered', border),
       ns.is('checked', modelValue === actualValue),
-      ns.m(size),
-    ]"
-  >
-    <span
-      :class="[
-        ns.e('input'),
-        ns.is('disabled', disabled),
-        ns.is('checked', modelValue === actualValue),
-      ]"
-    >
-      <input
-        ref="radioRef"
-        v-model="modelValue"
-        :class="ns.e('original')"
-        :value="actualValue"
-        :name="name || radioGroup?.name"
-        :disabled="disabled"
-        :checked="modelValue === actualValue"
-        type="radio"
-        @focus="focus = true"
-        @blur="focus = false"
-        @change="handleChange"
-        @click.stop
-      />
+    ]">
+      <input ref="radioRef" v-model="modelValue" :class="ns.e('original')" :value="actualValue"
+        :name="name || radioGroup?.name" :disabled="disabled" :checked="modelValue === actualValue" type="radio"
+        @focus="focus = true" @blur="focus = false" @change="handleChange" @click.stop />
       <span :class="ns.e('inner')" />
     </span>
     <span :class="ns.e('label')" @keydown.stop>
@@ -42,8 +27,8 @@
 
 <script lang="ts" setup>
 import { nextTick } from 'vue'
-import { useNamespace } from '@cery929-ui/hooks'
-import { CHANGE_EVENT } from '@cery929-ui/constants'
+import { useNamespace } from '@kn-ui/hooks'
+import { CHANGE_EVENT } from '@kn-ui/constants'
 import { type RadioProps, radioEmits, radioPropsDefaults } from './radio'
 import { useRadio } from './use-radio'
 

@@ -3,9 +3,9 @@ import {
   useFormDisabled,
   useFormItem,
   useFormSize,
-} from '@cery929-ui/components/form'
-import { useGlobalConfig } from '@cery929-ui/components/config-provider'
-import { useDeprecated } from '@cery929-ui/hooks'
+} from '@kn-ui/components/form'
+import { useGlobalConfig } from '@kn-ui/components/config-provider'
+import { useDeprecated } from '@kn-ui/hooks'
 import { buttonGroupContextKey } from './constants'
 
 import type { SetupContext } from 'vue'

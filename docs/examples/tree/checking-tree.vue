@@ -14,7 +14,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-import type { RenderContentContext, TreeInstance } from 'cery929-ui'
+import type { RenderContentContext, TreeInstance } from 'kn-ui'
 
 interface Tree {
   id: number

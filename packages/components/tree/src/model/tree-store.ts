@@ -1,6 +1,6 @@
 import { nextTick } from 'vue'
 import { isNil } from 'lodash-unified'
-import { NOOP, hasOwn, isObject, isPropAbsent } from '@cery929-ui/utils'
+import { NOOP, hasOwn, isObject, isPropAbsent } from '@kn-ui/utils'
 import Node from './node'
 import { getNodeKey } from './util'
 

@@ -1,5 +1,5 @@
 import { computed, unref } from 'vue'
-import { addUnit, isNumber } from '@cery929-ui/utils'
+import { addUnit, isNumber } from '@kn-ui/utils'
 import { enforceUnit, sum } from '../utils'
 
 import type { CSSProperties, ComputedRef } from 'vue'

@@ -1,5 +1,5 @@
 import type { CSSProperties, VNode } from 'vue'
-import type { ButtonProps } from '@cery929-ui/components/button'
+import type { ButtonProps } from '@kn-ui/components/button'
 
 export type TourMask =
   | boolean

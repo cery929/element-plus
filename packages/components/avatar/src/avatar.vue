@@ -1,13 +1,7 @@
 <template>
   <span :class="avatarClass" :style="sizeStyle">
-    <img
-      v-if="(src || srcSet) && !hasLoadError"
-      :src="src"
-      :alt="alt"
-      :srcset="srcSet"
-      :style="fitStyle"
-      @error="handleError"
-    />
+    <img v-if="(src || srcSet) && !hasLoadError" :src="src" :alt="alt" :srcset="srcSet" :style="fitStyle"
+      @error="handleError" />
     <el-icon v-else-if="icon">
       <component :is="icon" />
     </el-icon>
@@ -17,9 +11,9 @@
 
 <script lang="ts" setup>
 import { computed, inject, ref, watch } from 'vue'
-import { ElIcon } from '@cery929-ui/components/icon'
-import { useNamespace } from '@cery929-ui/hooks'
-import { addUnit, isNumber, isString } from '@cery929-ui/utils'
+import { ElIcon } from '@kn-ui/components/icon'
+import { useNamespace } from '@kn-ui/hooks'
+import { addUnit, isNumber, isString } from '@kn-ui/utils'
 import { avatarEmits } from './avatar'
 import { avatarGroupContextKey } from './constants'
 
@@ -60,8 +54,8 @@ const avatarClass = computed(() => {
 const sizeStyle = computed(() => {
   return isNumber(size.value)
     ? (ns.cssVarBlock({
-        size: addUnit(size.value)!,
-      }) as CSSProperties)
+      size: addUnit(size.value)!,
+    }) as CSSProperties)
     : undefined
 })
 

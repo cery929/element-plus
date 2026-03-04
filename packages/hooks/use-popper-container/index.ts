@@ -1,5 +1,5 @@
 import { computed, onBeforeMount } from 'vue'
-import { isClient } from '@cery929-ui/utils'
+import { isClient } from '@kn-ui/utils'
 import { useGetDerivedNamespace } from '../use-namespace'
 import { useIdInjection } from '../use-id'
 

@@ -1,5 +1,5 @@
-import { buildProps, isBoolean } from '@cery929-ui/utils'
-import { CHANGE_EVENT } from '@cery929-ui/constants'
+import { buildProps, isBoolean } from '@kn-ui/utils'
+import { CHANGE_EVENT } from '@kn-ui/constants'
 
 import type CheckTag from './check-tag.vue'
 import type { ExtractPublicPropTypes } from 'vue'

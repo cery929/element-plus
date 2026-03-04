@@ -14,7 +14,7 @@ import {
   epPackage,
   getPackageDependencies,
   projRoot,
-} from '@cery929-ui/build-utils'
+} from '@kn-ui/build-utils'
 import { MarkdownTransform } from '../plugins/markdown-transform'
 
 import type { Plugin, UserConfig } from 'vitepress'
@@ -28,7 +28,7 @@ const { dependencies: docsDeps } = getPackageDependencies(docPackage)
 const optimizeDeps = [...new Set([...epDeps, ...docsDeps])].filter(
   (dep) =>
     !dep.startsWith('@types/') &&
-    !['@cery929-ui/metadata', 'cery929-ui'].includes(dep) &&
+    !['@kn-ui/metadata', 'kn-ui'].includes(dep) &&
     !['normalize.css'].includes(dep)
 )
 optimizeDeps.push(
@@ -47,11 +47,11 @@ const alias: AliasOptions = [
     ? []
     : [
         {
-          find: /^cery929-ui(\/(es|lib))?$/,
-          replacement: path.resolve(projRoot, 'packages/cery929-ui/index.ts'),
+          find: /^kn-ui(\/(es|lib))?$/,
+          replacement: path.resolve(projRoot, 'packages/kn-ui/index.ts'),
         },
         {
-          find: /^cery929-ui\/(es|lib)\/(.*)$/,
+          find: /^kn-ui\/(es|lib)\/(.*)$/,
           replacement: `${path.resolve(projRoot, 'packages')}/$2`,
         },
       ]),

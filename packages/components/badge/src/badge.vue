@@ -2,18 +2,14 @@
   <div :class="ns.b()">
     <slot />
     <transition :name="`${ns.namespace.value}-zoom-in-center`">
-      <sup
-        v-show="!hidden && (content || isDot || $slots.content)"
-        :class="[
-          ns.e('content'),
-          ns.em('content', type),
-          ns.is('fixed', !!$slots.default),
-          ns.is('dot', isDot),
-          ns.is('hide-zero', !showZero && value === 0),
-          badgeClass,
-        ]"
-        :style="style"
-      >
+      <sup v-show="!hidden && (content || isDot || $slots.content)" :class="[
+        ns.e('content'),
+        ns.em('content', type),
+        ns.is('fixed', !!$slots.default),
+        ns.is('dot', isDot),
+        ns.is('hide-zero', !showZero && value === 0),
+        badgeClass,
+      ]" :style="style">
         <slot name="content" :value="content">
           {{ content }}
         </slot>
@@ -24,8 +20,8 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { useNamespace } from '@cery929-ui/hooks'
-import { addUnit, isNumber } from '@cery929-ui/utils'
+import { useNamespace } from '@kn-ui/hooks'
+import { addUnit, isNumber } from '@kn-ui/utils'
 
 import type { StyleValue } from 'vue'
 import type { BadgeProps } from './badge'

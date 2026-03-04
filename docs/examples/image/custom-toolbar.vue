@@ -37,7 +37,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ElIcon } from 'cery929-ui'
+import { ElIcon } from 'kn-ui'
 import {
   Back,
   DArrowRight,
@@ -48,7 +48,7 @@ import {
   Right,
   ZoomIn,
   ZoomOut,
-} from '@cery929-ui/icons-vue'
+} from '@kn-ui/icons-vue'
 
 const url =
   'https://fuss10.elemecdn.com/a/3f/3302e58f9a181d2509f3dc0fa68b0jpeg.jpeg'

@@ -5,11 +5,11 @@ import {
   isNumber,
   isString,
   mutable,
-} from '@cery929-ui/utils'
-import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@cery929-ui/constants'
+} from '@kn-ui/utils'
+import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@kn-ui/constants'
 
 import type { ExtractPublicPropTypes } from 'vue'
-import type { Arrayable, Awaitable } from '@cery929-ui/utils'
+import type { Arrayable, Awaitable } from '@kn-ui/utils'
 
 export type CollapseActiveName = string | number
 export type CollapseModelValue = Arrayable<CollapseActiveName>

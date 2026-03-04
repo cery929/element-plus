@@ -1,24 +1,14 @@
 <template>
   <transition :name="ns.b('fade')">
-    <div
-      v-show="visible"
-      :class="[ns.b(), ns.m(type), ns.is('center', center), ns.is(effect)]"
-      role="alert"
-    >
-      <el-icon
-        v-if="showIcon && ($slots.icon || iconComponent)"
-        :class="[ns.e('icon'), ns.is('big', hasDesc)]"
-      >
+    <div v-show="visible" :class="[ns.b(), ns.m(type), ns.is('center', center), ns.is(effect)]" role="alert">
+      <el-icon v-if="showIcon && ($slots.icon || iconComponent)" :class="[ns.e('icon'), ns.is('big', hasDesc)]">
         <slot name="icon">
           <component :is="iconComponent" />
         </slot>
       </el-icon>
 
       <div :class="ns.e('content')">
-        <span
-          v-if="title || $slots.title"
-          :class="[ns.e('title'), { 'with-description': hasDesc }]"
-        >
+        <span v-if="title || $slots.title" :class="[ns.e('title'), { 'with-description': hasDesc }]">
           <slot name="title">{{ title }}</slot>
         </span>
         <p v-if="hasDesc" :class="ns.e('description')">
@@ -27,11 +17,7 @@
           </slot>
         </p>
         <template v-if="closable">
-          <div
-            v-if="closeText"
-            :class="[ns.e('close-btn'), ns.is('customed')]"
-            @click="close"
-          >
+          <div v-if="closeText" :class="[ns.e('close-btn'), ns.is('customed')]" @click="close">
             {{ closeText }}
           </div>
           <el-icon v-else :class="ns.e('close-btn')" @click="close">
@@ -45,14 +31,14 @@
 
 <script lang="ts" setup>
 import { computed, ref, useSlots } from 'vue'
-import { ElIcon } from '@cery929-ui/components/icon'
+import { ElIcon } from '@kn-ui/components/icon'
 import {
   TypeComponents,
   TypeComponentsMap,
   flattedChildren,
   isComment,
-} from '@cery929-ui/utils'
-import { useNamespace } from '@cery929-ui/hooks'
+} from '@kn-ui/utils'
+import { useNamespace } from '@kn-ui/hooks'
 import { alertEmits } from './alert'
 
 import type { AlertProps } from './alert'

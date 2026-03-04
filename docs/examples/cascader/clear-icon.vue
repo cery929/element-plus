@@ -1,14 +1,9 @@
 <template>
-  <el-cascader
-    :options="options"
-    clearable
-    :clear-icon="CloseBold"
-    placeholder="Custom clear icon"
-  />
+  <el-cascader :options="options" clearable :clear-icon="CloseBold" placeholder="Custom clear icon" />
 </template>
 
 <script lang="ts" setup>
-import { CloseBold } from '@cery929-ui/icons-vue'
+import { CloseBold } from '@kn-ui/icons-vue'
 
 const options = [
   {

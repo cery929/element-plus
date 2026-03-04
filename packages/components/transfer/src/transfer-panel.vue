@@ -32,11 +32,11 @@
 
 <script lang="ts" setup>
 import { computed, reactive, toRefs, useSlots } from 'vue'
-import { isEmpty, mutable } from '@cery929-ui/utils'
-import { useLocale, useNamespace } from '@cery929-ui/hooks'
-import { ElCheckbox, ElCheckboxGroup } from '@cery929-ui/components/checkbox'
-import { ElInput } from '@cery929-ui/components/input'
-import { Search } from '@cery929-ui/icons-vue'
+import { isEmpty, mutable } from '@kn-ui/utils'
+import { useLocale, useNamespace } from '@kn-ui/hooks'
+import { ElCheckbox, ElCheckboxGroup } from '@kn-ui/components/checkbox'
+import { ElInput } from '@kn-ui/components/input'
+import { Search } from '@kn-ui/icons-vue'
 import { transferPanelEmits } from './transfer-panel'
 import { useCheck, usePropsAlias } from './composables'
 

@@ -8,12 +8,12 @@ import {
   watch,
 } from 'vue'
 import { isUndefined } from 'lodash-unified'
-import { usePopper } from '@cery929-ui/hooks'
+import { usePopper } from '@kn-ui/hooks'
 import { POPPER_INJECTION_KEY } from '../constants'
 import { buildPopperOptions, unwrapMeasurableEl } from '../utils'
 
 import type { Modifier } from '@popperjs/core'
-import type { PartialOptions } from '@cery929-ui/hooks'
+import type { PartialOptions } from '@kn-ui/hooks'
 import type { PopperContentProps } from '../content'
 
 const DEFAULT_ARROW_OFFSET = 0

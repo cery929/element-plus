@@ -6,7 +6,7 @@
 
 <script lang="ts" setup>
 import { computed, provide } from 'vue'
-import { useNamespace } from '@cery929-ui/hooks'
+import { useNamespace } from '@kn-ui/hooks'
 import { rowContextKey } from './constants'
 
 import type { CSSProperties } from 'vue'

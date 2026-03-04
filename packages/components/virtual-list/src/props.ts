@@ -3,7 +3,7 @@ import {
   buildProps,
   definePropType,
   mutable,
-} from '@cery929-ui/utils'
+} from '@kn-ui/utils'
 import { VERTICAL } from './defaults'
 
 import type { ExtractPropTypes, ExtractPublicPropTypes, StyleValue } from 'vue'

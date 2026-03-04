@@ -1,4 +1,4 @@
-import { buildProps, definePropType, isString } from '@cery929-ui/utils'
+import { buildProps, definePropType, isString } from '@kn-ui/utils'
 
 import type { MentionOption } from './types'
 

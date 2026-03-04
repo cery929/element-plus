@@ -1,3 +1,3 @@
-import '@cery929-ui/components/base/style'
-import '@cery929-ui/components/divider/style'
-import '@cery929-ui/theme-chalk/src/page-header.scss'
+import '@kn-ui/components/base/style'
+import '@kn-ui/components/divider/style'
+import '@kn-ui/theme-chalk/src/page-header.scss'

@@ -4,9 +4,9 @@ import {
   iconPropType,
   isBoolean,
   isNumber,
-} from '@cery929-ui/utils'
-import { UPDATE_MODEL_EVENT } from '@cery929-ui/constants'
-import { teleportProps } from '@cery929-ui/components/teleport'
+} from '@kn-ui/utils'
+import { UPDATE_MODEL_EVENT } from '@kn-ui/constants'
+import { teleportProps } from '@kn-ui/components/teleport'
 import { tourContentProps } from './content'
 
 import type { TourContentProps } from './content'

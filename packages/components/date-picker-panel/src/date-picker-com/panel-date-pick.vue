@@ -59,7 +59,7 @@
               dpNs.e('header-label'),
               { active: currentView === 'month' },
             ]" @keydown.enter="showPicker('month')" @click="showPicker('month')">{{ t(`el.datepicker.month${month +
-            1}`) }}</span>
+              1}`) }}</span>
           <span :class="dpNs.e('next-btn')">
             <button v-show="currentView === 'date'" type="button" :aria-label="t(`el.datepicker.nextMonth`)"
               :class="ppNs.e('icon-btn')" class="arrow-right" :disabled="dateDisabled" @click="moveByMonth(true)">
@@ -113,10 +113,10 @@ import {
   watch,
 } from 'vue'
 import dayjs from 'dayjs'
-import ElButton from '@cery929-ui/components/button'
-import { ClickOutside as vClickOutside } from '@cery929-ui/directives'
-import { useLocale, useNamespace } from '@cery929-ui/hooks'
-import ElInput from '@cery929-ui/components/input'
+import ElButton from '@kn-ui/components/button'
+import { ClickOutside as vClickOutside } from '@kn-ui/directives'
+import { useLocale, useNamespace } from '@kn-ui/hooks'
+import ElInput from '@kn-ui/components/input'
 import {
   DEFAULT_FORMATS_DATE,
   DEFAULT_FORMATS_TIME,
@@ -124,21 +124,21 @@ import {
   TimePickPanel,
   extractDateFormat,
   extractTimeFormat,
-} from '@cery929-ui/components/time-picker'
-import { ElIcon } from '@cery929-ui/components/icon'
+} from '@kn-ui/components/time-picker'
+import { ElIcon } from '@kn-ui/components/icon'
 import {
   extractFirst,
   getEventCode,
   isArray,
   isFunction,
-} from '@cery929-ui/utils'
-import { EVENT_CODE } from '@cery929-ui/constants'
+} from '@kn-ui/utils'
+import { EVENT_CODE } from '@kn-ui/constants'
 import {
   ArrowLeft,
   ArrowRight,
   DArrowLeft,
   DArrowRight,
-} from '@cery929-ui/icons-vue'
+} from '@kn-ui/icons-vue'
 import { panelDatePickProps } from '../props/panel-date-pick'
 import {
   correctlyParseUserInput,
@@ -149,7 +149,7 @@ import { ROOT_PICKER_IS_DEFAULT_FORMAT_INJECTION_KEY } from '../constants'
 import DateTable from './basic-date-table.vue'
 import MonthTable from './basic-month-table.vue'
 import YearTable from './basic-year-table.vue'
-import { useFormDisabled } from '@cery929-ui/components/form'
+import { useFormDisabled } from '@kn-ui/components/form'
 
 import type { SetupContext } from 'vue'
 import type { ConfigType, Dayjs } from 'dayjs'

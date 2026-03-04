@@ -17,8 +17,8 @@ import {
   useSlots,
   watch,
 } from 'vue'
-import { throwError } from '@cery929-ui/utils'
-import { useNamespace } from '@cery929-ui/hooks'
+import { throwError } from '@kn-ui/utils'
+import { useNamespace } from '@kn-ui/hooks'
 import { tabsRootContextKey } from './constants'
 
 import type { TabPaneProps } from './tab-pane'

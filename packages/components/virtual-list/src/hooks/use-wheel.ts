@@ -1,4 +1,4 @@
-import { cAF, isFirefox, rAF } from '@cery929-ui/utils'
+import { cAF, isFirefox, rAF } from '@kn-ui/utils'
 import { HORIZONTAL } from '../defaults'
 
 import type { ComputedRef } from 'vue'

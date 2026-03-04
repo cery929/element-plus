@@ -9,8 +9,8 @@ import {
   onMounted,
   ref,
 } from 'vue'
-import ElCheckbox from '@cery929-ui/components/checkbox'
-import { isArray, isString, isUndefined } from '@cery929-ui/utils'
+import ElCheckbox from '@kn-ui/components/checkbox'
+import { isArray, isString, isUndefined } from '@kn-ui/utils'
 import { cellStarts } from '../config'
 import { compose, mergeOptions } from '../util'
 import useWatcher from './watcher-helper'

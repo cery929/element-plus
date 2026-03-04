@@ -1,9 +1,9 @@
 import { computed, ref, unref } from 'vue'
-import { useNamespace, useZIndex } from '@cery929-ui/hooks'
-import { isNumber } from '@cery929-ui/utils'
+import { useNamespace, useZIndex } from '@kn-ui/hooks'
+import { isNumber } from '@kn-ui/utils'
 
 import type { CSSProperties, StyleValue } from 'vue'
-import type { UsePopperReturn } from '@cery929-ui/hooks'
+import type { UsePopperReturn } from '@kn-ui/hooks'
 import type { UsePopperContentReturn } from './use-content'
 import type { PopperContentProps } from '../content'
 

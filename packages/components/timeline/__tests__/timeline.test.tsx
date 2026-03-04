@@ -1,7 +1,7 @@
 import { markRaw, nextTick, ref } from 'vue'
 import { mount } from '@vue/test-utils'
 import { describe, expect, test } from 'vitest'
-import { MoreFilled } from '@cery929-ui/icons-vue'
+import { MoreFilled } from '@kn-ui/icons-vue'
 import TimeLine from '../src/timeline'
 import TimeLineItem from '../src/timeline-item.vue'
 

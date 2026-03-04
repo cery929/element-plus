@@ -1,4 +1,4 @@
-import { isArray, isClient, isElement } from '@cery929-ui/utils'
+import { isArray, isClient, isElement } from '@kn-ui/utils'
 
 import type {
   ComponentPublicInstance,

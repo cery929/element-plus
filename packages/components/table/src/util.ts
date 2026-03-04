@@ -12,10 +12,10 @@ import {
   isString,
   isUndefined,
   throwError,
-} from '@cery929-ui/utils'
+} from '@kn-ui/utils'
 import ElTooltip, {
   type ElTooltipProps,
-} from '@cery929-ui/components/tooltip'
+} from '@kn-ui/components/tooltip'
 
 import type { DefaultRow, Table, TreeProps } from './table/defaults'
 import type { TableColumnCtx } from './table-column/defaults'

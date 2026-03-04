@@ -1,5 +1,5 @@
 import { defineComponent, inject, renderSlot } from 'vue'
-import { useNamespace } from '@cery929-ui/hooks'
+import { useNamespace } from '@kn-ui/hooks'
 import { ROOT_PICKER_INJECTION_KEY } from '../constants'
 import { basicCellProps } from '../props/basic-cell'
 

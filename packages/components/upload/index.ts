@@ -1,7 +1,7 @@
-import { withInstall } from '@cery929-ui/utils'
+import { withInstall } from '@kn-ui/utils'
 import Upload from './src/upload.vue'
 
-import type { SFCWithInstall } from '@cery929-ui/utils'
+import type { SFCWithInstall } from '@kn-ui/utils'
 
 export const ElUpload: SFCWithInstall<typeof Upload> = withInstall(Upload)
 export default ElUpload

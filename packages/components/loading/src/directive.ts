@@ -1,6 +1,6 @@
 // @ts-nocheck
 import { isRef, ref } from 'vue'
-import { hyphenate, isObject, isString } from '@cery929-ui/utils'
+import { hyphenate, isObject, isString } from '@kn-ui/utils'
 import Loading from './service'
 
 import type { Directive, DirectiveBinding, UnwrapRef } from 'vue'

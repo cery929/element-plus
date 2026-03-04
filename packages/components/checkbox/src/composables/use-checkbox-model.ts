@@ -1,6 +1,6 @@
 import { computed, getCurrentInstance, inject, ref } from 'vue'
-import { isArray, isUndefined } from '@cery929-ui/utils'
-import { UPDATE_MODEL_EVENT } from '@cery929-ui/constants'
+import { isArray, isUndefined } from '@kn-ui/utils'
+import { UPDATE_MODEL_EVENT } from '@kn-ui/constants'
 import { checkboxGroupContextKey } from '../constants'
 
 import type { CheckboxProps } from '../checkbox'

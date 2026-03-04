@@ -21,12 +21,7 @@
     </el-image>
     <el-button @click="showPreview = true"> preview controlled </el-button>
 
-    <el-image-viewer
-      v-if="showPreview"
-      show-progress
-      :url-list="srcList"
-      @close="showPreview = false"
-    >
+    <el-image-viewer v-if="showPreview" show-progress :url-list="srcList" @close="showPreview = false">
       <template #viewer-error="{ activeIndex, src }">
         <div class="image-slot viewer-error">
           <el-icon><icon-picture /></el-icon>
@@ -42,7 +37,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { Picture as IconPicture } from '@cery929-ui/icons-vue'
+import { Picture as IconPicture } from '@kn-ui/icons-vue'
 
 const showPreview = ref(false)
 
@@ -70,12 +65,15 @@ const url =
   height: 200px;
   background: #fff;
 }
+
 .demo-image__error .image-slot .el-icon {
   font-size: 30px;
 }
+
 .image-viewer-slot {
   background: var(--el-fill-color-light);
 }
+
 .viewer-error {
   color: #000;
 }

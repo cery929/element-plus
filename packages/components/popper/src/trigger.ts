@@ -1,4 +1,4 @@
-import { buildProps, definePropType } from '@cery929-ui/utils'
+import { buildProps, definePropType } from '@kn-ui/utils'
 
 import type { Measurable } from './constants'
 import type Trigger from './trigger.vue'

@@ -2,8 +2,8 @@
 import { defineComponent, inject, nextTick, ref } from 'vue'
 import { mount } from '@vue/test-utils'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import { composeRefs } from '@cery929-ui/utils'
-import { EVENT_CODE } from '@cery929-ui/constants'
+import { composeRefs } from '@kn-ui/utils'
+import { EVENT_CODE } from '@kn-ui/constants'
 import {
   ROVING_FOCUS_COLLECTION_INJECTION_KEY,
   ROVING_FOCUS_ITEM_COLLECTION_INJECTION_KEY,

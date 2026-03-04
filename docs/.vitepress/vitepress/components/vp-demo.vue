@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { computed, getCurrentInstance, ref, toRef } from 'vue'
 import { useClipboard, useToggle } from '@vueuse/core'
-import { EVENT_CODE } from 'cery929-ui'
-import { CaretTop } from '@cery929-ui/icons-vue'
+import { EVENT_CODE } from 'kn-ui'
+import { CaretTop } from '@kn-ui/icons-vue'
 import { useLang } from '../composables/lang'
 import { useSourceCode } from '../composables/source-code'
 import { usePlayground } from '../composables/use-playground'

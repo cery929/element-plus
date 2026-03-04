@@ -1,4 +1,4 @@
-import '@cery929-ui/components/base/style/css'
-import '@cery929-ui/theme-chalk/el-popconfirm.css'
-import '@cery929-ui/components/popover/style/css'
-import '@cery929-ui/components/button/style/css'
+import '@kn-ui/components/base/style/css'
+import '@kn-ui/theme-chalk/el-popconfirm.css'
+import '@kn-ui/components/popover/style/css'
+import '@kn-ui/components/button/style/css'

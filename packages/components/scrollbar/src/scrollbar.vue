@@ -25,8 +25,8 @@ import {
   watch,
 } from 'vue'
 import { useEventListener, useResizeObserver } from '@vueuse/core'
-import { addUnit, debugWarn, isNumber, isObject } from '@cery929-ui/utils'
-import { useNamespace } from '@cery929-ui/hooks'
+import { addUnit, debugWarn, isNumber, isObject } from '@kn-ui/utils'
+import { useNamespace } from '@kn-ui/hooks'
 import Bar from './bar.vue'
 import { scrollbarContextKey } from './constants'
 import { scrollbarEmits } from './scrollbar'

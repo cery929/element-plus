@@ -1,5 +1,5 @@
 import type { CSSProperties, ComputedRef, InjectionKey, Ref } from 'vue'
-import type { UseNamespaceReturn } from '@cery929-ui/hooks'
+import type { UseNamespaceReturn } from '@kn-ui/hooks'
 
 export type DialogContext = {
   dialogRef: Ref<HTMLElement | undefined>

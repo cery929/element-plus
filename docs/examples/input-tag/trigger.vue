@@ -8,7 +8,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { EVENT_CODE } from 'cery929-ui'
+import { EVENT_CODE } from 'kn-ui'
 
 const trigger = ref<'Enter' | 'Space'>('Space')
 const input = ref<string[]>()

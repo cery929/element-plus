@@ -5,18 +5,14 @@
     <template #loading>
       <div class="custom-loading">
         <svg class="circular" viewBox="-10, -10, 50, 50">
-          <path
-            class="path"
-            d="
+          <path class="path" d="
             M 30 15
             L 28 17
             M 25.61 25.61
             A 15 15, 0, 0, 1, 15 30
             A 15 15, 0, 1, 1, 27.99 7.5
             L 15 15
-          "
-            style="stroke-width: 4px; fill: rgba(0, 0, 0, 0)"
-          />
+          " style="stroke-width: 4px; fill: rgba(0, 0, 0, 0)" />
         </svg>
       </div>
     </template>
@@ -25,7 +21,7 @@
 </template>
 
 <script lang="ts" setup>
-import { Eleme } from '@cery929-ui/icons-vue'
+import { Eleme } from '@kn-ui/icons-vue'
 </script>
 
 <style scoped>
@@ -35,6 +31,7 @@ import { Eleme } from '@cery929-ui/icons-vue'
   height: 18px;
   animation: loading-rotate 2s linear infinite;
 }
+
 .el-button .custom-loading .circular .path {
   animation: loading-dash 1.5s ease-in-out infinite;
   stroke-dasharray: 90, 150;

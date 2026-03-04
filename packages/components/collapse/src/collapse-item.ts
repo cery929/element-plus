@@ -1,5 +1,5 @@
-import { buildProps, definePropType, iconPropType } from '@cery929-ui/utils'
-import { ArrowRight } from '@cery929-ui/icons-vue'
+import { buildProps, definePropType, iconPropType } from '@kn-ui/utils'
+import { ArrowRight } from '@kn-ui/icons-vue'
 
 import type { Component, ExtractPublicPropTypes } from 'vue'
 import type { CollapseActiveName } from './collapse'

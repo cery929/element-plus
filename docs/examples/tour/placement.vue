@@ -13,7 +13,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-import type { ButtonInstance } from 'cery929-ui'
+import type { ButtonInstance } from 'kn-ui'
 
 const btnRef = ref<ButtonInstance>()
 

@@ -1,5 +1,5 @@
 {
-  "name": "@cery929-ui/theme-chalk",
+  "name": "@kn-ui/theme-chalk",
   "version": "0.1.0",
   "description": "Element component chalk theme.",
   "keywords": [
@@ -26,7 +26,7 @@
     "build": "gulp --require tsx/dist/loader.cjs"
   },
   "devDependencies": {
-    "@cery929-ui/build": "workspace:*",
+    "@kn-ui/build": "workspace:*",
     "@types/gulp-autoprefixer": "^0.0.33",
     "@types/gulp-rename": "^2.0.1",
     "@types/gulp-sass": "^5.0.0",

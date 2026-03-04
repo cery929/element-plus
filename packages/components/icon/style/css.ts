@@ -1,1 +1,1 @@
-import '@cery929-ui/components/base/style/css'
+import '@kn-ui/components/base/style/css'

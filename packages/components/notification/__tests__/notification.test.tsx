@@ -1,9 +1,9 @@
 import { nextTick } from 'vue'
 import { mount } from '@vue/test-utils'
 import { describe, expect, test, vi } from 'vitest'
-import { TypeComponentsMap } from '@cery929-ui/utils'
-import { Close, CloseBold } from '@cery929-ui/icons-vue'
-import { EVENT_CODE } from '@cery929-ui/constants'
+import { TypeComponentsMap } from '@kn-ui/utils'
+import { Close, CloseBold } from '@kn-ui/icons-vue'
+import { EVENT_CODE } from '@kn-ui/constants'
 import { notificationTypes } from '../src/notification'
 import Notification from '../src/notification.vue'
 

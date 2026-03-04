@@ -21,33 +21,33 @@ import {
   isNumber,
   isObject,
   isUndefined,
-} from '@cery929-ui/utils'
+} from '@kn-ui/utils'
 import {
   useComposition,
   useEmptyValues,
   useFocusController,
   useLocale,
   useNamespace,
-} from '@cery929-ui/hooks'
+} from '@kn-ui/hooks'
 import {
   CHANGE_EVENT,
   EVENT_CODE,
   MINIMUM_INPUT_WIDTH,
   UPDATE_MODEL_EVENT,
-} from '@cery929-ui/constants'
+} from '@kn-ui/constants'
 import {
   useFormDisabled,
   useFormItem,
   useFormItemInputId,
   useFormSize,
-} from '@cery929-ui/components/form'
+} from '@kn-ui/components/form'
 import { useAllowCreate } from './useAllowCreate'
 import { useProps } from './useProps'
 
 import type { Option, OptionType, SelectStates } from './select.types'
 import type { SelectV2Props } from './token'
 import type { SelectV2EmitFn } from './defaults'
-import type { TooltipInstance } from '@cery929-ui/components/tooltip'
+import type { TooltipInstance } from '@kn-ui/components/tooltip'
 import type { SelectDropdownInstance } from './select-dropdown'
 
 const useSelect = (props: SelectV2Props, emit: SelectV2EmitFn) => {

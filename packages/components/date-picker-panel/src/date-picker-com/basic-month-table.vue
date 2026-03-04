@@ -21,8 +21,8 @@
 <script lang="ts" setup>
 import { computed, nextTick, ref, watch } from 'vue'
 import dayjs from 'dayjs'
-import { useLocale, useNamespace } from '@cery929-ui/hooks'
-import { castArray, hasClass } from '@cery929-ui/utils'
+import { useLocale, useNamespace } from '@kn-ui/hooks'
+import { castArray, hasClass } from '@kn-ui/utils'
 import { basicMonthTableProps } from '../props/basic-month-table'
 import { datesInMonth, getValidDateOfMonth } from '../utils'
 import ElDatePickerCell from './basic-cell-render'

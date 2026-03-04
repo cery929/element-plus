@@ -1,11 +1,11 @@
 import { computed, reactive, ref, useAttrs, useSlots } from 'vue'
-import { useNamespace } from '@cery929-ui/hooks'
-import { MINIMUM_INPUT_WIDTH } from '@cery929-ui/constants'
+import { useNamespace } from '@kn-ui/hooks'
+import { MINIMUM_INPUT_WIDTH } from '@kn-ui/constants'
 import { useResizeObserver } from '@vueuse/core'
 
 import type { ComputedRef, Ref, StyleValue } from 'vue'
-import type { ComponentSize } from '@cery929-ui/constants'
-import type { IconComponent } from '@cery929-ui/utils'
+import type { ComponentSize } from '@kn-ui/constants'
+import type { IconComponent } from '@kn-ui/utils'
 import type { InputTagProps } from '../input-tag'
 
 interface UseInputTagDomOptions {

@@ -17,11 +17,11 @@
 
 <script lang="ts" setup>
 import { computed, inject, nextTick, onMounted, provide, ref, watch } from 'vue'
-import { ElInput } from '@cery929-ui/components/input'
-import { useFormDisabled, useFormItem } from '@cery929-ui/components/form'
-import { useNamespace } from '@cery929-ui/hooks'
-import { debugWarn } from '@cery929-ui/utils'
-import { UPDATE_MODEL_EVENT } from '@cery929-ui/constants'
+import { ElInput } from '@kn-ui/components/input'
+import { useFormDisabled, useFormItem } from '@kn-ui/components/form'
+import { useNamespace } from '@kn-ui/hooks'
+import { debugWarn } from '@kn-ui/utils'
+import { UPDATE_MODEL_EVENT } from '@kn-ui/constants'
 import AlphaSlider from './components/alpha-slider.vue'
 import HueSlider from './components/hue-slider.vue'
 import Predefine from './components/predefine.vue'
@@ -34,7 +34,7 @@ import {
 import { useCommonColor } from './composables/use-common-color'
 
 import type { ColorPickerPanelProps } from './color-picker-panel'
-import type { InputInstance } from '@cery929-ui/components/input'
+import type { InputInstance } from '@kn-ui/components/input'
 
 defineOptions({
   name: 'ElColorPickerPanel',

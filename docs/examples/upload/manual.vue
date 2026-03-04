@@ -20,7 +20,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-import type { UploadInstance } from 'cery929-ui'
+import type { UploadInstance } from 'kn-ui'
 
 const uploadRef = ref<UploadInstance>()
 

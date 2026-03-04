@@ -1,4 +1,4 @@
-import { useNamespace } from '@cery929-ui/hooks'
+import { useNamespace } from '@kn-ui/hooks'
 import {
   ensurePosition,
   getFixedColumnOffset,

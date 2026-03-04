@@ -1,6 +1,6 @@
 import { h, inject, ref } from 'vue'
 import { debounce } from 'lodash-unified'
-import { addClass, hasClass, removeClass } from '@cery929-ui/utils'
+import { addClass, hasClass, removeClass } from '@kn-ui/utils'
 import {
   createTablePopper,
   getCell,
@@ -149,7 +149,7 @@ function useEvents<T extends DefaultRow>(props: Partial<TableBodyProps<T>>) {
     const range = document.createRange()
     range.setStart(cellChild, 0)
     range.setEnd(cellChild, cellChild.childNodes.length)
-    /** detail: https://github.com/cery929-ui/cery929-ui/issues/10790
+    /** detail: https://github.com/kn-ui/kn-ui/issues/10790
      *  What went wrong?
      *  UI > Browser > Zoom, In Blink/WebKit, getBoundingClientRect() sometimes returns inexact values, probably due to lost precision during internal calculations. In the example above:
      *    - Expected: 188

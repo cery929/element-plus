@@ -38,9 +38,9 @@
 
 <script lang="ts" setup>
 import { computed, ref, watch } from 'vue'
-import { DArrowLeft, DArrowRight, MoreFilled } from '@cery929-ui/icons-vue'
-import { useLocale, useNamespace } from '@cery929-ui/hooks'
-import { CHANGE_EVENT } from '@cery929-ui/constants'
+import { DArrowLeft, DArrowRight, MoreFilled } from '@kn-ui/icons-vue'
+import { useLocale, useNamespace } from '@kn-ui/hooks'
+import { CHANGE_EVENT } from '@kn-ui/constants'
 import { paginationPagerProps } from './pager'
 
 defineOptions({

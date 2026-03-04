@@ -16,7 +16,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-import type { TimelineProps } from 'cery929-ui'
+import type { TimelineProps } from 'kn-ui'
 
 const activities = [
   {

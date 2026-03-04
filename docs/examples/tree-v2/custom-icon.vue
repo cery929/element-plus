@@ -1,10 +1,5 @@
 <template>
-  <el-tree-v2
-    style="max-width: 600px"
-    :data="data"
-    :props="props"
-    :height="200"
-  >
+  <el-tree-v2 style="max-width: 600px" :data="data" :props="props" :height="200">
     <template #default="{ node }">
       <el-icon class="node-icon" :class="{ 'is-leaf': node.isLeaf }">
         <Document v-if="node.isLeaf" />
@@ -17,7 +12,7 @@
 </template>
 
 <script lang="ts" setup>
-import { Document, Folder, FolderOpened } from '@cery929-ui/icons-vue'
+import { Document, Folder, FolderOpened } from '@kn-ui/icons-vue'
 
 interface Tree {
   id: string

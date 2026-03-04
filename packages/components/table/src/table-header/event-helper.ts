@@ -6,10 +6,10 @@ import {
   isClient,
   isElement,
   removeClass,
-} from '@cery929-ui/utils'
+} from '@kn-ui/utils'
 import { TABLE_INJECTION_KEY } from '../tokens'
 
-import type { EmitFn } from '@cery929-ui/utils'
+import type { EmitFn } from '@kn-ui/utils'
 import type { TableHeaderProps } from '.'
 import type { TableColumnCtx } from '../table-column/defaults'
 import type { DefaultRow, TableSortOrder } from '../table/defaults'

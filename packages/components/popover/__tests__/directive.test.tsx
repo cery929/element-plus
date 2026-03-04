@@ -1,7 +1,7 @@
 import { nextTick, ref } from 'vue'
 import { mount } from '@vue/test-utils'
 import { afterEach, describe, expect, it } from 'vitest'
-import { rAF } from '@cery929-ui/test-utils/tick'
+import { rAF } from '@kn-ui/test-utils/tick'
 import Popover from '../src/popover.vue'
 import PopoverDirective, { VPopover } from '../src/directive'
 

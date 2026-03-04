@@ -25,13 +25,13 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { ElButton } from 'cery929-ui'
+import { ElButton } from 'kn-ui'
 
 import type {
   RenderContentContext,
   RenderContentFunction,
   TreeInstance,
-} from 'cery929-ui'
+} from 'kn-ui'
 
 interface Tree {
   id: number

@@ -7,7 +7,7 @@ import {
   epOutput,
   epPackage,
   projRoot,
-} from '@cery929-ui/build-utils'
+} from '@kn-ui/build-utils'
 import { buildConfig, run, runTask, withTaskName } from './src'
 
 import type { TaskFunction } from 'gulp'

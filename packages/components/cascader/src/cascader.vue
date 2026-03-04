@@ -128,45 +128,45 @@ import {
   getSibling,
   isClient,
   isPromise,
-} from '@cery929-ui/utils'
-import ElCascaderPanel from '@cery929-ui/components/cascader-panel'
-import ElInput from '@cery929-ui/components/input'
-import ElTooltip from '@cery929-ui/components/tooltip'
-import ElScrollbar from '@cery929-ui/components/scrollbar'
-import ElTag from '@cery929-ui/components/tag'
-import ElIcon from '@cery929-ui/components/icon'
+} from '@kn-ui/utils'
+import ElCascaderPanel from '@kn-ui/components/cascader-panel'
+import ElInput from '@kn-ui/components/input'
+import ElTooltip from '@kn-ui/components/tooltip'
+import ElScrollbar from '@kn-ui/components/scrollbar'
+import ElTag from '@kn-ui/components/tag'
+import ElIcon from '@kn-ui/components/icon'
 import {
   useFormDisabled,
   useFormItem,
   useFormSize,
-} from '@cery929-ui/components/form'
-import { ClickOutside as vClickoutside } from '@cery929-ui/directives'
+} from '@kn-ui/components/form'
+import { ClickOutside as vClickoutside } from '@kn-ui/directives'
 import {
   useComposition,
   useEmptyValues,
   useFocusController,
   useLocale,
   useNamespace,
-} from '@cery929-ui/hooks'
+} from '@kn-ui/hooks'
 import {
   CHANGE_EVENT,
   EVENT_CODE,
   UPDATE_MODEL_EVENT,
-} from '@cery929-ui/constants'
-import { ArrowDown, Check, CircleClose } from '@cery929-ui/icons-vue'
+} from '@kn-ui/constants'
+import { ArrowDown, Check, CircleClose } from '@kn-ui/icons-vue'
 import { cascaderEmits } from './cascader'
 
-import type { Options } from '@cery929-ui/components/popper'
+import type { Options } from '@kn-ui/components/popper'
 import type { ComputedRef, StyleValue } from 'vue'
-import type { TooltipInstance } from '@cery929-ui/components/tooltip'
-import type { InputInstance } from '@cery929-ui/components/input'
-import type { ScrollbarInstance } from '@cery929-ui/components/scrollbar'
+import type { TooltipInstance } from '@kn-ui/components/tooltip'
+import type { InputInstance } from '@kn-ui/components/input'
+import type { ScrollbarInstance } from '@kn-ui/components/scrollbar'
 import type {
   CascaderNode,
   CascaderPanelInstance,
   CascaderValue,
   Tag,
-} from '@cery929-ui/components/cascader-panel'
+} from '@kn-ui/components/cascader-panel'
 import type { CascaderComponentProps } from './cascader'
 
 const popperOptions: Partial<Options> = {

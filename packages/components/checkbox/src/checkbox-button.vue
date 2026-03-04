@@ -1,24 +1,10 @@
 <template>
   <label :class="labelKls">
-    <input
-      v-model="model"
-      :class="ns.be('button', 'original')"
-      type="checkbox"
-      :name="name"
-      :tabindex="tabindex"
-      :disabled="isDisabled"
-      v-bind="inputBindings"
-      @change="handleChange"
-      @focus="isFocused = true"
-      @blur="isFocused = false"
-      @click.stop
-    />
+    <input v-model="model" :class="ns.be('button', 'original')" type="checkbox" :name="name" :tabindex="tabindex"
+      :disabled="isDisabled" v-bind="inputBindings" @change="handleChange" @focus="isFocused = true"
+      @blur="isFocused = false" @click.stop />
 
-    <span
-      v-if="$slots.default || label"
-      :class="ns.be('button', 'inner')"
-      :style="isChecked ? activeStyle : undefined"
-    >
+    <span v-if="$slots.default || label" :class="ns.be('button', 'inner')" :style="isChecked ? activeStyle : undefined">
       <slot>{{ label }}</slot>
     </span>
   </label>
@@ -26,7 +12,7 @@
 
 <script lang="ts" setup>
 import { computed, inject, useSlots } from 'vue'
-import { useNamespace } from '@cery929-ui/hooks'
+import { useNamespace } from '@kn-ui/hooks'
 import { checkboxGroupContextKey } from './constants'
 import { useCheckbox } from './composables'
 import { checkboxEmits, checkboxPropsDefaults } from './checkbox'

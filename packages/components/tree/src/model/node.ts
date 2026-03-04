@@ -7,11 +7,11 @@ import {
   isFunction,
   isString,
   isUndefined,
-} from '@cery929-ui/utils'
+} from '@kn-ui/utils'
 import { NODE_KEY, markNodeData } from './util'
 
 import type TreeStore from './tree-store'
-import type { Nullable } from '@cery929-ui/utils'
+import type { Nullable } from '@kn-ui/utils'
 import type {
   FakeNode,
   TreeKey,

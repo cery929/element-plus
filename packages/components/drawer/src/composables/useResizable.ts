@@ -1,5 +1,5 @@
 import { computed, onBeforeUnmount, ref, watch } from 'vue'
-import { addUnit } from '@cery929-ui/utils'
+import { addUnit } from '@kn-ui/utils'
 import { clamp, useEventListener, useWindowSize } from '@vueuse/core'
 
 import type { Ref, SetupContext } from 'vue'

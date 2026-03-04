@@ -1,7 +1,7 @@
-import { withInstall } from '@cery929-ui/utils'
+import { withInstall } from '@kn-ui/utils'
 import Watermark from './src/watermark.vue'
 
-import type { SFCWithInstall } from '@cery929-ui/utils'
+import type { SFCWithInstall } from '@kn-ui/utils'
 
 export const ElWatermark: SFCWithInstall<typeof Watermark> =
   withInstall(Watermark)

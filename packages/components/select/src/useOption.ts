@@ -5,7 +5,7 @@ import {
   escapeStringRegexp,
   isObject,
   throwError,
-} from '@cery929-ui/utils'
+} from '@kn-ui/utils'
 import { selectGroupKey, selectKey } from './token'
 import { COMPONENT_NAME } from './option'
 

@@ -56,13 +56,13 @@
 
 <script lang="ts" setup>
 import { computed, ref, useSlots } from 'vue'
-import { Close } from '@cery929-ui/icons-vue'
-import { ElOverlay } from '@cery929-ui/components/overlay'
-import ElFocusTrap from '@cery929-ui/components/focus-trap'
-import ElTeleport from '@cery929-ui/components/teleport'
-import { dialogPropsDefaults, useDialog } from '@cery929-ui/components/dialog'
-import ElIcon from '@cery929-ui/components/icon'
-import { useDeprecated, useLocale, useNamespace } from '@cery929-ui/hooks'
+import { Close } from '@kn-ui/icons-vue'
+import { ElOverlay } from '@kn-ui/components/overlay'
+import ElFocusTrap from '@kn-ui/components/focus-trap'
+import ElTeleport from '@kn-ui/components/teleport'
+import { dialogPropsDefaults, useDialog } from '@kn-ui/components/dialog'
+import ElIcon from '@kn-ui/components/icon'
+import { useDeprecated, useLocale, useNamespace } from '@kn-ui/hooks'
 import { drawerEmits } from './drawer'
 import { useResizable } from './composables/useResizable'
 

@@ -1,4 +1,4 @@
-import { buildProps, definePropType, iconPropType } from '@cery929-ui/utils'
+import { buildProps, definePropType, iconPropType } from '@kn-ui/utils'
 import { tourContentProps } from './content'
 
 import type { CSSProperties, Component, ExtractPublicPropTypes } from 'vue'

@@ -1,7 +1,7 @@
 import { unref } from 'vue'
-import { isArray } from '@cery929-ui/utils'
+import { isArray } from '@kn-ui/utils'
 
-import type { Arrayable } from '@cery929-ui/utils'
+import type { Arrayable } from '@kn-ui/utils'
 import type { Ref } from 'vue'
 import type { TooltipTriggerType } from './trigger'
 

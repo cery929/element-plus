@@ -6,9 +6,9 @@ import {
   reactive,
   toRef,
 } from 'vue'
-import { flattedChildren } from '@cery929-ui/utils'
-import ElTooltip from '@cery929-ui/components/tooltip'
-import { useNamespace } from '@cery929-ui/hooks'
+import { flattedChildren } from '@kn-ui/utils'
+import ElTooltip from '@kn-ui/components/tooltip'
+import { useNamespace } from '@kn-ui/hooks'
 import ElAvatar from './avatar.vue'
 import { avatarGroupContextKey } from './constants'
 import { avatarGroupProps } from './avatar-group-props'

@@ -1,10 +1,10 @@
 import { nextTick } from 'vue'
 import { VueWrapper, mount } from '@vue/test-utils'
 import { describe, expect, test, vi } from 'vitest'
-import { IMAGE_FAIL, IMAGE_SUCCESS } from '@cery929-ui/test-utils/mock'
+import { IMAGE_FAIL, IMAGE_SUCCESS } from '@kn-ui/test-utils/mock'
 import ImageViewer from '../src/image-viewer.vue'
-import triggerEvent from '@cery929-ui/test-utils/trigger-event'
-import { EVENT_CODE } from '@cery929-ui/constants'
+import triggerEvent from '@kn-ui/test-utils/trigger-event'
+import { EVENT_CODE } from '@kn-ui/constants'
 
 import type { ImageViewerInstance } from '../src/image-viewer'
 

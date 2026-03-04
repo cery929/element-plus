@@ -14,8 +14,8 @@ import {
 } from 'vue'
 import { unrefElement, useResizeObserver } from '@vueuse/core'
 import { isNil } from 'lodash-unified'
-import ElIcon from '@cery929-ui/components/icon'
-import { More } from '@cery929-ui/icons-vue'
+import ElIcon from '@kn-ui/components/icon'
+import { More } from '@kn-ui/icons-vue'
 import {
   buildProps,
   definePropType,
@@ -26,16 +26,16 @@ import {
   isString,
   isUndefined,
   mutable,
-} from '@cery929-ui/utils'
-import { useNamespace } from '@cery929-ui/hooks'
-import { ClickOutside as vClickoutside } from '@cery929-ui/directives'
+} from '@kn-ui/utils'
+import { useNamespace } from '@kn-ui/hooks'
+import { ClickOutside as vClickoutside } from '@kn-ui/directives'
 import Menubar from './utils/menu-bar'
 import ElMenuCollapseTransition from './menu-collapse-transition.vue'
 import ElSubMenu from './sub-menu'
 import { useMenuCssVar } from './use-menu-css-var'
 import { MENU_INJECTION_KEY, SUB_MENU_INJECTION_KEY } from './tokens'
 
-import type { PopperEffect } from '@cery929-ui/components/popper'
+import type { PopperEffect } from '@kn-ui/components/popper'
 import type { MenuItemClicked, MenuProvider, SubMenuProvider } from './types'
 import type { NavigationFailure, Router } from 'vue-router'
 import type {

@@ -1,14 +1,14 @@
 <script lang="ts">
 import { computed, defineComponent, h, onMounted, reactive, ref } from 'vue'
 import { pick } from 'lodash-unified'
-import { ElSelect, selectProps } from '@cery929-ui/components/select'
-import { ElTree, treeProps } from '@cery929-ui/components/tree'
+import { ElSelect, selectProps } from '@kn-ui/components/select'
+import { ElTree, treeProps } from '@kn-ui/components/tree'
 import { useSelect } from './select'
 import { useTree } from './tree'
 import CacheOptions from './cache-options'
 
-import type { TreeInstance } from '@cery929-ui/components/tree'
-import type { SelectInstance } from '@cery929-ui/components/select'
+import type { TreeInstance } from '@kn-ui/components/tree'
+import type { SelectInstance } from '@kn-ui/components/select'
 
 export default defineComponent({
   name: 'ElTreeSelect',

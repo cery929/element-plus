@@ -8,7 +8,7 @@
 </template>
 
 <script lang="ts" setup>
-import type { ImageProps } from 'cery929-ui'
+import type { ImageProps } from 'kn-ui'
 
 const fits = [
   'fill',

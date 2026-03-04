@@ -1,5 +1,5 @@
-import { CHANGE_EVENT } from '@cery929-ui/constants'
-import { buildProps, isNumber } from '@cery929-ui/utils'
+import { CHANGE_EVENT } from '@kn-ui/constants'
+import { buildProps, isNumber } from '@kn-ui/utils'
 
 import type Steps from './steps.vue'
 import type { ExtractPublicPropTypes } from 'vue'

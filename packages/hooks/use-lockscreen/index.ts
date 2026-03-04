@@ -6,7 +6,7 @@ import {
   hasClass,
   removeClass,
   throwError,
-} from '@cery929-ui/utils'
+} from '@kn-ui/utils'
 import { useNamespace } from '../use-namespace'
 
 import type { Ref } from 'vue'

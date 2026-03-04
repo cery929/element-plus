@@ -9,8 +9,8 @@ import {
   expect,
   it,
 } from 'vitest'
-import { usePopperContainer } from '@cery929-ui/hooks'
-import { TOOLTIP_INJECTION_KEY } from '@cery929-ui/components/tooltip'
+import { usePopperContainer } from '@kn-ui/hooks'
+import { TOOLTIP_INJECTION_KEY } from '@kn-ui/components/tooltip'
 import { genTooltipProvides } from '../test-helper/provides'
 import ElTooltipContent from '../src/content.vue'
 

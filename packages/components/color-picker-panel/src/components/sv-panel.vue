@@ -1,25 +1,14 @@
 <template>
   <div :class="rootKls" :style="rootStyle" @click="handleClick">
-    <div
-      ref="cursorRef"
-      :class="cursorKls"
-      :style="cursorStyle"
-      :tabindex="disabled ? undefined : 0"
-      :aria-disabled="disabled"
-      role="slider"
-      aria-valuemin="0,0"
-      aria-valuemax="100,100"
-      :aria-label="ariaLabel"
-      :aria-valuenow="`${saturation},${brightness}`"
-      :aria-valuetext="ariaValuetext"
-      @keydown="handleKeydown"
-    />
+    <div ref="cursorRef" :class="cursorKls" :style="cursorStyle" :tabindex="disabled ? undefined : 0"
+      :aria-disabled="disabled" role="slider" aria-valuemin="0,0" aria-valuemax="100,100" :aria-label="ariaLabel"
+      :aria-valuenow="`${saturation},${brightness}`" :aria-valuetext="ariaValuetext" @keydown="handleKeydown" />
   </div>
 </template>
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { useLocale } from '@cery929-ui/hooks/use-locale'
+import { useLocale } from '@kn-ui/hooks/use-locale'
 import { useSvPanel, useSvPanelDOM } from '../composables/use-sv-panel'
 
 import type { SvPanelProps } from '../props/sv-panel'

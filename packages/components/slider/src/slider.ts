@@ -4,15 +4,15 @@ import {
   definePropType,
   isArray,
   isNumber,
-} from '@cery929-ui/utils'
+} from '@kn-ui/utils'
 import {
   CHANGE_EVENT,
   INPUT_EVENT,
   UPDATE_MODEL_EVENT,
-} from '@cery929-ui/constants'
-import { useAriaProps, useSizeProp } from '@cery929-ui/hooks'
+} from '@kn-ui/constants'
+import { useAriaProps, useSizeProp } from '@kn-ui/hooks'
 
-import type { Arrayable } from '@cery929-ui/utils'
+import type { Arrayable } from '@kn-ui/utils'
 import type { ExtractPropTypes, ExtractPublicPropTypes } from 'vue'
 import type { SliderMarkerProps } from './marker'
 import type Slider from './slider.vue'

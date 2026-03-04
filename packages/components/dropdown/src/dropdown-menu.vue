@@ -12,13 +12,13 @@ import {
   composeEventHandlers,
   composeRefs,
   getEventCode,
-} from '@cery929-ui/utils'
-import { EVENT_CODE } from '@cery929-ui/constants'
+} from '@kn-ui/utils'
+import { EVENT_CODE } from '@kn-ui/constants'
 import {
   ROVING_FOCUS_COLLECTION_INJECTION_KEY,
   ROVING_FOCUS_GROUP_INJECTION_KEY,
-} from '@cery929-ui/components/roving-focus-group'
-import { useNamespace } from '@cery929-ui/hooks'
+} from '@kn-ui/components/roving-focus-group'
+import { useNamespace } from '@kn-ui/hooks'
 import { DROPDOWN_INJECTION_KEY } from './tokens'
 import { dropdownMenuProps } from './dropdown'
 import { useDropdown } from './useDropdown'

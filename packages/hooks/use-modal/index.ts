@@ -1,7 +1,7 @@
 import { watch } from 'vue'
 import { isClient, useEventListener } from '@vueuse/core'
-import { EVENT_CODE } from '@cery929-ui/constants'
-import { getEventCode } from '@cery929-ui/utils'
+import { EVENT_CODE } from '@kn-ui/constants'
+import { getEventCode } from '@kn-ui/utils'
 
 import type { Ref } from 'vue'
 

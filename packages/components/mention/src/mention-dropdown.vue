@@ -25,9 +25,9 @@
 
 <script lang="ts" setup>
 import { computed, nextTick, ref, watch } from 'vue'
-import { useLocale, useNamespace } from '@cery929-ui/hooks'
-import { scrollIntoView } from '@cery929-ui/utils'
-import ElScrollbar from '@cery929-ui/components/scrollbar'
+import { useLocale, useNamespace } from '@kn-ui/hooks'
+import { scrollIntoView } from '@kn-ui/utils'
+import ElScrollbar from '@kn-ui/components/scrollbar'
 import { mentionDropdownEmits } from './mention-dropdown'
 
 import type { MentionDropdownProps } from './mention-dropdown'

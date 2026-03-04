@@ -11,8 +11,8 @@ import {
   watch,
 } from 'vue'
 import { useResizeObserver } from '@vueuse/core'
-import { throwError } from '@cery929-ui/utils'
-import { useNamespace } from '@cery929-ui/hooks'
+import { throwError } from '@kn-ui/utils'
+import { useNamespace } from '@kn-ui/hooks'
 import { formContextKey, formItemContextKey } from './constants'
 
 import type { CSSProperties } from 'vue'

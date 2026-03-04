@@ -1,18 +1,18 @@
 import { isNil } from 'lodash-unified'
-import { buildProps, definePropType, isString } from '@cery929-ui/utils'
+import { buildProps, definePropType, isString } from '@kn-ui/utils'
 import {
   useAriaProps,
   useEmptyValuesProps,
   useSizeProp,
-} from '@cery929-ui/hooks'
-import { useTooltipContentProps } from '@cery929-ui/components/tooltip'
-import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@cery929-ui/constants'
+} from '@kn-ui/hooks'
+import { useTooltipContentProps } from '@kn-ui/components/tooltip'
+import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@kn-ui/constants'
 
 import type { ExtractPublicPropTypes } from 'vue'
 import type ColorPicker from './color-picker.vue'
-import type { AriaProps, UseEmptyValuesProps } from '@cery929-ui/hooks'
-import type { ComponentSize } from '@cery929-ui/constants'
-import type { ElTooltipContentProps } from '@cery929-ui/components/tooltip'
+import type { AriaProps, UseEmptyValuesProps } from '@kn-ui/hooks'
+import type { ComponentSize } from '@kn-ui/constants'
+import type { ElTooltipContentProps } from '@kn-ui/components/tooltip'
 
 export interface ColorPickerProps
   extends UseEmptyValuesProps, Pick<AriaProps, 'ariaLabel'> {

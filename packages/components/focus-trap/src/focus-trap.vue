@@ -14,9 +14,9 @@ import {
   watch,
 } from 'vue'
 import { isNil } from 'lodash-unified'
-import { EVENT_CODE } from '@cery929-ui/constants'
-import { useEscapeKeydown } from '@cery929-ui/hooks'
-import { getEventCode, isString } from '@cery929-ui/utils'
+import { EVENT_CODE } from '@kn-ui/constants'
+import { useEscapeKeydown } from '@kn-ui/hooks'
+import { getEventCode, isString } from '@kn-ui/utils'
 import {
   createFocusOutPreventedEvent,
   focusFirstDescendant,

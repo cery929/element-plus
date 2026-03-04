@@ -11,7 +11,7 @@
         </el-icon>
         <span v-if="!inactiveIcon && inactiveText" :aria-hidden="checked">{{
           inactiveText
-          }}</span>
+        }}</span>
       </slot>
     </span>
     <span :class="ns.e('core')" :style="coreStyle">
@@ -56,7 +56,7 @@
         </el-icon>
         <span v-if="!activeIcon && activeText" :aria-hidden="!checked">{{
           activeText
-          }}</span>
+        }}</span>
       </slot>
     </span>
   </div>
@@ -70,21 +70,21 @@ import {
   isBoolean,
   isPromise,
   throwError,
-} from '@cery929-ui/utils'
-import ElIcon from '@cery929-ui/components/icon'
+} from '@kn-ui/utils'
+import ElIcon from '@kn-ui/components/icon'
 import {
   useFormDisabled,
   useFormItem,
   useFormItemInputId,
   useFormSize,
-} from '@cery929-ui/components/form'
-import { Loading } from '@cery929-ui/icons-vue'
+} from '@kn-ui/components/form'
+import { Loading } from '@kn-ui/icons-vue'
 import {
   CHANGE_EVENT,
   INPUT_EVENT,
   UPDATE_MODEL_EVENT,
-} from '@cery929-ui/constants'
-import { useNamespace } from '@cery929-ui/hooks'
+} from '@kn-ui/constants'
+import { useNamespace } from '@kn-ui/hooks'
 import { switchEmits } from './switch'
 
 import type { CSSProperties } from 'vue'

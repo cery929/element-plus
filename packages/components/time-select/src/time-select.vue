@@ -18,15 +18,15 @@
 import { computed, ref } from 'vue'
 import dayjs from 'dayjs'
 import customParseFormat from 'dayjs/plugin/customParseFormat.js'
-import ElSelect from '@cery929-ui/components/select'
-import { useFormDisabled } from '@cery929-ui/components/form'
-import ElIcon from '@cery929-ui/components/icon'
-import { useLocale, useNamespace } from '@cery929-ui/hooks'
-import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@cery929-ui/constants'
+import ElSelect from '@kn-ui/components/select'
+import { useFormDisabled } from '@kn-ui/components/form'
+import ElIcon from '@kn-ui/components/icon'
+import { useLocale, useNamespace } from '@kn-ui/hooks'
+import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@kn-ui/constants'
 import {
   CircleClose as IconCircleClose,
   Clock as IconClock,
-} from '@cery929-ui/icons-vue'
+} from '@kn-ui/icons-vue'
 import { compareTime, formatTime, nextTime, parseTime } from './utils'
 
 import type { TimeSelectProps } from './time-select'

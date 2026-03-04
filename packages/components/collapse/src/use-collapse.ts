@@ -5,9 +5,9 @@ import {
   isBoolean,
   isPromise,
   throwError,
-} from '@cery929-ui/utils'
-import { useNamespace } from '@cery929-ui/hooks'
-import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@cery929-ui/constants'
+} from '@kn-ui/utils'
+import { useNamespace } from '@kn-ui/hooks'
+import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@kn-ui/constants'
 import { collapseContextKey } from './constants'
 
 import type { SetupContext } from 'vue'

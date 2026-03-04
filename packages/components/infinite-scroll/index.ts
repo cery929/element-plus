@@ -2,7 +2,7 @@
 import InfiniteScroll from './src'
 
 import type { App } from 'vue'
-import type { SFCWithInstall } from '@cery929-ui/utils'
+import type { SFCWithInstall } from '@kn-ui/utils'
 
 const _InfiniteScroll = InfiniteScroll as SFCWithInstall<typeof InfiniteScroll>
 

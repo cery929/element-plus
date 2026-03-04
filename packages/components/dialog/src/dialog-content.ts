@@ -1,4 +1,4 @@
-import { buildProps, iconPropType } from '@cery929-ui/utils'
+import { buildProps, iconPropType } from '@kn-ui/utils'
 
 import type { Component } from 'vue'
 

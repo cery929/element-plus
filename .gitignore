@@ -11,7 +11,7 @@ node_modules
 # Bundle
 dist
 coverage
-packages/cery929-ui/version.ts
+packages/kn-ui/version.ts
 
 # local env files
 *.local

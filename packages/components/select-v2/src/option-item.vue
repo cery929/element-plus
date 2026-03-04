@@ -15,7 +15,7 @@
 
 <script lang="ts">
 import { defineComponent, inject } from 'vue'
-import { useNamespace } from '@cery929-ui/hooks'
+import { useNamespace } from '@kn-ui/hooks'
 import { useOption } from './useOption'
 import { useProps } from './useProps'
 import { optionV2Emits, optionV2Props } from './defaults'

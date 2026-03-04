@@ -4,11 +4,7 @@
       <el-countdown title="Start to grab" :value="value" />
     </el-col>
     <el-col :xs="24" :sm="12" :md="8" class="text-center mb-4">
-      <el-countdown
-        title="Remaining VIP time"
-        format="HH:mm:ss"
-        :value="value1"
-      />
+      <el-countdown title="Remaining VIP time" format="HH:mm:ss" :value="value1" />
       <el-button class="countdown-footer" type="primary" @click="reset">
         Reset
       </el-button>
@@ -32,7 +28,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 import dayjs from 'dayjs'
-import { Calendar } from '@cery929-ui/icons-vue'
+import { Calendar } from '@kn-ui/icons-vue'
 
 const value = ref(Date.now() + 1000 * 60 * 60 * 7)
 const value1 = ref(Date.now() + 1000 * 60 * 60 * 24 * 2)

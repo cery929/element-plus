@@ -1,8 +1,8 @@
-import { withInstall, withNoopInstall } from '@cery929-ui/utils'
+import { withInstall, withNoopInstall } from '@kn-ui/utils'
 import Table from './src/table.vue'
 import TableColumn from './src/tableColumn'
 
-import type { SFCWithInstall } from '@cery929-ui/utils'
+import type { SFCWithInstall } from '@kn-ui/utils'
 
 export const ElTable: SFCWithInstall<typeof Table> & {
   TableColumn: typeof TableColumn

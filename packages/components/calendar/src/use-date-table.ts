@@ -1,9 +1,9 @@
 import { computed } from 'vue'
 import dayjs from 'dayjs'
 import localeData from 'dayjs/plugin/localeData.js'
-import { useLocale } from '@cery929-ui/hooks'
-import { rangeArr } from '@cery929-ui/components/time-picker'
-import { WEEK_DAYS } from '@cery929-ui/constants'
+import { useLocale } from '@kn-ui/hooks'
+import { rangeArr } from '@kn-ui/components/time-picker'
+import { WEEK_DAYS } from '@kn-ui/constants'
 import { getMonthDays, getPrevMonthLastDays, toNestedArr } from './date-table'
 
 import type { SetupContext } from 'vue'

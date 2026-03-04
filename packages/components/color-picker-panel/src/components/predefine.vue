@@ -11,7 +11,7 @@
 
 <script lang="ts" setup>
 import { usePredefine, usePredefineDOM } from '../composables/use-predefine'
-import { useLocale } from '@cery929-ui/hooks/use-locale'
+import { useLocale } from '@kn-ui/hooks/use-locale'
 
 import type { PredefineProps } from '../props/predefine'
 

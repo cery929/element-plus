@@ -1,6 +1,6 @@
-import { componentSizes, datePickTypes } from '@cery929-ui/constants'
+import { componentSizes, datePickTypes } from '@kn-ui/constants'
 
-import type { ComponentSize, DatePickType } from '@cery929-ui/constants'
+import type { ComponentSize, DatePickType } from '@kn-ui/constants'
 
 export const isValidComponentSize = (val: string): val is ComponentSize | '' =>
   ['', ...componentSizes].includes(val)

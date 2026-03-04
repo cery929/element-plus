@@ -1,8 +1,8 @@
-import { withInstall, withInstallDirective } from '@cery929-ui/utils'
+import { withInstall, withInstallDirective } from '@kn-ui/utils'
 import Popover from './src/popover.vue'
 import PopoverDirective, { VPopover } from './src/directive'
 
-import type { SFCWithInstall } from '@cery929-ui/utils'
+import type { SFCWithInstall } from '@kn-ui/utils'
 
 export const ElPopoverDirective: SFCWithInstall<typeof PopoverDirective> =
   withInstallDirective(PopoverDirective, VPopover)

@@ -1,5 +1,5 @@
 import { computed, getCurrentInstance, inject, provide, ref, unref } from 'vue'
-import { debugWarn, keysOf } from '@cery929-ui/utils'
+import { debugWarn, keysOf } from '@kn-ui/utils'
 import {
   SIZE_INJECTION_KEY,
   defaultInitialZIndex,
@@ -11,7 +11,7 @@ import {
   useNamespace,
   useZIndex,
   zIndexContextKey,
-} from '@cery929-ui/hooks'
+} from '@kn-ui/hooks'
 import { configProviderContextKey } from '../constants'
 
 import type { MaybeRef } from '@vueuse/core'

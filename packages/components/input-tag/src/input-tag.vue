@@ -63,13 +63,13 @@
 
 <script lang="ts" setup>
 import { computed, markRaw, useSlots } from 'vue'
-import { useAttrs, useCalcInputWidth } from '@cery929-ui/hooks'
-import { NOOP, ValidateComponentsMap } from '@cery929-ui/utils'
-import { CircleClose } from '@cery929-ui/icons-vue'
-import ElTooltip from '@cery929-ui/components/tooltip'
-import ElIcon from '@cery929-ui/components/icon'
-import ElTag from '@cery929-ui/components/tag'
-import { useFormItem, useFormItemInputId } from '@cery929-ui/components/form'
+import { useAttrs, useCalcInputWidth } from '@kn-ui/hooks'
+import { NOOP, ValidateComponentsMap } from '@kn-ui/utils'
+import { CircleClose } from '@kn-ui/icons-vue'
+import ElTooltip from '@kn-ui/components/tooltip'
+import ElIcon from '@kn-ui/components/icon'
+import ElTag from '@kn-ui/components/tag'
+import { useFormItem, useFormItemInputId } from '@kn-ui/components/form'
 import { inputTagEmits } from './input-tag'
 import {
   useDragTag,

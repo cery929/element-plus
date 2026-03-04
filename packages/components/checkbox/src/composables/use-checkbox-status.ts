@@ -1,7 +1,7 @@
 import { computed, inject, ref, toRaw } from 'vue'
 import { isEqual } from 'lodash-unified'
-import { useFormSize } from '@cery929-ui/components/form'
-import { isArray, isBoolean, isObject, isPropAbsent } from '@cery929-ui/utils'
+import { useFormSize } from '@kn-ui/components/form'
+import { isArray, isBoolean, isObject, isPropAbsent } from '@kn-ui/utils'
 import { checkboxGroupContextKey } from '../constants'
 
 import type { ComponentInternalInstance } from 'vue'

@@ -8,7 +8,7 @@ import {
   isObject,
   isString,
   isUndefined,
-} from '@cery929-ui/utils'
+} from '@kn-ui/utils'
 import MessageBoxConstructor from './index.vue'
 
 import type { AppContext, ComponentPublicInstance, VNode } from 'vue'

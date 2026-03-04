@@ -1,4 +1,4 @@
-import { buildProps, iconPropType } from '@cery929-ui/utils'
+import { buildProps, iconPropType } from '@kn-ui/utils'
 
 import type { ExtractPropTypes, ExtractPublicPropTypes } from 'vue'
 import type Next from './next.vue'

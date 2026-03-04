@@ -6,8 +6,8 @@
 <script lang="ts" setup>
 import { computed, inject, nextTick, onBeforeUnmount, ref, watch } from 'vue'
 import { useResizeObserver } from '@vueuse/core'
-import { capitalize, isUndefined, throwError } from '@cery929-ui/utils'
-import { useNamespace } from '@cery929-ui/hooks'
+import { capitalize, isUndefined, throwError } from '@kn-ui/utils'
+import { useNamespace } from '@kn-ui/hooks'
 import { tabsRootContextKey } from './constants'
 
 import type { TabBarProps } from './tab-bar'

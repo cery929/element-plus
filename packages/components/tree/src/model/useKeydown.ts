@@ -1,12 +1,12 @@
 import { onMounted, onUpdated } from 'vue'
 import { useEventListener } from '@vueuse/core'
-import { EVENT_CODE } from '@cery929-ui/constants'
-import { useNamespace } from '@cery929-ui/hooks'
-import { getEventCode } from '@cery929-ui/utils'
+import { EVENT_CODE } from '@kn-ui/constants'
+import { useNamespace } from '@kn-ui/hooks'
+import { getEventCode } from '@kn-ui/utils'
 
 import type TreeStore from './tree-store'
 import type { Ref } from 'vue'
-import type { Nullable } from '@cery929-ui/utils'
+import type { Nullable } from '@kn-ui/utils'
 
 interface UseKeydownOption {
   el$: Ref<HTMLElement | null>

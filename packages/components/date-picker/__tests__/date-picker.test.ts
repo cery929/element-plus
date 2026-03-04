@@ -3,22 +3,22 @@ import { nextTick } from 'vue'
 import { flushPromises, mount } from '@vue/test-utils'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import dayjs from 'dayjs'
-import { CircleClose } from '@cery929-ui/icons-vue'
-import { rAF } from '@cery929-ui/test-utils/tick'
-import ConfigProvider from '@cery929-ui/components/config-provider'
+import { CircleClose } from '@kn-ui/icons-vue'
+import { rAF } from '@kn-ui/test-utils/tick'
+import ConfigProvider from '@kn-ui/components/config-provider'
 import {
   CommonPicker,
   PICKER_POPPER_OPTIONS_INJECTION_KEY,
-} from '@cery929-ui/components/time-picker'
-import triggerEvent from '@cery929-ui/test-utils/trigger-event'
-import Input from '@cery929-ui/components/input'
-import zhCn from '@cery929-ui/locale/lang/zh-cn'
-import enUs from '@cery929-ui/locale/lang/en'
+} from '@kn-ui/components/time-picker'
+import triggerEvent from '@kn-ui/test-utils/trigger-event'
+import Input from '@kn-ui/components/input'
+import zhCn from '@kn-ui/locale/lang/zh-cn'
+import enUs from '@kn-ui/locale/lang/en'
 import 'dayjs/locale/zh-cn'
-import { EVENT_CODE } from '@cery929-ui/constants'
-import { ElForm, ElFormItem } from '@cery929-ui/components/form'
+import { EVENT_CODE } from '@kn-ui/constants'
+import { ElForm, ElFormItem } from '@kn-ui/components/form'
 import DatePicker from '../src/date-picker'
-import DatePickerRange from '@cery929-ui/components/date-picker-panel/src/date-picker-com/panel-date-range.vue'
+import DatePickerRange from '@kn-ui/components/date-picker-panel/src/date-picker-com/panel-date-range.vue'
 
 const _mount = (template: string, data = () => ({}), otherObj?) =>
   mount(

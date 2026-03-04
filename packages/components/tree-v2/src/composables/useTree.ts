@@ -1,5 +1,5 @@
 import { computed, ref, shallowRef, watch } from 'vue'
-import { isObject } from '@cery929-ui/utils'
+import { isObject } from '@kn-ui/utils'
 import {
   CURRENT_CHANGE,
   NODE_CLICK,
@@ -14,10 +14,10 @@ import { useFilter } from './useFilter'
 import type {
   FixedSizeList,
   Alignment as ScrollStrategy,
-} from '@cery929-ui/components/virtual-list'
+} from '@kn-ui/components/virtual-list'
 import type { SetupContext } from 'vue'
 import type { treeEmits } from '../virtual-tree'
-import type { CheckboxValueType } from '@cery929-ui/components/checkbox'
+import type { CheckboxValueType } from '@kn-ui/components/checkbox'
 import type {
   Tree,
   TreeData,

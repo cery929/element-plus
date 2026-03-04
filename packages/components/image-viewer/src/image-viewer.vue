@@ -89,12 +89,12 @@ import {
   useLockscreen,
   useNamespace,
   useZIndex,
-} from '@cery929-ui/hooks'
-import { EVENT_CODE } from '@cery929-ui/constants'
-import { getEventCode, keysOf } from '@cery929-ui/utils'
-import ElFocusTrap from '@cery929-ui/components/focus-trap'
-import ElTeleport from '@cery929-ui/components/teleport'
-import ElIcon from '@cery929-ui/components/icon'
+} from '@kn-ui/hooks'
+import { EVENT_CODE } from '@kn-ui/constants'
+import { getEventCode, keysOf } from '@kn-ui/utils'
+import ElFocusTrap from '@kn-ui/components/focus-trap'
+import ElTeleport from '@kn-ui/components/teleport'
+import ElIcon from '@kn-ui/components/icon'
 import {
   ArrowLeft,
   ArrowRight,
@@ -105,7 +105,7 @@ import {
   ScaleToOriginal,
   ZoomIn,
   ZoomOut,
-} from '@cery929-ui/icons-vue'
+} from '@kn-ui/icons-vue'
 import { imageViewerEmits } from './image-viewer'
 
 import type { CSSProperties } from 'vue'

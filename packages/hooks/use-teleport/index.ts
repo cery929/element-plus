@@ -4,7 +4,7 @@ import {
   createGlobalNode,
   isClient,
   removeGlobalNode,
-} from '@cery929-ui/utils'
+} from '@kn-ui/utils'
 
 import type { Ref, VNode } from 'vue'
 

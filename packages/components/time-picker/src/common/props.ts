@@ -1,18 +1,18 @@
 import { placements } from '@popperjs/core'
-import { buildProps, definePropType } from '@cery929-ui/utils'
+import { buildProps, definePropType } from '@kn-ui/utils'
 import {
   useAriaProps,
   useEmptyValuesProps,
   useSizeProp,
-} from '@cery929-ui/hooks'
-import { useTooltipContentProps } from '@cery929-ui/components/tooltip'
-import { CircleClose } from '@cery929-ui/icons-vue'
+} from '@kn-ui/hooks'
+import { useTooltipContentProps } from '@kn-ui/components/tooltip'
+import { CircleClose } from '@kn-ui/icons-vue'
 import { disabledTimeListsProps } from '../props/shared'
 
 import type { Component, ExtractPropTypes, ExtractPublicPropTypes } from 'vue'
 import type { Options } from '@popperjs/core'
 import type { Dayjs } from 'dayjs'
-import type { Placement } from '@cery929-ui/components/popper'
+import type { Placement } from '@kn-ui/components/popper'
 
 export type SingleOrRange<T> = T | [T, T]
 export type DateModelType = number | string | Date

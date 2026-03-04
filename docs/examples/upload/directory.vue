@@ -9,9 +9,9 @@
 </template>
 
 <script setup lang="ts">
-import { UploadFilled } from '@cery929-ui/icons-vue'
+import { UploadFilled } from '@kn-ui/icons-vue'
 
-import type { UploadFile, UploadFiles } from 'cery929-ui'
+import type { UploadFile, UploadFiles } from 'kn-ui'
 
 const handleChange = (uploadFile: UploadFile, uploadFiles: UploadFiles) => {
   console.log(uploadFile, uploadFiles)

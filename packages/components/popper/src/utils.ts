@@ -1,5 +1,5 @@
 import { unrefElement } from '@vueuse/core'
-import { isClient } from '@cery929-ui/utils'
+import { isClient } from '@kn-ui/utils'
 
 import type { ComponentPublicInstance } from 'vue'
 import type { MaybeRef } from '@vueuse/core'

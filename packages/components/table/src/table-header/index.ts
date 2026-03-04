@@ -10,9 +10,9 @@ import {
   ref,
   watch,
 } from 'vue'
-import ElCheckbox from '@cery929-ui/components/checkbox'
-import { useNamespace } from '@cery929-ui/hooks'
-import { useLocale } from '@cery929-ui/hooks/use-locale'
+import ElCheckbox from '@kn-ui/components/checkbox'
+import { useNamespace } from '@kn-ui/hooks'
+import { useLocale } from '@kn-ui/hooks/use-locale'
 import FilterPanel from '../filter-panel.vue'
 import useLayoutObserver from '../layout-observer'
 import { TABLE_INJECTION_KEY } from '../tokens'

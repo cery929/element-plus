@@ -47,16 +47,16 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { ElIcon } from '@cery929-ui/components/icon'
+import { ElIcon } from '@kn-ui/components/icon'
 import {
   Check,
   CircleCheck,
   CircleClose,
   Close,
   WarningFilled,
-} from '@cery929-ui/icons-vue'
-import { useNamespace } from '@cery929-ui/hooks'
-import { isFunction, isString } from '@cery929-ui/utils'
+} from '@kn-ui/icons-vue'
+import { useNamespace } from '@kn-ui/hooks'
+import { isFunction, isString } from '@kn-ui/utils'
 
 import type { CSSProperties } from 'vue'
 import type { ProgressColor, ProgressProps } from './progress'

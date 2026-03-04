@@ -1,20 +1,8 @@
 <template>
-  <el-select
-    :model-value="yearValue"
-    size="small"
-    :class="nsSelect.e('year')"
-    :validate-event="false"
-    :options="yearOptions"
-    @change="handleYearChange"
-  />
-  <el-select
-    :model-value="monthValue"
-    size="small"
-    :class="nsSelect.e('month')"
-    :validate-event="false"
-    :options="monthOptions"
-    @change="handleMonthChange"
-  />
+  <el-select :model-value="yearValue" size="small" :class="nsSelect.e('year')" :validate-event="false"
+    :options="yearOptions" @change="handleYearChange" />
+  <el-select :model-value="monthValue" size="small" :class="nsSelect.e('month')" :validate-event="false"
+    :options="monthOptions" @change="handleMonthChange" />
   <el-button size="small" @click="selectToday">
     {{ t('el.datepicker.today') }}
   </el-button>
@@ -23,10 +11,10 @@
 <script lang="ts" setup>
 import { computed } from 'vue'
 import dayjs from 'dayjs'
-import { useLocale, useNamespace } from '@cery929-ui/hooks'
-import ElSelect from '@cery929-ui/components/select'
-import { ElButton } from '@cery929-ui/components/button'
-import { isFunction } from '@cery929-ui/utils'
+import { useLocale, useNamespace } from '@kn-ui/hooks'
+import ElSelect from '@kn-ui/components/select'
+import { ElButton } from '@kn-ui/components/button'
+import { isFunction } from '@kn-ui/utils'
 import { selectControllerEmits } from './select-controller'
 
 import type { SelectControllerProps } from './select-controller'

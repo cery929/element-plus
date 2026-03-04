@@ -42,9 +42,9 @@
 <script lang="ts" setup>
 import { computed, provide, reactive, toRefs } from 'vue'
 import { useEventListener } from '@vueuse/core'
-import ElInputNumber from '@cery929-ui/components/input-number'
-import { useFormItemInputId, useFormSize } from '@cery929-ui/components/form'
-import { useLocale, useNamespace } from '@cery929-ui/hooks'
+import ElInputNumber from '@kn-ui/components/input-number'
+import { useFormItemInputId, useFormSize } from '@kn-ui/components/form'
+import { useLocale, useNamespace } from '@kn-ui/hooks'
 import { sliderContextKey } from './constants'
 import { sliderEmits, sliderProps } from './slider'
 import SliderButton from './button.vue'

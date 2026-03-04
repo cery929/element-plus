@@ -10,7 +10,7 @@ import type {
   AllowDropType,
   NodeDropType,
   RenderContentContext,
-} from 'cery929-ui'
+} from 'kn-ui'
 
 type Node = RenderContentContext['node']
 

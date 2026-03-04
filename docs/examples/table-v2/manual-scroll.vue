@@ -23,7 +23,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-import type { TableV2Instance } from 'cery929-ui'
+import type { TableV2Instance } from 'kn-ui'
 
 const generateColumns = (length = 10, prefix = 'column-', props?: any) =>
   Array.from({ length }).map((_, columnIndex) => ({

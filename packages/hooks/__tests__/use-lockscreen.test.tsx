@@ -1,7 +1,7 @@
 import { computed, defineComponent, nextTick, onMounted, ref } from 'vue'
 import { mount } from '@vue/test-utils'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import { hasClass } from '@cery929-ui/utils'
+import { hasClass } from '@kn-ui/utils'
 import { useLockscreen } from '../use-lockscreen'
 import { useNamespace } from '../use-namespace'
 
@@ -19,7 +19,7 @@ const Comp = defineComponent({
   },
 })
 
-vi.mock('@cery929-ui/utils', async (importOriginal) => {
+vi.mock('@kn-ui/utils', async (importOriginal) => {
   return {
     ...((await importOriginal()) as Record<string, any>),
     getScrollBarWidth: vi.fn(() => 16),

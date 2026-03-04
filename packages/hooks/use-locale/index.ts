@@ -1,11 +1,11 @@
 import { computed, inject, isRef, ref, unref } from 'vue'
 import { get } from 'lodash-unified'
-import English from '@cery929-ui/locale/lang/en'
+import English from '@kn-ui/locale/lang/en'
 
 import type { MaybeRef } from '@vueuse/core'
 import type { InjectionKey, Ref } from 'vue'
-import type { FieldPath } from '@cery929-ui/utils'
-import type { Language } from '@cery929-ui/locale'
+import type { FieldPath } from '@kn-ui/utils'
+import type { Language } from '@kn-ui/locale'
 
 export type LocaleKeys =
   | Exclude<FieldPath<typeof English>, 'name' | 'el'>

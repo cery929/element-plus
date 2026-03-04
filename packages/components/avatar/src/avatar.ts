@@ -3,11 +3,11 @@ import {
   definePropType,
   iconPropType,
   isNumber,
-} from '@cery929-ui/utils'
-import { componentSizes } from '@cery929-ui/constants'
+} from '@kn-ui/utils'
+import { componentSizes } from '@kn-ui/constants'
 
 import type { CSSProperties, Component, ExtractPublicPropTypes } from 'vue'
-import type { ComponentSize } from '@cery929-ui/constants'
+import type { ComponentSize } from '@kn-ui/constants'
 
 export interface AvatarProps {
   /**

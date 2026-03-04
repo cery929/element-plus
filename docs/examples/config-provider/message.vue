@@ -8,7 +8,7 @@
 
 <script lang="ts" setup>
 import { reactive } from 'vue'
-import { ElMessage } from 'cery929-ui'
+import { ElMessage } from 'kn-ui'
 
 const config = reactive({
   max: 3,

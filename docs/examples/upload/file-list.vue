@@ -13,7 +13,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-import type { UploadProps, UploadUserFile } from 'cery929-ui'
+import type { UploadProps, UploadUserFile } from 'kn-ui'
 
 const fileList = ref<UploadUserFile[]>([
   {

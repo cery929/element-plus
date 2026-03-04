@@ -18,15 +18,15 @@
 <script lang="ts" setup>
 import { computed, reactive, ref, watch } from 'vue'
 import { useActiveElement, useResizeObserver } from '@vueuse/core'
-import { useId, useNamespace } from '@cery929-ui/hooks'
+import { useId, useNamespace } from '@kn-ui/hooks'
 import {
   useFormDisabled,
   useFormItem,
   useFormItemInputId,
   useFormSize,
-} from '@cery929-ui/components/form'
-import { debugWarn, isObject } from '@cery929-ui/utils'
-import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@cery929-ui/constants'
+} from '@kn-ui/components/form'
+import { debugWarn, isObject } from '@kn-ui/utils'
+import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@kn-ui/constants'
 import { defaultProps, segmentedEmits } from './segmented'
 
 import type { Option } from './types'

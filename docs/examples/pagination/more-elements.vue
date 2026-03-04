@@ -47,7 +47,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-import type { ComponentSize } from 'cery929-ui'
+import type { ComponentSize } from 'kn-ui'
 
 const currentPage1 = ref(5)
 const currentPage2 = ref(5)

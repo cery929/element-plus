@@ -6,14 +6,14 @@
       type="number" @update:model-value="handleInput" @change="handleChange" />
     <span :class="[ns.e('classifier')]">{{
       t('el.pagination.pageClassifier')
-      }}</span>
+    }}</span>
   </span>
 </template>
 
 <script lang="ts" setup>
 import { computed, ref } from 'vue'
-import { useLocale, useNamespace } from '@cery929-ui/hooks'
-import ElInput from '@cery929-ui/components/input'
+import { useLocale, useNamespace } from '@kn-ui/hooks'
+import ElInput from '@kn-ui/components/input'
 import { usePagination } from '../usePagination'
 import { paginationJumperProps } from './jumper'
 

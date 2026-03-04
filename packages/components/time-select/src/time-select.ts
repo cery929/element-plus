@@ -1,12 +1,12 @@
-import { buildProps, definePropType } from '@cery929-ui/utils'
-import { CircleClose, Clock } from '@cery929-ui/icons-vue'
-import { useEmptyValuesProps, useSizeProp } from '@cery929-ui/hooks'
+import { buildProps, definePropType } from '@kn-ui/utils'
+import { CircleClose, Clock } from '@kn-ui/icons-vue'
+import { useEmptyValuesProps, useSizeProp } from '@kn-ui/hooks'
 
-import type { UseEmptyValuesProps } from '@cery929-ui/hooks'
-import type { PopperEffect } from '@cery929-ui/components/popper'
+import type { UseEmptyValuesProps } from '@kn-ui/hooks'
+import type { PopperEffect } from '@kn-ui/components/popper'
 import type TimeSelect from './time-select.vue'
 import type { CSSProperties, Component, ExtractPublicPropTypes } from 'vue'
-import type { ComponentSize } from '@cery929-ui/constants'
+import type { ComponentSize } from '@kn-ui/constants'
 
 export interface TimeSelectProps extends UseEmptyValuesProps {
   /**

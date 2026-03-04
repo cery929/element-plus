@@ -1,5 +1,5 @@
 import { unref } from 'vue'
-import { buildProps, isNumber } from '@cery929-ui/utils'
+import { buildProps, isNumber } from '@kn-ui/utils'
 import { useTimeout } from '../use-timeout'
 
 import type { ToRefs } from 'vue'

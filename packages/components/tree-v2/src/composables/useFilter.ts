@@ -1,5 +1,5 @@
 import { computed, ref } from 'vue'
-import { isFunction } from '@cery929-ui/utils'
+import { isFunction } from '@kn-ui/utils'
 
 import type { Ref } from 'vue'
 import type { Tree, TreeKey, TreeNode, TreeProps } from '../types'

@@ -1,4 +1,4 @@
-import { isLeaf } from '@cery929-ui/utils'
+import { isLeaf } from '@kn-ui/utils'
 
 import type { CascaderNode } from './types'
 

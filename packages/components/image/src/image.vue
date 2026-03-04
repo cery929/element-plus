@@ -46,8 +46,8 @@ import {
 } from 'vue'
 import { useIntersectionObserver, useThrottleFn } from '@vueuse/core'
 import { fromPairs } from 'lodash-unified'
-import { useAttrs, useLocale, useNamespace } from '@cery929-ui/hooks'
-import ImageViewer from '@cery929-ui/components/image-viewer'
+import { useAttrs, useLocale, useNamespace } from '@kn-ui/hooks'
+import ImageViewer from '@kn-ui/components/image-viewer'
 import {
   getScrollContainer,
   isArray,
@@ -55,7 +55,7 @@ import {
   isElement,
   isString,
   isWindow,
-} from '@cery929-ui/utils'
+} from '@kn-ui/utils'
 import { imageEmits } from './image'
 
 import type { ImageProps } from './image'

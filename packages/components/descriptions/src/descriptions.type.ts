@@ -1,4 +1,4 @@
-import type { ColumnAlignment, ComponentSize } from '@cery929-ui/constants'
+import type { ColumnAlignment, ComponentSize } from '@kn-ui/constants'
 
 export interface IDescriptionsInject {
   border: boolean

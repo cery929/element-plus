@@ -1,12 +1,5 @@
 <template>
-  <component
-    :is="tag"
-    ref="_ref"
-    v-bind="_props"
-    :class="buttonKls"
-    :style="buttonStyle"
-    @click="handleClick"
-  >
+  <component :is="tag" ref="_ref" v-bind="_props" :class="buttonKls" :style="buttonStyle" @click="handleClick">
     <template v-if="loading">
       <slot v-if="$slots.loading" name="loading" />
       <el-icon v-else :class="ns.is('loading')">
@@ -17,10 +10,7 @@
       <component :is="icon" v-if="icon" />
       <slot v-else name="icon" />
     </el-icon>
-    <span
-      v-if="$slots.default"
-      :class="{ [ns.em('text', 'expand')]: shouldAddSpace }"
-    >
+    <span v-if="$slots.default" :class="{ [ns.em('text', 'expand')]: shouldAddSpace }">
       <slot />
     </span>
   </component>
@@ -28,9 +18,9 @@
 
 <script lang="ts" setup>
 import { computed, markRaw } from 'vue'
-import { ElIcon } from '@cery929-ui/components/icon'
-import { Loading } from '@cery929-ui/icons-vue'
-import { useNamespace } from '@cery929-ui/hooks'
+import { ElIcon } from '@kn-ui/components/icon'
+import { Loading } from '@kn-ui/icons-vue'
+import { useNamespace } from '@kn-ui/hooks'
 import { useButton } from './use-button'
 import { buttonEmits } from './button'
 import { useButtonCustomStyle } from './button-custom'

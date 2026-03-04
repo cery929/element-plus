@@ -1,2 +1,2 @@
-import '@cery929-ui/components/base/style'
-import '@cery929-ui/theme-chalk/src/affix.scss'
+import '@kn-ui/components/base/style'
+import '@kn-ui/theme-chalk/src/affix.scss'

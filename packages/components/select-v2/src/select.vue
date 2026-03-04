@@ -82,8 +82,8 @@
                 autocapitalize="off" :aria-expanded="expanded" :aria-label="ariaLabel"
                 :class="[nsSelect.e('input'), nsSelect.is(selectSize)]" :disabled="selectDisabled" role="combobox"
                 :aria-controls="contentId" :aria-activedescendant="states.hoveringIndex >= 0
-                    ? `${contentId}-${states.hoveringIndex}`
-                    : ''
+                  ? `${contentId}-${states.hoveringIndex}`
+                  : ''
                   " :readonly="!filterable" spellcheck="false" type="text" :name="name" @input="onInput"
                 @compositionstart="handleCompositionStart" @compositionupdate="handleCompositionUpdate"
                 @compositionend="handleCompositionEnd" @keydown.up.stop.prevent="onKeyboardNavigate('backward')"
@@ -167,17 +167,17 @@
 
 <script lang="ts">
 import { computed, defineComponent, provide, reactive, toRefs } from 'vue'
-import { isArray } from '@cery929-ui/utils'
-import { ClickOutside } from '@cery929-ui/directives'
-import ElTooltip from '@cery929-ui/components/tooltip'
-import ElTag from '@cery929-ui/components/tag'
-import ElIcon from '@cery929-ui/components/icon'
-import { useCalcInputWidth, useId } from '@cery929-ui/hooks'
+import { isArray } from '@kn-ui/utils'
+import { ClickOutside } from '@kn-ui/directives'
+import ElTooltip from '@kn-ui/components/tooltip'
+import ElTag from '@kn-ui/components/tag'
+import ElIcon from '@kn-ui/components/icon'
+import { useCalcInputWidth, useId } from '@kn-ui/hooks'
 import ElSelectMenu from './select-dropdown'
 import useSelect from './useSelect'
 import { selectV2Emits, selectV2Props } from './defaults'
 import { selectV2InjectionKey } from './token'
-import { BORDER_HORIZONTAL_WIDTH } from '@cery929-ui/constants'
+import { BORDER_HORIZONTAL_WIDTH } from '@kn-ui/constants'
 
 export default defineComponent({
   name: 'ElSelectV2',

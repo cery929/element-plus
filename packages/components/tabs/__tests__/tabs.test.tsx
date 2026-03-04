@@ -1,7 +1,7 @@
 import { defineComponent, nextTick, ref } from 'vue'
 import { flushPromises, mount } from '@vue/test-utils'
 import { describe, expect, test, vi } from 'vitest'
-import { EVENT_CODE } from '@cery929-ui/constants'
+import { EVENT_CODE } from '@kn-ui/constants'
 import Tabs from '../src/tabs'
 import TabPane from '../src/tab-pane.vue'
 import TabNav from '../src/tab-nav'
@@ -9,7 +9,7 @@ import TabNav from '../src/tab-nav'
 import type {
   TabPaneName,
   TabsPaneContext,
-} from '@cery929-ui/components/tabs'
+} from '@kn-ui/components/tabs'
 
 const Comp = defineComponent({
   components: {

@@ -1,4 +1,4 @@
-import { isObject } from '@cery929-ui/utils'
+import { isObject } from '@kn-ui/utils'
 
 import type { PanelItemState } from '../type'
 

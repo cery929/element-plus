@@ -49,7 +49,7 @@ const emit = defineEmits(${PROP_NAME}Emits)
 EOF
 
 cat > $DIRNAME/src/$INPUT_NAME.ts <<EOF
-import { buildProps } from '@cery929-ui/utils'
+import { buildProps } from '@kn-ui/utils'
 
 import type { ExtractPropTypes, ExtractPublicPropTypes } from 'vue'
 
@@ -68,9 +68,9 @@ export type ${NAME}Instance = InstanceType<typeof $NAME> & unknown
 EOF
 
 cat <<EOF >"$DIRNAME/index.ts"
-import { withInstall } from '@cery929-ui/utils'
+import { withInstall } from '@kn-ui/utils'
 import $NAME from './src/$INPUT_NAME.vue'
-import type { SFCWithInstall } from '@cery929-ui/utils'
+import type { SFCWithInstall } from '@kn-ui/utils'
 
 export const El$NAME: SFCWithInstall<typeof $NAME> = withInstall($NAME)
 export default El$NAME
@@ -96,13 +96,13 @@ describe('$NAME.vue', () => {
 EOF
 
 cat > $DIRNAME/style/index.ts <<EOF
-import '@cery929-ui/components/base/style'
-import '@cery929-ui/theme-chalk/src/$INPUT_NAME.scss'
+import '@kn-ui/components/base/style'
+import '@kn-ui/theme-chalk/src/$INPUT_NAME.scss'
 EOF
 
 cat > $DIRNAME/style/css.ts <<EOF
-import '@cery929-ui/components/base/style/css'
-import '@cery929-ui/theme-chalk/el-$INPUT_NAME.css'
+import '@kn-ui/components/base/style/css'
+import '@kn-ui/theme-chalk/el-$INPUT_NAME.css'
 EOF
 
 cat > $FILE_PATH/theme-chalk/src/$INPUT_NAME.scss <<EOF
@@ -112,4 +112,4 @@ perl -0777 -pi -e "s/\n\n/\nexport * from '.\/$INPUT_NAME'\n\n/" $FILE_PATH/comp
 
 TYPE_PATH=$(cd "$(dirname "${BASH_SOURCE[0]}")/../typings" && pwd)
 
-perl -0777 -pi -e "s/\n\s+}/\n    El$NAME: typeof import('cery929-ui')['El$NAME']\n  }/" $TYPE_PATH/global.d.ts
+perl -0777 -pi -e "s/\n\s+}/\n    El$NAME: typeof import('kn-ui')['El$NAME']\n  }/" $TYPE_PATH/global.d.ts

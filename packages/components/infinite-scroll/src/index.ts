@@ -6,8 +6,8 @@ import {
   getScrollContainer,
   isFunction,
   throwError,
-} from '@cery929-ui/utils'
-import { useDeprecated } from '@cery929-ui/hooks'
+} from '@kn-ui/utils'
+import { useDeprecated } from '@kn-ui/hooks'
 
 import type { ComponentPublicInstance, ObjectDirective } from 'vue'
 

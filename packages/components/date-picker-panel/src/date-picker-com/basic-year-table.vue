@@ -18,9 +18,9 @@
 <script lang="ts" setup>
 import { computed, nextTick, ref, watch } from 'vue'
 import dayjs from 'dayjs'
-import { useLocale, useNamespace } from '@cery929-ui/hooks'
-import { rangeArr } from '@cery929-ui/components/time-picker'
-import { castArray, hasClass } from '@cery929-ui/utils'
+import { useLocale, useNamespace } from '@kn-ui/hooks'
+import { rangeArr } from '@kn-ui/components/time-picker'
+import { castArray, hasClass } from '@kn-ui/utils'
 import { basicYearTableProps } from '../props/basic-year-table'
 import { getValidDateOfYear } from '../utils'
 import ElDatePickerCell from './basic-cell-render'

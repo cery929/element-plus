@@ -18,8 +18,8 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { useLocale, useNamespace } from '@cery929-ui/hooks'
-import { addUnit } from '@cery929-ui/utils'
+import { useLocale, useNamespace } from '@kn-ui/hooks'
+import { addUnit } from '@kn-ui/utils'
 import ImgEmpty from './img-empty.vue'
 
 import type { CSSProperties } from 'vue'

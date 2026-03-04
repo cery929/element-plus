@@ -6,7 +6,7 @@ import {
   isFunction,
   isString,
   isUndefined,
-} from '@cery929-ui/utils'
+} from '@kn-ui/utils'
 import NotificationConstructor from './notification.vue'
 import { notificationTypes } from './notification'
 

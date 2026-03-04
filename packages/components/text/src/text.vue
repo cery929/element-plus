@@ -6,9 +6,9 @@
 
 <script lang="ts" setup>
 import { computed, onMounted, onUpdated, ref, useAttrs } from 'vue'
-import { useNamespace } from '@cery929-ui/hooks'
-import { useFormSize } from '@cery929-ui/components/form'
-import { isUndefined } from '@cery929-ui/utils'
+import { useNamespace } from '@kn-ui/hooks'
+import { useFormSize } from '@kn-ui/components/form'
+import { isUndefined } from '@kn-ui/utils'
 
 import type { TextProps } from './text'
 

@@ -1,8 +1,8 @@
-import { withInstall, withNoopInstall } from '@cery929-ui/utils'
+import { withInstall, withNoopInstall } from '@kn-ui/utils'
 import Avatar from './src/avatar.vue'
 import AvatarGroup from './src/avatar-group'
 
-import type { SFCWithInstall } from '@cery929-ui/utils'
+import type { SFCWithInstall } from '@kn-ui/utils'
 
 export const ElAvatar: SFCWithInstall<typeof Avatar> & {
   AvatarGroup: typeof AvatarGroup

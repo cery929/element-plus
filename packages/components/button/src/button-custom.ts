@@ -1,7 +1,7 @@
 import { computed } from 'vue'
 import { TinyColor } from '@ctrl/tinycolor'
-import { useNamespace } from '@cery929-ui/hooks'
-import { useFormDisabled } from '@cery929-ui/components/form'
+import { useNamespace } from '@kn-ui/hooks'
+import { useFormDisabled } from '@kn-ui/components/form'
 
 import type { ButtonProps } from './button'
 

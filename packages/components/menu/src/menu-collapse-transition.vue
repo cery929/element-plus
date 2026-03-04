@@ -5,8 +5,8 @@
 </template>
 
 <script lang="ts" setup>
-import { useNamespace } from '@cery929-ui/hooks'
-import { addClass, hasClass, removeClass } from '@cery929-ui/utils'
+import { useNamespace } from '@kn-ui/hooks'
+import { addClass, hasClass, removeClass } from '@kn-ui/utils'
 
 import type { BaseTransitionProps, TransitionProps } from 'vue'
 

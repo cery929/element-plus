@@ -6,7 +6,7 @@
 
 <script lang="ts" setup>
 import { computed, useSlots } from 'vue'
-import { useNamespace } from '@cery929-ui/hooks'
+import { useNamespace } from '@kn-ui/hooks'
 
 import type { Component, VNode } from 'vue'
 

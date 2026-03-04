@@ -7,7 +7,7 @@ import {
   Loading,
   SuccessFilled,
   WarningFilled,
-} from '@cery929-ui/icons-vue'
+} from '@kn-ui/icons-vue'
 import { definePropType } from './props'
 
 import type { Component } from 'vue'

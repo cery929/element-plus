@@ -22,7 +22,7 @@ import {
   isFunction,
   isString,
   keysOf,
-} from '@cery929-ui/utils'
+} from '@kn-ui/utils'
 
 import type {
   CSSProperties,
@@ -31,7 +31,7 @@ import type {
   Ref,
   SetupContext,
 } from 'vue'
-import type { UseNamespaceReturn } from '@cery929-ui/hooks'
+import type { UseNamespaceReturn } from '@kn-ui/hooks'
 import type { PosInfo, TourGap, TourMask } from './types'
 import type {
   ComputePositionReturn,

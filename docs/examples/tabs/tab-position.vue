@@ -17,7 +17,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-import type { TabsInstance } from 'cery929-ui'
+import type { TabsInstance } from 'kn-ui'
 
 const tabPosition = ref<TabsInstance['tabPosition']>('left')
 </script>

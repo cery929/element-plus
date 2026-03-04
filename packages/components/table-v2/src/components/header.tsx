@@ -7,8 +7,8 @@ import {
   ref,
   unref,
 } from 'vue'
-import { useNamespace } from '@cery929-ui/hooks'
-import { ensureArray } from '@cery929-ui/utils'
+import { useNamespace } from '@kn-ui/hooks'
+import { ensureArray } from '@kn-ui/utils'
 import { tableV2HeaderProps } from '../header'
 import { enforceUnit } from '../utils'
 import { TABLE_V2_GRID_INJECTION_KEY } from '../tokens'

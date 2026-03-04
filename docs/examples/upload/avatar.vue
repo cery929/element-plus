@@ -10,10 +10,10 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { ElMessage } from 'cery929-ui'
-import { Plus } from '@cery929-ui/icons-vue'
+import { ElMessage } from 'kn-ui'
+import { Plus } from '@kn-ui/icons-vue'
 
-import type { UploadProps } from 'cery929-ui'
+import type { UploadProps } from 'kn-ui'
 
 const imageUrl = ref('')
 

@@ -13,9 +13,9 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { Plus } from '@cery929-ui/icons-vue'
+import { Plus } from '@kn-ui/icons-vue'
 
-import type { UploadProps, UploadUserFile } from 'cery929-ui'
+import type { UploadProps, UploadUserFile } from 'kn-ui'
 
 const fileList = ref<UploadUserFile[]>([
   {

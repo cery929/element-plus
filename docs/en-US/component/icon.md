@@ -11,7 +11,7 @@ Element Plus provides a set of common icons.
 
 - If you want to **use directly** like the example, you need to [globally register](https://v3.vuejs.org/guide/component-registration.html#global-registration) the components before using it.
 
-- If you want to see all available SVG icons please check [@cery929-ui/icons-vue@1.x](https://unpkg.com/browse/@cery929-ui/icons-vue@1/dist/es/)[@cery929-ui/icons-vue@latest](https://unpkg.com/browse/@cery929-ui/icons-vue@latest/dist/types/components/) and the source [element-plus-icons](https://github.com/element-plus/element-plus-icons) out or [Icon Collection](#icon-collection)
+- If you want to see all available SVG icons please check [@kn-ui/icons-vue@1.x](https://unpkg.com/browse/@kn-ui/icons-vue@1/dist/es/)[@kn-ui/icons-vue@latest](https://unpkg.com/browse/@kn-ui/icons-vue@latest/dist/types/components/) and the source [element-plus-icons](https://github.com/element-plus/element-plus-icons) out or [Icon Collection](#icon-collection)
 
 ## Installation
 
@@ -22,28 +22,28 @@ Choose a package manager you like.
 ::: code-group
 
 ```shell [npm]
-$ npm install @cery929-ui/icons-vue
+$ npm install @kn-ui/icons-vue
 ```
 
 ```shell [yarn]
-$ yarn add @cery929-ui/icons-vue
+$ yarn add @kn-ui/icons-vue
 ```
 
 ```shell [pnpm]
-$ pnpm install @cery929-ui/icons-vue
+$ pnpm install @kn-ui/icons-vue
 ```
 
 :::
 
 ### Register All Icons
 
-You need import all icons from `@cery929-ui/icons-vue` and register them globally.
+You need import all icons from `@kn-ui/icons-vue` and register them globally.
 
 ```ts
 // main.ts
 
 // if you're using CDN, please remove this line.
-import * as ElementPlusIconsVue from '@cery929-ui/icons-vue'
+import * as ElementPlusIconsVue from '@kn-ui/icons-vue'
 
 const app = createApp(App)
 for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
@@ -64,13 +64,13 @@ You can also use other CDN providers.
 #### unpkg
 
 ```html
-<script src="//unpkg.com/@cery929-ui/icons-vue"></script>
+<script src="//unpkg.com/@kn-ui/icons-vue"></script>
 ```
 
 #### jsDelivr
 
 ```html
-<script src="//cdn.jsdelivr.net/npm/@cery929-ui/icons-vue"></script>
+<script src="//cdn.jsdelivr.net/npm/@kn-ui/icons-vue"></script>
 ```
 
 :::tip
@@ -111,7 +111,7 @@ so you need to use an alias in order to render the icon, if you register `Menu` 
 ```
 
 <vp-script setup>
-import { Edit, Share, Delete, Search, Loading } from '@cery929-ui/icons-vue'
+import { Edit, Share, Delete, Search, Loading } from '@kn-ui/icons-vue'
 </vp-script>
 
 <ElRow>

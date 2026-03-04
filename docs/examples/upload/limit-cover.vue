@@ -17,9 +17,9 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { genFileId } from 'cery929-ui'
+import { genFileId } from 'kn-ui'
 
-import type { UploadInstance, UploadProps, UploadRawFile } from 'cery929-ui'
+import type { UploadInstance, UploadProps, UploadRawFile } from 'kn-ui'
 
 const upload = ref<UploadInstance>()
 

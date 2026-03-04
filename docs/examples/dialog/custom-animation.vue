@@ -33,7 +33,7 @@
 <script lang="ts" setup>
 import { computed, ref } from 'vue'
 
-import type { DialogTransition } from 'cery929-ui'
+import type { DialogTransition } from 'kn-ui'
 
 const dialogVisible = ref(false)
 const currentAnimation = ref('fade')

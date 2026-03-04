@@ -8,7 +8,7 @@ import {
   toRef,
   watch,
 } from 'vue'
-import { useNamespace, useOrderedChildren } from '@cery929-ui/hooks'
+import { useNamespace, useOrderedChildren } from '@kn-ui/hooks'
 import { useContainer, useResize, useSize } from './hooks'
 import { splitterEmits } from './splitter'
 import { splitterRootContextKey } from './type'

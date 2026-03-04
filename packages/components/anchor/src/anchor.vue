@@ -18,7 +18,7 @@ import {
   watch,
 } from 'vue'
 import { useEventListener } from '@vueuse/core'
-import { useNamespace } from '@cery929-ui/hooks'
+import { useNamespace } from '@kn-ui/hooks'
 import {
   animateScrollTo,
   getElement,
@@ -28,8 +28,8 @@ import {
   isUndefined,
   isWindow,
   throttleByRaf,
-} from '@cery929-ui/utils'
-import { CHANGE_EVENT } from '@cery929-ui/constants'
+} from '@kn-ui/utils'
+import { CHANGE_EVENT } from '@kn-ui/constants'
 import { anchorEmits } from './anchor'
 import { anchorKey } from './constants'
 

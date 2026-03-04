@@ -1,8 +1,8 @@
 import { computed, ref } from 'vue'
 import { isEqual } from 'lodash-unified'
-import { useLocale } from '@cery929-ui/hooks/use-locale'
-import { isArray } from '@cery929-ui/utils'
-import { UPDATE_MODEL_EVENT } from '@cery929-ui/constants'
+import { useLocale } from '@kn-ui/hooks/use-locale'
+import { isArray } from '@kn-ui/utils'
+import { UPDATE_MODEL_EVENT } from '@kn-ui/constants'
 import { dayOrDaysToDate, formatter, parseDate, valueEquals } from '../utils'
 
 import type { Dayjs } from 'dayjs'

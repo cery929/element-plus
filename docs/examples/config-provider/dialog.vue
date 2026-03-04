@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { computed, nextTick, ref, shallowReactive } from 'vue'
 
-import type { ButtonInstance, DialogTransition } from 'cery929-ui'
+import type { ButtonInstance, DialogTransition } from 'kn-ui'
 
 type GlobalConfig = {
   alignCenter: boolean

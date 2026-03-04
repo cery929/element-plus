@@ -1,152 +1,132 @@
-<p align="center">
-  <img width="300px" src="https://user-images.githubusercontent.com/10731096/95823103-9ce15780-0d5f-11eb-8010-1bd1b5910d4f.png">
-</p>
+- 这是二次开发源码库的使用手册
+- 本手册主要介绍如何使用本源码库进行二次开发
 
-<p align="center">
-  <a href="https://www.npmjs.org/package/element-plus">
-    <img src="https://img.shields.io/npm/v/element-plus.svg" />
-  </a>
-  <a href="https://github.com/element-plus/element-plus">
-    <img src="https://img.shields.io/badge/node-%20%3E%3D%2020-47c219" />
-  </a>
-  <a href="https://npmcharts.com/compare/element-plus?minimal=true">
-    <img src="https://img.shields.io/npm/dm/element-plus.svg" />
-  </a>
-  <a href="https://codecov.io/gh/element-plus/element-plus">
-    <img src="https://codecov.io/gh/element-plus/element-plus/branch/dev/graph/badge.svg?token=BKSBO2GLZI"/>
-  </a>
-  <br>
-</p>
+## 1. 环境准备
 
-<p align="center">Element Plus - A Vue.js 3 UI library</p>
+Node.js >= 20
 
-- 💪 Vue 3 Composition API
-- 🔥 Written in TypeScript
+pnpm >= 10.18
 
-## Getting Started
+Git > 2.20
 
-Alright, if you're looking to make Element Plus better, keep reading.
-For developers using Element Plus to build websites, please visit [Getting Started](https://element-plus.org/).
+## 2. 安装依赖
 
-- 中国大陆[加速镜像站点](https://cn.element-plus.org/zh-CN/)
+```shell
+pnpm i
+```
 
-## Breaking Change List
+## 3. 开发调试 (同时调试，并修改文档)
 
-The first stable release of Element Plus, suitable for production use, was released on February 7, 2022. The API is stable now, and here's a full list on how to upgrade from [Element UI](https://element.eleme.io) to Element Plus.
+```shell
+pnpm docs:dev
+```
 
-You can find the breaking change list here: [Breaking Change List](https://github.com/element-plus/element-plus/discussions/5658).
+# 📜 Element Plus 脚本命令详解
 
-### Migration Tool :hammer_and_wrench:
+这是 Element Plus 项目中的 scripts 配置，包含了开发、测试、构建、文档生成等一系列自动化命令。下面是每个命令的详细说明。
 
-We have made a migration tool for you to migrate your project from [Element UI](https://element.eleme.io) to Element Plus.
+## 📋 命令分类说明
 
-You can find the [gogocode migration tool](https://github.com/thx/gogocode/tree/main/packages/gogocode-plugin-element) here.
+### 1. 提交相关
 
-We have tested this on [Vue Element Admin](https://github.com/PanJiaChen/vue-element-admin). You can find the transpiled code [here](https://github.com/gogocodeio/vue-element-admin).
+| 命令 | 说明                                                                               |
+| ---- | ---------------------------------------------------------------------------------- |
+| cz   | 运行 czg，使用 Commitizen 规范生成符合约定式提交（Conventional Commits）的提交信息 |
 
-### Playground
+### 2. 测试相关
 
-You can also try out Element Plus with its built-in component playground.
+| 命令          | 说明                                                               |
+| ------------- | ------------------------------------------------------------------ |
+| test          | 运行 Vitest 单元测试                                               |
+| test:coverage | 运行 Vitest 单元测试并生成代码覆盖率报告                           |
+| test:ssr      | 使用指定的 SSR（服务端渲染）配置文件运行测试                       |
+| prepare:e2e   | 准备端到端测试环境，如果 docs 目录下没有编译好的文件，则先构建文档 |
 
-#### Try it with our built-in playground
+### 3. 开发相关
 
-[Playground](https://element-plus.run/)
+| 命令           | 说明                                               |
+| -------------- | -------------------------------------------------- |
+| dev            | 启动 play 目录下的开发调试项目（用于实时调试组件） |
+| gen            | 执行 scripts/gc.sh 脚本，用于生成新组件的模板文件  |
+| gen:version    | 运行 gen-version.ts 脚本，生成版本信息文件         |
+| diff:table     | 运行 build-table.ts 脚本，生成组件差异对比表格     |
+| update:version | 运行 update-version.ts 脚本，更新项目版本号        |
 
-#### Try it with CodeSandbox
+### 4. 国际化相关
 
-[![Edit element-plus](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/p/github/element-plus/element-plus-demo/main)
+| 命令        | 说明                                                         |
+| ----------- | ------------------------------------------------------------ |
+| locale:sync | 运行 sync-locale.ts 脚本同步语言包文件，然后执行 locale:lint |
+| locale:lint | 使用 ESLint 检查 packages/locale/lang 目录下的语言包文件     |
 
-<p align="center">
-  <b>Special thanks to our generous sponsors:</b>
-</p>
-<br/>
-<p align="center">
-  <b>Platinum Sponsors</b>
-</p>
-<table align="center" cellspacing="0" cellpadding="0">
-  <tbody>
-    <tr>
-      <td align="center" valign="middle">
-        <a href="https://www.jnpfsoft.com/index.html?from=elementUI" target="_blank">
-          <img width="150px" src="https://github.com/element-plus/element-plus/assets/17680888/6a044d82-c393-48ab-90b8-de0d3aad1624">
-        </a>
-      </td>
-      <td align="center" valign="middle">
-        <a href="http://github.crmeb.net/u/Element?from=element-plus" target="_blank">
-          <img width="150px" src="https://github.com/user-attachments/assets/18079452-986c-4c6e-84ec-fb6175c26567">
-        </a>
-      </td>
-    </tr>
-    </tbody>
-</table>
-<p align="center">
-  <b>Gold Sponsors</b>
-</p>
-<table align="center" cellspacing="0" cellpadding="0">
-  <tbody>
-    <tr>
-      <td align="center" valign="middle">
-        <a href="https://el.frsimple.com" target="_blank">
-          <img width="130px" src="https://github.com/user-attachments/assets/27ec522b-5de2-4c61-88b9-be47ff3ccc69">
-        </a>
-      </td>
-      <td align="center" valign="middle">
-        <a href="https://bit.dev/?from=element-ui" target="_blank">
-          <img width="130px" src="https://user-images.githubusercontent.com/10095631/41342907-e44e7196-6f2f-11e8-92f2-47702dc8f059.png">
-        </a>
-      </td>
-    </tr>
-  </tbody>
-</table>
+### 5. 清理相关
 
----
+| 命令       | 说明                                   |
+| ---------- | -------------------------------------- |
+| clean      | 先清理 dist 目录，然后递归清理所有子包 |
+| clean:dist | 使用 rimraf 删除根目录的 dist 文件夹   |
 
-## Translations
+### 6. 构建相关
 
-Element Plus has been translated into multiple languages. You can click [here](https://crowdin.com/project/element-plus) to help us update the translations or apply to become a proofreader.
+| 命令        | 说明                                                         |
+| ----------- | ------------------------------------------------------------ |
+| build       | 进入 internal/build 目录并执行构建主流程                     |
+| build:theme | 进入 packages/theme-chalk 目录构建主题样式                   |
+| stub        | 递归执行所有子包的 stub 命令（用于生成 TypeScript 类型声明） |
 
-For now, we are only providing English and Chinese versions due to limited resources, but we are looking forward to translating it into more languages. Please visit the link
-above and leave a message if you would like to help translate Element Plus into your preferred language.
+### 7. 代码质量相关
 
-### How to help translate
+| 命令        | 说明                                                        |
+| ----------- | ----------------------------------------------------------- |
+| format      | 使用 Prettier 格式化所有文件（实验性功能）                  |
+| lint        | 使用 ESLint 检查所有相关文件（包括 .vue、.js、.ts、.md 等） |
+| lint:fix    | 运行 lint 并自动修复可修复的问题                            |
+| lint:commit | 运行 commitlint 检查提交信息是否符合规范                    |
 
-See how to help translate in [Translating Element Plus](https://element-plus.org/en-US/guide/translation.html).
+### 8. TypeScript 类型检查
 
-## Stay tuned :eyes:
+| 命令                  | 说明                                                       |
+| --------------------- | ---------------------------------------------------------- |
+| typecheck             | 并行运行所有 typecheck: 开头的类型检查命令                 |
+| typecheck:web         | 检查 Web 相关代码的类型（使用 tsconfig.web.json）          |
+| typecheck:play        | 检查 play 调试项目的类型（使用 tsconfig.play.json）        |
+| typecheck:node        | 检查 Node.js 相关代码的类型（使用 tsconfig.node.json）     |
+| typecheck:vite-config | 检查 Vite 配置文件的类型（使用 tsconfig.vite-config.json） |
+| typecheck:vitest      | 检查 Vitest 测试文件的类型（使用 tsconfig.vitest.json）    |
 
-Join our [Discord](https://discord.com/invite/gXK9XNzW3X) to start communicating with everybody.
+### 9. 文档相关
 
-## This thing is broken, I should help improve it!
+| 命令                     | 说明                                      |
+| ------------------------ | ----------------------------------------- |
+| docs:dev                 | 进入 docs 目录启动文档开发服务器          |
+| docs:build               | 进入 docs 目录构建文档静态文件            |
+| docs:serve               | 进入 docs 目录预览构建好的文档            |
+| docs:gen-locale          | 进入 docs 目录生成文档的语言包            |
+| docs:crowdin-credentials | 进入 docs 目录处理 Crowdin 翻译平台的凭证 |
 
-Awesommmmmmee. Everything you need is down below. You can also refer to
-[CONTRIBUTING](https://github.com/element-plus/element-plus/blob/dev/CONTRIBUTING.md) and
-[Code of Conduct](https://github.com/element-plus/element-plus/blob/dev/CODE_OF_CONDUCT.md)
-where you'll find the same information listed below.
+### 10. 生命周期钩子
 
-## I would like to become a part of the development team!
+| 命令        | 说明                                                                        |
+| ----------- | --------------------------------------------------------------------------- |
+| prepare     | 运行 Husky 初始化 Git 钩子（npm install 后自动执行）                        |
+| postinstall | npm install 完成后自动执行：生成 stub、生成版本信息、启动 metadata 开发服务 |
 
-Welcome :star_struck:! We are looking for talented developers to join us and make Element Plus better! If you're interested in joining the development team, please
-reach out to us -- you're more than welcome to join us! :heart:
+## 🎯 常用工作流示例
 
-We are now looking for experts in `Testing`, `GitHub Actions` and `PM`. If you feel like you can and are willing to help, please don't hesitate to reach out to us. :pray:
+### 开发一个新组件
 
-## Contributors
+```bash
+pnpm gen        # 生成组件模板
+pnpm dev        # 启动调试服务
+pnpm test       # 运行测试
+pnpm lint       # 代码检查
+pnpm build      # 构建组件
 
-This project exists thanks to all the people who contribute.
+```
 
-And thank you to all our backers! 🙏
+```bash
+pnpm docs:dev   # 本地预览文档
+pnpm docs:build # 构建文档静态文件
+pnpm docs:serve # 预览构建结果
 
-<a href="https://openomy.app/github/element-plus/element-plus" target="_blank" style="display: block; width: 100%;" align="center">
-  <img src="https://openomy.app/svg?repo=element-plus/element-plus&chart=bubble&latestMonth=3" target="_blank" alt="Contribution Leaderboard" style="display: block; width: 100%;" />
-</a>
-
-<hr />
-
-<a href="https://github.com/element-plus/element-plus/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=element-plus/element-plus" />
-</a>
-
-## License
-
-Element Plus is open source software licensed as
-[MIT](https://github.com/element-plus/element-plus/blob/master/LICENSE).
+```

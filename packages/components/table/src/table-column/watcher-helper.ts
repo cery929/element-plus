@@ -1,5 +1,5 @@
 import { getCurrentInstance, watch } from 'vue'
-import { hasOwn, isUndefined } from '@cery929-ui/utils'
+import { hasOwn, isUndefined } from '@kn-ui/utils'
 import { parseMinWidth, parseWidth } from '../util'
 
 import type { ComputedRef } from 'vue'

@@ -30,8 +30,8 @@
 
 <script lang="ts" setup>
 import { computed, inject } from 'vue'
-import { ElIcon } from '@cery929-ui/components/icon'
-import { useNamespace } from '@cery929-ui/hooks'
+import { ElIcon } from '@kn-ui/components/icon'
+import { useNamespace } from '@kn-ui/hooks'
 import { TIMELINE_INJECTION_KEY } from './tokens'
 
 import type { TimelineProvider } from './tokens'

@@ -25,13 +25,13 @@ import {
   isPlainObject,
   isUndefined,
   scrollIntoView,
-} from '@cery929-ui/utils'
+} from '@kn-ui/utils'
 import {
   CHANGE_EVENT,
   EVENT_CODE,
   MINIMUM_INPUT_WIDTH,
   UPDATE_MODEL_EVENT,
-} from '@cery929-ui/constants'
+} from '@kn-ui/constants'
 import {
   useComposition,
   useEmptyValues,
@@ -39,17 +39,17 @@ import {
   useId,
   useLocale,
   useNamespace,
-} from '@cery929-ui/hooks'
+} from '@kn-ui/hooks'
 import {
   useFormDisabled,
   useFormItem,
   useFormItemInputId,
   useFormSize,
-} from '@cery929-ui/components/form'
+} from '@kn-ui/components/form'
 
 import type { Component } from 'vue'
-import type { TooltipInstance } from '@cery929-ui/components/tooltip'
-import type { ScrollbarInstance } from '@cery929-ui/components/scrollbar'
+import type { TooltipInstance } from '@kn-ui/components/tooltip'
+import type { ScrollbarInstance } from '@kn-ui/components/scrollbar'
 import type { SelectEmits, SelectProps } from './select'
 import type {
   OptionBasic,

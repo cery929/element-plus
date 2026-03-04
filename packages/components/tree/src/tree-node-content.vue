@@ -1,7 +1,7 @@
 <script lang="ts">
 import { defineComponent, h, inject, renderSlot } from 'vue'
-import ElText from '@cery929-ui/components/text'
-import { useNamespace } from '@cery929-ui/hooks'
+import ElText from '@kn-ui/components/text'
+import { useNamespace } from '@kn-ui/hooks'
 import { NODE_INSTANCE_INJECTION_KEY, ROOT_TREE_INJECTION_KEY } from './tokens'
 
 import type { ComponentInternalInstance } from 'vue'

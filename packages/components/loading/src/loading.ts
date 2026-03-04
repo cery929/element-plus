@@ -11,11 +11,11 @@ import {
   withCtx,
   withDirectives,
 } from 'vue'
-import { removeClass } from '@cery929-ui/utils'
-import { useGlobalComponentSettings } from '@cery929-ui/components/config-provider'
+import { removeClass } from '@kn-ui/utils'
+import { useGlobalComponentSettings } from '@kn-ui/components/config-provider'
 
 import type { AppContext, VNode } from 'vue'
-import type { UseNamespaceReturn } from '@cery929-ui/hooks'
+import type { UseNamespaceReturn } from '@kn-ui/hooks'
 import type { LoadingOptionsResolved } from './types'
 
 export function createLoadingComponent(

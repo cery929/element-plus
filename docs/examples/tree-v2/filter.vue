@@ -7,7 +7,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-import type { TreeNodeData, TreeV2Instance } from 'cery929-ui'
+import type { TreeNodeData, TreeV2Instance } from 'kn-ui'
 
 interface Tree {
   id: string

@@ -1,9 +1,9 @@
-import { withInstall, withNoopInstall } from '@cery929-ui/utils'
+import { withInstall, withNoopInstall } from '@kn-ui/utils'
 import Select from './src/select.vue'
 import Option from './src/option.vue'
 import OptionGroup from './src/option-group.vue'
 
-import type { SFCWithInstall } from '@cery929-ui/utils'
+import type { SFCWithInstall } from '@kn-ui/utils'
 
 export const ElSelect: SFCWithInstall<typeof Select> & {
   Option: typeof Option

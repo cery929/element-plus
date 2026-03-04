@@ -14,10 +14,10 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { ElIcon } from '@cery929-ui/components/icon'
-import { useGlobalConfig } from '@cery929-ui/components/config-provider'
-import { useDeprecated, useNamespace } from '@cery929-ui/hooks'
-import { isBoolean } from '@cery929-ui/utils'
+import { ElIcon } from '@kn-ui/components/icon'
+import { useGlobalConfig } from '@kn-ui/components/config-provider'
+import { useDeprecated, useNamespace } from '@kn-ui/hooks'
+import { isBoolean } from '@kn-ui/utils'
 import { linkEmits } from './link'
 
 import type { LinkProps } from './link'

@@ -1,5 +1,5 @@
 import { renderSlot } from 'vue'
-import ElEmpty from '@cery929-ui/components/empty'
+import ElEmpty from '@kn-ui/components/empty'
 
 import type { CSSProperties, FunctionalComponent } from 'vue'
 

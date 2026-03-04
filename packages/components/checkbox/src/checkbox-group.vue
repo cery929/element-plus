@@ -1,21 +1,8 @@
 <template>
-  <component
-    :is="tag"
-    :id="groupId"
-    :class="ns.b('group')"
-    role="group"
-    :aria-label="
-      !isLabeledByFormItem ? ariaLabel || 'checkbox-group' : undefined
-    "
-    :aria-labelledby="isLabeledByFormItem ? formItem?.labelId : undefined"
-  >
+  <component :is="tag" :id="groupId" :class="ns.b('group')" role="group" :aria-label="!isLabeledByFormItem ? ariaLabel || 'checkbox-group' : undefined
+    " :aria-labelledby="isLabeledByFormItem ? formItem?.labelId : undefined">
     <slot>
-      <component
-        :is="optionComponent"
-        v-for="(item, index) in options"
-        :key="index"
-        v-bind="getOptionProps(item)"
-      />
+      <component :is="optionComponent" v-for="(item, index) in options" :key="index" v-bind="getOptionProps(item)" />
     </slot>
   </component>
 </template>
@@ -23,14 +10,14 @@
 <script lang="ts" setup>
 import { computed, nextTick, provide, toRefs, watch } from 'vue'
 import { isEqual, omit, pick } from 'lodash-unified'
-import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@cery929-ui/constants'
-import { debugWarn } from '@cery929-ui/utils'
-import { useNamespace } from '@cery929-ui/hooks'
+import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@kn-ui/constants'
+import { debugWarn } from '@kn-ui/utils'
+import { useNamespace } from '@kn-ui/hooks'
 import {
   useFormDisabled,
   useFormItem,
   useFormItemInputId,
-} from '@cery929-ui/components/form'
+} from '@kn-ui/components/form'
 import { checkboxDefaultProps, checkboxGroupEmits } from './checkbox-group'
 import { checkboxGroupContextKey } from './constants'
 import ElCheckbox from './checkbox.vue'

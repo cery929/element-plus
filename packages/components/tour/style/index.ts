@@ -1,3 +1,3 @@
-import '@cery929-ui/components/base/style'
-import '@cery929-ui/components/button/style'
-import '@cery929-ui/theme-chalk/src/tour.scss'
+import '@kn-ui/components/base/style'
+import '@kn-ui/components/button/style'
+import '@kn-ui/theme-chalk/src/tour.scss'

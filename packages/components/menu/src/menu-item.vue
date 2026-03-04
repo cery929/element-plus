@@ -36,9 +36,9 @@ import {
   reactive,
   toRef,
 } from 'vue'
-import ElTooltip from '@cery929-ui/components/tooltip'
-import { debugWarn, isPropAbsent, throwError } from '@cery929-ui/utils'
-import { useNamespace } from '@cery929-ui/hooks'
+import ElTooltip from '@kn-ui/components/tooltip'
+import { debugWarn, isPropAbsent, throwError } from '@kn-ui/utils'
+import { useNamespace } from '@kn-ui/hooks'
 import useMenu from './use-menu'
 import { menuItemEmits } from './menu-item'
 import { MENU_INJECTION_KEY, SUB_MENU_INJECTION_KEY } from './tokens'

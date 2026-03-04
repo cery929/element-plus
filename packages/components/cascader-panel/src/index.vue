@@ -1,15 +1,7 @@
 <template>
-  <div
-    :class="[ns.b('panel'), ns.is('bordered', border)]"
-    @keydown="handleKeyDown"
-  >
-    <el-cascader-menu
-      v-for="(menu, index) in menus"
-      :key="index"
-      :ref="(item) => (menuList[index] = item as CascaderMenuInstance)"
-      :index="index"
-      :nodes="[...menu]"
-    >
+  <div :class="[ns.b('panel'), ns.is('bordered', border)]" @keydown="handleKeyDown">
+    <el-cascader-menu v-for="(menu, index) in menus" :key="index"
+      :ref="(item) => (menuList[index] = item as CascaderMenuInstance)" :index="index" :nodes="[...menu]">
       <template #empty>
         <slot name="empty" />
       </template>
@@ -39,13 +31,13 @@ import {
   isEmpty,
   scrollIntoView,
   unique,
-} from '@cery929-ui/utils'
+} from '@kn-ui/utils'
 import {
   CHANGE_EVENT,
   EVENT_CODE,
   UPDATE_MODEL_EVENT,
-} from '@cery929-ui/constants'
-import { useNamespace } from '@cery929-ui/hooks'
+} from '@kn-ui/constants'
+import { useNamespace } from '@kn-ui/hooks'
 import ElCascaderMenu from './menu.vue'
 import Store from './store'
 import Node from './node'

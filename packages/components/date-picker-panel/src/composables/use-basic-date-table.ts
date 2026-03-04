@@ -1,8 +1,8 @@
 import { computed, nextTick, ref, unref, watch } from 'vue'
 import dayjs from 'dayjs'
 import { flatten } from 'lodash-unified'
-import { useLocale, useNamespace } from '@cery929-ui/hooks'
-import { castArray, isArray } from '@cery929-ui/utils'
+import { useLocale, useNamespace } from '@kn-ui/hooks'
+import { castArray, isArray } from '@kn-ui/utils'
 import { buildPickerTable } from '../utils'
 
 import type { SetupContext } from 'vue'

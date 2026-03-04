@@ -1,8 +1,8 @@
-import { buildProps, definePropType } from '@cery929-ui/utils'
+import { buildProps, definePropType } from '@kn-ui/utils'
 import {
   virtualizedGridProps,
   virtualizedScrollbarProps,
-} from '@cery929-ui/components/virtual-list'
+} from '@kn-ui/components/virtual-list'
 import {
   classType,
   columns,

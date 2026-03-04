@@ -1,6 +1,6 @@
 import { placements } from '@popperjs/core'
-import { buildProps, definePropType } from '@cery929-ui/utils'
-import { useAriaProps } from '@cery929-ui/hooks'
+import { buildProps, definePropType } from '@kn-ui/utils'
+import { useAriaProps } from '@kn-ui/hooks'
 import { popperArrowProps, popperArrowPropsDefaults } from './arrow'
 
 import type { PopperEffect } from './popper'

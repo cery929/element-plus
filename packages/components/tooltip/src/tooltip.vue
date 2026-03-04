@@ -37,14 +37,14 @@ import {
   ElPopper,
   ElPopperArrow,
   popperArrowPropsDefaults,
-} from '@cery929-ui/components/popper'
-import { isBoolean } from '@cery929-ui/utils'
+} from '@kn-ui/components/popper'
+import { isBoolean } from '@kn-ui/utils'
 import {
   useDelayedToggle,
   useId,
   useNamespace,
   usePopperContainer,
-} from '@cery929-ui/hooks'
+} from '@kn-ui/hooks'
 import { TOOLTIP_INJECTION_KEY } from './constants'
 import { tooltipEmits, useTooltipModelToggle } from './tooltip'
 import ElTooltipTrigger from './trigger.vue'
@@ -52,10 +52,10 @@ import ElTooltipContent from './content.vue'
 import { useTooltipContentPropsDefaults } from './content'
 import { useTooltipTriggerPropsDefaults } from './trigger'
 
-import type { Mutable } from '@cery929-ui/utils'
+import type { Mutable } from '@kn-ui/utils'
 import type { TooltipContentInstance } from './content'
 import type { UseTooltipProps } from './tooltip'
-import type { PopperInstance } from '@cery929-ui/components/popper'
+import type { PopperInstance } from '@kn-ui/components/popper'
 
 defineOptions({
   name: 'ElTooltip',

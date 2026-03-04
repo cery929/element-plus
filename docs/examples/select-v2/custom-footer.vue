@@ -20,7 +20,7 @@
 <script lang="ts" setup>
 import { nextTick, ref } from 'vue'
 
-import type { CheckboxValueType, SelectV2Instance } from 'cery929-ui'
+import type { CheckboxValueType, SelectV2Instance } from 'kn-ui'
 
 const initials = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
 const select = ref<SelectV2Instance>()

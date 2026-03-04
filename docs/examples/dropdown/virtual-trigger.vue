@@ -25,9 +25,9 @@ import {
   CirclePlus,
   CirclePlusFilled,
   Plus,
-} from '@cery929-ui/icons-vue'
+} from '@kn-ui/icons-vue'
 
-import type { DropdownInstance } from 'cery929-ui'
+import type { DropdownInstance } from 'kn-ui'
 
 const dropdownRef = ref<DropdownInstance>()
 const position = ref({

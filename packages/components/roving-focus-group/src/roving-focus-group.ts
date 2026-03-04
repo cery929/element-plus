@@ -1,5 +1,5 @@
-import { buildProps, definePropType } from '@cery929-ui/utils'
-import { createCollectionWithScope } from '@cery929-ui/components/collection'
+import { buildProps, definePropType } from '@kn-ui/utils'
+import { createCollectionWithScope } from '@kn-ui/components/collection'
 
 import type {
   ExtractPropTypes,

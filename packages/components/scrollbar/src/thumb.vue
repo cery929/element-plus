@@ -10,8 +10,8 @@
 <script lang="ts" setup>
 import { computed, inject, onBeforeUnmount, ref, toRef } from 'vue'
 import { useEventListener } from '@vueuse/core'
-import { isClient, throwError } from '@cery929-ui/utils'
-import { useNamespace } from '@cery929-ui/hooks'
+import { isClient, throwError } from '@kn-ui/utils'
+import { useNamespace } from '@kn-ui/hooks'
 import { scrollbarContextKey } from './constants'
 import { BAR_MAP, renderThumbStyle } from './util'
 

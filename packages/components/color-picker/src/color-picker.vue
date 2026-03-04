@@ -48,41 +48,41 @@
 <script lang="ts" setup>
 import { computed, nextTick, provide, ref, watch } from 'vue'
 import { debounce, pick } from 'lodash-unified'
-import { ElIcon } from '@cery929-ui/components/icon'
+import { ElIcon } from '@kn-ui/components/icon'
 import { reactiveComputed } from '@vueuse/core'
-import { ClickOutside as vClickOutside } from '@cery929-ui/directives'
-import { ElTooltip } from '@cery929-ui/components/tooltip'
-import { ElButton } from '@cery929-ui/components/button'
+import { ClickOutside as vClickOutside } from '@kn-ui/directives'
+import { ElTooltip } from '@kn-ui/components/tooltip'
+import { ElButton } from '@kn-ui/components/button'
 import {
   useFormDisabled,
   useFormItem,
   useFormItemInputId,
   useFormSize,
-} from '@cery929-ui/components/form'
+} from '@kn-ui/components/form'
 import {
   useEmptyValues,
   useFocusController,
   useLocale,
   useNamespace,
-} from '@cery929-ui/hooks'
+} from '@kn-ui/hooks'
 import {
   CHANGE_EVENT,
   EVENT_CODE,
   UPDATE_MODEL_EVENT,
-} from '@cery929-ui/constants'
-import { debugWarn, getEventCode } from '@cery929-ui/utils'
-import { ArrowDown, Close } from '@cery929-ui/icons-vue'
+} from '@kn-ui/constants'
+import { debugWarn, getEventCode } from '@kn-ui/utils'
+import { ArrowDown, Close } from '@kn-ui/icons-vue'
 import { colorPickerEmits, colorPickerPropsDefaults } from './color-picker'
 import {
   ElColorPickerPanel,
   ROOT_COMMON_COLOR_INJECTION_KEY,
   colorPickerPanelProps,
-} from '@cery929-ui/components/color-picker-panel'
-import Color from '@cery929-ui/components/color-picker-panel/src/utils/color'
-import { useCommonColor } from '@cery929-ui/components/color-picker-panel/src/composables/use-common-color'
+} from '@kn-ui/components/color-picker-panel'
+import Color from '@kn-ui/components/color-picker-panel/src/utils/color'
+import { useCommonColor } from '@kn-ui/components/color-picker-panel/src/composables/use-common-color'
 
-import type { ColorPickerPanelInstance } from '@cery929-ui/components/color-picker-panel'
-import type { TooltipInstance } from '@cery929-ui/components/tooltip'
+import type { ColorPickerPanelInstance } from '@kn-ui/components/color-picker-panel'
+import type { TooltipInstance } from '@kn-ui/components/tooltip'
 import type { ColorPickerProps } from './color-picker'
 
 defineOptions({

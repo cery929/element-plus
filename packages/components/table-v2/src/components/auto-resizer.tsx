@@ -1,5 +1,5 @@
 import { defineComponent } from 'vue'
-import { useNamespace } from '@cery929-ui/hooks'
+import { useNamespace } from '@kn-ui/hooks'
 import { autoResizerProps } from '../auto-resizer'
 import { useAutoResize } from '../composables'
 

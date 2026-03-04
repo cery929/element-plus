@@ -1,6 +1,6 @@
 import { createVNode, defineComponent, h, renderSlot } from 'vue'
-import { PatchFlags, buildProps, definePropType } from '@cery929-ui/utils'
-import { useNamespace, useSameTarget } from '@cery929-ui/hooks'
+import { PatchFlags, buildProps, definePropType } from '@kn-ui/utils'
+import { useNamespace, useSameTarget } from '@kn-ui/hooks'
 
 import type {
   CSSProperties,

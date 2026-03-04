@@ -1,6 +1,6 @@
 import { defineComponent, h, inject } from 'vue'
-import { useNamespace } from '@cery929-ui/hooks'
-import ElText from '@cery929-ui/components/text'
+import { useNamespace } from '@kn-ui/hooks'
+import ElText from '@kn-ui/components/text'
 import { ROOT_TREE_INJECTION_KEY, treeNodeContentProps } from './virtual-tree'
 
 export default defineComponent({

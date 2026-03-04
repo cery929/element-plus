@@ -13,7 +13,7 @@
 <script lang="ts" setup>
 import { onMounted, ref } from 'vue'
 
-import type { ScrollbarInstance } from 'cery929-ui'
+import type { ScrollbarInstance } from 'kn-ui'
 
 type Arrayable<T> = T | T[]
 

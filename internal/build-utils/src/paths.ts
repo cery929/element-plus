@@ -7,7 +7,7 @@ export const themeRoot = resolve(pkgRoot, 'theme-chalk')
 export const hookRoot = resolve(pkgRoot, 'hooks')
 export const localeRoot = resolve(pkgRoot, 'locale')
 export const directiveRoot = resolve(pkgRoot, 'directives')
-export const epRoot = resolve(pkgRoot, 'cery929-ui')
+export const epRoot = resolve(pkgRoot, 'kn-ui')
 export const utilRoot = resolve(pkgRoot, 'utils')
 export const buildRoot = resolve(projRoot, 'internal', 'build')
 
@@ -18,8 +18,8 @@ export const vpRoot = resolve(docRoot, '.vitepress')
 
 /** `/dist` */
 export const buildOutput = resolve(projRoot, 'dist')
-/** `/dist/cery929-ui` */
-export const epOutput = resolve(buildOutput, 'cery929-ui')
+/** `/dist/kn-ui` */
+export const epOutput = resolve(buildOutput, 'kn-ui')
 
 export const projPackage = resolve(projRoot, 'package.json')
 export const compPackage = resolve(compRoot, 'package.json')

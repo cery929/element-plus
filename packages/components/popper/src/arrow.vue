@@ -4,7 +4,7 @@
 
 <script lang="ts" setup>
 import { inject, onBeforeUnmount } from 'vue'
-import { useNamespace } from '@cery929-ui/hooks'
+import { useNamespace } from '@kn-ui/hooks'
 import { POPPER_CONTENT_INJECTION_KEY } from './constants'
 
 defineOptions({

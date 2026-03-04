@@ -5,8 +5,8 @@ import {
   ArrowLeft,
   ArrowRight,
   ArrowUp,
-} from '@cery929-ui/icons-vue'
-import { useNamespace } from '@cery929-ui/hooks'
+} from '@kn-ui/icons-vue'
+import { useNamespace } from '@kn-ui/hooks'
 
 const ns = useNamespace('splitter-bar')
 

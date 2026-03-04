@@ -14,8 +14,8 @@ import {
   unref,
 } from 'vue'
 import { useEventListener } from '@vueuse/core'
-import { hasOwn, isClient, isNumber, isString } from '@cery929-ui/utils'
-import { useNamespace } from '@cery929-ui/hooks'
+import { hasOwn, isClient, isNumber, isString } from '@kn-ui/utils'
+import { useNamespace } from '@kn-ui/hooks'
 import { useCache } from '../hooks/use-cache'
 import useWheel from '../hooks/use-wheel'
 import Scrollbar from '../components/scrollbar'

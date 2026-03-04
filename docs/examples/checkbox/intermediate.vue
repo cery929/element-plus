@@ -12,7 +12,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-import type { CheckboxValueType } from 'cery929-ui'
+import type { CheckboxValueType } from 'kn-ui'
 
 const checkAll = ref(false)
 const isIndeterminate = ref(true)

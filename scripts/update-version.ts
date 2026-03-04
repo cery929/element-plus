@@ -1,6 +1,6 @@
 import consola from 'consola'
 import chalk from 'chalk'
-import { errorAndExit, getWorkspacePackages } from '@cery929-ui/build-utils'
+import { errorAndExit, getWorkspacePackages } from '@kn-ui/build-utils'
 
 import type { Project } from '@pnpm/find-workspace-packages'
 
@@ -19,14 +19,14 @@ async function main() {
   consola.log(chalk.cyan(`$TAG_VERSION: ${tagVersion}`))
   consola.log(chalk.cyan(`$GIT_HEAD: ${gitHead}`))
 
-  consola.debug(chalk.yellow(`Updating package.json for cery929-ui`))
+  consola.debug(chalk.yellow(`Updating package.json for kn-ui`))
 
   const pkgs = Object.fromEntries(
     (await getWorkspacePackages()).map((pkg) => [pkg.manifest.name!, pkg])
   )
-  const elementPlus = pkgs['cery929-ui'] || pkgs['@cery929-ui/nightly']
-  const eslintConfig = pkgs['@cery929-ui/eslint-config']
-  const metadata = pkgs['@cery929-ui/metadata']
+  const elementPlus = pkgs['kn-ui'] || pkgs['@kn-ui/nightly']
+  const eslintConfig = pkgs['@kn-ui/eslint-config']
+  const metadata = pkgs['@kn-ui/metadata']
 
   const writeVersion = async (project: Project) => {
     await project.writeProjectManifest({

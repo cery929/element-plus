@@ -1,9 +1,9 @@
-import { withInstall, withNoopInstall } from '@cery929-ui/utils'
+import { withInstall, withNoopInstall } from '@kn-ui/utils'
 import Checkbox from './src/checkbox.vue'
 import CheckboxButton from './src/checkbox-button.vue'
 import CheckboxGroup from './src/checkbox-group.vue'
 
-import type { SFCWithInstall } from '@cery929-ui/utils'
+import type { SFCWithInstall } from '@kn-ui/utils'
 
 export const ElCheckbox: SFCWithInstall<typeof Checkbox> & {
   CheckboxButton: typeof CheckboxButton

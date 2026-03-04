@@ -1,5 +1,5 @@
 import { TinyColor } from '@ctrl/tinycolor'
-import { hasOwn } from '@cery929-ui/utils'
+import { hasOwn } from '@kn-ui/utils'
 
 import type { ColorFormats } from '@ctrl/tinycolor'
 

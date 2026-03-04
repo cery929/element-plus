@@ -54,13 +54,13 @@
 <script lang="ts" setup>
 import { computed, inject, nextTick, onMounted, ref, unref, watch } from 'vue'
 import { debounce } from 'lodash-unified'
-import { vRepeatClick } from '@cery929-ui/directives'
-import ElScrollbar from '@cery929-ui/components/scrollbar'
-import ElIcon from '@cery929-ui/components/icon'
-import { ArrowDown, ArrowUp } from '@cery929-ui/icons-vue'
-import { useNamespace } from '@cery929-ui/hooks'
-import { getStyle, isNumber } from '@cery929-ui/utils'
-import { CHANGE_EVENT } from '@cery929-ui/constants'
+import { vRepeatClick } from '@kn-ui/directives'
+import ElScrollbar from '@kn-ui/components/scrollbar'
+import ElIcon from '@kn-ui/components/icon'
+import { ArrowDown, ArrowUp } from '@kn-ui/icons-vue'
+import { useNamespace } from '@kn-ui/hooks'
+import { getStyle, isNumber } from '@kn-ui/utils'
+import { CHANGE_EVENT } from '@kn-ui/constants'
 import {
   DEFAULT_FORMATS_TIME,
   PICKER_BASE_INJECTION_KEY,
@@ -71,7 +71,7 @@ import { basicTimeSpinnerProps } from '../props/basic-time-spinner'
 import { getTimeLists } from '../composables/use-time-picker'
 
 import type { Ref } from 'vue'
-import type { ScrollbarInstance } from '@cery929-ui/components/scrollbar'
+import type { ScrollbarInstance } from '@kn-ui/components/scrollbar'
 import type { TimeUnit } from '../constants'
 import type { TimeList } from '../utils'
 

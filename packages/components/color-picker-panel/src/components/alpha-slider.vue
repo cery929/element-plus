@@ -10,7 +10,7 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { useLocale } from '@cery929-ui/hooks'
+import { useLocale } from '@kn-ui/hooks'
 import { useSlider, useSliderDOM } from '../composables/use-slider'
 
 import type { AlphaSliderProps } from '../props/slider'

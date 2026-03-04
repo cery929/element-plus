@@ -7,12 +7,12 @@ import {
   inject,
   withDirectives,
 } from 'vue'
-import { NOOP, debugWarn, isObject } from '@cery929-ui/utils'
+import { NOOP, debugWarn, isObject } from '@kn-ui/utils'
 import {
   FORWARD_REF_INJECTION_KEY,
   useForwardRefDirective,
   useNamespace,
-} from '@cery929-ui/hooks'
+} from '@kn-ui/hooks'
 
 import type { Ref, VNode } from 'vue'
 

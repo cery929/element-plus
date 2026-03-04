@@ -1,4 +1,4 @@
-import { isArray } from '@cery929-ui/utils'
+import { isArray } from '@kn-ui/utils'
 
 import type { WatermarkProps } from './watermark'
 

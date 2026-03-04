@@ -7,7 +7,7 @@
 
 <script lang="ts" setup>
 import { h, ref } from 'vue'
-import { ElMessageBox, ElSwitch } from 'cery929-ui'
+import { ElMessageBox, ElSwitch } from 'kn-ui'
 
 const open = () => {
   ElMessageBox({

@@ -1,5 +1,5 @@
 import { computed, inject, ref, unref } from 'vue'
-import { useIdInjection, useNamespace } from '@cery929-ui/hooks'
+import { useIdInjection, useNamespace } from '@kn-ui/hooks'
 import { collapseContextKey } from './constants'
 
 import type { CollapseItemProps } from './collapse-item'

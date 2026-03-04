@@ -12,8 +12,8 @@ import {
 import {
   DynamicSizeGrid,
   FixedSizeGrid,
-} from '@cery929-ui/components/virtual-list'
-import { isNumber, isObject } from '@cery929-ui/utils'
+} from '@kn-ui/components/virtual-list'
+import { isNumber, isObject } from '@kn-ui/utils'
 import { Header } from './components'
 import { TABLE_V2_GRID_INJECTION_KEY, TableV2InjectionKey } from './tokens'
 import { tableV2GridProps } from './grid'
@@ -28,7 +28,7 @@ import type {
   GridScrollOptions,
   ResetAfterIndex,
   Alignment as ScrollStrategy,
-} from '@cery929-ui/components/virtual-list'
+} from '@kn-ui/components/virtual-list'
 import type { TableV2HeaderInstance } from './components'
 import type { TableV2GridProps } from './grid'
 

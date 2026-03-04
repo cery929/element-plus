@@ -1,4 +1,4 @@
-import { isArray, isEmpty, isFunction, isUndefined } from '@cery929-ui/utils'
+import { isArray, isEmpty, isFunction, isUndefined } from '@kn-ui/utils'
 
 import type {
   CascaderConfig,

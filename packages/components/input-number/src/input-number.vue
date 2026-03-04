@@ -42,15 +42,15 @@
 <script lang="ts" setup>
 import { computed, onMounted, onUpdated, reactive, ref, watch } from 'vue'
 import { isNil } from 'lodash-unified'
-import { ElInput } from '@cery929-ui/components/input'
-import { ElIcon } from '@cery929-ui/components/icon'
+import { ElInput } from '@kn-ui/components/input'
+import { ElIcon } from '@kn-ui/components/icon'
 import {
   useFormDisabled,
   useFormItem,
   useFormSize,
-} from '@cery929-ui/components/form'
-import { vRepeatClick } from '@cery929-ui/directives'
-import { useLocale, useNamespace } from '@cery929-ui/hooks'
+} from '@kn-ui/components/form'
+import { vRepeatClick } from '@kn-ui/directives'
+import { useLocale, useNamespace } from '@kn-ui/hooks'
 import {
   debugWarn,
   getEventCode,
@@ -59,17 +59,17 @@ import {
   isString,
   isUndefined,
   throwError,
-} from '@cery929-ui/utils'
-import { ArrowDown, ArrowUp, Minus, Plus } from '@cery929-ui/icons-vue'
+} from '@kn-ui/utils'
+import { ArrowDown, ArrowUp, Minus, Plus } from '@kn-ui/icons-vue'
 import {
   CHANGE_EVENT,
   EVENT_CODE,
   INPUT_EVENT,
   UPDATE_MODEL_EVENT,
-} from '@cery929-ui/constants'
+} from '@kn-ui/constants'
 import { inputNumberEmits } from './input-number'
 
-import type { InputInstance } from '@cery929-ui/components/input'
+import type { InputInstance } from '@kn-ui/components/input'
 import type { InputNumberProps } from './input-number'
 
 defineOptions({

@@ -10,10 +10,10 @@
 
 <script lang="tsx" setup>
 import { ref, withKeys } from 'vue'
-import { ElInput } from 'cery929-ui'
+import { ElInput } from 'kn-ui'
 
 import type { FunctionalComponent } from 'vue'
-import type { Column, InputInstance } from 'cery929-ui'
+import type { Column, InputInstance } from 'kn-ui'
 
 type SelectionCellProps = {
   value: string

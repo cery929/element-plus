@@ -5,21 +5,21 @@ import {
   isNumber,
   isObject,
   isString,
-} from '@cery929-ui/utils'
-import { useTooltipContentProps } from '@cery929-ui/components/tooltip'
+} from '@kn-ui/utils'
+import { useTooltipContentProps } from '@kn-ui/components/tooltip'
 import {
   CHANGE_EVENT,
   INPUT_EVENT,
   UPDATE_MODEL_EVENT,
-} from '@cery929-ui/constants'
-import { inputProps } from '@cery929-ui/components/input'
+} from '@kn-ui/constants'
+import { inputProps } from '@kn-ui/components/input'
 
 import type { ExtractPublicPropTypes } from 'vue'
 import type Autocomplete from './autocomplete.vue'
-import type { Placement } from '@cery929-ui/components/popper'
-import type { Awaitable } from '@cery929-ui/utils'
-import type { InputProps } from '@cery929-ui/components/input'
-import type { ElTooltipContentProps } from '@cery929-ui/components/tooltip'
+import type { Placement } from '@kn-ui/components/popper'
+import type { Awaitable } from '@kn-ui/utils'
+import type { InputProps } from '@kn-ui/components/input'
+import type { ElTooltipContentProps } from '@kn-ui/components/tooltip'
 
 export type AutocompleteData = Record<string, any>[]
 export type AutocompleteFetchSuggestionsCallback = (

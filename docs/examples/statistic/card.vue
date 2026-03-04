@@ -6,11 +6,8 @@
           <template #title>
             <div style="display: inline-flex; align-items: center">
               Daily active users
-              <el-tooltip
-                effect="dark"
-                content="Number of users who logged into the product in one day"
-                placement="top"
-              >
+              <el-tooltip effect="dark" content="Number of users who logged into the product in one day"
+                placement="top">
                 <el-icon style="margin-left: 4px" :size="12">
                   <Warning />
                 </el-icon>
@@ -37,11 +34,8 @@
           <template #title>
             <div style="display: inline-flex; align-items: center">
               Monthly Active Users
-              <el-tooltip
-                effect="dark"
-                content="Number of users who logged into the product in one month"
-                placement="top"
-              >
+              <el-tooltip effect="dark" content="Number of users who logged into the product in one month"
+                placement="top">
                 <el-icon style="margin-left: 4px" :size="12">
                   <Warning />
                 </el-icon>
@@ -98,7 +92,7 @@ import {
   CaretBottom,
   CaretTop,
   Warning,
-} from '@cery929-ui/icons-vue'
+} from '@kn-ui/icons-vue'
 </script>
 
 <style scoped>
@@ -142,6 +136,7 @@ import {
 .green {
   color: var(--el-color-success);
 }
+
 .red {
   color: var(--el-color-error);
 }

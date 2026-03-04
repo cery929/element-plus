@@ -1,7 +1,7 @@
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { addClass, addUnit, debugWarn, hasClass, removeClass } from '../..'
 
-vi.mock('@cery929-ui/utils/error', () => ({
+vi.mock('@kn-ui/utils/error', () => ({
   debugWarn: vi.fn(),
 }))
 

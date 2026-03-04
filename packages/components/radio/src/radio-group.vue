@@ -19,10 +19,10 @@ import {
   toRefs,
   watch,
 } from 'vue'
-import { useFormItem, useFormItemInputId } from '@cery929-ui/components/form'
-import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@cery929-ui/constants'
-import { useId, useNamespace } from '@cery929-ui/hooks'
-import { debugWarn } from '@cery929-ui/utils'
+import { useFormItem, useFormItemInputId } from '@kn-ui/components/form'
+import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@kn-ui/constants'
+import { useId, useNamespace } from '@kn-ui/hooks'
+import { debugWarn } from '@kn-ui/utils'
 import {
   type RadioGroupProps,
   radioDefaultProps,

@@ -5,7 +5,7 @@ import {
   definePropType,
   isArray,
   isFunction,
-} from '@cery929-ui/utils'
+} from '@kn-ui/utils'
 import { isEqual } from 'lodash-unified'
 
 import type { InjectionKey, Ref } from 'vue'

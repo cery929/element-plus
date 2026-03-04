@@ -1,7 +1,7 @@
-import { withInstall } from '@cery929-ui/utils'
+import { withInstall } from '@kn-ui/utils'
 import CascaderPanel from './src/index.vue'
 
-import type { SFCWithInstall } from '@cery929-ui/utils'
+import type { SFCWithInstall } from '@kn-ui/utils'
 
 export const ElCascaderPanel: SFCWithInstall<typeof CascaderPanel> =
   withInstall(CascaderPanel)

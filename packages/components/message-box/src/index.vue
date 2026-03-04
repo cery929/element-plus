@@ -25,8 +25,8 @@
                 @click="
                   handleAction(distinguishCancelAndClose ? 'close' : 'cancel')
                   " @keydown.prevent.enter="
-                  handleAction(distinguishCancelAndClose ? 'close' : 'cancel')
-                  ">
+                    handleAction(distinguishCancelAndClose ? 'close' : 'cancel')
+                    ">
                 <el-icon :class="ns.e('close')">
                   <component :is="closeIcon || 'close'" />
                 </el-icon>
@@ -92,36 +92,36 @@ import {
   toRefs,
   watch,
 } from 'vue'
-import ElButton from '@cery929-ui/components/button'
-import { TrapFocus } from '@cery929-ui/directives'
+import ElButton from '@kn-ui/components/button'
+import { TrapFocus } from '@kn-ui/directives'
 import {
   useDraggable,
   useId,
   useLockscreen,
   useSameTarget,
-} from '@cery929-ui/hooks'
-import ElInput from '@cery929-ui/components/input'
-import { ElOverlay } from '@cery929-ui/components/overlay'
+} from '@kn-ui/hooks'
+import ElInput from '@kn-ui/components/input'
+import { ElOverlay } from '@kn-ui/components/overlay'
 import {
   TypeComponents,
   TypeComponentsMap,
   isFunction,
   isString,
   isValidComponentSize,
-} from '@cery929-ui/utils'
-import { ElIcon } from '@cery929-ui/components/icon'
-import { Loading } from '@cery929-ui/icons-vue'
-import ElFocusTrap from '@cery929-ui/components/focus-trap'
-import { useGlobalComponentSettings } from '@cery929-ui/components/config-provider'
+} from '@kn-ui/utils'
+import { ElIcon } from '@kn-ui/components/icon'
+import { Loading } from '@kn-ui/icons-vue'
+import ElFocusTrap from '@kn-ui/components/focus-trap'
+import { useGlobalComponentSettings } from '@kn-ui/components/config-provider'
 
 import type { ComponentPublicInstance, PropType } from 'vue'
-import type { ComponentSize } from '@cery929-ui/constants'
+import type { ComponentSize } from '@kn-ui/constants'
 import type {
   Action,
   MessageBoxState,
   MessageBoxType,
 } from './message-box.type'
-import type { InputInstance } from '@cery929-ui/components/input'
+import type { InputInstance } from '@kn-ui/components/input'
 
 export default defineComponent({
   name: 'ElMessageBox',

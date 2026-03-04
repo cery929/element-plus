@@ -41,8 +41,8 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { ElButton, ElButtonGroup } from '@cery929-ui/components/button'
-import { useLocale, useNamespace } from '@cery929-ui/hooks'
+import { ElButton, ElButtonGroup } from '@kn-ui/components/button'
+import { useLocale, useNamespace } from '@kn-ui/hooks'
 import DateTable from './date-table.vue'
 import { useCalendar } from './use-calendar'
 import { calendarEmits } from './calendar'

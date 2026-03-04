@@ -1,6 +1,6 @@
 import { nextTick, onMounted, ref } from 'vue'
 import { useEventListener } from '@vueuse/core'
-import { isArray, isNumber } from '@cery929-ui/utils'
+import { isArray, isNumber } from '@kn-ui/utils'
 
 import type { SliderInitData, SliderProps } from '../slider'
 

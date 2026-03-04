@@ -35,11 +35,11 @@ import {
   TypeComponents,
   TypeComponentsMap,
   getEventCode,
-} from '@cery929-ui/utils'
-import { EVENT_CODE } from '@cery929-ui/constants'
-import ElBadge from '@cery929-ui/components/badge'
-import { useGlobalComponentSettings } from '@cery929-ui/components/config-provider'
-import { ElIcon } from '@cery929-ui/components/icon'
+} from '@kn-ui/utils'
+import { EVENT_CODE } from '@kn-ui/constants'
+import ElBadge from '@kn-ui/components/badge'
+import { useGlobalComponentSettings } from '@kn-ui/components/config-provider'
+import { ElIcon } from '@kn-ui/components/icon'
 import {
   MESSAGE_DEFAULT_PLACEMENT,
   messageDefaults,
@@ -48,7 +48,7 @@ import {
 import { getLastOffset, getOffsetOrSpace } from './instance'
 import { omit } from 'lodash-unified'
 
-import type { BadgeProps } from '@cery929-ui/components/badge'
+import type { BadgeProps } from '@kn-ui/components/badge'
 import type { CSSProperties } from 'vue'
 import type { MessageProps } from './message'
 

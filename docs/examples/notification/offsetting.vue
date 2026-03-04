@@ -3,7 +3,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ElNotification } from 'cery929-ui'
+import { ElNotification } from 'kn-ui'
 
 const open = () => {
   ElNotification.success({

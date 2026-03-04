@@ -27,10 +27,10 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import ElIcon from '@cery929-ui/components/icon'
-import { Close } from '@cery929-ui/icons-vue'
-import { useLocale, useNamespace } from '@cery929-ui/hooks'
-import { useFormSize } from '@cery929-ui/components/form'
+import ElIcon from '@kn-ui/components/icon'
+import { Close } from '@kn-ui/icons-vue'
+import { useLocale, useNamespace } from '@kn-ui/hooks'
+import { useFormSize } from '@kn-ui/components/form'
 import { tagEmits } from './tag'
 
 import type { VNode } from 'vue'

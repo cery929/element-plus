@@ -24,7 +24,7 @@
 <script lang="ts" setup>
 import { reactive } from 'vue'
 
-import type { LinkConfigContext } from 'cery929-ui'
+import type { LinkConfigContext } from 'kn-ui'
 
 const linkTypes = ['primary', 'success', 'warning', 'info', 'danger', 'default']
 const underlineOptions = ['always', 'never', 'hover']

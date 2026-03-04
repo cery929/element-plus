@@ -1,7 +1,7 @@
 import { computed, ref } from 'vue'
-import { debugWarn, ensureArray, isArray } from '@cery929-ui/utils'
+import { debugWarn, ensureArray, isArray } from '@kn-ui/utils'
 
-import type { Arrayable } from '@cery929-ui/utils'
+import type { Arrayable } from '@kn-ui/utils'
 import type { FormItemContext } from './types'
 import type { FormItemProp } from './form-item'
 

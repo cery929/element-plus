@@ -35,7 +35,7 @@
 </template>
 
 <script lang="ts" setup>
-import { CaretBottom } from '@cery929-ui/icons-vue'
+import { CaretBottom } from '@kn-ui/icons-vue'
 </script>
 
 <style scoped>

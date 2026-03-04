@@ -6,7 +6,7 @@
 </template>
 
 <script lang="ts" setup>
-import { Share } from '@cery929-ui/icons-vue'
+import { Share } from '@kn-ui/icons-vue'
 </script>
 
 <style scoped>

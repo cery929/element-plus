@@ -1,8 +1,8 @@
 import { computed, inject, ref } from 'vue'
-import { UPDATE_MODEL_EVENT } from '@cery929-ui/constants'
-import { useFormDisabled, useFormSize } from '@cery929-ui/components/form'
-import { useDeprecated } from '@cery929-ui/hooks'
-import { isPropAbsent } from '@cery929-ui/utils'
+import { UPDATE_MODEL_EVENT } from '@kn-ui/constants'
+import { useFormDisabled, useFormSize } from '@kn-ui/components/form'
+import { useDeprecated } from '@kn-ui/hooks'
+import { isPropAbsent } from '@kn-ui/utils'
 import { radioGroupKey } from './constants'
 
 import type { RadioButtonProps } from './radio-button'

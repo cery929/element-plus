@@ -3,7 +3,7 @@
 </template>
 
 <script lang="ts" setup>
-import type { CascaderProps } from 'cery929-ui'
+import type { CascaderProps } from 'kn-ui'
 
 let id = 0
 const props: CascaderProps = {

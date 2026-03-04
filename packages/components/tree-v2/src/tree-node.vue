@@ -32,11 +32,11 @@
 
 <script lang="ts" setup>
 import { computed, inject } from 'vue'
-import ElIcon from '@cery929-ui/components/icon'
-import { CaretRight } from '@cery929-ui/icons-vue'
-import ElCheckbox from '@cery929-ui/components/checkbox'
-import { useNamespace } from '@cery929-ui/hooks'
-import { isFunction, isString, mutable } from '@cery929-ui/utils'
+import ElIcon from '@kn-ui/components/icon'
+import { CaretRight } from '@kn-ui/icons-vue'
+import ElCheckbox from '@kn-ui/components/checkbox'
+import { useNamespace } from '@kn-ui/hooks'
+import { isFunction, isString, mutable } from '@kn-ui/utils'
 import ElNodeContent from './tree-node-content'
 import {
   EMPTY_NODE,
@@ -46,7 +46,7 @@ import {
 } from './virtual-tree'
 
 import type { TreeNode, TreeNodeProps } from './types'
-import type { CheckboxValueType } from '@cery929-ui/components/checkbox'
+import type { CheckboxValueType } from '@kn-ui/components/checkbox'
 
 defineOptions({
   name: 'ElTreeNode',

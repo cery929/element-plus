@@ -1,5 +1,5 @@
 import { onBeforeUnmount, onMounted, ref, watchEffect } from 'vue'
-import { addUnit } from '@cery929-ui/utils'
+import { addUnit } from '@kn-ui/utils'
 
 import type { ComputedRef, Ref } from 'vue'
 

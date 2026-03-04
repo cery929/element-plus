@@ -1,7 +1,7 @@
-import { withInstall } from '@cery929-ui/utils'
+import { withInstall } from '@kn-ui/utils'
 import TreeV2 from './src/tree.vue'
 
-import type { SFCWithInstall } from '@cery929-ui/utils'
+import type { SFCWithInstall } from '@kn-ui/utils'
 
 export const ElTreeV2: SFCWithInstall<typeof TreeV2> = withInstall(TreeV2)
 export default ElTreeV2

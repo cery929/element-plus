@@ -6,7 +6,7 @@
 
 <script lang="ts" setup>
 import { provide, reactive, toRef } from 'vue'
-import { useNamespace } from '@cery929-ui/hooks'
+import { useNamespace } from '@kn-ui/hooks'
 import { buttonGroupContextKey } from './constants'
 
 import type { ButtonGroupProps } from './button-group'

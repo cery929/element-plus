@@ -1,5 +1,5 @@
 {
-  "name": "@cery929-ui/directives",
+  "name": "@kn-ui/directives",
   "version": "0.0.5",
   "description": "Element Plus directives",
   "license": "MIT",
@@ -11,8 +11,8 @@
     "vue": "catalog:"
   },
   "dependencies": {
-    "@cery929-ui/constants": "workspace:^",
-    "@cery929-ui/utils": "workspace:^",
+    "@kn-ui/constants": "workspace:^",
+    "@kn-ui/utils": "workspace:^",
     "normalize-wheel-es": "catalog:"
   },
   "devDependencies": {

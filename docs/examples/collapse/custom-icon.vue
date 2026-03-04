@@ -56,9 +56,9 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { CaretRight } from '@cery929-ui/icons-vue'
+import { CaretRight } from '@kn-ui/icons-vue'
 
-import type { CollapseModelValue } from 'cery929-ui'
+import type { CollapseModelValue } from 'kn-ui'
 
 const activeNames = ref(['1'])
 const handleChange = (val: CollapseModelValue) => {

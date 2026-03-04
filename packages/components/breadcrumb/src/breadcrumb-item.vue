@@ -14,8 +14,8 @@
 
 <script lang="ts" setup>
 import { getCurrentInstance, inject } from 'vue'
-import ElIcon from '@cery929-ui/components/icon'
-import { useNamespace } from '@cery929-ui/hooks'
+import ElIcon from '@kn-ui/components/icon'
+import { useNamespace } from '@kn-ui/hooks'
 import { breadcrumbKey } from './constants'
 
 import type { Router } from 'vue-router'

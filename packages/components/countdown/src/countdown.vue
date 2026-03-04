@@ -1,12 +1,6 @@
 <template>
-  <el-statistic
-    :value="rawValue"
-    :title="title"
-    :prefix="prefix"
-    :suffix="suffix"
-    :value-style="valueStyle"
-    :formatter="formatter"
-  >
+  <el-statistic :value="rawValue" :title="title" :prefix="prefix" :suffix="suffix" :value-style="valueStyle"
+    :formatter="formatter">
     <template v-for="(_, name) in $slots" #[name]>
       <slot :name="name" />
     </template>
@@ -15,9 +9,9 @@
 
 <script lang="ts" setup>
 import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
-import { ElStatistic } from '@cery929-ui/components/statistic'
-import { cAF, rAF } from '@cery929-ui/utils'
-import { CHANGE_EVENT } from '@cery929-ui/constants'
+import { ElStatistic } from '@kn-ui/components/statistic'
+import { cAF, rAF } from '@kn-ui/utils'
+import { CHANGE_EVENT } from '@kn-ui/constants'
 import { countdownEmits } from './countdown'
 import { formatTime, getTime } from './utils'
 

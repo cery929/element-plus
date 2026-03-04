@@ -1,6 +1,6 @@
 import { computed, defineComponent, h } from 'vue'
-import { buildProps, definePropType, isString } from '@cery929-ui/utils'
-import { useNamespace } from '@cery929-ui/hooks'
+import { buildProps, definePropType, isString } from '@kn-ui/utils'
+import { useNamespace } from '@kn-ui/hooks'
 
 import type {
   CSSProperties,

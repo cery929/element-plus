@@ -5,9 +5,9 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { TableV2SortOrder } from 'cery929-ui'
+import { TableV2SortOrder } from 'kn-ui'
 
-import type { SortBy, SortState } from 'cery929-ui'
+import type { SortBy, SortState } from 'kn-ui'
 
 const generateColumns = (length = 10, prefix = 'column-', props?: any) =>
   Array.from({ length }).map((_, columnIndex) => ({

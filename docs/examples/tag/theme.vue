@@ -22,7 +22,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-import type { TagProps } from 'cery929-ui'
+import type { TagProps } from 'kn-ui'
 
 type Item = { type: TagProps['type']; label: string }
 

@@ -3,8 +3,8 @@ import { mount } from '@vue/test-utils'
 import { afterEach, describe, expect, test, vi } from 'vitest'
 import Tour from '../src/tour.vue'
 import TourStep from '../src/step.vue'
-import { EVENT_CODE } from '@cery929-ui/constants'
-import triggerEvent from '@cery929-ui/test-utils/trigger-event'
+import { EVENT_CODE } from '@kn-ui/constants'
+import triggerEvent from '@kn-ui/test-utils/trigger-event'
 
 import type { TourPropsPublic } from '../src/tour'
 

@@ -1,9 +1,9 @@
 import installer from './defaults'
 
-export * from '@cery929-ui/components'
-export * from '@cery929-ui/constants'
-export * from '@cery929-ui/directives'
-export * from '@cery929-ui/hooks'
+export * from '@kn-ui/components'
+export * from '@kn-ui/constants'
+export * from '@kn-ui/directives'
+export * from '@kn-ui/hooks'
 export * from './make-installer'
 
 export const install = installer.install

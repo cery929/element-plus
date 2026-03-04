@@ -8,7 +8,7 @@
 
 <script lang="ts" setup>
 import { h, ref } from 'vue'
-import { ElDivider } from 'cery929-ui'
+import { ElDivider } from 'kn-ui'
 
 const size = ref(10)
 const spacer = h(ElDivider, { direction: 'vertical' })

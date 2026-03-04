@@ -1,1 +1,1 @@
-export { default } from '@cery929-ui/eslint-config'
+export { default } from '@kn-ui/eslint-config'

@@ -1,10 +1,10 @@
 import { watch } from 'vue'
-import { INPUT_EVENT, UPDATE_MODEL_EVENT } from '@cery929-ui/constants'
-import { debugWarn, isArray, isNumber, throwError } from '@cery929-ui/utils'
+import { INPUT_EVENT, UPDATE_MODEL_EVENT } from '@kn-ui/constants'
+import { debugWarn, isArray, isNumber, throwError } from '@kn-ui/utils'
 
 import type { ComputedRef, SetupContext } from 'vue'
-import type { Arrayable } from '@cery929-ui/utils'
-import type { FormItemContext } from '@cery929-ui/components/form'
+import type { Arrayable } from '@kn-ui/utils'
+import type { FormItemContext } from '@kn-ui/components/form'
 import type { SliderEmits, SliderInitData, SliderProps } from '../slider'
 
 export const useWatch = (

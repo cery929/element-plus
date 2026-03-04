@@ -1,8 +1,8 @@
-import { buildProps, definePropType } from '@cery929-ui/utils'
+import { buildProps, definePropType } from '@kn-ui/utils'
 
 import type Skeleton from './skeleton.vue'
 import type { ExtractPublicPropTypes } from 'vue'
-import type { ThrottleType } from '@cery929-ui/hooks'
+import type { ThrottleType } from '@kn-ui/hooks'
 
 export interface SkeletonProps {
   /**

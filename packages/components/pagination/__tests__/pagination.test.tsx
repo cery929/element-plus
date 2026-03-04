@@ -6,7 +6,7 @@ import {
   CaretRight,
   DArrowLeft,
   DArrowRight,
-} from '@cery929-ui/icons-vue'
+} from '@kn-ui/icons-vue'
 import Pagination from '../src/pagination'
 import selectDropdownVue from '../../select/src/select-dropdown.vue'
 

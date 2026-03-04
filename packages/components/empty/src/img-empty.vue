@@ -53,7 +53,7 @@
 </template>
 
 <script lang="ts" setup>
-import { useId, useNamespace } from '@cery929-ui/hooks'
+import { useId, useNamespace } from '@kn-ui/hooks'
 
 defineOptions({
   name: 'ImgEmpty',

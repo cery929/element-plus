@@ -1,8 +1,8 @@
-import { withInstall, withNoopInstall } from '@cery929-ui/utils'
+import { withInstall, withNoopInstall } from '@kn-ui/utils'
 import Anchor from './src/anchor.vue'
 import AnchorLink from './src/anchor-link.vue'
 
-import type { SFCWithInstall } from '@cery929-ui/utils'
+import type { SFCWithInstall } from '@kn-ui/utils'
 
 export const ElAnchor: SFCWithInstall<typeof Anchor> & {
   AnchorLink: typeof AnchorLink

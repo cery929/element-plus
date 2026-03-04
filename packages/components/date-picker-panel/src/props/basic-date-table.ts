@@ -1,4 +1,4 @@
-import { buildProps } from '@cery929-ui/utils'
+import { buildProps } from '@kn-ui/utils'
 import { datePickerSharedProps, selectionModeWithDefault } from './shared'
 
 import type { ExtractPropTypes, ExtractPublicPropTypes } from 'vue'

@@ -14,7 +14,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-import type { DrawerProps } from 'cery929-ui'
+import type { DrawerProps } from 'kn-ui'
 
 const direction = ref<DrawerProps['direction']>()
 const drawer = ref(false)

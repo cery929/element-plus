@@ -3,7 +3,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ElMessageBox } from 'cery929-ui'
+import { ElMessageBox } from 'kn-ui'
 
 const open = () => {
   ElMessageBox.alert(

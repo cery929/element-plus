@@ -1,8 +1,8 @@
-import { withInstall, withNoopInstall } from '@cery929-ui/utils'
+import { withInstall, withNoopInstall } from '@kn-ui/utils'
 import Breadcrumb from './src/breadcrumb.vue'
 import BreadcrumbItem from './src/breadcrumb-item.vue'
 
-import type { SFCWithInstall } from '@cery929-ui/utils'
+import type { SFCWithInstall } from '@kn-ui/utils'
 
 export const ElBreadcrumb: SFCWithInstall<typeof Breadcrumb> & {
   BreadcrumbItem: typeof BreadcrumbItem

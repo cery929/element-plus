@@ -52,7 +52,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-import type { CollapseModelValue } from 'cery929-ui'
+import type { CollapseModelValue } from 'kn-ui'
 
 const activeNames = ref(['1'])
 const handleChange = (val: CollapseModelValue) => {

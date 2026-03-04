@@ -1,29 +1,16 @@
 <template>
   <div>
-    <el-input
-      v-model="input1"
-      style="max-width: 600px"
-      placeholder="Please input"
-    >
+    <el-input v-model="input1" style="max-width: 600px" placeholder="Please input">
       <template #prepend>Http://</template>
     </el-input>
   </div>
   <div class="mt-4">
-    <el-input
-      v-model="input2"
-      style="max-width: 600px"
-      placeholder="Please input"
-    >
+    <el-input v-model="input2" style="max-width: 600px" placeholder="Please input">
       <template #append>.com</template>
     </el-input>
   </div>
   <div class="mt-4">
-    <el-input
-      v-model="input3"
-      style="max-width: 600px"
-      placeholder="Please input"
-      class="input-with-select"
-    >
+    <el-input v-model="input3" style="max-width: 600px" placeholder="Please input" class="input-with-select">
       <template #prepend>
         <el-select v-model="select" placeholder="Select" style="width: 115px">
           <el-option label="Restaurant" value="1" />
@@ -37,12 +24,7 @@
     </el-input>
   </div>
   <div class="mt-4">
-    <el-input
-      v-model="input3"
-      style="max-width: 600px"
-      placeholder="Please input"
-      class="input-with-select"
-    >
+    <el-input v-model="input3" style="max-width: 600px" placeholder="Please input" class="input-with-select">
       <template #prepend>
         <el-button :icon="Search" />
       </template>
@@ -59,7 +41,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { Search } from '@cery929-ui/icons-vue'
+import { Search } from '@kn-ui/icons-vue'
 
 const input1 = ref('')
 const input2 = ref('')

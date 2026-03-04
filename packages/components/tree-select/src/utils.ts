@@ -1,6 +1,6 @@
-import { isArray } from '@cery929-ui/utils'
+import { isArray } from '@kn-ui/utils'
 
-import type { TreeNodeData } from '@cery929-ui/components/tree/src/tree.type'
+import type { TreeNodeData } from '@kn-ui/components/tree/src/tree.type'
 
 export function isValidValue(val: any) {
   return val || val === 0

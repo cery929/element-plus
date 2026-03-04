@@ -1,4 +1,4 @@
-import { buildProps, iconPropType } from '@cery929-ui/utils'
+import { buildProps, iconPropType } from '@kn-ui/utils'
 
 import type { Component, ExtractPublicPropTypes } from 'vue'
 import type TimelineItem from './timeline-item.vue'

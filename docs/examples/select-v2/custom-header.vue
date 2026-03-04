@@ -12,7 +12,7 @@
 <script lang="ts" setup>
 import { ref, watch } from 'vue'
 
-import type { CheckboxValueType } from 'cery929-ui'
+import type { CheckboxValueType } from 'kn-ui'
 
 const initials = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
 const checkAll = ref(false)

@@ -1,5 +1,5 @@
 import { pick } from 'lodash-unified'
-import { buildProps } from '@cery929-ui/utils'
+import { buildProps } from '@kn-ui/utils'
 
 export interface AriaProps {
   /**

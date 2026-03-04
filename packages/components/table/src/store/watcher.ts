@@ -1,5 +1,5 @@
 import { computed, getCurrentInstance, ref, toRefs, unref, watch } from 'vue'
-import { ensureArray, hasOwn, isArray, isString } from '@cery929-ui/utils'
+import { ensureArray, hasOwn, isArray, isString } from '@kn-ui/utils'
 import {
   getColumnById,
   getColumnByKey,

@@ -1,8 +1,8 @@
-import { withInstall } from '@cery929-ui/utils'
+import { withInstall } from '@kn-ui/utils'
 import TableV2 from './src/table-v2'
 import AutoResizer from './src/components/auto-resizer'
 
-import type { SFCWithInstall } from '@cery929-ui/utils'
+import type { SFCWithInstall } from '@kn-ui/utils'
 
 export {
   Alignment as TableV2Alignment,

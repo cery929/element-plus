@@ -46,10 +46,10 @@ import {
   ref,
   watch,
 } from 'vue'
-import { useNamespace } from '@cery929-ui/hooks'
-import { ElIcon } from '@cery929-ui/components/icon'
-import { Check, Close } from '@cery929-ui/icons-vue'
-import { isNumber } from '@cery929-ui/utils'
+import { useNamespace } from '@kn-ui/hooks'
+import { ElIcon } from '@kn-ui/components/icon'
+import { Check, Close } from '@kn-ui/icons-vue'
+import { isNumber } from '@kn-ui/utils'
 import { STEPS_INJECTION_KEY } from './tokens'
 
 import type { StepProps } from './item'

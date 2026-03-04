@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { computed, ref, shallowRef } from 'vue'
 import clipboardCopy from 'clipboard-copy'
-import { ElMessage } from 'cery929-ui'
-import * as Icons from '@cery929-ui/icons-vue'
+import { ElMessage } from 'kn-ui'
+import * as Icons from '@kn-ui/icons-vue'
 import { useLang } from '../../composables/lang'
 import localeData from '../../../i18n/component/icons.json'
 import IconCategories from './icons-categories.json'

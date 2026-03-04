@@ -49,10 +49,10 @@
 <script lang="ts" setup>
 import { computed, nextTick, onMounted, ref } from 'vue'
 import { useRouter, withBase } from 'vitepress'
-import { Search } from '@cery929-ui/icons-vue'
+import { Search } from '@kn-ui/icons-vue'
 import overviewLocale from '../../../i18n/component/overview.json'
 
-import type { InputInstance } from 'cery929-ui'
+import type { InputInstance } from 'kn-ui'
 
 import { useSidebar } from '~/composables/sidebar'
 import { useLang } from '~/composables/lang'

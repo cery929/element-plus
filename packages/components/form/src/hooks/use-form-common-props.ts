@@ -1,9 +1,9 @@
 import { computed, inject, ref, unref } from 'vue'
-import { useGlobalSize } from '@cery929-ui/hooks/use-size'
-import { useProp } from '@cery929-ui/hooks/use-prop'
+import { useGlobalSize } from '@kn-ui/hooks/use-size'
+import { useProp } from '@kn-ui/hooks/use-prop'
 import { formContextKey, formItemContextKey } from '../constants'
 
-import type { ComponentSize } from '@cery929-ui/constants'
+import type { ComponentSize } from '@kn-ui/constants'
 import type { MaybeRef } from '@vueuse/core'
 
 export const useFormSize = (

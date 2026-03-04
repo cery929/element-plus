@@ -1,6 +1,6 @@
 import { nextTick, ref } from 'vue'
 import { describe, expect, it, vi } from 'vitest'
-import { EVENT_CODE } from '@cery929-ui/constants'
+import { EVENT_CODE } from '@kn-ui/constants'
 import { useModal } from '../use-modal'
 
 describe('useModal', () => {

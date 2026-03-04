@@ -1,5 +1,5 @@
 import { ref } from 'vue'
-import { isNumber } from '@cery929-ui/utils'
+import { isNumber } from '@kn-ui/utils'
 
 export const useScrollbar = () => {
   const scrollBarRef = ref()

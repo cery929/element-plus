@@ -1,3 +1,3 @@
-import '@cery929-ui/components/base/style'
-import '@cery929-ui/components/popper/style'
-import '@cery929-ui/theme-chalk/src/popover.scss'
+import '@kn-ui/components/base/style'
+import '@kn-ui/components/popper/style'
+import '@kn-ui/theme-chalk/src/popover.scss'

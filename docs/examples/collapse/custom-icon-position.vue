@@ -47,7 +47,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-import type { CollapseIconPositionType } from 'cery929-ui'
+import type { CollapseIconPositionType } from 'kn-ui'
 
 const position = ref<CollapseIconPositionType>('left')
 </script>

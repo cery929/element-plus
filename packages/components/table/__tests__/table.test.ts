@@ -1,10 +1,10 @@
 // @ts-nocheck
 import { h, nextTick } from 'vue'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import ElCheckbox from '@cery929-ui/components/checkbox'
-import triggerEvent from '@cery929-ui/test-utils/trigger-event'
-import { rAF } from '@cery929-ui/test-utils/tick'
-import { CaretBottom, CaretTop } from '@cery929-ui/icons-vue'
+import ElCheckbox from '@kn-ui/components/checkbox'
+import triggerEvent from '@kn-ui/test-utils/trigger-event'
+import { rAF } from '@kn-ui/test-utils/tick'
+import { CaretBottom, CaretTop } from '@kn-ui/icons-vue'
 import ElTable from '../src/table.vue'
 import ElTableColumn from '../src/table-column'
 import {
@@ -1204,7 +1204,7 @@ describe('Table.vue', () => {
       wrapper.unmount()
     })
 
-    // https://github.com/cery929-ui/cery929-ui/issues/4589
+    // https://github.com/kn-ui/kn-ui/issues/4589
     it('sort-change event', async () => {
       const handleSortChange = vi.fn()
       const wrapper = mount({

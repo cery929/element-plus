@@ -18,7 +18,7 @@ import {
   toRefs,
   unref,
 } from 'vue'
-import { useId, useNamespace } from '@cery929-ui/hooks'
+import { useId, useNamespace } from '@kn-ui/hooks'
 import { useOption } from './useOption'
 import { COMPONENT_NAME, optionProps } from './option'
 

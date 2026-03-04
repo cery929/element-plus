@@ -1,10 +1,10 @@
-import { buildProps } from '@cery929-ui/utils'
+import { buildProps } from '@kn-ui/utils'
 import {
   CircleCheckFilled,
   CircleCloseFilled,
   InfoFilled,
   WarningFilled,
-} from '@cery929-ui/icons-vue'
+} from '@kn-ui/icons-vue'
 
 import type { Component, ExtractPublicPropTypes } from 'vue'
 import type Result from './result.vue'

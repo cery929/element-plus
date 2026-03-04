@@ -6,8 +6,8 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { CHANGE_EVENT } from '@cery929-ui/constants'
-import { useNamespace } from '@cery929-ui/hooks'
+import { CHANGE_EVENT } from '@kn-ui/constants'
+import { useNamespace } from '@kn-ui/hooks'
 import { checkTagEmits } from './check-tag'
 
 import type { CheckTagProps } from './check-tag'

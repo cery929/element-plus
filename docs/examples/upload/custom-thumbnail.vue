@@ -33,9 +33,9 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { Delete, Download, Plus, ZoomIn } from '@cery929-ui/icons-vue'
+import { Delete, Download, Plus, ZoomIn } from '@kn-ui/icons-vue'
 
-import type { UploadFile } from 'cery929-ui'
+import type { UploadFile } from 'kn-ui'
 
 const dialogImageUrl = ref('')
 const dialogVisible = ref(false)

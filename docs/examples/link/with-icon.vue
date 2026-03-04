@@ -8,7 +8,7 @@
 </template>
 
 <script setup lang="ts">
-import { Edit, View as IconView } from '@cery929-ui/icons-vue'
+import { Edit, View as IconView } from '@kn-ui/icons-vue'
 </script>
 
 <style scoped>

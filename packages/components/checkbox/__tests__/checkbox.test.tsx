@@ -1,7 +1,7 @@
 import { nextTick, reactive, ref } from 'vue'
 import { mount } from '@vue/test-utils'
 import { describe, expect, test } from 'vitest'
-import { ElForm, ElFormItem } from '@cery929-ui/components/form'
+import { ElForm, ElFormItem } from '@kn-ui/components/form'
 import Checkbox from '../src/checkbox.vue'
 import CheckboxButton from '../src/checkbox-button.vue'
 import CheckboxGroup from '../src/checkbox-group.vue'

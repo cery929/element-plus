@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { onMounted } from 'vue'
-// import { ElMessageBox } from 'cery929-ui'
+// import { ElMessageBox } from 'kn-ui'
 // import dayjs from 'dayjs'
 import { isClient, useEventListener, useToggle } from '@vueuse/core'
-import { EVENT_CODE } from 'cery929-ui'
+import { EVENT_CODE } from 'kn-ui'
 import { useSidebar } from '../composables/sidebar'
 import { useToggleWidgets } from '../composables/toggle-widgets'
 // import { useLang } from '../composables/lang'

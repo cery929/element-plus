@@ -107,33 +107,33 @@ import {
 } from 'vue'
 import { useResizeObserver } from '@vueuse/core'
 import { isNil } from 'lodash-unified'
-import { ElIcon } from '@cery929-ui/components/icon'
-import { Hide as IconHide, View as IconView } from '@cery929-ui/icons-vue'
+import { ElIcon } from '@kn-ui/components/icon'
+import { Hide as IconHide, View as IconView } from '@kn-ui/icons-vue'
 import {
   useFormDisabled,
   useFormItem,
   useFormItemInputId,
   useFormSize,
-} from '@cery929-ui/components/form'
+} from '@kn-ui/components/form'
 import {
   NOOP,
   ValidateComponentsMap,
   debugWarn,
   isClient,
   isObject,
-} from '@cery929-ui/utils'
+} from '@kn-ui/utils'
 import {
   useAttrs,
   useComposition,
   useCursor,
   useFocusController,
   useNamespace,
-} from '@cery929-ui/hooks'
+} from '@kn-ui/hooks'
 import {
   CHANGE_EVENT,
   INPUT_EVENT,
   UPDATE_MODEL_EVENT,
-} from '@cery929-ui/constants'
+} from '@kn-ui/constants'
 import { calcTextareaHeight, looseToNumber } from './utils'
 import { inputEmits, inputPropsDefaults } from './input'
 

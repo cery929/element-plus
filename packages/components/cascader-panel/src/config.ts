@@ -1,6 +1,6 @@
 import { computed } from 'vue'
-import { NOOP, buildProps, definePropType } from '@cery929-ui/utils'
-import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@cery929-ui/constants'
+import { NOOP, buildProps, definePropType } from '@kn-ui/utils'
+import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@kn-ui/constants'
 
 import type { PropType } from 'vue'
 import type {

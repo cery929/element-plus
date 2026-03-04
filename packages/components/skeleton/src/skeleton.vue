@@ -19,7 +19,7 @@
 
 <script lang="ts" setup>
 import { toRef } from 'vue'
-import { useNamespace, useThrottleRender } from '@cery929-ui/hooks'
+import { useNamespace, useThrottleRender } from '@kn-ui/hooks'
 import ElSkeletonItem from './skeleton-item.vue'
 
 import type { SkeletonProps } from './skeleton.ts'

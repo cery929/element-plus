@@ -1,8 +1,8 @@
-import { buildProps, definePropType } from '@cery929-ui/utils'
-import { useAriaProps, useSizeProp } from '@cery929-ui/hooks'
+import { buildProps, definePropType } from '@kn-ui/utils'
+import { useAriaProps, useSizeProp } from '@kn-ui/hooks'
 import { radioEmits } from './radio'
 
-import type { ComponentSize } from '@cery929-ui/constants'
+import type { ComponentSize } from '@kn-ui/constants'
 import type { ExtractPublicPropTypes } from 'vue'
 import type RadioGroup from './radio-group.vue'
 

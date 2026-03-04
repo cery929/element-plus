@@ -13,7 +13,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { ElMessageBox } from 'cery929-ui'
+import { ElMessageBox } from 'kn-ui'
 
 const drawer = ref(false)
 const innerDrawer = ref(false)

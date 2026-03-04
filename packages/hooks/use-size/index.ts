@@ -1,9 +1,9 @@
 import { computed, inject, unref } from 'vue'
-import { buildProp } from '@cery929-ui/utils'
-import { componentSizes } from '@cery929-ui/constants'
+import { buildProp } from '@kn-ui/utils'
+import { componentSizes } from '@kn-ui/constants'
 
 import type { InjectionKey, Ref } from 'vue'
-import type { ComponentSize } from '@cery929-ui/constants'
+import type { ComponentSize } from '@kn-ui/constants'
 
 export const useSizeProp = buildProp({
   type: String,

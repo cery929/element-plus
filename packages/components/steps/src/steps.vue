@@ -7,8 +7,8 @@
 
 <script lang="ts" setup>
 import { getCurrentInstance, provide, watch } from 'vue'
-import { CHANGE_EVENT } from '@cery929-ui/constants'
-import { useNamespace, useOrderedChildren } from '@cery929-ui/hooks'
+import { CHANGE_EVENT } from '@kn-ui/constants'
+import { useNamespace, useOrderedChildren } from '@kn-ui/hooks'
 import { stepsEmits } from './steps'
 import { STEPS_INJECTION_KEY } from './tokens'
 

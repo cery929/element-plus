@@ -7,7 +7,7 @@ pnpm update:version
 
 pnpm build
 
-cd dist/cery929-ui
+cd dist/kn-ui
 pnpm publish --access public --no-git-checks
 cd -
 

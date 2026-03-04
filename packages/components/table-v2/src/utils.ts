@@ -1,5 +1,5 @@
 import { h, isVNode } from 'vue'
-import { addUnit, isArray, isFunction } from '@cery929-ui/utils'
+import { addUnit, isArray, isFunction } from '@kn-ui/utils'
 
 import type { CSSProperties, Component, Slot } from 'vue'
 import type { JSX } from 'vue/jsx-runtime'

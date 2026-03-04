@@ -1,4 +1,4 @@
-import { buildProps, definePropType } from '@cery929-ui/utils'
+import { buildProps, definePropType } from '@kn-ui/utils'
 
 import type { ExtractPublicPropTypes } from 'vue'
 import type { RouteLocationRaw } from 'vue-router'

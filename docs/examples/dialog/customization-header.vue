@@ -8,7 +8,9 @@
       <div class="my-header">
         <h4 :id="titleId" :class="titleClass">This is a custom header!</h4>
         <el-button type="danger" @click="close">
-          <el-icon class="el-icon--left"><CircleCloseFilled /></el-icon>
+          <el-icon class="el-icon--left">
+            <CircleCloseFilled />
+          </el-icon>
           Close
         </el-button>
       </div>
@@ -19,7 +21,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { CircleCloseFilled } from '@cery929-ui/icons-vue'
+import { CircleCloseFilled } from '@kn-ui/icons-vue'
 
 const visible = ref(false)
 </script>

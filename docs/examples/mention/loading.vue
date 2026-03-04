@@ -6,7 +6,7 @@
 <script setup lang="ts">
 import { onBeforeUnmount, ref } from 'vue'
 
-import type { MentionOption } from 'cery929-ui'
+import type { MentionOption } from 'kn-ui'
 
 const value = ref('')
 const loading = ref(false)

@@ -3,12 +3,7 @@
     <el-progress :percentage="50">
       <el-button text>Content</el-button>
     </el-progress>
-    <el-progress
-      :text-inside="true"
-      :stroke-width="20"
-      :percentage="50"
-      status="exception"
-    >
+    <el-progress :text-inside="true" :stroke-width="20" :percentage="50" status="exception">
       <span>Content</span>
     </el-progress>
     <el-progress type="circle" :percentage="100" status="success">
@@ -24,7 +19,7 @@
 </template>
 
 <script lang="ts" setup>
-import { Check } from '@cery929-ui/icons-vue'
+import { Check } from '@kn-ui/icons-vue'
 </script>
 
 <style scoped>
@@ -33,15 +28,18 @@ import { Check } from '@cery929-ui/icons-vue'
   margin-top: 10px;
   font-size: 28px;
 }
+
 .percentage-label {
   display: block;
   margin-top: 10px;
   font-size: 12px;
 }
+
 .demo-progress .el-progress--line {
   margin-bottom: 15px;
   max-width: 600px;
 }
+
 .demo-progress .el-progress--circle {
   margin-right: 15px;
 }

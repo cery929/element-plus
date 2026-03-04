@@ -1,4 +1,4 @@
-import { definePropType } from '@cery929-ui/utils'
+import { definePropType } from '@kn-ui/utils'
 import { buttonProps } from './button'
 
 import type { ExtractPublicPropTypes } from 'vue'

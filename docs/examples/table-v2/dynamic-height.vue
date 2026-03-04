@@ -10,9 +10,9 @@ import {
   ElTag,
   TableV2FixedDir,
   TableV2SortOrder,
-} from 'cery929-ui'
+} from 'kn-ui'
 
-import type { Column, SortBy } from 'cery929-ui'
+import type { Column, SortBy } from 'kn-ui'
 
 const longText =
   'Quaerat ipsam necessitatibus eum quibusdam est id voluptatem cumque mollitia.'

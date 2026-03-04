@@ -191,7 +191,7 @@ export default defineConfig([
               position: 'before',
             },
             {
-              pattern: '@cery929-ui/**',
+              pattern: '@kn-ui/**',
               group: 'internal',
             },
           ],
@@ -363,18 +363,18 @@ export default defineConfig([
       'no-restricted-imports': [
         'error',
         {
-          paths: [{ name: '@cery929-ui', message: 'Use cery929-ui instead.' }],
+          paths: [{ name: '@kn-ui', message: 'Use kn-ui instead.' }],
           patterns: [
             {
               group: [
-                '@cery929-ui/*',
-                '!@cery929-ui/icons-vue',
-                'cery929-ui/es/*',
-                '!cery929-ui/es/locale',
-                'cery929-ui/lib/*',
-                '!cery929-ui/lib/locale',
+                '@kn-ui/*',
+                '!@kn-ui/icons-vue',
+                'kn-ui/es/*',
+                '!kn-ui/es/locale',
+                'kn-ui/lib/*',
+                '!kn-ui/lib/locale',
               ],
-              message: 'Use cery929-ui instead.',
+              message: 'Use kn-ui instead.',
             },
           ],
         },
@@ -398,8 +398,8 @@ export default defineConfig([
             { name: 'lodash', message: 'Use lodash-unified instead.' },
             { name: 'lodash-es', message: 'Use lodash-unified instead.' },
             {
-              name: 'cery929-ui',
-              message: 'Use @cery929-ui/* instead.',
+              name: 'kn-ui',
+              message: 'Use @kn-ui/* instead.',
             },
           ],
           patterns: [
@@ -408,20 +408,20 @@ export default defineConfig([
               message: 'Use lodash-unified instead.',
             },
             {
-              group: ['cery929-ui/*'],
-              message: 'Use @cery929-ui/* instead.',
+              group: ['kn-ui/*'],
+              message: 'Use @kn-ui/* instead.',
             },
             {
               group: [
-                '@cery929-ui/components',
-                '@cery929-ui/constants',
-                '@cery929-ui/directives',
-                '@cery929-ui/cery929-ui',
-                '@cery929-ui/hooks',
-                '@cery929-ui/locale',
-                '@cery929-ui/test-utils',
-                '@cery929-ui/theme-chalk',
-                '@cery929-ui/utils',
+                '@kn-ui/components',
+                '@kn-ui/constants',
+                '@kn-ui/directives',
+                '@kn-ui/kn-ui',
+                '@kn-ui/hooks',
+                '@kn-ui/locale',
+                '@kn-ui/test-utils',
+                '@kn-ui/theme-chalk',
+                '@kn-ui/utils',
               ],
               message: 'Please do not use this dependency in the current file.',
             },
@@ -444,8 +444,8 @@ export default defineConfig([
             { name: 'lodash', message: 'Use lodash-unified instead.' },
             { name: 'lodash-es', message: 'Use lodash-unified instead.' },
             {
-              name: 'cery929-ui',
-              message: 'Use @cery929-ui/* instead.',
+              name: 'kn-ui',
+              message: 'Use @kn-ui/* instead.',
             },
           ],
           patterns: [
@@ -454,19 +454,19 @@ export default defineConfig([
               message: 'Use lodash-unified instead.',
             },
             {
-              group: ['cery929-ui/*'],
-              message: 'Use @cery929-ui/* instead.',
+              group: ['kn-ui/*'],
+              message: 'Use @kn-ui/* instead.',
             },
             {
               group: [
-                '@cery929-ui/components',
-                '@cery929-ui/cery929-ui',
-                '@cery929-ui/theme-chalk',
-                '@cery929-ui/build',
-                '@cery929-ui/build-constants',
-                '@cery929-ui/build-utils',
-                '@cery929-ui/eslint-config',
-                '@cery929-ui/metadata',
+                '@kn-ui/components',
+                '@kn-ui/kn-ui',
+                '@kn-ui/theme-chalk',
+                '@kn-ui/build',
+                '@kn-ui/build-constants',
+                '@kn-ui/build-utils',
+                '@kn-ui/eslint-config',
+                '@kn-ui/metadata',
               ],
               message: 'Please do not use this dependency in the current file.',
             },
@@ -478,7 +478,7 @@ export default defineConfig([
   {
     files: [
       'packages/components/**/*.{js,jsx,ts,tsx,vue}',
-      'packages/cery929-ui/**/*.{js,jsx,ts,tsx,vue}',
+      'packages/kn-ui/**/*.{js,jsx,ts,tsx,vue}',
     ],
     rules: {
       'no-restricted-imports': [
@@ -488,8 +488,8 @@ export default defineConfig([
             { name: 'lodash', message: 'Use lodash-unified instead.' },
             { name: 'lodash-es', message: 'Use lodash-unified instead.' },
             {
-              name: 'cery929-ui',
-              message: 'Use @cery929-ui/* instead.',
+              name: 'kn-ui',
+              message: 'Use @kn-ui/* instead.',
             },
           ],
           patterns: [
@@ -498,32 +498,32 @@ export default defineConfig([
               message: 'Use lodash-unified instead.',
             },
             {
-              group: ['cery929-ui/*'],
-              message: 'Use @cery929-ui/* instead.',
+              group: ['kn-ui/*'],
+              message: 'Use @kn-ui/* instead.',
             },
             {
               group: [
-                '@cery929-ui/theme-chalk/**/*.scss',
-                '!@cery929-ui/theme-chalk/src/*.scss',
-                '@cery929-ui/theme-chalk/src/el-*.scss',
+                '@kn-ui/theme-chalk/**/*.scss',
+                '!@kn-ui/theme-chalk/src/*.scss',
+                '@kn-ui/theme-chalk/src/el-*.scss',
               ],
-              message: 'Use @cery929-ui/theme-chalk/src/*.scss instead.',
+              message: 'Use @kn-ui/theme-chalk/src/*.scss instead.',
             },
             {
               group: [
-                '@cery929-ui/theme-chalk/**/*.css',
-                '!@cery929-ui/theme-chalk/el-*.css',
-                '!@cery929-ui/theme-chalk/base.css',
+                '@kn-ui/theme-chalk/**/*.css',
+                '!@kn-ui/theme-chalk/el-*.css',
+                '!@kn-ui/theme-chalk/base.css',
               ],
-              message: 'Use @cery929-ui/theme-chalk/el-*.css instead.',
+              message: 'Use @kn-ui/theme-chalk/el-*.css instead.',
             },
             {
               group: [
-                '@cery929-ui/build',
-                '@cery929-ui/build-constants',
-                '@cery929-ui/build-utils',
-                '@cery929-ui/eslint-config',
-                '@cery929-ui/metadata',
+                '@kn-ui/build',
+                '@kn-ui/build-constants',
+                '@kn-ui/build-utils',
+                '@kn-ui/eslint-config',
+                '@kn-ui/metadata',
               ],
               message: 'Please do not use this dependency in the current file.',
             },

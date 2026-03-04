@@ -1,5 +1,5 @@
 import 'normalize.css'
-// import 'cery929-ui/dist/index.css'
+// import 'kn-ui/dist/index.css'
 
 // for dev
 // reset

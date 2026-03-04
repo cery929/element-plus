@@ -12,9 +12,9 @@ addIcon
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { Select } from '@cery929-ui/icons-vue'
+import { Select } from '@kn-ui/icons-vue'
 
-import type { TabPaneName } from 'cery929-ui'
+import type { TabPaneName } from 'kn-ui'
 
 let tabIndex = 2
 const editableTabsValue = ref('2')

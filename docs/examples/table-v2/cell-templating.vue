@@ -11,10 +11,10 @@ import {
   ElTag,
   ElTooltip,
   TableV2FixedDir,
-} from 'cery929-ui'
-import { Timer } from '@cery929-ui/icons-vue'
+} from 'kn-ui'
+import { Timer } from '@kn-ui/icons-vue'
 
-import type { Column } from 'cery929-ui'
+import type { Column } from 'kn-ui'
 
 let id = 0
 

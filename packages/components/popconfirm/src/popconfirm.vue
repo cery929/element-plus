@@ -33,15 +33,15 @@
 
 <script lang="ts" setup>
 import { computed, ref, unref } from 'vue'
-import ElButton from '@cery929-ui/components/button'
-import ElIcon from '@cery929-ui/components/icon'
-import ElTooltip from '@cery929-ui/components/tooltip'
-import { useLocale, useNamespace } from '@cery929-ui/hooks'
-import { addUnit } from '@cery929-ui/utils'
-import { QuestionFilled } from '@cery929-ui/icons-vue'
+import ElButton from '@kn-ui/components/button'
+import ElIcon from '@kn-ui/components/icon'
+import ElTooltip from '@kn-ui/components/tooltip'
+import { useLocale, useNamespace } from '@kn-ui/hooks'
+import { addUnit } from '@kn-ui/utils'
+import { QuestionFilled } from '@kn-ui/icons-vue'
 import { popconfirmEmits } from './popconfirm'
 
-import type { TooltipInstance } from '@cery929-ui/components/tooltip'
+import type { TooltipInstance } from '@kn-ui/components/tooltip'
 import type { PopconfirmProps } from './popconfirm'
 
 defineOptions({

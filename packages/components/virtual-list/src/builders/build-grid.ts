@@ -18,8 +18,8 @@ import {
   isClient,
   isNumber,
   isString,
-} from '@cery929-ui/utils'
-import { useNamespace } from '@cery929-ui/hooks'
+} from '@kn-ui/utils'
+import { useNamespace } from '@kn-ui/hooks'
 import Scrollbar from '../components/scrollbar'
 import { useGridWheel } from '../hooks/use-grid-wheel'
 import { useCache } from '../hooks/use-cache'

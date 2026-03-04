@@ -24,9 +24,9 @@
 <script lang="ts" setup>
 import { computed, inject, nextTick, ref } from 'vue'
 import dayjs from 'dayjs'
-import { EVENT_CODE } from '@cery929-ui/constants'
-import { useLocale, useNamespace } from '@cery929-ui/hooks'
-import { getEventCode, isUndefined } from '@cery929-ui/utils'
+import { EVENT_CODE } from '@kn-ui/constants'
+import { useLocale, useNamespace } from '@kn-ui/hooks'
+import { getEventCode, isUndefined } from '@kn-ui/utils'
 import { PICKER_BASE_INJECTION_KEY } from '../constants'
 import { panelTimePickerProps } from '../props/panel-time-picker'
 import { useTimePanel } from '../composables/use-time-panel'

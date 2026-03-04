@@ -172,15 +172,15 @@ import {
   toRefs,
   watch,
 } from 'vue'
-import { ClickOutside } from '@cery929-ui/directives'
-import ElTooltip from '@cery929-ui/components/tooltip'
-import ElScrollbar from '@cery929-ui/components/scrollbar'
-import ElTag from '@cery929-ui/components/tag'
-import ElIcon from '@cery929-ui/components/icon'
-import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@cery929-ui/constants'
-import { flattedChildren, isArray, isObject } from '@cery929-ui/utils'
-import { useCalcInputWidth } from '@cery929-ui/hooks'
-import { useProps } from '@cery929-ui/components/select-v2/src/useProps'
+import { ClickOutside } from '@kn-ui/directives'
+import ElTooltip from '@kn-ui/components/tooltip'
+import ElScrollbar from '@kn-ui/components/scrollbar'
+import ElTag from '@kn-ui/components/tag'
+import ElIcon from '@kn-ui/components/icon'
+import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@kn-ui/constants'
+import { flattedChildren, isArray, isObject } from '@kn-ui/utils'
+import { useCalcInputWidth } from '@kn-ui/hooks'
+import { useProps } from '@kn-ui/components/select-v2/src/useProps'
 import ElOption from './option.vue'
 import ElSelectMenu from './select-dropdown.vue'
 import { useSelect } from './useSelect'
@@ -382,7 +382,7 @@ export default defineComponent({
     })
 
     onBeforeUnmount(() => {
-      // https://github.com/cery929-ui/cery929-ui/issues/21279
+      // https://github.com/kn-ui/kn-ui/issues/21279
       const record = warnHandlerMap.get(instance.appContext)
       if (!record) return
       record.count -= 1

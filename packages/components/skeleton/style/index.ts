@@ -1,3 +1,3 @@
-import '@cery929-ui/components/base/style'
-import '@cery929-ui/theme-chalk/src/skeleton.scss'
-import '@cery929-ui/components/skeleton-item/style'
+import '@kn-ui/components/base/style'
+import '@kn-ui/theme-chalk/src/skeleton.scss'
+import '@kn-ui/components/skeleton-item/style'

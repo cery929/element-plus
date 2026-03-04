@@ -2,9 +2,9 @@
 import { nextTick } from 'vue'
 import { mount } from '@vue/test-utils'
 import { describe, expect, test, vi } from 'vitest'
-import defineGetter from '@cery929-ui/test-utils/define-getter'
-import sleep from '@cery929-ui/test-utils/sleep'
-import ElIcon from '@cery929-ui/components/icon'
+import defineGetter from '@kn-ui/test-utils/define-getter'
+import sleep from '@kn-ui/test-utils/sleep'
+import ElIcon from '@kn-ui/components/icon'
 import Tree from '../src/tree.vue'
 import Button from '../../button/src/button.vue'
 

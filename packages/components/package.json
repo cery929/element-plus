@@ -1,5 +1,5 @@
 {
-  "name": "@cery929-ui/components",
+  "name": "@kn-ui/components",
   "version": "0.0.5",
   "description": "all components are settled here",
   "main": "index.ts",
@@ -11,17 +11,17 @@
   },
   "dependencies": {
     "@ctrl/tinycolor": "catalog:",
-    "@cery929-ui/constants": "workspace:^",
-    "@cery929-ui/directives": "workspace:^",
-    "@cery929-ui/hooks": "workspace:^",
-    "@cery929-ui/icons-vue": "catalog:",
-    "@cery929-ui/utils": "workspace:^",
+    "@kn-ui/constants": "workspace:^",
+    "@kn-ui/directives": "workspace:^",
+    "@kn-ui/hooks": "workspace:^",
+    "@kn-ui/icons-vue": "catalog:",
+    "@kn-ui/utils": "workspace:^",
     "@popperjs/core": "catalog:",
     "@vueuse/core": "catalog:",
     "lodash-unified": "catalog:"
   },
   "devDependencies": {
-    "@cery929-ui/test-utils": "workspace:^",
+    "@kn-ui/test-utils": "workspace:^",
     "@vue/test-utils": "catalog:",
     "vue": "catalog:"
   },

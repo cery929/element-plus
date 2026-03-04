@@ -91,7 +91,7 @@ Element Plus has added a global method `$notify` for `app.config.globalPropertie
 
 ```javascript
 import { ElNotification } from 'element-plus'
-import { CloseBold } from '@cery929-ui/icons-vue'
+import { CloseBold } from '@kn-ui/icons-vue'
 
 ElNotification({
   title: 'Title',

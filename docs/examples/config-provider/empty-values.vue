@@ -12,7 +12,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { ElMessage } from 'cery929-ui'
+import { ElMessage } from 'kn-ui'
 
 const value1 = ref('')
 const value2 = ref('')

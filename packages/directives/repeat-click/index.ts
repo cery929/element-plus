@@ -1,4 +1,4 @@
-import { isFunction } from '@cery929-ui/utils'
+import { isFunction } from '@kn-ui/utils'
 
 import type { ObjectDirective } from 'vue'
 

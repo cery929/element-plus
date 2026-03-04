@@ -7,9 +7,9 @@
 
 <script lang="ts" setup>
 import { inject, ref } from 'vue'
-import { useNamespace } from '@cery929-ui/hooks'
-import { useFormDisabled } from '@cery929-ui/components/form'
-import { throwError } from '@cery929-ui/utils/error'
+import { useNamespace } from '@kn-ui/hooks'
+import { useFormDisabled } from '@kn-ui/components/form'
+import { throwError } from '@kn-ui/utils/error'
 import { flatten } from 'lodash-unified'
 import { uploadContextKey } from './constants'
 import { uploadDraggerEmits } from './upload-dragger'

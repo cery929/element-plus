@@ -1,15 +1,10 @@
 <template>
-  <el-input
-    v-model="input"
-    clearable
-    :clear-icon="CloseBold"
-    placeholder="Custom clear icon"
-  />
+  <el-input v-model="input" clearable :clear-icon="CloseBold" placeholder="Custom clear icon" />
 </template>
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { CloseBold } from '@cery929-ui/icons-vue'
+import { CloseBold } from '@kn-ui/icons-vue'
 
 const input = ref('Custom clear icon')
 </script>

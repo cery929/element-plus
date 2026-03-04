@@ -8,8 +8,8 @@ import {
   isFunction,
   isNumber,
   isString,
-} from '@cery929-ui/utils'
-import { messageConfig } from '@cery929-ui/components/config-provider'
+} from '@kn-ui/utils'
+import { messageConfig } from '@kn-ui/components/config-provider'
 import MessageConstructor from './message.vue'
 import {
   MESSAGE_DEFAULT_PLACEMENT,

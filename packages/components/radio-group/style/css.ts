@@ -1,3 +1,3 @@
-import '@cery929-ui/components/base/style/css'
-import '@cery929-ui/components/radio/style/css'
-import '@cery929-ui/theme-chalk/el-radio-group.css'
+import '@kn-ui/components/base/style/css'
+import '@kn-ui/components/radio/style/css'
+import '@kn-ui/theme-chalk/el-radio-group.css'

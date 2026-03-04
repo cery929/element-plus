@@ -15,7 +15,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-import type { TableInstance } from 'cery929-ui'
+import type { TableInstance } from 'kn-ui'
 
 interface User {
   date: string

@@ -24,10 +24,10 @@
 
 <script lang="ts" setup>
 import { computed, inject } from 'vue'
-import { ElIcon } from '@cery929-ui/components/icon'
-import { FOCUS_TRAP_INJECTION_KEY } from '@cery929-ui/components/focus-trap'
-import { useDraggable, useLocale } from '@cery929-ui/hooks'
-import { CloseComponents, composeRefs } from '@cery929-ui/utils'
+import { ElIcon } from '@kn-ui/components/icon'
+import { FOCUS_TRAP_INJECTION_KEY } from '@kn-ui/components/focus-trap'
+import { useDraggable, useLocale } from '@kn-ui/hooks'
+import { CloseComponents, composeRefs } from '@kn-ui/utils'
 import { dialogInjectionKey } from './constants'
 import {
   dialogContentEmits,

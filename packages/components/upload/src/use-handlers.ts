@@ -1,7 +1,7 @@
 import { nextTick, watch } from 'vue'
 import { isNil } from 'lodash-unified'
 import { useVModel } from '@vueuse/core'
-import { debugWarn, throwError } from '@cery929-ui/utils'
+import { debugWarn, throwError } from '@kn-ui/utils'
 import { genFileId } from './upload'
 
 import type { ShallowRef } from 'vue'

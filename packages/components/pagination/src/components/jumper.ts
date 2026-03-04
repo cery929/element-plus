@@ -1,5 +1,5 @@
-import { buildProps } from '@cery929-ui/utils'
-import { componentSizes } from '@cery929-ui/constants'
+import { buildProps } from '@kn-ui/utils'
+import { componentSizes } from '@kn-ui/constants'
 
 import type { ExtractPropTypes, ExtractPublicPropTypes } from 'vue'
 import type Jumper from './jumper.vue'

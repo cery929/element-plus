@@ -1,6 +1,6 @@
 // @ts-nocheck
-import { getEventCode, triggerEvent } from '@cery929-ui/utils'
-import { EVENT_CODE } from '@cery929-ui/constants'
+import { getEventCode, triggerEvent } from '@kn-ui/utils'
+import { EVENT_CODE } from '@kn-ui/constants'
 import SubMenu from './submenu'
 
 class MenuItem {

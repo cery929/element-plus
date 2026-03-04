@@ -1,5 +1,5 @@
 {
-  "name": "cery929-ui",
+  "name": "kn-ui",
   "version": "1.0.0",
   "description": "A Component Library for Vue 3",
   "keywords": [
@@ -81,7 +81,7 @@
   },
   "dependencies": {
     "@ctrl/tinycolor": "^3.4.1",
-    "@cery929-ui/icons-vue": "^1.0.1",
+    "@kn-ui/icons-vue": "^1.0.0",
     "@floating-ui/dom": "^1.0.1",
     "@popperjs/core": "npm:@sxzz/popperjs-es@^2.11.7",
     "@types/lodash": "^4.17.20",

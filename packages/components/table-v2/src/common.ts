@@ -1,4 +1,4 @@
-import { definePropType, mutable } from '@cery929-ui/utils'
+import { definePropType, mutable } from '@kn-ui/utils'
 
 import type { CSSProperties } from 'vue'
 import type { Column, KeyType } from './types'

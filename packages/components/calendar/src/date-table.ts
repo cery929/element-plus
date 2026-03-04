@@ -1,5 +1,5 @@
-import { buildProps, definePropType, isObject } from '@cery929-ui/utils'
-import { rangeArr } from '@cery929-ui/components/time-picker'
+import { buildProps, definePropType, isObject } from '@kn-ui/utils'
+import { rangeArr } from '@kn-ui/components/time-picker'
 
 import type { ExtractPublicPropTypes } from 'vue'
 import type { Dayjs } from 'dayjs'

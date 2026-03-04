@@ -1,6 +1,6 @@
 import consola from 'consola'
-import { REPO_BRANCH, REPO_PATH } from '@cery929-ui/build-constants'
-import { docsDirName } from '@cery929-ui/build-utils'
+import { REPO_BRANCH, REPO_PATH } from '@kn-ui/build-constants'
+import { docsDirName } from '@kn-ui/build-utils'
 import { languages } from '../utils/lang'
 import { features } from './features'
 import { head } from './head'

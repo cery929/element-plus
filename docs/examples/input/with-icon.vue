@@ -3,39 +3,25 @@
     <div class="input-group">
       <span class="label">Using attributes</span>
       <div class="input-container">
-        <el-input
-          v-model="input1"
-          class="responsive-input"
-          placeholder="Pick a date"
-          :suffix-icon="Calendar"
-        />
-        <el-input
-          v-model="input2"
-          class="responsive-input"
-          placeholder="Type something"
-          :prefix-icon="Search"
-        />
+        <el-input v-model="input1" class="responsive-input" placeholder="Pick a date" :suffix-icon="Calendar" />
+        <el-input v-model="input2" class="responsive-input" placeholder="Type something" :prefix-icon="Search" />
       </div>
     </div>
     <div class="input-group">
       <span class="label">Using slots</span>
       <div class="input-container">
-        <el-input
-          v-model="input3"
-          class="responsive-input"
-          placeholder="Pick a date"
-        >
+        <el-input v-model="input3" class="responsive-input" placeholder="Pick a date">
           <template #suffix>
-            <el-icon class="el-input__icon"><calendar /></el-icon>
+            <el-icon class="el-input__icon">
+              <calendar />
+            </el-icon>
           </template>
         </el-input>
-        <el-input
-          v-model="input4"
-          class="responsive-input"
-          placeholder="Type something"
-        >
+        <el-input v-model="input4" class="responsive-input" placeholder="Type something">
           <template #prefix>
-            <el-icon class="el-input__icon"><search /></el-icon>
+            <el-icon class="el-input__icon">
+              <search />
+            </el-icon>
           </template>
         </el-input>
       </div>
@@ -45,7 +31,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { Calendar, Search } from '@cery929-ui/icons-vue'
+import { Calendar, Search } from '@kn-ui/icons-vue'
 
 const input1 = ref('')
 const input2 = ref('')

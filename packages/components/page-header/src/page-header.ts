@@ -1,5 +1,5 @@
-import { buildProps, iconPropType } from '@cery929-ui/utils'
-import { Back } from '@cery929-ui/icons-vue'
+import { buildProps, iconPropType } from '@kn-ui/utils'
+import { Back } from '@kn-ui/icons-vue'
 
 import type { Component, ExtractPublicPropTypes } from 'vue'
 import type PageHeader from './page-header.vue'

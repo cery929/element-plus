@@ -2,7 +2,7 @@ import { defineComponent, renderSlot, watch } from 'vue'
 import { provideGlobalConfig } from './hooks/use-global-config'
 import { configProviderProps } from './config-provider-props'
 
-import type { MessageConfigContext } from '@cery929-ui/components/message'
+import type { MessageConfigContext } from '@kn-ui/components/message'
 
 export const messageConfig: MessageConfigContext = {
   placement: 'top',

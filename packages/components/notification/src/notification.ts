@@ -1,5 +1,5 @@
-import { Close } from '@cery929-ui/icons-vue'
-import { buildProps, definePropType, iconPropType } from '@cery929-ui/utils'
+import { Close } from '@kn-ui/icons-vue'
+import { buildProps, definePropType, iconPropType } from '@kn-ui/utils'
 
 import type { AppContext, Component, ExtractPublicPropTypes, VNode } from 'vue'
 import type Notification from './notification.vue'

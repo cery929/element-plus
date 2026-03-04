@@ -5,8 +5,8 @@
 </template>
 
 <script lang="ts" setup>
-import { useNamespace } from '@cery929-ui/hooks'
-import { PictureFilled } from '@cery929-ui/icons-vue'
+import { useNamespace } from '@kn-ui/hooks'
+import { PictureFilled } from '@kn-ui/icons-vue'
 
 import type { SkeletonItemProps } from './skeleton-item.ts'
 

@@ -1,8 +1,8 @@
 import { nextTick } from 'vue'
 import { mount } from '@vue/test-utils'
 import { describe, expect, test, vi } from 'vitest'
-import makeScroll from '@cery929-ui/test-utils/make-scroll'
-import defineGetter from '@cery929-ui/test-utils/define-getter'
+import makeScroll from '@kn-ui/test-utils/make-scroll'
+import defineGetter from '@kn-ui/test-utils/define-getter'
 import Scrollbar from '../src/scrollbar.vue'
 import Thumb from '../src/thumb.vue'
 

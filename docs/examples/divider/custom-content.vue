@@ -15,5 +15,5 @@
 </template>
 
 <script lang="ts" setup>
-import { StarFilled } from '@cery929-ui/icons-vue'
+import { StarFilled } from '@kn-ui/icons-vue'
 </script>

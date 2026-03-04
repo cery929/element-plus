@@ -1,6 +1,6 @@
 import { watch } from 'vue'
 import { debounce } from 'lodash-unified'
-import { isObject } from '@cery929-ui/utils'
+import { isObject } from '@kn-ui/utils'
 import useStore from '.'
 
 import type { Store } from '.'

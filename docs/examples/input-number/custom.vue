@@ -35,7 +35,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { ArrowDown, ArrowUp, Minus, Plus } from '@cery929-ui/icons-vue'
+import { ArrowDown, ArrowUp, Minus, Plus } from '@kn-ui/icons-vue'
 
 const num = ref(1)
 </script>

@@ -1,4 +1,4 @@
-import { buildProps, definePropType, mutable } from '@cery929-ui/utils'
+import { buildProps, definePropType, mutable } from '@kn-ui/utils'
 
 import type { ExtractPublicPropTypes } from 'vue'
 import type { TabPaneName, TabsPaneContext } from './constants'

@@ -7,7 +7,7 @@
 </template>
 
 <script lang="ts" setup>
-import type { TableColumnCtx } from 'cery929-ui'
+import type { TableColumnCtx } from 'kn-ui'
 
 interface User {
   date: string

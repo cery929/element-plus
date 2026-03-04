@@ -12,8 +12,8 @@
 
 <script lang="ts" setup>
 import { computed, ref } from 'vue'
-import zhCn from 'cery929-ui/es/locale/lang/zh-cn'
-import en from 'cery929-ui/es/locale/lang/en'
+import zhCn from 'kn-ui/es/locale/lang/zh-cn'
+import en from 'kn-ui/es/locale/lang/en'
 
 const language = ref('zh-cn')
 const locale = computed(() => (language.value === 'zh-cn' ? zhCn : en))

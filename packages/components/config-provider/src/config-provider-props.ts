@@ -1,13 +1,13 @@
-import { buildProps, definePropType } from '@cery929-ui/utils'
-import { useEmptyValuesProps, useSizeProp } from '@cery929-ui/hooks'
+import { buildProps, definePropType } from '@kn-ui/utils'
+import { useEmptyValuesProps, useSizeProp } from '@kn-ui/hooks'
 
 import type { ExtractPropTypes, ExtractPublicPropTypes } from 'vue'
-import type { Language } from '@cery929-ui/locale'
-import type { ButtonConfigContext } from '@cery929-ui/components/button'
-import type { CardConfigContext } from '@cery929-ui/components/card'
-import type { DialogConfigContext } from '@cery929-ui/components/dialog'
-import type { MessageConfigContext } from '@cery929-ui/components/message'
-import type { LinkConfigContext } from '@cery929-ui/components/link'
+import type { Language } from '@kn-ui/locale'
+import type { ButtonConfigContext } from '@kn-ui/components/button'
+import type { CardConfigContext } from '@kn-ui/components/card'
+import type { DialogConfigContext } from '@kn-ui/components/dialog'
+import type { MessageConfigContext } from '@kn-ui/components/message'
+import type { LinkConfigContext } from '@kn-ui/components/link'
 
 // eslint-disable-next-line @typescript-eslint/no-empty-object-type
 export type ExperimentalFeatures = {

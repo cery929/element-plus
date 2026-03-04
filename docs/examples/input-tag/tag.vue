@@ -18,9 +18,9 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { ElementPlus } from '@cery929-ui/icons-vue'
+import { ElementPlus } from '@kn-ui/icons-vue'
 
-import type { TagProps } from 'cery929-ui'
+import type { TagProps } from 'kn-ui'
 
 const type: Array<TagProps['type']> = [
   'primary',

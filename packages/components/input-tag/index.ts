@@ -1,7 +1,7 @@
-import { withInstall } from '@cery929-ui/utils'
+import { withInstall } from '@kn-ui/utils'
 import InputTag from './src/input-tag.vue'
 
-import type { SFCWithInstall } from '@cery929-ui/utils'
+import type { SFCWithInstall } from '@kn-ui/utils'
 
 export const ElInputTag: SFCWithInstall<typeof InputTag> = withInstall(InputTag)
 export default ElInputTag

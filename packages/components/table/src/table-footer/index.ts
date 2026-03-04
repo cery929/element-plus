@@ -1,5 +1,5 @@
 import { defineComponent, h, inject } from 'vue'
-import { useNamespace } from '@cery929-ui/hooks'
+import { useNamespace } from '@kn-ui/hooks'
 import useLayoutObserver from '../layout-observer'
 import { TABLE_INJECTION_KEY } from '../tokens'
 import useStyle from './style-helper'

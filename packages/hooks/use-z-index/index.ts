@@ -1,5 +1,5 @@
 import { computed, getCurrentInstance, inject, ref, unref } from 'vue'
-import { debugWarn, isClient, isNumber } from '@cery929-ui/utils'
+import { debugWarn, isClient, isNumber } from '@kn-ui/utils'
 
 import type { InjectionKey, Ref } from 'vue'
 

@@ -1,5 +1,5 @@
-import { buildProps, definePropType, mutable } from '@cery929-ui/utils'
-import { componentSizes } from '@cery929-ui/constants'
+import { buildProps, definePropType, mutable } from '@kn-ui/utils'
+import { componentSizes } from '@kn-ui/constants'
 
 import type {
   CSSProperties,

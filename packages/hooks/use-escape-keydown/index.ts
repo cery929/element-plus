@@ -1,6 +1,6 @@
 import { onBeforeUnmount, onMounted } from 'vue'
-import { getEventCode, isClient } from '@cery929-ui/utils'
-import { EVENT_CODE } from '@cery929-ui/constants'
+import { getEventCode, isClient } from '@kn-ui/utils'
+import { EVENT_CODE } from '@kn-ui/constants'
 
 let registeredEscapeHandlers: ((e: KeyboardEvent) => void)[] = []
 

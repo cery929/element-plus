@@ -1,8 +1,8 @@
 // @ts-nocheck
 import { nextTick, ref } from 'vue'
 import { afterEach, describe, expect, test } from 'vitest'
-import makeMount from '@cery929-ui/test-utils/make-mount'
-import { rAF } from '@cery929-ui/test-utils/tick'
+import makeMount from '@kn-ui/test-utils/make-mount'
+import { rAF } from '@kn-ui/test-utils/tick'
 import Popover from '../src/popover.vue'
 import PopoverDirective, { VPopover } from '../src/directive'
 

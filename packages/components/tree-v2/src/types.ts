@@ -1,4 +1,4 @@
-import { IconPropType } from '@cery929-ui/utils'
+import { IconPropType } from '@kn-ui/utils'
 
 import type {
   ComponentInternalInstance,

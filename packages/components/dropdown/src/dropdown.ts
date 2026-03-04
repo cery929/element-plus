@@ -1,17 +1,17 @@
-import { buildProps, definePropType, iconPropType } from '@cery929-ui/utils'
-import { EVENT_CODE } from '@cery929-ui/constants'
+import { buildProps, definePropType, iconPropType } from '@kn-ui/utils'
+import { EVENT_CODE } from '@kn-ui/constants'
 import {
   useTooltipContentProps,
   useTooltipTriggerProps,
-} from '@cery929-ui/components/tooltip'
-import { roleTypes } from '@cery929-ui/components/popper'
+} from '@kn-ui/components/tooltip'
+import { roleTypes } from '@kn-ui/components/popper'
 
-import type { TooltipTriggerType } from '@cery929-ui/components/tooltip'
-import type { Placement } from '@cery929-ui/components/popper'
+import type { TooltipTriggerType } from '@kn-ui/components/tooltip'
+import type { Placement } from '@kn-ui/components/popper'
 import type { Options } from '@popperjs/core'
-import type { ButtonProps, ButtonType } from '@cery929-ui/components/button'
+import type { ButtonProps, ButtonType } from '@kn-ui/components/button'
 import type { ComponentInternalInstance, ComputedRef } from 'vue'
-import type { Arrayable, Nullable } from '@cery929-ui/utils'
+import type { Arrayable, Nullable } from '@kn-ui/utils'
 
 export interface IElDropdownInstance {
   instance?: ComponentInternalInstance

@@ -1,7 +1,11 @@
 <template>
   <el-roving-focus-item :focusable="!disabled">
-    <el-dropdown-item-impl v-bind="propsAndAttrs" @pointerleave="handlePointerLeave" @pointermove="handlePointerMove"
-      @clickimpl="handleClick">
+    <el-dropdown-item-impl
+      v-bind="propsAndAttrs"
+      @pointerleave="handlePointerLeave"
+      @pointermove="handlePointerMove"
+      @clickimpl="handleClick"
+    >
       <template v-if="$slots.icon" #icon>
         <slot name="icon" />
       </template>

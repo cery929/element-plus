@@ -1,6 +1,11 @@
 <template>
-  <el-autocomplete v-model="state" :fetch-suggestions="querySearch" popper-class="my-autocomplete"
-    placeholder="Please input" @select="handleSelect">
+  <el-autocomplete
+    v-model="state"
+    :fetch-suggestions="querySearch"
+    popper-class="my-autocomplete"
+    placeholder="Please input"
+    @select="handleSelect"
+  >
     <template #suffix>
       <el-icon class="el-input__icon" @click="handleIconClick">
         <edit />

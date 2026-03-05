@@ -1,6 +1,14 @@
 <template>
-  <el-tree ref="treeRef" style="max-width: 600px" :data="data" show-checkbox default-expand-all node-key="id"
-    highlight-current :props="defaultProps" />
+  <el-tree
+    ref="treeRef"
+    style="max-width: 600px"
+    :data="data"
+    show-checkbox
+    default-expand-all
+    node-key="id"
+    highlight-current
+    :props="defaultProps"
+  />
 
   <div class="flex flex-wrap gap-1 mt-2">
     <el-button class="!ml-0" @click="getCheckedNodes">get by node</el-button>

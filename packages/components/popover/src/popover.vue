@@ -1,11 +1,36 @@
 <template>
-  <el-tooltip ref="tooltipRef" v-bind="$attrs" :trigger="trigger" :trigger-keys="triggerKeys" :placement="placement"
-    :disabled="disabled" :visible="visible" :transition="transition" :popper-options="popperOptions"
-    :tabindex="tabindex" :content="content" :offset="offset" :show-after="showAfter" :hide-after="hideAfter"
-    :auto-close="autoClose" :show-arrow="showArrow" :aria-label="title" :effect="effect" :enterable="enterable"
-    :popper-class="kls" :popper-style="style" :teleported="teleported" :append-to="appendTo" :persistent="persistent"
-    :gpu-acceleration="gpuAcceleration" @update:visible="onUpdateVisible" @before-show="beforeEnter"
-    @before-hide="beforeLeave" @show="afterEnter" @hide="afterLeave">
+  <el-tooltip
+    ref="tooltipRef"
+    v-bind="$attrs"
+    :trigger="trigger"
+    :trigger-keys="triggerKeys"
+    :placement="placement"
+    :disabled="disabled"
+    :visible="visible"
+    :transition="transition"
+    :popper-options="popperOptions"
+    :tabindex="tabindex"
+    :content="content"
+    :offset="offset"
+    :show-after="showAfter"
+    :hide-after="hideAfter"
+    :auto-close="autoClose"
+    :show-arrow="showArrow"
+    :aria-label="title"
+    :effect="effect"
+    :enterable="enterable"
+    :popper-class="kls"
+    :popper-style="style"
+    :teleported="teleported"
+    :append-to="appendTo"
+    :persistent="persistent"
+    :gpu-acceleration="gpuAcceleration"
+    @update:visible="onUpdateVisible"
+    @before-show="beforeEnter"
+    @before-hide="beforeLeave"
+    @show="afterEnter"
+    @hide="afterLeave"
+  >
     <template v-if="$slots.reference">
       <slot name="reference" />
     </template>

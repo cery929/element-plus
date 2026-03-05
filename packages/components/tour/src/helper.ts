@@ -16,13 +16,7 @@ import {
   offset as offsetMiddleware,
   shift,
 } from '@floating-ui/dom'
-import {
-  isArray,
-  isClient,
-  isFunction,
-  isString,
-  keysOf,
-} from '@kn-ui/utils'
+import { isArray, isClient, isFunction, isString, keysOf } from '@kn-ui/utils'
 
 import type {
   CSSProperties,

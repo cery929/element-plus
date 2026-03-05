@@ -1,21 +1,41 @@
 <template>
-  <div :class="[
-    ns.b(),
-    ns.m(listType),
-    ns.is('drag', drag),
-    ns.is('disabled', disabled),
-  ]" :tabindex="disabled ? undefined : 0" :aria-disabled="disabled" role="button" @click="handleClick"
-    @keydown.self.enter.space="handleKeydown">
+  <div
+    :class="[
+      ns.b(),
+      ns.m(listType),
+      ns.is('drag', drag),
+      ns.is('disabled', disabled),
+    ]"
+    :tabindex="disabled ? undefined : 0"
+    :aria-disabled="disabled"
+    role="button"
+    @click="handleClick"
+    @keydown.self.enter.space="handleKeydown"
+  >
     <template v-if="drag">
-      <upload-dragger :disabled="disabled" :directory="directory" @file="uploadFiles">
+      <upload-dragger
+        :disabled="disabled"
+        :directory="directory"
+        @file="uploadFiles"
+      >
         <slot />
       </upload-dragger>
     </template>
     <template v-else>
       <slot />
     </template>
-    <input ref="inputRef" :class="ns.e('input')" :name="name" :disabled="disabled" :multiple="multiple" :accept="accept"
-      :webkitdirectory="directory || undefined" type="file" @change="handleChange" @click.stop />
+    <input
+      ref="inputRef"
+      :class="ns.e('input')"
+      :name="name"
+      :disabled="disabled"
+      :multiple="multiple"
+      :accept="accept"
+      :webkitdirectory="directory || undefined"
+      type="file"
+      @change="handleChange"
+      @click.stop
+    />
   </div>
 </template>
 

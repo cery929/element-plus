@@ -4,7 +4,12 @@
   <el-drawer v-model="drawer" title="I'm outer Drawer" size="50%">
     <div>
       <el-button @click="innerDrawer = true">Click me!</el-button>
-      <el-drawer v-model="innerDrawer" title="I'm inner Drawer" :append-to-body="true" :before-close="handleClose">
+      <el-drawer
+        v-model="innerDrawer"
+        title="I'm inner Drawer"
+        :append-to-body="true"
+        :before-close="handleClose"
+      >
         <p>_(:зゝ∠)_</p>
       </el-drawer>
     </div>

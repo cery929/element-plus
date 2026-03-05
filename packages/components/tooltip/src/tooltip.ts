@@ -4,10 +4,7 @@ import { popperArrowProps, popperProps } from '@kn-ui/components/popper'
 import { useTooltipContentProps } from './content'
 import { useTooltipTriggerProps } from './trigger'
 
-import type {
-  PopperArrowProps,
-  PopperProps,
-} from '@kn-ui/components/popper'
+import type { PopperArrowProps, PopperProps } from '@kn-ui/components/popper'
 import type { ElTooltipContentProps } from './content'
 import type { UseTooltipTriggerProps } from './trigger'
 import type Tooltip from './tooltip.vue'

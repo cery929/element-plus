@@ -1,9 +1,22 @@
 <template>
-  <div ref="formItemRef" :class="formItemClasses" :role="isGroup ? 'group' : undefined"
-    :aria-labelledby="isGroup ? labelId : undefined">
-    <form-label-wrap :is-auto-width="labelStyle.width === 'auto'" :update-all="formContext?.labelWidth === 'auto'">
-      <component :is="labelFor ? 'label' : 'div'" v-if="!!(label || $slots.label)" :id="labelId" :for="labelFor"
-        :class="ns.e('label')" :style="labelStyle">
+  <div
+    ref="formItemRef"
+    :class="formItemClasses"
+    :role="isGroup ? 'group' : undefined"
+    :aria-labelledby="isGroup ? labelId : undefined"
+  >
+    <form-label-wrap
+      :is-auto-width="labelStyle.width === 'auto'"
+      :update-all="formContext?.labelWidth === 'auto'"
+    >
+      <component
+        :is="labelFor ? 'label' : 'div'"
+        v-if="!!(label || $slots.label)"
+        :id="labelId"
+        :for="labelFor"
+        :class="ns.e('label')"
+        :style="labelStyle"
+      >
         <slot name="label" :label="currentLabel">
           {{ currentLabel }}
         </slot>

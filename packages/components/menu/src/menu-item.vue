@@ -1,16 +1,28 @@
 <template>
-  <li :class="[
-    nsMenuItem.b(),
-    nsMenuItem.is('active', active),
-    nsMenuItem.is('disabled', disabled),
-  ]" role="menuitem" tabindex="-1" @click="handleClick">
-    <el-tooltip v-if="
-      parentMenu.type.name === 'ElMenu' &&
-      rootMenu.props.collapse &&
-      $slots.title
-    " :effect="rootMenu.props.popperEffect" placement="right" :fallback-placements="['left']"
-      :popper-class="rootMenu.props.popperClass" :popper-style="rootMenu.props.popperStyle"
-      :persistent="rootMenu.props.persistent" focus-on-target>
+  <li
+    :class="[
+      nsMenuItem.b(),
+      nsMenuItem.is('active', active),
+      nsMenuItem.is('disabled', disabled),
+    ]"
+    role="menuitem"
+    tabindex="-1"
+    @click="handleClick"
+  >
+    <el-tooltip
+      v-if="
+        parentMenu.type.name === 'ElMenu' &&
+        rootMenu.props.collapse &&
+        $slots.title
+      "
+      :effect="rootMenu.props.popperEffect"
+      placement="right"
+      :fallback-placements="['left']"
+      :popper-class="rootMenu.props.popperClass"
+      :popper-style="rootMenu.props.popperStyle"
+      :persistent="rootMenu.props.persistent"
+      focus-on-target
+    >
       <template #content>
         <slot name="title" />
       </template>

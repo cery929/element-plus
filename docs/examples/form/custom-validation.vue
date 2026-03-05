@@ -1,11 +1,22 @@
 <template>
-  <el-form ref="ruleFormRef" style="max-width: 600px" :model="ruleForm" status-icon :rules="rules" label-width="auto"
-    class="demo-ruleForm">
+  <el-form
+    ref="ruleFormRef"
+    style="max-width: 600px"
+    :model="ruleForm"
+    status-icon
+    :rules="rules"
+    label-width="auto"
+    class="demo-ruleForm"
+  >
     <el-form-item label="Password" prop="pass">
       <el-input v-model="ruleForm.pass" type="password" autocomplete="off" />
     </el-form-item>
     <el-form-item label="Confirm" prop="checkPass">
-      <el-input v-model="ruleForm.checkPass" type="password" autocomplete="off" />
+      <el-input
+        v-model="ruleForm.checkPass"
+        type="password"
+        autocomplete="off"
+      />
     </el-form-item>
     <el-form-item label="Age" prop="age">
       <el-input v-model.number="ruleForm.age" />

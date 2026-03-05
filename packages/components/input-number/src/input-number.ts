@@ -1,11 +1,7 @@
 import { isNil } from 'lodash-unified'
 import { buildProps, definePropType, isNumber } from '@kn-ui/utils'
 import { useAriaProps, useSizeProp } from '@kn-ui/hooks'
-import {
-  CHANGE_EVENT,
-  INPUT_EVENT,
-  UPDATE_MODEL_EVENT,
-} from '@kn-ui/constants'
+import { CHANGE_EVENT, INPUT_EVENT, UPDATE_MODEL_EVENT } from '@kn-ui/constants'
 
 import type { ExtractPublicPropTypes, HTMLAttributes } from 'vue'
 import type { ComponentSize } from '@kn-ui/constants'

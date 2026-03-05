@@ -10,7 +10,11 @@
       <div class="flex flex-col basis-150px gap-1">
         <span>Underline:</span>
         <el-select v-model="config.underline">
-          <el-option v-for="type in underlineOptions" :key="type" :value="type" />
+          <el-option
+            v-for="type in underlineOptions"
+            :key="type"
+            :value="type"
+          />
         </el-select>
       </div>
     </div>

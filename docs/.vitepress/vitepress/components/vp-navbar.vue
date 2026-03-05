@@ -34,7 +34,11 @@ const currentLink = computed(() => {
     <div class="header-container">
       <div class="logo-container">
         <a :href="withBase(currentLink)">
-          <img class="logo" src="/images/element-plus-logo.svg" alt="Element Plus Logo" />
+          <img
+            class="logo"
+            src="/images/element-plus-logo.svg"
+            alt="Element Plus Logo"
+          />
         </a>
         <el-tag round size="small" title="latest version">{{
           epVersion.replace('0.0.0-staging.', '')
@@ -46,7 +50,11 @@ const currentLink = computed(() => {
         <VPNavbarThemeToggler class="theme-toggler" />
         <VPNavbarTranslation class="translation" />
         <VPNavbarSocialLinks class="social-links" />
-        <VPNavbarHamburger :active="fullScreen" class="hamburger" @click="$emit('toggle')" />
+        <VPNavbarHamburger
+          :active="fullScreen"
+          class="hamburger"
+          @click="$emit('toggle')"
+        />
       </div>
     </div>
   </div>
@@ -58,7 +66,7 @@ const currentLink = computed(() => {
   align-items: center;
   height: var(--header-height);
 
-  >a {
+  > a {
     height: 28px;
     width: 128px;
   }

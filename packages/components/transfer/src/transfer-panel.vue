@@ -1,24 +1,49 @@
 <template>
   <div :class="ns.b('panel')">
     <p :class="ns.be('panel', 'header')">
-      <el-checkbox v-model="allChecked" :indeterminate="isIndeterminate" :validate-event="false"
-        @change="handleAllCheckedChange">
+      <el-checkbox
+        v-model="allChecked"
+        :indeterminate="isIndeterminate"
+        :validate-event="false"
+        @change="handleAllCheckedChange"
+      >
         {{ title }}
         <span>{{ checkedSummary }}</span>
       </el-checkbox>
     </p>
 
     <div :class="[ns.be('panel', 'body'), ns.is('with-footer', hasFooter)]">
-      <el-input v-if="filterable" v-model="query" :class="ns.be('panel', 'filter')" size="default"
-        :placeholder="placeholder" :prefix-icon="Search" clearable :validate-event="false" />
-      <el-checkbox-group v-show="!hasNoMatch && !isEmpty(data)" v-model="checked" :validate-event="false"
-        :class="[ns.is('filterable', filterable), ns.be('panel', 'list')]">
-        <el-checkbox v-for="item in filteredData" :key="item[propsAlias.key]" :class="ns.be('panel', 'item')"
-          :value="item[propsAlias.key]" :disabled="item[propsAlias.disabled]" :validate-event="false">
+      <el-input
+        v-if="filterable"
+        v-model="query"
+        :class="ns.be('panel', 'filter')"
+        size="default"
+        :placeholder="placeholder"
+        :prefix-icon="Search"
+        clearable
+        :validate-event="false"
+      />
+      <el-checkbox-group
+        v-show="!hasNoMatch && !isEmpty(data)"
+        v-model="checked"
+        :validate-event="false"
+        :class="[ns.is('filterable', filterable), ns.be('panel', 'list')]"
+      >
+        <el-checkbox
+          v-for="item in filteredData"
+          :key="item[propsAlias.key]"
+          :class="ns.be('panel', 'item')"
+          :value="item[propsAlias.key]"
+          :disabled="item[propsAlias.disabled]"
+          :validate-event="false"
+        >
           <option-content :option="optionRender?.(item)" />
         </el-checkbox>
       </el-checkbox-group>
-      <div v-show="hasNoMatch || isEmpty(data)" :class="ns.be('panel', 'empty')">
+      <div
+        v-show="hasNoMatch || isEmpty(data)"
+        :class="ns.be('panel', 'empty')"
+      >
         <slot name="empty">
           {{ hasNoMatch ? t('el.transfer.noMatch') : t('el.transfer.noData') }}
         </slot>

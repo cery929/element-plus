@@ -1,12 +1,29 @@
 <template>
-  <component :is="!hasOwnLabel && isLabeledByFormItem ? 'span' : 'label'"
-    :for="!hasOwnLabel && isLabeledByFormItem ? null : inputId" :class="compKls"
-    :aria-controls="indeterminate ? ariaControls : null" :aria-checked="indeterminate ? 'mixed' : undefined"
-    :aria-label="ariaLabel" @click="onClickRoot">
+  <component
+    :is="!hasOwnLabel && isLabeledByFormItem ? 'span' : 'label'"
+    :for="!hasOwnLabel && isLabeledByFormItem ? null : inputId"
+    :class="compKls"
+    :aria-controls="indeterminate ? ariaControls : null"
+    :aria-checked="indeterminate ? 'mixed' : undefined"
+    :aria-label="ariaLabel"
+    @click="onClickRoot"
+  >
     <span :class="spanKls">
-      <input :id="inputId" v-model="model" :class="ns.e('original')" type="checkbox" :indeterminate="indeterminate"
-        :name="name" :tabindex="tabindex" :disabled="isDisabled" v-bind="inputBindings" @change="handleChange"
-        @focus="isFocused = true" @blur="isFocused = false" @click.stop />
+      <input
+        :id="inputId"
+        v-model="model"
+        :class="ns.e('original')"
+        type="checkbox"
+        :indeterminate="indeterminate"
+        :name="name"
+        :tabindex="tabindex"
+        :disabled="isDisabled"
+        v-bind="inputBindings"
+        @change="handleChange"
+        @focus="isFocused = true"
+        @blur="isFocused = false"
+        @click.stop
+      />
       <span :class="ns.e('inner')" />
     </span>
     <span v-if="hasOwnLabel" :class="ns.e('label')">

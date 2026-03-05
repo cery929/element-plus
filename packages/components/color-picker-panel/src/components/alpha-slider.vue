@@ -1,10 +1,21 @@
 <template>
   <div :class="rootKls">
     <div ref="bar" :class="barKls" :style="barStyle" @click="handleClick" />
-    <div ref="thumb" :class="thumbKls" :style="thumbStyle" :aria-label="ariaLabel" :aria-valuenow="currentValue"
-      :aria-valuetext="ariaValuetext" :aria-orientation="vertical ? 'vertical' : 'horizontal'" :aria-valuemin="minValue"
-      :aria-valuemax="maxValue" role="slider" :tabindex="disabled ? undefined : 0" :aria-disabled="disabled"
-      @keydown="handleKeydown" />
+    <div
+      ref="thumb"
+      :class="thumbKls"
+      :style="thumbStyle"
+      :aria-label="ariaLabel"
+      :aria-valuenow="currentValue"
+      :aria-valuetext="ariaValuetext"
+      :aria-orientation="vertical ? 'vertical' : 'horizontal'"
+      :aria-valuemin="minValue"
+      :aria-valuemax="maxValue"
+      role="slider"
+      :tabindex="disabled ? undefined : 0"
+      :aria-disabled="disabled"
+      @keydown="handleKeydown"
+    />
   </div>
 </template>
 

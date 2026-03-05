@@ -1,5 +1,9 @@
 <template>
-  <el-table :data="tableData" :default-sort="{ prop: 'date', order: 'descending' }" style="width: 100%">
+  <el-table
+    :data="tableData"
+    :default-sort="{ prop: 'date', order: 'descending' }"
+    style="width: 100%"
+  >
     <el-table-column prop="date" label="Date" sortable width="180" />
     <el-table-column prop="name" label="Name" width="180" />
     <el-table-column prop="address" label="Address" :formatter="formatter" />

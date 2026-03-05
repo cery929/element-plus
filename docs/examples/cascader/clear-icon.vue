@@ -1,5 +1,10 @@
 <template>
-  <el-cascader :options="options" clearable :clear-icon="CloseBold" placeholder="Custom clear icon" />
+  <el-cascader
+    :options="options"
+    clearable
+    :clear-icon="CloseBold"
+    placeholder="Custom clear icon"
+  />
 </template>
 
 <script lang="ts" setup>

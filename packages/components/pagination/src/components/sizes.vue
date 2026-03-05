@@ -1,8 +1,22 @@
 <template>
   <span :class="ns.e('sizes')">
-    <el-select :model-value="innerPageSize" :disabled="disabled" :popper-class="popperClass" :popper-style="popperStyle"
-      :size="size" :teleported="teleported" :validate-event="false" :append-to="appendSizeTo" @change="handleChange">
-      <el-option v-for="item in innerPageSizes" :key="item" :value="item" :label="item + t('el.pagination.pagesize')" />
+    <el-select
+      :model-value="innerPageSize"
+      :disabled="disabled"
+      :popper-class="popperClass"
+      :popper-style="popperStyle"
+      :size="size"
+      :teleported="teleported"
+      :validate-event="false"
+      :append-to="appendSizeTo"
+      @change="handleChange"
+    >
+      <el-option
+        v-for="item in innerPageSizes"
+        :key="item"
+        :value="item"
+        :label="item + t('el.pagination.pagesize')"
+      />
     </el-select>
   </span>
 </template>

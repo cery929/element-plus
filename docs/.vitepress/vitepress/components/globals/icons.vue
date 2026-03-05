@@ -83,16 +83,30 @@ const filterCategories = computed(() => {
 
 <template>
   <div style="text-align: right">
-    <el-switch v-model="copyIcon" active-text="Copy icon code" inactive-text="Copy SVG content" />
+    <el-switch
+      v-model="copyIcon"
+      active-text="Copy icon code"
+      inactive-text="Copy SVG content"
+    />
   </div>
   <div class="icon-search-content">
-    <el-input v-model="query" :prefix-icon="Icons.Search" size="large" placeholder="Search Icons" />
+    <el-input
+      v-model="query"
+      :prefix-icon="Icons.Search"
+      size="large"
+      placeholder="Search Icons"
+    />
   </div>
   <div v-for="item in filterCategories" :key="item.name" class="demo-icon-item">
     <div class="demo-icon-title">{{ item.name }}</div>
     <ul class="demo-icon-list">
-      <li v-for="component in item.icons" :key="component.name" :ref="component.name" class="icon-item"
-        @click="copySvgIcon(component.name, $refs)">
+      <li
+        v-for="component in item.icons"
+        :key="component.name"
+        :ref="component.name"
+        class="icon-item"
+        @click="copySvgIcon(component.name, $refs)"
+      >
         <span class="demo-svg-icon">
           <ElIcon :size="20">
             <component :is="component" />

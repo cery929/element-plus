@@ -39,14 +39,7 @@
 </template>
 
 <script lang="ts" setup>
-import {
-  Check,
-  Delete,
-  Edit,
-  Message,
-  Search,
-  Star,
-} from '@kn-ui/icons-vue'
+import { Check, Delete, Edit, Message, Search, Star } from '@kn-ui/icons-vue'
 </script>
 
 <style scoped>
@@ -63,7 +56,7 @@ import {
   align-items: center;
 }
 
-.button-row>* {
+.button-row > * {
   margin: 0;
 }
 </style>

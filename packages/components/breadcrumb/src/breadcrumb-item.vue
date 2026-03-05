@@ -1,6 +1,10 @@
 <template>
   <span :class="ns.e('item')">
-    <span :class="[ns.e('inner'), ns.is('link', !!to)]" role="link" @click="onClick">
+    <span
+      :class="[ns.e('inner'), ns.is('link', !!to)]"
+      role="link"
+      @click="onClick"
+    >
       <slot />
     </span>
     <el-icon v-if="breadcrumbContext?.separatorIcon" :class="ns.e('separator')">

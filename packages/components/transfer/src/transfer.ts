@@ -1,10 +1,5 @@
 import { isNil } from 'lodash-unified'
-import {
-  buildProps,
-  definePropType,
-  isArray,
-  mutable,
-} from '@kn-ui/utils'
+import { buildProps, definePropType, isArray, mutable } from '@kn-ui/utils'
 import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@kn-ui/constants'
 
 import type { ExtractPublicPropTypes, h as H, VNode } from 'vue'

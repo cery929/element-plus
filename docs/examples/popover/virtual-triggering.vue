@@ -3,7 +3,13 @@
     Click me
   </el-button>
 
-  <el-popover ref="popoverRef" :virtual-ref="buttonRef" trigger="click" title="With title" virtual-triggering>
+  <el-popover
+    ref="popoverRef"
+    :virtual-ref="buttonRef"
+    trigger="click"
+    title="With title"
+    virtual-triggering
+  >
     <span> Some content </span>
   </el-popover>
 </template>

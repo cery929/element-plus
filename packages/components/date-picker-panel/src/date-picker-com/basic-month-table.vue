@@ -1,17 +1,30 @@
 <template>
-  <table role="grid" :aria-label="t('el.datepicker.monthTablePrompt')" :class="ns.b()" @click="handleMonthTableClick"
-    @mousemove="handleMouseMove">
+  <table
+    role="grid"
+    :aria-label="t('el.datepicker.monthTablePrompt')"
+    :class="ns.b()"
+    @click="handleMonthTableClick"
+    @mousemove="handleMouseMove"
+  >
     <tbody ref="tbodyRef">
       <tr v-for="(row, key) in rows" :key="key">
-        <td v-for="(cell, key_) in row" :key="key_"
-          :ref="(el) => cell.isSelected && (currentCellRef = el as HTMLElement)" :class="getCellStyle(cell)"
-          :aria-selected="!!cell.isSelected" :aria-label="t(`el.datepicker.month${+cell.text + 1}`)"
-          :tabindex="cell.isSelected ? 0 : -1" @keydown.space.prevent.stop="handleMonthTableClick"
-          @keydown.enter.prevent.stop="handleMonthTableClick">
-          <el-date-picker-cell :cell="{
-            ...cell,
-            renderText: t('el.datepicker.months.' + months[cell.text]),
-          }" />
+        <td
+          v-for="(cell, key_) in row"
+          :key="key_"
+          :ref="(el) => cell.isSelected && (currentCellRef = el as HTMLElement)"
+          :class="getCellStyle(cell)"
+          :aria-selected="!!cell.isSelected"
+          :aria-label="t(`el.datepicker.month${+cell.text + 1}`)"
+          :tabindex="cell.isSelected ? 0 : -1"
+          @keydown.space.prevent.stop="handleMonthTableClick"
+          @keydown.enter.prevent.stop="handleMonthTableClick"
+        >
+          <el-date-picker-cell
+            :cell="{
+              ...cell,
+              renderText: t('el.datepicker.months.' + months[cell.text]),
+            }"
+          />
         </td>
       </tr>
     </tbody>
@@ -158,8 +171,8 @@ const getCellStyle = (cell: MonthCell) => {
     props.disabled ||
     (props.disabledDate
       ? datesInMonth(props.date, year, month, lang.value).every(
-        props.disabledDate
-      )
+          props.disabledDate
+        )
       : false)
   style.current = castArray(props.parsedValue).some(
     (date) =>
@@ -245,11 +258,11 @@ const handleMonthTableClick = (event: MouseEvent | KeyboardEvent) => {
     )
     const newValue = hasClass(target, 'current')
       ? castArray(props.parsedValue).filter(
-        (d) =>
-          // Filter out the selected month only when both year and month match
-          // This allows remove same months from different years #20019
-          d?.year() !== newMonth.year() || d?.month() !== newMonth.month()
-      )
+          (d) =>
+            // Filter out the selected month only when both year and month match
+            // This allows remove same months from different years #20019
+            d?.year() !== newMonth.year() || d?.month() !== newMonth.month()
+        )
       : castArray(props.parsedValue).concat([dayjs(newMonth)])
     emit('pick', newValue)
   } else if (props.selectionMode === 'range') {

@@ -1,8 +1,22 @@
 <template>
   <div ref="scrollbarRef" :class="ns.b()">
-    <div ref="wrapRef" :class="wrapKls" :style="wrapStyle" :tabindex="tabindex" @scroll="handleScroll">
-      <component :is="tag" :id="id" ref="resizeRef" :class="resizeKls" :style="viewStyle" :role="role"
-        :aria-label="ariaLabel" :aria-orientation="ariaOrientation">
+    <div
+      ref="wrapRef"
+      :class="wrapKls"
+      :style="wrapStyle"
+      :tabindex="tabindex"
+      @scroll="handleScroll"
+    >
+      <component
+        :is="tag"
+        :id="id"
+        ref="resizeRef"
+        :class="resizeKls"
+        :style="viewStyle"
+        :role="role"
+        :aria-label="ariaLabel"
+        :aria-orientation="ariaOrientation"
+      >
         <slot />
       </component>
     </div>
@@ -137,7 +151,7 @@ const handleScroll = () => {
       top: wrapScrollTop <= props.distance && prevTop !== 0,
       right:
         wrapScrollLeft + wrapRef.value.clientWidth >=
-        wrapRef.value.scrollWidth - props.distance &&
+          wrapRef.value.scrollWidth - props.distance &&
         prevLeft !== wrapScrollLeft,
       left: wrapScrollLeft <= props.distance && prevLeft !== 0,
     }
@@ -202,8 +216,8 @@ watch(
       stopWrapResizeObserver?.()
       stopResizeListener?.()
     } else {
-      ; ({ stop: stopResizeObserver } = useResizeObserver(resizeRef, update))
-        ; ({ stop: stopWrapResizeObserver } = useResizeObserver(wrapRef, update))
+      ;({ stop: stopResizeObserver } = useResizeObserver(resizeRef, update))
+      ;({ stop: stopWrapResizeObserver } = useResizeObserver(wrapRef, update))
       stopResizeListener = useEventListener('resize', update)
     }
   },

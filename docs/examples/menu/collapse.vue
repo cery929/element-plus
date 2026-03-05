@@ -3,8 +3,13 @@
     <el-radio-button :value="false">expand</el-radio-button>
     <el-radio-button :value="true">collapse</el-radio-button>
   </el-radio-group>
-  <el-menu default-active="2" class="el-menu-vertical-demo" :collapse="isCollapse" @open="handleOpen"
-    @close="handleClose">
+  <el-menu
+    default-active="2"
+    class="el-menu-vertical-demo"
+    :collapse="isCollapse"
+    @open="handleOpen"
+    @close="handleClose"
+  >
     <el-sub-menu index="1">
       <template #title>
         <el-icon>
@@ -46,12 +51,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import {
-  Document,
-  Menu as IconMenu,
-  Location,
-  Setting,
-} from '@kn-ui/icons-vue'
+import { Document, Menu as IconMenu, Location, Setting } from '@kn-ui/icons-vue'
 
 const isCollapse = ref(true)
 const handleOpen = (key: string, keyPath: string[]) => {

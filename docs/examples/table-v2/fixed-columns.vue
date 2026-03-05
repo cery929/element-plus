@@ -1,6 +1,13 @@
 <template>
-  <el-table-v2 :columns="columns" :data="data" :sort-by="sortBy" :width="700" :height="400" fixed
-    @column-sort="onSort" />
+  <el-table-v2
+    :columns="columns"
+    :data="data"
+    :sort-by="sortBy"
+    :width="700"
+    :height="400"
+    fixed
+    @column-sort="onSort"
+  />
 </template>
 
 <script lang="ts" setup>

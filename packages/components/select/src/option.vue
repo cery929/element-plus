@@ -1,6 +1,14 @@
 <template>
-  <li v-show="visible" :id="id" :class="containerKls" role="option" :aria-disabled="isDisabled || undefined"
-    :aria-selected="itemSelected" @mousemove="hoverItem" @click.stop="selectOptionClick">
+  <li
+    v-show="visible"
+    :id="id"
+    :class="containerKls"
+    role="option"
+    :aria-disabled="isDisabled || undefined"
+    :aria-selected="itemSelected"
+    @mousemove="hoverItem"
+    @click.stop="selectOptionClick"
+  >
     <slot>
       <span>{{ currentLabel }}</span>
     </slot>

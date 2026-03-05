@@ -1,9 +1,20 @@
 <template>
   <el-teleport to="body" :disabled="!teleported">
     <transition name="viewer-fade" appear>
-      <div ref="wrapper" :tabindex="-1" :class="ns.e('wrapper')" :style="{ zIndex }">
-        <el-focus-trap loop trapped :focus-trap-el="wrapper" focus-start-el="container"
-          @focusout-prevented="onFocusoutPrevented" @release-requested="onCloseRequested">
+      <div
+        ref="wrapper"
+        :tabindex="-1"
+        :class="ns.e('wrapper')"
+        :style="{ zIndex }"
+      >
+        <el-focus-trap
+          loop
+          trapped
+          :focus-trap-el="wrapper"
+          focus-start-el="container"
+          @focusout-prevented="onFocusoutPrevented"
+          @release-requested="onCloseRequested"
+        >
           <div :class="ns.e('mask')" @click.self="hideOnClickModal && hide()" />
 
           <!-- CLOSE -->
@@ -26,16 +37,30 @@
               </el-icon>
             </span>
           </template>
-          <div v-if="$slots.progress || showProgress" :class="[ns.e('btn'), ns.e('progress')]">
-            <slot name="progress" :active-index="activeIndex" :total="urlList.length">
+          <div
+            v-if="$slots.progress || showProgress"
+            :class="[ns.e('btn'), ns.e('progress')]"
+          >
+            <slot
+              name="progress"
+              :active-index="activeIndex"
+              :total="urlList.length"
+            >
               {{ progress }}
             </slot>
           </div>
           <!-- ACTIONS -->
           <div :class="[ns.e('btn'), ns.e('actions')]">
             <div :class="ns.e('actions__inner')">
-              <slot name="toolbar" :actions="handleActions" :prev="prev" :next="next" :reset="toggleMode"
-                :active-index="activeIndex" :set-active-item="setActiveItem">
+              <slot
+                name="toolbar"
+                :actions="handleActions"
+                :prev="prev"
+                :next="next"
+                :reset="toggleMode"
+                :active-index="activeIndex"
+                :set-active-item="setActiveItem"
+              >
                 <el-icon @click="handleActions('zoomOut')">
                   <ZoomOut />
                 </el-icon>
@@ -58,11 +83,25 @@
           </div>
           <!-- CANVAS -->
           <div :class="ns.e('canvas')">
-            <slot v-if="loadError && $slots['viewer-error']" name="viewer-error" :active-index="activeIndex"
-              :src="currentImg" />
-            <img v-else ref="imgRef" :key="currentImg" :src="currentImg" :style="imgStyle" :class="ns.e('img')"
-              :crossorigin="crossorigin" @load="handleImgLoad" @error="handleImgError" @mousedown="handleMouseDown"
-              @touchstart="handleTouchStart" />
+            <slot
+              v-if="loadError && $slots['viewer-error']"
+              name="viewer-error"
+              :active-index="activeIndex"
+              :src="currentImg"
+            />
+            <img
+              v-else
+              ref="imgRef"
+              :key="currentImg"
+              :src="currentImg"
+              :style="imgStyle"
+              :class="ns.e('img')"
+              :crossorigin="crossorigin"
+              @load="handleImgLoad"
+              @error="handleImgError"
+              @mousedown="handleMouseDown"
+              @touchstart="handleTouchStart"
+            />
           </div>
           <slot />
         </el-focus-trap>
@@ -84,12 +123,7 @@ import {
 } from 'vue'
 import { clamp, useEventListener } from '@vueuse/core'
 import { throttle } from 'lodash-unified'
-import {
-  useLocale,
-  useLockscreen,
-  useNamespace,
-  useZIndex,
-} from '@kn-ui/hooks'
+import { useLocale, useLockscreen, useNamespace, useZIndex } from '@kn-ui/hooks'
 import { EVENT_CODE } from '@kn-ui/constants'
 import { getEventCode, keysOf } from '@kn-ui/utils'
 import ElFocusTrap from '@kn-ui/components/focus-trap'
@@ -285,7 +319,7 @@ function handleImgError(e: Event) {
   loadError.value = true
   loading.value = false
   emit('error', e)
-    ; (e.target as HTMLImageElement).alt = t('el.image.error')
+  ;(e.target as HTMLImageElement).alt = t('el.image.error')
 }
 
 function handleMouseDown(e: MouseEvent) {

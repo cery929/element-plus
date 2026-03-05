@@ -1,13 +1,25 @@
 <template>
-  <table role="grid" :aria-label="t('el.datepicker.yearTablePrompt')" :class="ns.b()" @click="handleYearTableClick"
-    @mousemove="handleMouseMove">
+  <table
+    role="grid"
+    :aria-label="t('el.datepicker.yearTablePrompt')"
+    :class="ns.b()"
+    @click="handleYearTableClick"
+    @mousemove="handleMouseMove"
+  >
     <tbody ref="tbodyRef">
       <tr v-for="(row, rowKey) in rows" :key="rowKey">
-        <td v-for="(cell, cellKey) in row" :key="`${rowKey}_${cellKey}`"
-          :ref="(el) => cell.isSelected && (currentCellRef = el as HTMLElement)" class="available"
-          :class="getCellKls(cell)" :aria-selected="cell.isSelected" :aria-label="String(cell.text)"
-          :tabindex="cell.isSelected ? 0 : -1" @keydown.space.prevent.stop="handleYearTableClick"
-          @keydown.enter.prevent.stop="handleYearTableClick">
+        <td
+          v-for="(cell, cellKey) in row"
+          :key="`${rowKey}_${cellKey}`"
+          :ref="(el) => cell.isSelected && (currentCellRef = el as HTMLElement)"
+          class="available"
+          :class="getCellKls(cell)"
+          :aria-selected="cell.isSelected"
+          :aria-label="String(cell.text)"
+          :tabindex="cell.isSelected ? 0 : -1"
+          @keydown.space.prevent.stop="handleYearTableClick"
+          @keydown.enter.prevent.stop="handleYearTableClick"
+        >
           <el-date-picker-cell :cell="cell" />
         </td>
       </tr>

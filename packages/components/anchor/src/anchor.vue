@@ -1,6 +1,11 @@
 <template>
   <div ref="anchorRef" :class="cls">
-    <div v-if="marker" ref="markerRef" :class="ns.e('marker')" :style="markerStyle" />
+    <div
+      v-if="marker"
+      ref="markerRef"
+      :class="ns.e('marker')"
+      :style="markerStyle"
+    />
     <div :class="ns.e('list')">
       <slot />
     </div>

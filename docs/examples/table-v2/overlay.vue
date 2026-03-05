@@ -1,7 +1,16 @@
 <template>
-  <el-table-v2 :columns="columns" :data="data" :row-height="40" :width="700" :height="400">
+  <el-table-v2
+    :columns="columns"
+    :data="data"
+    :row-height="40"
+    :width="700"
+    :height="400"
+  >
     <template #overlay>
-      <div class="el-loading-mask" style="display: flex; align-items: center; justify-content: center">
+      <div
+        class="el-loading-mask"
+        style="display: flex; align-items: center; justify-content: center"
+      >
         <el-icon class="is-loading" color="var(--el-color-primary)" :size="26">
           <loading-icon />
         </el-icon>

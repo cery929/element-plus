@@ -5,7 +5,13 @@
     <el-radio value="small">Small</el-radio>
   </el-radio-group>
 
-  <el-descriptions class="margin-top" title="With border" :column="3" :size="size" border>
+  <el-descriptions
+    class="margin-top"
+    title="With border"
+    :column="3"
+    :size="size"
+    border
+  >
     <template #extra>
       <el-button type="primary">Operation</el-button>
     </template>
@@ -66,7 +72,13 @@
     </el-descriptions-item>
   </el-descriptions>
 
-  <el-descriptions class="margin-top" title="Without border" :column="3" :size="size" :style="blockMargin">
+  <el-descriptions
+    class="margin-top"
+    title="Without border"
+    :column="3"
+    :size="size"
+    :style="blockMargin"
+  >
     <template #extra>
       <el-button type="primary">Operation</el-button>
     </template>

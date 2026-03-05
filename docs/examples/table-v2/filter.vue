@@ -1,5 +1,11 @@
 <template>
-  <el-table-v2 fixed :columns="fixedColumns" :data="data" :width="700" :height="400" />
+  <el-table-v2
+    fixed
+    :columns="fixedColumns"
+    :data="data"
+    :width="700"
+    :height="400"
+  />
 </template>
 
 <script lang="tsx" setup>
@@ -69,7 +75,7 @@ const onReset = () => {
 
 const handleShowPopover = () => {
   const button = document.querySelector('.el-table-v2__demo-filter button')
-    ; (button as HTMLElement)?.focus()
+  ;(button as HTMLElement)?.focus()
 }
 
 columns[0].headerCellRenderer = (props: HeaderCellSlotProps) => {

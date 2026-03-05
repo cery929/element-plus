@@ -1,7 +1,15 @@
 <template>
   <div class="demo-image__custom-toolbar">
-    <el-image style="width: 100px; height: 100px" :src="url" :preview-src-list="srcList" fit="cover" show-progress>
-      <template #toolbar="{ actions, prev, next, reset, activeIndex, setActiveItem }">
+    <el-image
+      style="width: 100px; height: 100px"
+      :src="url"
+      :preview-src-list="srcList"
+      fit="cover"
+      show-progress
+    >
+      <template
+        #toolbar="{ actions, prev, next, reset, activeIndex, setActiveItem }"
+      >
         <el-icon @click="prev">
           <Back />
         </el-icon>
@@ -14,12 +22,16 @@
         <el-icon @click="actions('zoomOut')">
           <ZoomOut />
         </el-icon>
-        <el-icon @click="actions('zoomIn', { enableTransition: false, zoomRate: 2 })">
+        <el-icon
+          @click="actions('zoomIn', { enableTransition: false, zoomRate: 2 })"
+        >
           <ZoomIn />
         </el-icon>
-        <el-icon @click="
-          actions('clockwise', { rotateDeg: 180, enableTransition: false })
-          ">
+        <el-icon
+          @click="
+            actions('clockwise', { rotateDeg: 180, enableTransition: false })
+          "
+        >
           <RefreshRight />
         </el-icon>
         <el-icon @click="actions('anticlockwise')">

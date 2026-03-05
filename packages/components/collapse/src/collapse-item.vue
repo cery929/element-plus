@@ -1,9 +1,19 @@
 <template>
   <div :class="rootKls">
-    <div :id="scopedHeadId" :class="headKls" :aria-expanded="isActive" :aria-controls="scopedContentId"
-      :aria-describedby="scopedContentId" :tabindex="disabled ? undefined : 0" :aria-disabled="disabled" role="button"
-      @click="handleHeaderClick" @keydown.space.enter.stop="handleEnterClick" @focus="handleFocus"
-      @blur="focusing = false">
+    <div
+      :id="scopedHeadId"
+      :class="headKls"
+      :aria-expanded="isActive"
+      :aria-controls="scopedContentId"
+      :aria-describedby="scopedContentId"
+      :tabindex="disabled ? undefined : 0"
+      :aria-disabled="disabled"
+      role="button"
+      @click="handleHeaderClick"
+      @keydown.space.enter.stop="handleEnterClick"
+      @focus="handleFocus"
+      @blur="focusing = false"
+    >
       <span :class="itemTitleKls">
         <slot name="title" :is-active="isActive">{{ title }}</slot>
       </span>
@@ -15,8 +25,14 @@
     </div>
 
     <el-collapse-transition>
-      <div v-show="isActive" :id="scopedContentId" role="region" :class="itemWrapperKls" :aria-hidden="!isActive"
-        :aria-labelledby="scopedHeadId">
+      <div
+        v-show="isActive"
+        :id="scopedContentId"
+        role="region"
+        :class="itemWrapperKls"
+        :aria-hidden="!isActive"
+        :aria-labelledby="scopedHeadId"
+      >
         <div :class="itemContentKls">
           <slot />
         </div>

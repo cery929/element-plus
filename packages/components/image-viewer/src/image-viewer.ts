@@ -1,9 +1,4 @@
-import {
-  buildProps,
-  definePropType,
-  isNumber,
-  mutable,
-} from '@kn-ui/utils'
+import { buildProps, definePropType, isNumber, mutable } from '@kn-ui/utils'
 
 import type { Component, ExtractPublicPropTypes } from 'vue'
 import type ImageViewer from './image-viewer.vue'

@@ -83,8 +83,14 @@ const beforeChange = () => {
 
 <template>
   <ClientOnly>
-    <el-switch ref="switchRef" v-model="darkMode" v-bind="$attrs" :before-change="beforeChange"
-      :active-action-icon="DarkIcon" :inactive-action-icon="LightIcon" />
+    <el-switch
+      ref="switchRef"
+      v-model="darkMode"
+      v-bind="$attrs"
+      :before-change="beforeChange"
+      :active-action-icon="DarkIcon"
+      :inactive-action-icon="LightIcon"
+    />
   </ClientOnly>
 </template>
 

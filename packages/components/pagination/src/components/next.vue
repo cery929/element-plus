@@ -1,6 +1,12 @@
 <template>
-  <button type="button" class="btn-next" :disabled="internalDisabled" :aria-label="nextText || t('el.pagination.next')"
-    :aria-disabled="internalDisabled" @click="$emit('click', $event)">
+  <button
+    type="button"
+    class="btn-next"
+    :disabled="internalDisabled"
+    :aria-label="nextText || t('el.pagination.next')"
+    :aria-disabled="internalDisabled"
+    @click="$emit('click', $event)"
+  >
     <span v-if="nextText">{{ nextText }}</span>
     <el-icon v-else>
       <component :is="nextIcon" />

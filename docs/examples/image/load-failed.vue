@@ -21,7 +21,12 @@
     </el-image>
     <el-button @click="showPreview = true"> preview controlled </el-button>
 
-    <el-image-viewer v-if="showPreview" show-progress :url-list="srcList" @close="showPreview = false">
+    <el-image-viewer
+      v-if="showPreview"
+      show-progress
+      :url-list="srcList"
+      @close="showPreview = false"
+    >
       <template #viewer-error="{ activeIndex, src }">
         <div class="image-slot viewer-error">
           <el-icon><icon-picture /></el-icon>

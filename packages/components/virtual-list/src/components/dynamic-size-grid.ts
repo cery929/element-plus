@@ -1,9 +1,4 @@
-import {
-  isFunction,
-  isNumber,
-  isUndefined,
-  throwError,
-} from '@kn-ui/utils'
+import { isFunction, isNumber, isUndefined, throwError } from '@kn-ui/utils'
 import createGrid from '../builders/build-grid'
 import {
   AUTO_ALIGNMENT,

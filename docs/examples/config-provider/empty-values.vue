@@ -1,11 +1,29 @@
 <template>
   <el-config-provider :value-on-clear="null" :empty-values="[undefined, null]">
     <div class="flex flex-wrap gap-4 items-center">
-      <el-select v-model="value1" clearable placeholder="Select" style="width: 240px" @change="handleChange">
-        <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value" />
+      <el-select
+        v-model="value1"
+        clearable
+        placeholder="Select"
+        style="width: 240px"
+        @change="handleChange"
+      >
+        <el-option
+          v-for="item in options"
+          :key="item.value"
+          :label="item.label"
+          :value="item.value"
+        />
       </el-select>
-      <el-select-v2 v-model="value2" clearable placeholder="Select" style="width: 240px" :options="options"
-        :value-on-clear="() => undefined" @change="handleChange" />
+      <el-select-v2
+        v-model="value2"
+        clearable
+        placeholder="Select"
+        style="width: 240px"
+        :options="options"
+        :value-on-clear="() => undefined"
+        @change="handleChange"
+      />
     </div>
   </el-config-provider>
 </template>

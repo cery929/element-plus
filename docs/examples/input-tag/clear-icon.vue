@@ -1,5 +1,10 @@
 <template>
-  <el-input-tag v-model="input" clearable :clear-icon="CloseBold" placeholder="Custom clear icon" />
+  <el-input-tag
+    v-model="input"
+    clearable
+    :clear-icon="CloseBold"
+    placeholder="Custom clear icon"
+  />
 </template>
 
 <script lang="ts" setup>

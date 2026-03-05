@@ -1,10 +1,6 @@
 import { placements } from '@popperjs/core'
 import { scrollbarEmits } from '@kn-ui/components/scrollbar'
-import {
-  useAriaProps,
-  useEmptyValuesProps,
-  useSizeProp,
-} from '@kn-ui/hooks'
+import { useAriaProps, useEmptyValuesProps, useSizeProp } from '@kn-ui/hooks'
 import { buildProps, definePropType, iconPropType } from '@kn-ui/utils'
 import { useTooltipContentProps } from '@kn-ui/components/tooltip'
 import { ArrowDown, CircleClose } from '@kn-ui/icons-vue'
@@ -19,11 +15,7 @@ import type {
   ExtractPublicPropTypes,
 } from 'vue'
 import type Select from './select.vue'
-import type {
-  Options,
-  Placement,
-  PopperEffect,
-} from '@kn-ui/components/popper'
+import type { Options, Placement, PopperEffect } from '@kn-ui/components/popper'
 import type { OptionValue } from './type'
 import type { Props } from '@kn-ui/components/select-v2/src/useProps'
 

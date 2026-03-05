@@ -1,9 +1,4 @@
-import {
-  buildProps,
-  definePropType,
-  isString,
-  isUndefined,
-} from '@kn-ui/utils'
+import { buildProps, definePropType, isString, isUndefined } from '@kn-ui/utils'
 
 import type { ExtractPublicPropTypes } from 'vue'
 import type Anchor from './anchor.vue'

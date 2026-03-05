@@ -1,6 +1,15 @@
 <template>
-  <el-switch v-model="value1" :loading="loading1" :before-change="beforeChange1" />
-  <el-switch v-model="value2" class="ml-2" :loading="loading2" :before-change="beforeChange2" />
+  <el-switch
+    v-model="value1"
+    :loading="loading1"
+    :before-change="beforeChange1"
+  />
+  <el-switch
+    v-model="value2"
+    class="ml-2"
+    :loading="loading2"
+    :before-change="beforeChange2"
+  />
 </template>
 
 <script lang="ts" setup>

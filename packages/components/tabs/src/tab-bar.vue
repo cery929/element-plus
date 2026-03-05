@@ -1,6 +1,10 @@
 <template>
-  <div v-if="renderActiveBar" ref="barRef" :class="[ns.e('active-bar'), ns.is(rootTabs!.props.tabPosition)]"
-    :style="barStyle" />
+  <div
+    v-if="renderActiveBar"
+    ref="barRef"
+    :class="[ns.e('active-bar'), ns.is(rootTabs!.props.tabPosition)]"
+    :style="barStyle"
+  />
 </template>
 
 <script lang="ts" setup>

@@ -1,9 +1,19 @@
 <template>
-  <div :id="groupId" ref="radioGroupRef" :class="ns.b('group')" role="radiogroup"
+  <div
+    :id="groupId"
+    ref="radioGroupRef"
+    :class="ns.b('group')"
+    role="radiogroup"
     :aria-label="!isLabeledByFormItem ? ariaLabel || 'radio-group' : undefined"
-    :aria-labelledby="isLabeledByFormItem ? formItem!.labelId : undefined">
+    :aria-labelledby="isLabeledByFormItem ? formItem!.labelId : undefined"
+  >
     <slot>
-      <component :is="optionComponent" v-for="(item, index) in options" :key="index" v-bind="getOptionProps(item)" />
+      <component
+        :is="optionComponent"
+        v-for="(item, index) in options"
+        :key="index"
+        v-bind="getOptionProps(item)"
+      />
     </slot>
   </div>
 </template>

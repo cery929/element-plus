@@ -1,16 +1,19 @@
 <template>
-  <el-table-v2 :columns="columns" :data="data" :sort-by="sort" :estimated-row-height="40" :width="700" :height="400"
-    fixed @column-sort="onColumnSort" />
+  <el-table-v2
+    :columns="columns"
+    :data="data"
+    :sort-by="sort"
+    :estimated-row-height="40"
+    :width="700"
+    :height="400"
+    fixed
+    @column-sort="onColumnSort"
+  />
 </template>
 
 <script lang="tsx" setup>
 import { ref } from 'vue'
-import {
-  ElButton,
-  ElTag,
-  TableV2FixedDir,
-  TableV2SortOrder,
-} from 'kn-ui'
+import { ElButton, ElTag, TableV2FixedDir, TableV2SortOrder } from 'kn-ui'
 
 import type { Column, SortBy } from 'kn-ui'
 

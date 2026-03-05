@@ -1,6 +1,13 @@
 <template>
-  <el-popconfirm confirm-button-text="Yes" cancel-button-text="No" :icon="InfoFilled" icon-color="#626AEF"
-    title="Are you sure to delete this?" @confirm="confirmEvent" @cancel="cancelEvent">
+  <el-popconfirm
+    confirm-button-text="Yes"
+    cancel-button-text="No"
+    :icon="InfoFilled"
+    icon-color="#626AEF"
+    title="Are you sure to delete this?"
+    @confirm="confirmEvent"
+    @cancel="cancelEvent"
+  >
     <template #reference>
       <el-button>Delete</el-button>
     </template>

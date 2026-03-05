@@ -1,27 +1,70 @@
 <template>
-  <el-teleport :to="appendTo" :disabled="appendTo !== 'body' ? false : !appendToBody">
+  <el-teleport
+    :to="appendTo"
+    :disabled="appendTo !== 'body' ? false : !appendToBody"
+  >
     <transition v-bind="transitionConfig">
-      <el-overlay v-show="visible" custom-mask-event :mask="modal" :overlay-class="[
-        modalClass ?? '',
-        `${ns.namespace.value}-modal-dialog`,
-        ns.is('penetrable', penetrable),
-      ]" :z-index="zIndex">
-        <div role="dialog" aria-modal="true" :aria-label="title || undefined"
-          :aria-labelledby="!title ? titleId : undefined" :aria-describedby="bodyId" :class="[
+      <el-overlay
+        v-show="visible"
+        custom-mask-event
+        :mask="modal"
+        :overlay-class="[
+          modalClass ?? '',
+          `${ns.namespace.value}-modal-dialog`,
+          ns.is('penetrable', penetrable),
+        ]"
+        :z-index="zIndex"
+      >
+        <div
+          role="dialog"
+          aria-modal="true"
+          :aria-label="title || undefined"
+          :aria-labelledby="!title ? titleId : undefined"
+          :aria-describedby="bodyId"
+          :class="[
             `${ns.namespace.value}-overlay-dialog`,
             ns.is('closing', closing),
-          ]" :style="overlayDialogStyle" @click="overlayEvent.onClick" @mousedown="overlayEvent.onMousedown"
-          @mouseup="overlayEvent.onMouseup">
-          <el-focus-trap loop :trapped="visible" focus-start-el="container" @focus-after-trapped="onOpenAutoFocus"
-            @focus-after-released="onCloseAutoFocus" @focusout-prevented="onFocusoutPrevented"
-            @release-requested="onCloseRequested">
-            <el-dialog-content v-if="rendered" ref="dialogContentRef" v-bind="$attrs" :center="center"
-              :align-center="_alignCenter" :close-icon="closeIcon" :draggable="_draggable" :overflow="_overflow"
-              :fullscreen="fullscreen" :header-class="headerClass" :body-class="bodyClass" :footer-class="footerClass"
-              :show-close="showClose" :title="title" :aria-level="headerAriaLevel" @close="handleClose">
+          ]"
+          :style="overlayDialogStyle"
+          @click="overlayEvent.onClick"
+          @mousedown="overlayEvent.onMousedown"
+          @mouseup="overlayEvent.onMouseup"
+        >
+          <el-focus-trap
+            loop
+            :trapped="visible"
+            focus-start-el="container"
+            @focus-after-trapped="onOpenAutoFocus"
+            @focus-after-released="onCloseAutoFocus"
+            @focusout-prevented="onFocusoutPrevented"
+            @release-requested="onCloseRequested"
+          >
+            <el-dialog-content
+              v-if="rendered"
+              ref="dialogContentRef"
+              v-bind="$attrs"
+              :center="center"
+              :align-center="_alignCenter"
+              :close-icon="closeIcon"
+              :draggable="_draggable"
+              :overflow="_overflow"
+              :fullscreen="fullscreen"
+              :header-class="headerClass"
+              :body-class="bodyClass"
+              :footer-class="footerClass"
+              :show-close="showClose"
+              :title="title"
+              :aria-level="headerAriaLevel"
+              @close="handleClose"
+            >
               <template #header>
-                <slot v-if="!$slots.title" name="header" :close="handleClose" :title-id="titleId"
-                  :title-class="ns.e('title')" />
+                <slot
+                  v-if="!$slots.title"
+                  name="header"
+                  :close="handleClose"
+                  :title-id="titleId"
+                  :title-class="ns.e('title')"
+                />
                 <slot v-else name="title" />
               </template>
               <slot />

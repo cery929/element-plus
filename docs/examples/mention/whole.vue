@@ -1,8 +1,22 @@
 <template>
-  <el-mention v-model="value1" whole :options="options1" style="width: 320px" placeholder="Please input" />
+  <el-mention
+    v-model="value1"
+    whole
+    :options="options1"
+    style="width: 320px"
+    placeholder="Please input"
+  />
   <el-divider />
-  <el-mention v-model="value2" :options="options2" :prefix="['@', '#']" whole :check-is-whole="checkIsWhole"
-    style="width: 320px" placeholder="input @ to mention people, # to mention tag" @search="handleSearch" />
+  <el-mention
+    v-model="value2"
+    :options="options2"
+    :prefix="['@', '#']"
+    whole
+    :check-is-whole="checkIsWhole"
+    style="width: 320px"
+    placeholder="input @ to mention people, # to mention tag"
+    @search="handleSearch"
+  />
 </template>
 
 <script setup lang="ts">

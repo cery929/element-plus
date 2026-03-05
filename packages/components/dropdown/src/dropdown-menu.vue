@@ -1,18 +1,23 @@
 <template>
-  <ul :ref="dropdownListWrapperRef" :class="dropdownKls" :style="rovingFocusGroupRootStyle" :tabindex="-1" :role="role"
-    :aria-labelledby="triggerId" @focusin="handleFocus" @focusout="onBlur" @keydown.self="handleKeydown"
-    @mousedown.self="onMousedown">
+  <ul
+    :ref="dropdownListWrapperRef"
+    :class="dropdownKls"
+    :style="rovingFocusGroupRootStyle"
+    :tabindex="-1"
+    :role="role"
+    :aria-labelledby="triggerId"
+    @focusin="handleFocus"
+    @focusout="onBlur"
+    @keydown.self="handleKeydown"
+    @mousedown.self="onMousedown"
+  >
     <slot />
   </ul>
 </template>
 
 <script lang="ts">
 import { computed, defineComponent, inject } from 'vue'
-import {
-  composeEventHandlers,
-  composeRefs,
-  getEventCode,
-} from '@kn-ui/utils'
+import { composeEventHandlers, composeRefs, getEventCode } from '@kn-ui/utils'
 import { EVENT_CODE } from '@kn-ui/constants'
 import {
   ROVING_FOCUS_COLLECTION_INJECTION_KEY,

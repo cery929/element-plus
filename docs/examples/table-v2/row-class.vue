@@ -1,17 +1,17 @@
 <template>
-  <el-table-v2 :columns="columns" :data="data" :row-class="rowClass" :width="700" :height="400" />
+  <el-table-v2
+    :columns="columns"
+    :data="data"
+    :row-class="rowClass"
+    :width="700"
+    :height="400"
+  />
 </template>
 
 <script lang="tsx" setup>
 import { ref } from 'vue'
 import dayjs from 'dayjs'
-import {
-  ElButton,
-  ElIcon,
-  ElTag,
-  ElTooltip,
-  TableV2FixedDir,
-} from 'kn-ui'
+import { ElButton, ElIcon, ElTag, ElTooltip, TableV2FixedDir } from 'kn-ui'
 import { Timer } from '@kn-ui/icons-vue'
 
 import type { Column, RowClassNameGetter } from 'kn-ui'

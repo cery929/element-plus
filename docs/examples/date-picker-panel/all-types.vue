@@ -4,7 +4,11 @@
       <div class="flex flex-col basis-150px gap-1">
         <span>Type:</span>
         <el-select v-model="type">
-          <el-option v-for="optionType in types" :key="optionType" :value="optionType" />
+          <el-option
+            v-for="optionType in types"
+            :key="optionType"
+            :value="optionType"
+          />
         </el-select>
       </div>
     </div>

@@ -178,12 +178,27 @@ defineExpose({
 </script>
 
 <template>
-  <div ref="panelEl" :class="[ns.b()]" :style="{ flexBasis: `${panelSize}px` }" v-bind="$attrs">
+  <div
+    ref="panelEl"
+    :class="[ns.b()]"
+    :style="{ flexBasis: `${panelSize}px` }"
+    v-bind="$attrs"
+  >
     <slot />
   </div>
-  <SplitBar v-if="isShowBar" :index="index" :layout="layout" :lazy="lazy" :resizable="isResizable"
-    :start-collapsible="startCollapsible" :end-collapsible="endCollapsible" @move-start="onMoveStart" @moving="onMoving"
-    @move-end="onMoveEnd" @collapse="onCollapse">
+  <SplitBar
+    v-if="isShowBar"
+    :index="index"
+    :layout="layout"
+    :lazy="lazy"
+    :resizable="isResizable"
+    :start-collapsible="startCollapsible"
+    :end-collapsible="endCollapsible"
+    @move-start="onMoveStart"
+    @moving="onMoving"
+    @move-end="onMoveEnd"
+    @collapse="onCollapse"
+  >
     <template #start-collapsible>
       <slot name="start-collapsible" />
     </template>

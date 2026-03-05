@@ -1,15 +1,41 @@
 <template>
-  <div :class="[ns.b(), ns.is('disabled', disabled), ns.is('border', border)]" @focusout="handleFocusout">
+  <div
+    :class="[ns.b(), ns.is('disabled', disabled), ns.is('border', border)]"
+    @focusout="handleFocusout"
+  >
     <div :class="ns.e('wrapper')">
-      <hue-slider ref="hueRef" class="hue-slider" :color="color" vertical :disabled="disabled" />
+      <hue-slider
+        ref="hueRef"
+        class="hue-slider"
+        :color="color"
+        vertical
+        :disabled="disabled"
+      />
       <sv-panel ref="svRef" :color="color" :disabled="disabled" />
     </div>
-    <alpha-slider v-if="showAlpha" ref="alphaRef" :color="color" :disabled="disabled" />
-    <predefine v-if="predefine" ref="predefine" :enable-alpha="showAlpha" :color="color" :colors="predefine"
-      :disabled="disabled" />
+    <alpha-slider
+      v-if="showAlpha"
+      ref="alphaRef"
+      :color="color"
+      :disabled="disabled"
+    />
+    <predefine
+      v-if="predefine"
+      ref="predefine"
+      :enable-alpha="showAlpha"
+      :color="color"
+      :colors="predefine"
+      :disabled="disabled"
+    />
     <div :class="ns.e('footer')">
-      <el-input ref="inputRef" v-model="customInput" :validate-event="false" size="small" :disabled="disabled"
-        @change="handleConfirm" />
+      <el-input
+        ref="inputRef"
+        v-model="customInput"
+        :validate-event="false"
+        size="small"
+        :disabled="disabled"
+        @change="handleConfirm"
+      />
       <slot name="footer" />
     </div>
   </div>

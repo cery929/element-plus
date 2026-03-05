@@ -2,7 +2,13 @@
   <div style="height: 400px">
     <el-auto-resizer>
       <template #default="{ height, width }">
-        <el-table-v2 :columns="columns" :data="data" :width="width" :height="height" fixed />
+        <el-table-v2
+          :columns="columns"
+          :data="data"
+          :width="width"
+          :height="height"
+          fixed
+        />
       </template>
     </el-auto-resizer>
   </div>
@@ -86,10 +92,10 @@ columns.unshift({
   headerCellRenderer: () => {
     const _data = unref(data)
     const onChange = (value: CheckboxValueType) =>
-    (data.value = _data.map((row) => {
-      row.checked = value
-      return row
-    }))
+      (data.value = _data.map((row) => {
+        row.checked = value
+        return row
+      }))
     const allSelected = _data.every((row) => row.checked)
     const containsChecked = _data.some((row) => row.checked)
 

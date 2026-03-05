@@ -1,11 +1,26 @@
 <template>
   <div class="custom-tree-container">
     <p>Using render-content</p>
-    <el-tree ref="treeRef1" style="max-width: 600px" :data="dataSource" show-checkbox node-key="id" default-expand-all
-      :expand-on-click-node="false" :render-content="renderContent" />
+    <el-tree
+      ref="treeRef1"
+      style="max-width: 600px"
+      :data="dataSource"
+      show-checkbox
+      node-key="id"
+      default-expand-all
+      :expand-on-click-node="false"
+      :render-content="renderContent"
+    />
     <p>Using scoped slot</p>
-    <el-tree ref="treeRef2" style="max-width: 600px" :data="dataSource" show-checkbox node-key="id" default-expand-all
-      :expand-on-click-node="false">
+    <el-tree
+      ref="treeRef2"
+      style="max-width: 600px"
+      :data="dataSource"
+      show-checkbox
+      node-key="id"
+      default-expand-all
+      :expand-on-click-node="false"
+    >
       <template #default="{ node, data }">
         <div class="custom-tree-node">
           <span>{{ node.label }}</span>
@@ -13,7 +28,12 @@
             <el-button type="primary" link @click="append(data)">
               Append
             </el-button>
-            <el-button style="margin-left: 4px" type="danger" link @click="remove(node, data)">
+            <el-button
+              style="margin-left: 4px"
+              type="danger"
+              link
+              @click="remove(node, data)"
+            >
               Delete
             </el-button>
           </div>

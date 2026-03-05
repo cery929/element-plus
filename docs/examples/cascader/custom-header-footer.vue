@@ -2,9 +2,19 @@
   <div class="cascader-custom-header-footer">
     <div>
       <p>Custom header content</p>
-      <el-cascader v-model="value" popper-class="cascader-custom-header" :options="options" :props="props" clearable>
+      <el-cascader
+        v-model="value"
+        popper-class="cascader-custom-header"
+        :options="options"
+        :props="props"
+        clearable
+      >
         <template #header>
-          <el-checkbox v-model="checkAll" :indeterminate="indeterminate" @change="handleCheckAll">
+          <el-checkbox
+            v-model="checkAll"
+            :indeterminate="indeterminate"
+            @change="handleCheckAll"
+          >
             All
           </el-checkbox>
         </template>
@@ -95,12 +105,12 @@ const handleClear = () => {
   display: flex;
 }
 
-.cascader-custom-header-footer>div {
+.cascader-custom-header-footer > div {
   flex: 1;
   text-align: center;
 }
 
-.cascader-custom-header-footer>div:not(:last-child) {
+.cascader-custom-header-footer > div:not(:last-child) {
   border-right: 1px solid var(--el-border-color);
 }
 

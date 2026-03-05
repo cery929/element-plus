@@ -1,6 +1,12 @@
 <template>
-  <el-tree style="max-width: 600px" :props="props" :load="loadNode" lazy show-checkbox
-    @check-change="handleCheckChange" />
+  <el-tree
+    style="max-width: 600px"
+    :props="props"
+    :load="loadNode"
+    lazy
+    show-checkbox
+    @check-change="handleCheckChange"
+  />
 </template>
 
 <script lang="ts" setup>

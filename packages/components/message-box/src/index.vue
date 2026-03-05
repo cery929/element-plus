@@ -1,32 +1,67 @@
 <template>
   <transition name="fade-in-linear" @after-leave="$emit('vanish')">
-    <el-overlay v-show="visible" :z-index="zIndex" :overlay-class="[ns.is('message-box'), modalClass]" :mask="modal">
-      <div role="dialog" :aria-label="title" aria-modal="true" :aria-describedby="!showInput ? contentId : undefined"
-        :class="`${ns.namespace.value}-overlay-message-box`" @click="overlayEvent.onClick"
-        @mousedown="overlayEvent.onMousedown" @mouseup="overlayEvent.onMouseup">
-        <el-focus-trap loop :trapped="visible" :focus-trap-el="rootRef" :focus-start-el="focusStartRef"
-          @release-requested="onCloseRequested">
-          <div ref="rootRef" :class="[
-            ns.b(),
-            customClass,
-            ns.is('draggable', draggable),
-            ns.is('dragging', isDragging),
-            { [ns.m('center')]: center },
-          ]" :style="customStyle" tabindex="-1" @click.stop="">
-            <div v-if="title !== null && title !== undefined" ref="headerRef"
-              :class="[ns.e('header'), { 'show-close': showClose }]">
+    <el-overlay
+      v-show="visible"
+      :z-index="zIndex"
+      :overlay-class="[ns.is('message-box'), modalClass]"
+      :mask="modal"
+    >
+      <div
+        role="dialog"
+        :aria-label="title"
+        aria-modal="true"
+        :aria-describedby="!showInput ? contentId : undefined"
+        :class="`${ns.namespace.value}-overlay-message-box`"
+        @click="overlayEvent.onClick"
+        @mousedown="overlayEvent.onMousedown"
+        @mouseup="overlayEvent.onMouseup"
+      >
+        <el-focus-trap
+          loop
+          :trapped="visible"
+          :focus-trap-el="rootRef"
+          :focus-start-el="focusStartRef"
+          @release-requested="onCloseRequested"
+        >
+          <div
+            ref="rootRef"
+            :class="[
+              ns.b(),
+              customClass,
+              ns.is('draggable', draggable),
+              ns.is('dragging', isDragging),
+              { [ns.m('center')]: center },
+            ]"
+            :style="customStyle"
+            tabindex="-1"
+            @click.stop=""
+          >
+            <div
+              v-if="title !== null && title !== undefined"
+              ref="headerRef"
+              :class="[ns.e('header'), { 'show-close': showClose }]"
+            >
               <div :class="ns.e('title')">
-                <el-icon v-if="iconComponent && center" :class="[ns.e('status'), typeClass]">
+                <el-icon
+                  v-if="iconComponent && center"
+                  :class="[ns.e('status'), typeClass]"
+                >
                   <component :is="iconComponent" />
                 </el-icon>
                 <span>{{ title }}</span>
               </div>
-              <button v-if="showClose" type="button" :class="ns.e('headerbtn')" :aria-label="t('el.messagebox.close')"
+              <button
+                v-if="showClose"
+                type="button"
+                :class="ns.e('headerbtn')"
+                :aria-label="t('el.messagebox.close')"
                 @click="
                   handleAction(distinguishCancelAndClose ? 'close' : 'cancel')
-                  " @keydown.prevent.enter="
-                    handleAction(distinguishCancelAndClose ? 'close' : 'cancel')
-                    ">
+                "
+                @keydown.prevent.enter="
+                  handleAction(distinguishCancelAndClose ? 'close' : 'cancel')
+                "
+              >
                 <el-icon :class="ns.e('close')">
                   <component :is="closeIcon || 'close'" />
                 </el-icon>
@@ -34,41 +69,79 @@
             </div>
             <div :id="contentId" :class="ns.e('content')">
               <div :class="ns.e('container')">
-                <el-icon v-if="iconComponent && !center && hasMessage" :class="[ns.e('status'), typeClass]">
+                <el-icon
+                  v-if="iconComponent && !center && hasMessage"
+                  :class="[ns.e('status'), typeClass]"
+                >
                   <component :is="iconComponent" />
                 </el-icon>
                 <div v-if="hasMessage" :class="ns.e('message')">
                   <slot>
-                    <component :is="showInput ? 'label' : 'p'" v-if="!dangerouslyUseHTMLString"
-                      :for="showInput ? inputId : undefined" v-text="message" />
-                    <component :is="showInput ? 'label' : 'p'" v-else :for="showInput ? inputId : undefined"
-                      v-html="message" />
+                    <component
+                      :is="showInput ? 'label' : 'p'"
+                      v-if="!dangerouslyUseHTMLString"
+                      :for="showInput ? inputId : undefined"
+                      v-text="message"
+                    />
+                    <component
+                      :is="showInput ? 'label' : 'p'"
+                      v-else
+                      :for="showInput ? inputId : undefined"
+                      v-html="message"
+                    />
                   </slot>
                 </div>
               </div>
               <div v-show="showInput" :class="ns.e('input')">
-                <el-input :id="inputId" ref="inputRef" v-model="inputValue" :type="inputType"
-                  :placeholder="inputPlaceholder" :aria-invalid="validateError" :class="{ invalid: validateError }"
-                  @keydown.enter="handleInputEnter" />
-                <div :class="ns.e('errormsg')" :style="{
-                  visibility: !!editorErrorMessage ? 'visible' : 'hidden',
-                }">
+                <el-input
+                  :id="inputId"
+                  ref="inputRef"
+                  v-model="inputValue"
+                  :type="inputType"
+                  :placeholder="inputPlaceholder"
+                  :aria-invalid="validateError"
+                  :class="{ invalid: validateError }"
+                  @keydown.enter="handleInputEnter"
+                />
+                <div
+                  :class="ns.e('errormsg')"
+                  :style="{
+                    visibility: !!editorErrorMessage ? 'visible' : 'hidden',
+                  }"
+                >
                   {{ editorErrorMessage }}
                 </div>
               </div>
             </div>
             <div :class="ns.e('btns')">
-              <el-button v-if="showCancelButton" :type="cancelButtonType === 'text' ? '' : cancelButtonType"
-                :text="cancelButtonType === 'text'" :loading="cancelButtonLoading"
-                :loading-icon="cancelButtonLoadingIcon" :class="[cancelButtonClass]" :round="roundButton"
-                :size="btnSize" @click="handleAction('cancel')" @keydown.prevent.enter="handleAction('cancel')">
+              <el-button
+                v-if="showCancelButton"
+                :type="cancelButtonType === 'text' ? '' : cancelButtonType"
+                :text="cancelButtonType === 'text'"
+                :loading="cancelButtonLoading"
+                :loading-icon="cancelButtonLoadingIcon"
+                :class="[cancelButtonClass]"
+                :round="roundButton"
+                :size="btnSize"
+                @click="handleAction('cancel')"
+                @keydown.prevent.enter="handleAction('cancel')"
+              >
                 {{ cancelButtonText || t('el.messagebox.cancel') }}
               </el-button>
-              <el-button v-show="showConfirmButton" ref="confirmRef"
-                :type="confirmButtonType === 'text' ? '' : confirmButtonType" :text="confirmButtonType === 'text'"
-                :loading="confirmButtonLoading" :loading-icon="confirmButtonLoadingIcon" :class="[confirmButtonClasses]"
-                :round="roundButton" :disabled="confirmButtonDisabled" :size="btnSize" @click="handleAction('confirm')"
-                @keydown.prevent.enter="handleAction('confirm')">
+              <el-button
+                v-show="showConfirmButton"
+                ref="confirmRef"
+                :type="confirmButtonType === 'text' ? '' : confirmButtonType"
+                :text="confirmButtonType === 'text'"
+                :loading="confirmButtonLoading"
+                :loading-icon="confirmButtonLoadingIcon"
+                :class="[confirmButtonClasses]"
+                :round="roundButton"
+                :disabled="confirmButtonDisabled"
+                :size="btnSize"
+                @click="handleAction('confirm')"
+                @keydown.prevent.enter="handleAction('confirm')"
+              >
                 {{ confirmButtonText || t('el.messagebox.confirm') }}
               </el-button>
             </div>
@@ -94,12 +167,7 @@ import {
 } from 'vue'
 import ElButton from '@kn-ui/components/button'
 import { TrapFocus } from '@kn-ui/directives'
-import {
-  useDraggable,
-  useId,
-  useLockscreen,
-  useSameTarget,
-} from '@kn-ui/hooks'
+import { useDraggable, useId, useLockscreen, useSameTarget } from '@kn-ui/hooks'
 import ElInput from '@kn-ui/components/input'
 import { ElOverlay } from '@kn-ui/components/overlay'
 import {

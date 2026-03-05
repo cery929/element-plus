@@ -1,25 +1,52 @@
 <template>
   <div ref="wrapperRef" :class="ns.b()">
-    <el-input v-bind="mergeProps(passInputProps, $attrs)" ref="elInputRef" :model-value="modelValue"
-      :disabled="disabled" :role="dropdownVisible ? 'combobox' : undefined"
+    <el-input
+      v-bind="mergeProps(passInputProps, $attrs)"
+      ref="elInputRef"
+      :model-value="modelValue"
+      :disabled="disabled"
+      :role="dropdownVisible ? 'combobox' : undefined"
       :aria-activedescendant="dropdownVisible ? hoveringId || '' : undefined"
-      :aria-controls="dropdownVisible ? contentId : undefined" :aria-expanded="dropdownVisible || undefined"
-      :aria-label="ariaLabel" :aria-autocomplete="dropdownVisible ? 'none' : undefined"
-      :aria-haspopup="dropdownVisible ? 'listbox' : undefined" @input="handleInputChange" @keydown="handleInputKeyDown"
-      @mousedown="handleInputMouseDown">
+      :aria-controls="dropdownVisible ? contentId : undefined"
+      :aria-expanded="dropdownVisible || undefined"
+      :aria-label="ariaLabel"
+      :aria-autocomplete="dropdownVisible ? 'none' : undefined"
+      :aria-haspopup="dropdownVisible ? 'listbox' : undefined"
+      @input="handleInputChange"
+      @keydown="handleInputKeyDown"
+      @mousedown="handleInputMouseDown"
+    >
       <template v-for="(_, name) in $slots" #[name]="slotProps">
         <slot :name="name" v-bind="slotProps" />
       </template>
     </el-input>
-    <el-tooltip ref="tooltipRef" :visible="dropdownVisible" :popper-class="[ns.e('popper'), popperClass!]"
-      :popper-style="popperStyle" :popper-options="popperOptions" :placement="computedPlacement"
-      :fallback-placements="computedFallbackPlacements" effect="light" pure :offset="offset" :show-arrow="showArrow">
+    <el-tooltip
+      ref="tooltipRef"
+      :visible="dropdownVisible"
+      :popper-class="[ns.e('popper'), popperClass!]"
+      :popper-style="popperStyle"
+      :popper-options="popperOptions"
+      :placement="computedPlacement"
+      :fallback-placements="computedFallbackPlacements"
+      effect="light"
+      pure
+      :offset="offset"
+      :show-arrow="showArrow"
+    >
       <template #default>
         <div :style="cursorStyle" />
       </template>
       <template #content>
-        <el-mention-dropdown ref="dropdownRef" :options="filteredOptions" :disabled="disabled" :loading="loading"
-          :content-id="contentId" :aria-label="ariaLabel" @select="handleSelect" @click.stop="elInputRef?.focus()">
+        <el-mention-dropdown
+          ref="dropdownRef"
+          :options="filteredOptions"
+          :disabled="disabled"
+          :loading="loading"
+          :content-id="contentId"
+          :aria-label="ariaLabel"
+          @select="handleSelect"
+          @click.stop="elInputRef?.focus()"
+        >
           <template v-for="(_, name) in $slots" #[name]="slotProps">
             <slot :name="name" v-bind="slotProps" />
           </template>
@@ -38,11 +65,7 @@ import ElInput, {
   inputPropsDefaults,
 } from '@kn-ui/components/input'
 import ElTooltip from '@kn-ui/components/tooltip'
-import {
-  EVENT_CODE,
-  INPUT_EVENT,
-  UPDATE_MODEL_EVENT,
-} from '@kn-ui/constants'
+import { EVENT_CODE, INPUT_EVENT, UPDATE_MODEL_EVENT } from '@kn-ui/constants'
 import { useFormDisabled } from '@kn-ui/components/form'
 import { getEventCode, isFunction } from '@kn-ui/utils'
 import { mentionDefaultProps, mentionEmits } from './mention'

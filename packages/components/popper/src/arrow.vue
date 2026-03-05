@@ -1,5 +1,10 @@
 <template>
-  <span ref="arrowRef" :class="ns.e('arrow')" :style="arrowStyle" data-popper-arrow />
+  <span
+    ref="arrowRef"
+    :class="ns.e('arrow')"
+    :style="arrowStyle"
+    data-popper-arrow
+  />
 </template>
 
 <script lang="ts" setup>

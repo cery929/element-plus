@@ -1,11 +1,21 @@
 <template>
   <div class="overview-container">
     <div class="search-content">
-      <el-input ref="searchRef" v-model="query" :prefix-icon="Search" size="large" placeholder="Search Components" />
+      <el-input
+        ref="searchRef"
+        v-model="query"
+        :prefix-icon="Search"
+        size="large"
+        placeholder="Search Components"
+      />
     </div>
 
     <div class="main-content">
-      <div v-for="(group, groupIndex) in filteredSidebars" :key="groupIndex" class="component-group">
+      <div
+        v-for="(group, groupIndex) in filteredSidebars"
+        :key="groupIndex"
+        class="component-group"
+      >
         <p class="component-title">
           {{ group.text }}
           <el-tag effect="dark" round size="small">
@@ -13,8 +23,17 @@
           </el-tag>
         </p>
         <div class="card-content">
-          <a v-for="(item, index) in group.children" :key="index" tabindex="0" :href="withBase(item.link)">
-            <el-card shadow="hover" @click.stop="toPage(item.link)" @keydown.enter="toPage(item.link)">
+          <a
+            v-for="(item, index) in group.children"
+            :key="index"
+            tabindex="0"
+            :href="withBase(item.link)"
+          >
+            <el-card
+              shadow="hover"
+              @click.stop="toPage(item.link)"
+              @keydown.enter="toPage(item.link)"
+            >
               <template #header>
                 <el-text truncated>{{ item.text }}</el-text>
                 <span v-if="item.promotion" class="vp-tag">
@@ -31,14 +50,27 @@
         </div>
       </div>
 
-      <el-empty v-if="!filteredSidebars.length" :description="locale['empty-description']" />
+      <el-empty
+        v-if="!filteredSidebars.length"
+        :description="locale['empty-description']"
+      />
 
       <p class="designed-by">
         Icons designed by
-        <el-link type="primary" underline="never" href="https://github.com/daodaozz08" target="_blank">
+        <el-link
+          type="primary"
+          underline="never"
+          href="https://github.com/daodaozz08"
+          target="_blank"
+        >
           @叨叨
         </el-link>
-        <el-link type="primary" underline="never" href="https://github.com/zhiwendesign" target="_blank">
+        <el-link
+          type="primary"
+          underline="never"
+          href="https://github.com/zhiwendesign"
+          target="_blank"
+        >
           @卡卡
         </el-link>
       </p>

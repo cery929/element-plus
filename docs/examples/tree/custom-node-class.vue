@@ -1,7 +1,14 @@
 <template>
   <div class="custom-tree-node-container">
-    <el-tree style="max-width: 600px" :data="data" show-checkbox node-key="id" default-expand-all
-      :expand-on-click-node="false" :props="{ class: customNodeClass }" />
+    <el-tree
+      style="max-width: 600px"
+      :data="data"
+      show-checkbox
+      node-key="id"
+      default-expand-all
+      :expand-on-click-node="false"
+      :props="{ class: customNodeClass }"
+    />
   </div>
 </template>
 
@@ -74,11 +81,11 @@ const data: Tree[] = [
 </script>
 
 <style>
-.is-penultimate>.el-tree-node__content .el-tree-node__label {
+.is-penultimate > .el-tree-node__content .el-tree-node__label {
   color: #626aef;
 }
 
-.is-penultimate>.el-tree-node__children>div {
+.is-penultimate > .el-tree-node__children > div {
   display: inline-block;
   margin-right: 4px;
 

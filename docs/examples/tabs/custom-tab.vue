@@ -22,7 +22,7 @@ import { Calendar } from '@kn-ui/icons-vue'
 </script>
 
 <style>
-.demo-tabs>.el-tabs__content {
+.demo-tabs > .el-tabs__content {
   padding: 32px;
   color: #6b778c;
   font-size: 32px;

@@ -1,5 +1,10 @@
 <template>
-  <div ref="breadcrumb" :class="ns.b()" :aria-label="t('el.breadcrumb.label')" role="navigation">
+  <div
+    ref="breadcrumb"
+    :class="ns.b()"
+    :aria-label="t('el.breadcrumb.label')"
+    role="navigation"
+  >
     <slot />
   </div>
 </template>

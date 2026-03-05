@@ -1,9 +1,19 @@
 <template>
   <span :class="ns.e('jump')" :disabled="disabled">
     <span :class="[ns.e('goto')]">{{ t('el.pagination.goto') }}</span>
-    <el-input :size="size" :class="[ns.e('editor'), ns.is('in-pagination')]" :min="1" :max="pageCount"
-      :disabled="disabled" :model-value="innerValue" :validate-event="false" :aria-label="t('el.pagination.page')"
-      type="number" @update:model-value="handleInput" @change="handleChange" />
+    <el-input
+      :size="size"
+      :class="[ns.e('editor'), ns.is('in-pagination')]"
+      :min="1"
+      :max="pageCount"
+      :disabled="disabled"
+      :model-value="innerValue"
+      :validate-event="false"
+      :aria-label="t('el.pagination.page')"
+      type="number"
+      @update:model-value="handleInput"
+      @change="handleChange"
+    />
     <span :class="[ns.e('classifier')]">{{
       t('el.pagination.pageClassifier')
     }}</span>

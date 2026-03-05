@@ -1,5 +1,11 @@
 <template>
-  <div v-show="ready" ref="carouselItemRef" :class="itemKls" :style="itemStyle" @click="handleItemClick">
+  <div
+    v-show="ready"
+    ref="carouselItemRef"
+    :class="itemKls"
+    :style="itemStyle"
+    @click="handleItemClick"
+  >
     <div v-if="isCardType" v-show="!active" :class="ns.e('mask')" />
     <slot />
   </div>

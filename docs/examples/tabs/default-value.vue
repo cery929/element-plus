@@ -1,6 +1,16 @@
 <template>
-  <el-tabs v-model="activeName" class="demo-tabs" default-value="third" @tab-click="handleClick">
-    <el-tab-pane v-for="tab in tabs" :key="tab.name" :label="tab.label" :name="tab.name">
+  <el-tabs
+    v-model="activeName"
+    class="demo-tabs"
+    default-value="third"
+    @tab-click="handleClick"
+  >
+    <el-tab-pane
+      v-for="tab in tabs"
+      :key="tab.name"
+      :label="tab.label"
+      :name="tab.name"
+    >
       default-value: third
       <br />
       active: {{ activeName }}
@@ -28,7 +38,7 @@ const handleClick = (tab: TabsPaneContext, event: Event) => {
 </script>
 
 <style>
-.demo-tabs>.el-tabs__content {
+.demo-tabs > .el-tabs__content {
   padding: 32px;
   color: #6b778c;
   font-size: 32px;

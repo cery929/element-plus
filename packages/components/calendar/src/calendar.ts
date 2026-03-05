@@ -1,9 +1,4 @@
-import {
-  buildProps,
-  definePropType,
-  isArray,
-  isDate,
-} from '@kn-ui/utils'
+import { buildProps, definePropType, isArray, isDate } from '@kn-ui/utils'
 import { INPUT_EVENT, UPDATE_MODEL_EVENT } from '@kn-ui/constants'
 
 import type { ExtractPublicPropTypes } from 'vue'

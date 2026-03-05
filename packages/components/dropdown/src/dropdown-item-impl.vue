@@ -1,10 +1,23 @@
 <template>
-  <li v-if="divided" role="separator" :class="ns.bem('menu', 'item', 'divided')" />
-  <li :ref="itemRef" v-bind="{ ...dataset, ...$attrs }" :aria-disabled="disabled"
-    :class="[ns.be('menu', 'item'), ns.is('disabled', disabled)]" :tabindex="tabIndex" :role="role"
-    @click="(e) => $emit('clickimpl', e)" @focus="handleFocus" @keydown.self="handleKeydown"
-    @mousedown="handleMousedown" @pointermove="(e) => $emit('pointermove', e)"
-    @pointerleave="(e) => $emit('pointerleave', e)">
+  <li
+    v-if="divided"
+    role="separator"
+    :class="ns.bem('menu', 'item', 'divided')"
+  />
+  <li
+    :ref="itemRef"
+    v-bind="{ ...dataset, ...$attrs }"
+    :aria-disabled="disabled"
+    :class="[ns.be('menu', 'item'), ns.is('disabled', disabled)]"
+    :tabindex="tabIndex"
+    :role="role"
+    @click="(e) => $emit('clickimpl', e)"
+    @focus="handleFocus"
+    @keydown.self="handleKeydown"
+    @mousedown="handleMousedown"
+    @pointermove="(e) => $emit('pointermove', e)"
+    @pointerleave="(e) => $emit('pointerleave', e)"
+  >
     <el-icon v-if="icon || $slots.icon">
       <slot name="icon">
         <component :is="icon" />
@@ -23,11 +36,7 @@ import {
 import { COLLECTION_ITEM_SIGN } from '@kn-ui/components/collection'
 import { ElIcon } from '@kn-ui/components/icon'
 import { useNamespace } from '@kn-ui/hooks'
-import {
-  composeEventHandlers,
-  composeRefs,
-  getEventCode,
-} from '@kn-ui/utils'
+import { composeEventHandlers, composeRefs, getEventCode } from '@kn-ui/utils'
 import { EVENT_CODE } from '@kn-ui/constants'
 import { dropdownItemProps } from './dropdown'
 import { DROPDOWN_INJECTION_KEY } from './tokens'

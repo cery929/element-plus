@@ -1,9 +1,5 @@
 import { computed, nextTick, ref, shallowRef } from 'vue'
-import {
-  CHANGE_EVENT,
-  INPUT_EVENT,
-  UPDATE_MODEL_EVENT,
-} from '@kn-ui/constants'
+import { CHANGE_EVENT, INPUT_EVENT, UPDATE_MODEL_EVENT } from '@kn-ui/constants'
 import { useFormDisabled, useFormItem } from '@kn-ui/components/form'
 
 import type { CSSProperties, Ref, SetupContext } from 'vue'

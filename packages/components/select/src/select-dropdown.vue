@@ -1,6 +1,8 @@
 <template>
-  <div :class="[ns.b('dropdown'), ns.is('multiple', isMultiple), popperClass]"
-    :style="{ [isFitInputWidth ? 'width' : 'minWidth']: minWidth }">
+  <div
+    :class="[ns.b('dropdown'), ns.is('multiple', isMultiple), popperClass]"
+    :style="{ [isFitInputWidth ? 'width' : 'minWidth']: minWidth }"
+  >
     <div v-if="$slots.header" :class="ns.be('dropdown', 'header')">
       <slot name="header" />
     </div>

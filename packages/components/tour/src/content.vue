@@ -1,10 +1,27 @@
 <template>
-  <div ref="contentRef" :style="contentStyle" :class="ns.e('content')" :data-side="side" tabindex="-1">
-    <el-focus-trap loop trapped focus-start-el="container" :focus-trap-el="contentRef || undefined"
-      @release-requested="onCloseRequested" @focusout-prevented="onFocusoutPrevented">
+  <div
+    ref="contentRef"
+    :style="contentStyle"
+    :class="ns.e('content')"
+    :data-side="side"
+    tabindex="-1"
+  >
+    <el-focus-trap
+      loop
+      trapped
+      focus-start-el="container"
+      :focus-trap-el="contentRef || undefined"
+      @release-requested="onCloseRequested"
+      @focusout-prevented="onFocusoutPrevented"
+    >
       <slot />
     </el-focus-trap>
-    <span v-if="showArrow" ref="arrowRef" :style="arrowStyle" :class="ns.e('arrow')" />
+    <span
+      v-if="showArrow"
+      ref="arrowRef"
+      :style="arrowStyle"
+      :class="ns.e('arrow')"
+    />
   </div>
 </template>
 

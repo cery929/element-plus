@@ -1,5 +1,10 @@
 <template>
-  <component :is="tag" ref="textRef" :class="textKls" :style="{ '-webkit-line-clamp': lineClamp }">
+  <component
+    :is="tag"
+    ref="textRef"
+    :class="textKls"
+    :style="{ '-webkit-line-clamp': lineClamp }"
+  >
     <slot />
   </component>
 </template>

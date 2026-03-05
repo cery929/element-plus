@@ -1,14 +1,46 @@
 <template>
-  <el-tooltip ref="popperRef" :visible="suggestionVisible" :placement="placement"
-    :fallback-placements="['bottom-start', 'top-start']" :popper-class="[ns.e('popper'), popperClass!]"
-    :popper-style="popperStyle" :teleported="teleported" :append-to="appendTo" :gpu-acceleration="false" pure
-    manual-mode effect="light" trigger="click" :transition="`${ns.namespace.value}-zoom-in-top`" persistent
-    role="listbox" @before-show="onSuggestionShow" @hide="onHide">
-    <div ref="listboxRef" :class="[ns.b(), $attrs.class]" :style="styles" role="combobox" aria-haspopup="listbox"
-      :aria-expanded="suggestionVisible" :aria-owns="listboxId">
-      <el-input ref="inputRef" v-bind="mergeProps(passInputProps, $attrs)" :model-value="modelValue"
-        :disabled="disabled" @input="handleInput" @change="handleChange" @focus="handleFocus" @blur="handleBlur"
-        @clear="handleClear" @keydown="handleKeydown" @mousedown="handleMouseDown">
+  <el-tooltip
+    ref="popperRef"
+    :visible="suggestionVisible"
+    :placement="placement"
+    :fallback-placements="['bottom-start', 'top-start']"
+    :popper-class="[ns.e('popper'), popperClass!]"
+    :popper-style="popperStyle"
+    :teleported="teleported"
+    :append-to="appendTo"
+    :gpu-acceleration="false"
+    pure
+    manual-mode
+    effect="light"
+    trigger="click"
+    :transition="`${ns.namespace.value}-zoom-in-top`"
+    persistent
+    role="listbox"
+    @before-show="onSuggestionShow"
+    @hide="onHide"
+  >
+    <div
+      ref="listboxRef"
+      :class="[ns.b(), $attrs.class]"
+      :style="styles"
+      role="combobox"
+      aria-haspopup="listbox"
+      :aria-expanded="suggestionVisible"
+      :aria-owns="listboxId"
+    >
+      <el-input
+        ref="inputRef"
+        v-bind="mergeProps(passInputProps, $attrs)"
+        :model-value="modelValue"
+        :disabled="disabled"
+        @input="handleInput"
+        @change="handleChange"
+        @focus="handleFocus"
+        @blur="handleBlur"
+        @clear="handleClear"
+        @keydown="handleKeydown"
+        @mousedown="handleMouseDown"
+      >
         <template v-if="$slots.prepend" #prepend>
           <slot name="prepend" />
         </template>
@@ -24,15 +56,29 @@
       </el-input>
     </div>
     <template #content>
-      <div ref="regionRef" :class="[ns.b('suggestion'), ns.is('loading', suggestionLoading)]" :style="{
-        [fitInputWidth ? 'width' : 'minWidth']: dropdownWidth,
-        outline: 'none',
-      }" role="region">
-        <div v-if="$slots.header" :class="ns.be('suggestion', 'header')" @click.stop>
+      <div
+        ref="regionRef"
+        :class="[ns.b('suggestion'), ns.is('loading', suggestionLoading)]"
+        :style="{
+          [fitInputWidth ? 'width' : 'minWidth']: dropdownWidth,
+          outline: 'none',
+        }"
+        role="region"
+      >
+        <div
+          v-if="$slots.header"
+          :class="ns.be('suggestion', 'header')"
+          @click.stop
+        >
           <slot name="header" />
         </div>
-        <el-scrollbar :id="listboxId" tag="ul" :wrap-class="ns.be('suggestion', 'wrap')"
-          :view-class="ns.be('suggestion', 'list')" role="listbox">
+        <el-scrollbar
+          :id="listboxId"
+          tag="ul"
+          :wrap-class="ns.be('suggestion', 'wrap')"
+          :view-class="ns.be('suggestion', 'list')"
+          role="listbox"
+        >
           <li v-if="suggestionLoading">
             <slot name="loading">
               <el-icon :class="ns.is('loading')">
@@ -41,14 +87,24 @@
             </slot>
           </li>
           <template v-else>
-            <li v-for="(item, index) in suggestions" :id="`${listboxId}-item-${index}`" :key="index"
-              :class="{ highlighted: highlightedIndex === index }" role="option"
-              :aria-selected="highlightedIndex === index" @click="handleSelect(item)">
+            <li
+              v-for="(item, index) in suggestions"
+              :id="`${listboxId}-item-${index}`"
+              :key="index"
+              :class="{ highlighted: highlightedIndex === index }"
+              role="option"
+              :aria-selected="highlightedIndex === index"
+              @click="handleSelect(item)"
+            >
               <slot :item="item">{{ item[valueKey] }}</slot>
             </li>
           </template>
         </el-scrollbar>
-        <div v-if="$slots.footer" :class="ns.be('suggestion', 'footer')" @click.stop>
+        <div
+          v-if="$slots.footer"
+          :class="ns.be('suggestion', 'footer')"
+          @click.stop
+        >
           <slot name="footer" />
         </div>
       </div>
@@ -397,15 +453,15 @@ onBeforeUnmount(() => {
 onMounted(() => {
   const inputElement = inputRef.value?.ref
   if (!inputElement) return
-    ;[
-      { key: 'role', value: 'textbox' },
-      { key: 'aria-autocomplete', value: 'list' },
-      { key: 'aria-controls', value: listboxId.value },
-      {
-        key: 'aria-activedescendant',
-        value: `${listboxId.value}-item-${highlightedIndex.value}`,
-      },
-    ].forEach(({ key, value }) => inputElement.setAttribute(key, value))
+  ;[
+    { key: 'role', value: 'textbox' },
+    { key: 'aria-autocomplete', value: 'list' },
+    { key: 'aria-controls', value: listboxId.value },
+    {
+      key: 'aria-activedescendant',
+      value: `${listboxId.value}-item-${highlightedIndex.value}`,
+    },
+  ].forEach(({ key, value }) => inputElement.setAttribute(key, value))
   // get readonly attr
   readonly = inputElement.hasAttribute('readonly')
 })

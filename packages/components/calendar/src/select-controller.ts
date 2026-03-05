@@ -1,9 +1,4 @@
-import {
-  buildProps,
-  definePropType,
-  isObject,
-  isString,
-} from '@kn-ui/utils'
+import { buildProps, definePropType, isObject, isString } from '@kn-ui/utils'
 
 import type { ExtractPublicPropTypes } from 'vue'
 import type { Dayjs } from 'dayjs'

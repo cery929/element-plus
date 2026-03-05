@@ -1,6 +1,9 @@
 <template>
   <div :class="descriptionKls">
-    <div v-if="title || extra || $slots.title || $slots.extra" :class="ns.e('header')">
+    <div
+      v-if="title || extra || $slots.title || $slots.extra"
+      :class="ns.e('header')"
+    >
       <div :class="ns.e('title')">
         <slot name="title">{{ title }}</slot>
       </div>

@@ -1,12 +1,20 @@
 <template>
-  <li :id="`${contentId}-${index}`" role="option" :aria-selected="selected" :aria-disabled="disabled || undefined"
-    :style="style" :class="[
+  <li
+    :id="`${contentId}-${index}`"
+    role="option"
+    :aria-selected="selected"
+    :aria-disabled="disabled || undefined"
+    :style="style"
+    :class="[
       ns.be('dropdown', 'item'),
       ns.is('selected', selected),
       ns.is('disabled', disabled),
       ns.is('created', created),
       ns.is('hovering', hovering),
-    ]" @mousemove="hoverItem" @click.stop="selectOptionClick">
+    ]"
+    @mousemove="hoverItem"
+    @click.stop="selectOptionClick"
+  >
     <slot :item="item" :index="index" :disabled="disabled">
       <span>{{ getLabel(item) }}</span>
     </slot>

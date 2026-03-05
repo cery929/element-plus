@@ -4,7 +4,12 @@
     <el-segmented v-model="tagEffect" :options="effect" />
   </div>
   <br />
-  <el-input-tag v-model="input" :tag-type="tagType" :tag-effect="tagEffect" placeholder="Please input">
+  <el-input-tag
+    v-model="input"
+    :tag-type="tagType"
+    :tag-effect="tagEffect"
+    placeholder="Please input"
+  >
     <template #tag="{ value }">
       <div class="flex items-center">
         <el-icon class="mr-1">

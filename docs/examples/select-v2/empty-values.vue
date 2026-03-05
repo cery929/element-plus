@@ -1,6 +1,14 @@
 <template>
-  <el-select-v2 v-model="value" :options="options" :empty-values="[null, undefined]" :value-on-clear="null" clearable
-    placeholder="Select" style="width: 240px" @clear="handleClear" />
+  <el-select-v2
+    v-model="value"
+    :options="options"
+    :empty-values="[null, undefined]"
+    :value-on-clear="null"
+    clearable
+    placeholder="Select"
+    style="width: 240px"
+    @clear="handleClear"
+  />
 </template>
 
 <script lang="ts" setup>

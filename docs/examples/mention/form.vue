@@ -1,5 +1,10 @@
 <template>
-  <el-form ref="ruleFormRef" style="max-width: 600px" :model="ruleForm" :rules="rules">
+  <el-form
+    ref="ruleFormRef"
+    style="max-width: 600px"
+    :model="ruleForm"
+    :rules="rules"
+  >
     <el-form-item label="name" prop="name">
       <el-mention v-model="ruleForm.name" :options="options" />
     </el-form-item>

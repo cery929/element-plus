@@ -1,10 +1,6 @@
 import { placements } from '@popperjs/core'
 import { buildProps, definePropType } from '@kn-ui/utils'
-import {
-  useAriaProps,
-  useEmptyValuesProps,
-  useSizeProp,
-} from '@kn-ui/hooks'
+import { useAriaProps, useEmptyValuesProps, useSizeProp } from '@kn-ui/hooks'
 import { useTooltipContentProps } from '@kn-ui/components/tooltip'
 import { CircleClose } from '@kn-ui/icons-vue'
 import { disabledTimeListsProps } from '../props/shared'

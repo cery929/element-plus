@@ -1,8 +1,15 @@
 <template>
-  <el-checkbox v-model="checkAll" :indeterminate="isIndeterminate" @change="handleCheckAllChange">
+  <el-checkbox
+    v-model="checkAll"
+    :indeterminate="isIndeterminate"
+    @change="handleCheckAllChange"
+  >
     Check all
   </el-checkbox>
-  <el-checkbox-group v-model="checkedCities" @change="handleCheckedCitiesChange">
+  <el-checkbox-group
+    v-model="checkedCities"
+    @change="handleCheckedCitiesChange"
+  >
     <el-checkbox v-for="city in cities" :key="city" :label="city" :value="city">
       {{ city }}
     </el-checkbox>

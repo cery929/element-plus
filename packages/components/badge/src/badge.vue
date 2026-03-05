@@ -2,14 +2,18 @@
   <div :class="ns.b()">
     <slot />
     <transition :name="`${ns.namespace.value}-zoom-in-center`">
-      <sup v-show="!hidden && (content || isDot || $slots.content)" :class="[
-        ns.e('content'),
-        ns.em('content', type),
-        ns.is('fixed', !!$slots.default),
-        ns.is('dot', isDot),
-        ns.is('hide-zero', !showZero && value === 0),
-        badgeClass,
-      ]" :style="style">
+      <sup
+        v-show="!hidden && (content || isDot || $slots.content)"
+        :class="[
+          ns.e('content'),
+          ns.em('content', type),
+          ns.is('fixed', !!$slots.default),
+          ns.is('dot', isDot),
+          ns.is('hide-zero', !showZero && value === 0),
+          badgeClass,
+        ]"
+        :style="style"
+      >
         <slot name="content" :value="content">
           {{ content }}
         </slot>

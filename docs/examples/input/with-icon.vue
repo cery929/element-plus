@@ -3,21 +3,39 @@
     <div class="input-group">
       <span class="label">Using attributes</span>
       <div class="input-container">
-        <el-input v-model="input1" class="responsive-input" placeholder="Pick a date" :suffix-icon="Calendar" />
-        <el-input v-model="input2" class="responsive-input" placeholder="Type something" :prefix-icon="Search" />
+        <el-input
+          v-model="input1"
+          class="responsive-input"
+          placeholder="Pick a date"
+          :suffix-icon="Calendar"
+        />
+        <el-input
+          v-model="input2"
+          class="responsive-input"
+          placeholder="Type something"
+          :prefix-icon="Search"
+        />
       </div>
     </div>
     <div class="input-group">
       <span class="label">Using slots</span>
       <div class="input-container">
-        <el-input v-model="input3" class="responsive-input" placeholder="Pick a date">
+        <el-input
+          v-model="input3"
+          class="responsive-input"
+          placeholder="Pick a date"
+        >
           <template #suffix>
             <el-icon class="el-input__icon">
               <calendar />
             </el-icon>
           </template>
         </el-input>
-        <el-input v-model="input4" class="responsive-input" placeholder="Type something">
+        <el-input
+          v-model="input4"
+          class="responsive-input"
+          placeholder="Type something"
+        >
           <template #prefix>
             <el-icon class="el-input__icon">
               <search />

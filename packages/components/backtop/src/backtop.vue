@@ -1,6 +1,11 @@
 <template>
   <transition :name="`${ns.namespace.value}-fade-in`">
-    <div v-if="visible" :style="backTopStyle" :class="ns.b()" @click.stop="handleClick">
+    <div
+      v-if="visible"
+      :style="backTopStyle"
+      :class="ns.b()"
+      @click.stop="handleClick"
+    >
       <slot>
         <el-icon :class="ns.e('icon')"><caret-top /></el-icon>
       </slot>

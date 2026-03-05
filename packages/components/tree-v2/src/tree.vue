@@ -1,14 +1,37 @@
 <template>
-  <div :class="[ns.b(), { [ns.m('highlight-current')]: highlightCurrent }]" role="tree">
-    <fixed-size-list v-if="isNotEmpty" ref="listRef" :class-name="ns.b('virtual-list')" :data="flattenTree"
-      :total="flattenTree.length" :height="height" :item-size="treeNodeSize" :perf-mode="perfMode"
-      :scrollbar-always-on="scrollbarAlwaysOn">
+  <div
+    :class="[ns.b(), { [ns.m('highlight-current')]: highlightCurrent }]"
+    role="tree"
+  >
+    <fixed-size-list
+      v-if="isNotEmpty"
+      ref="listRef"
+      :class-name="ns.b('virtual-list')"
+      :data="flattenTree"
+      :total="flattenTree.length"
+      :height="height"
+      :item-size="treeNodeSize"
+      :perf-mode="perfMode"
+      :scrollbar-always-on="scrollbarAlwaysOn"
+    >
       <template #default="{ data, index, style }">
-        <el-tree-node :key="data[index].key" :style="style" :node="data[index]" :expanded="data[index].expanded"
-          :show-checkbox="showCheckbox" :checked="isChecked(data[index])" :indeterminate="isIndeterminate(data[index])"
-          :item-size="treeNodeSize" :disabled="isDisabled(data[index])" :current="isCurrent(data[index])"
-          :hidden-expand-icon="isForceHiddenExpandIcon(data[index])" @click="handleNodeClick" @toggle="toggleExpand"
-          @check="handleNodeCheck" @drop="handleNodeDrop" />
+        <el-tree-node
+          :key="data[index].key"
+          :style="style"
+          :node="data[index]"
+          :expanded="data[index].expanded"
+          :show-checkbox="showCheckbox"
+          :checked="isChecked(data[index])"
+          :indeterminate="isIndeterminate(data[index])"
+          :item-size="treeNodeSize"
+          :disabled="isDisabled(data[index])"
+          :current="isCurrent(data[index])"
+          :hidden-expand-icon="isForceHiddenExpandIcon(data[index])"
+          @click="handleNodeClick"
+          @toggle="toggleExpand"
+          @check="handleNodeCheck"
+          @drop="handleNodeDrop"
+        />
       </template>
     </fixed-size-list>
     <div v-else :class="ns.e('empty-block')">

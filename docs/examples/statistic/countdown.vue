@@ -4,7 +4,11 @@
       <el-countdown title="Start to grab" :value="value" />
     </el-col>
     <el-col :xs="24" :sm="12" :md="8" class="text-center mb-4">
-      <el-countdown title="Remaining VIP time" format="HH:mm:ss" :value="value1" />
+      <el-countdown
+        title="Remaining VIP time"
+        format="HH:mm:ss"
+        :value="value1"
+      />
       <el-button class="countdown-footer" type="primary" @click="reset">
         Reset
       </el-button>

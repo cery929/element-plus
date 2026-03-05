@@ -1,67 +1,117 @@
 <template>
-  <div :class="[
-    ppNs.b(),
-    drpNs.b(),
-    ppNs.is('border', border),
-    ppNs.is('disabled', monthRangeDisabled),
-    {
-      'has-sidebar': Boolean($slots.sidebar) || hasShortcuts,
-    },
-  ]">
+  <div
+    :class="[
+      ppNs.b(),
+      drpNs.b(),
+      ppNs.is('border', border),
+      ppNs.is('disabled', monthRangeDisabled),
+      {
+        'has-sidebar': Boolean($slots.sidebar) || hasShortcuts,
+      },
+    ]"
+  >
     <div :class="ppNs.e('body-wrapper')">
       <slot name="sidebar" :class="ppNs.e('sidebar')" />
       <div v-if="hasShortcuts" :class="ppNs.e('sidebar')">
-        <button v-for="(shortcut, key) in shortcuts" :key="key" type="button" :class="ppNs.e('shortcut')"
-          :disabled="monthRangeDisabled" @click="handleShortcutClick(shortcut)">
+        <button
+          v-for="(shortcut, key) in shortcuts"
+          :key="key"
+          type="button"
+          :class="ppNs.e('shortcut')"
+          :disabled="monthRangeDisabled"
+          @click="handleShortcutClick(shortcut)"
+        >
           {{ shortcut.text }}
         </button>
       </div>
       <div :class="ppNs.e('body')">
         <div :class="[ppNs.e('content'), drpNs.e('content')]" class="is-left">
           <div :class="drpNs.e('header')">
-            <button type="button" :class="ppNs.e('icon-btn')" class="d-arrow-left" :disabled="monthRangeDisabled"
-              @click="leftPrevYear">
+            <button
+              type="button"
+              :class="ppNs.e('icon-btn')"
+              class="d-arrow-left"
+              :disabled="monthRangeDisabled"
+              @click="leftPrevYear"
+            >
               <slot name="prev-year">
                 <el-icon><d-arrow-left /></el-icon>
               </slot>
             </button>
-            <button v-if="unlinkPanels" type="button" :disabled="!enableYearArrow || monthRangeDisabled" :class="[
-              ppNs.e('icon-btn'),
-              ppNs.is('disabled', !enableYearArrow || monthRangeDisabled),
-            ]" class="d-arrow-right" @click="leftNextYear">
+            <button
+              v-if="unlinkPanels"
+              type="button"
+              :disabled="!enableYearArrow || monthRangeDisabled"
+              :class="[
+                ppNs.e('icon-btn'),
+                ppNs.is('disabled', !enableYearArrow || monthRangeDisabled),
+              ]"
+              class="d-arrow-right"
+              @click="leftNextYear"
+            >
               <slot name="next-year">
                 <el-icon><d-arrow-right /></el-icon>
               </slot>
             </button>
             <div>{{ leftLabel }}</div>
           </div>
-          <month-table selection-mode="range" :date="leftDate" :min-date="minDate" :max-date="maxDate"
-            :range-state="rangeState" :disabled-date="disabledDate" :disabled="monthRangeDisabled"
-            :cell-class-name="cellClassName" @changerange="handleChangeRange" @pick="handleRangePick"
-            @select="onSelect" />
+          <month-table
+            selection-mode="range"
+            :date="leftDate"
+            :min-date="minDate"
+            :max-date="maxDate"
+            :range-state="rangeState"
+            :disabled-date="disabledDate"
+            :disabled="monthRangeDisabled"
+            :cell-class-name="cellClassName"
+            @changerange="handleChangeRange"
+            @pick="handleRangePick"
+            @select="onSelect"
+          />
         </div>
         <div :class="[ppNs.e('content'), drpNs.e('content')]" class="is-right">
           <div :class="drpNs.e('header')">
-            <button v-if="unlinkPanels" type="button" :disabled="!enableYearArrow || monthRangeDisabled" :class="[
-              ppNs.e('icon-btn'),
-              ppNs.is('disabled', !enableYearArrow || monthRangeDisabled),
-            ]" class="d-arrow-left" @click="rightPrevYear">
+            <button
+              v-if="unlinkPanels"
+              type="button"
+              :disabled="!enableYearArrow || monthRangeDisabled"
+              :class="[
+                ppNs.e('icon-btn'),
+                ppNs.is('disabled', !enableYearArrow || monthRangeDisabled),
+              ]"
+              class="d-arrow-left"
+              @click="rightPrevYear"
+            >
               <slot name="prev-year">
                 <el-icon><d-arrow-left /></el-icon>
               </slot>
             </button>
-            <button type="button" :class="ppNs.e('icon-btn')" class="d-arrow-right" :disabled="monthRangeDisabled"
-              @click="rightNextYear">
+            <button
+              type="button"
+              :class="ppNs.e('icon-btn')"
+              class="d-arrow-right"
+              :disabled="monthRangeDisabled"
+              @click="rightNextYear"
+            >
               <slot name="next-year">
                 <el-icon><d-arrow-right /></el-icon>
               </slot>
             </button>
             <div>{{ rightLabel }}</div>
           </div>
-          <month-table selection-mode="range" :date="rightDate" :min-date="minDate" :max-date="maxDate"
-            :range-state="rangeState" :disabled-date="disabledDate" :disabled="monthRangeDisabled"
-            :cell-class-name="cellClassName" @changerange="handleChangeRange" @pick="handleRangePick"
-            @select="onSelect" />
+          <month-table
+            selection-mode="range"
+            :date="rightDate"
+            :min-date="minDate"
+            :max-date="maxDate"
+            :range-state="rangeState"
+            :disabled-date="disabledDate"
+            :disabled="monthRangeDisabled"
+            :cell-class-name="cellClassName"
+            @changerange="handleChangeRange"
+            @pick="handleRangePick"
+            @select="onSelect"
+          />
         </div>
       </div>
     </div>

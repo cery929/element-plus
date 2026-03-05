@@ -7,12 +7,7 @@ import {
   watch,
 } from 'vue'
 import { useTimeoutFn } from '@vueuse/core'
-import {
-  defaultNamespace,
-  useId,
-  useLockscreen,
-  useZIndex,
-} from '@kn-ui/hooks'
+import { defaultNamespace, useId, useLockscreen, useZIndex } from '@kn-ui/hooks'
 import { UPDATE_MODEL_EVENT } from '@kn-ui/constants'
 import {
   addUnit,

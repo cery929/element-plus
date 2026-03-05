@@ -11,11 +11,23 @@
 
   <el-tour v-model="open">
     <el-tour-step :target="ref1?.$el" title="Upload File">
-      <img style="width: 240px" src="https://element-plus.org/images/element-plus-logo.svg" alt="tour.png" />
+      <img
+        style="width: 240px"
+        src="https://element-plus.org/images/element-plus-logo.svg"
+        alt="tour.png"
+      />
       <div>Put you files here.</div>
     </el-tour-step>
-    <el-tour-step :target="ref2?.$el" title="Save" description="Save your changes" />
-    <el-tour-step :target="ref3?.$el" title="Other Actions" description="Click to see other" />
+    <el-tour-step
+      :target="ref2?.$el"
+      title="Save"
+      description="Save your changes"
+    />
+    <el-tour-step
+      :target="ref3?.$el"
+      title="Other Actions"
+      description="Click to see other"
+    />
   </el-tour>
 </template>
 

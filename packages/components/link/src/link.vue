@@ -1,6 +1,10 @@
 <template>
-  <a :class="linkKls" :href="disabled || !href ? undefined : href" :target="disabled || !href ? undefined : target"
-    @click="handleClick">
+  <a
+    :class="linkKls"
+    :href="disabled || !href ? undefined : href"
+    :target="disabled || !href ? undefined : target"
+    @click="handleClick"
+  >
     <el-icon v-if="icon">
       <component :is="icon" />
     </el-icon>

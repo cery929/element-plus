@@ -1,25 +1,64 @@
 <template>
-  <div :id="inputId" :class="[rateClasses, ns.is('disabled', rateDisabled)]" role="slider"
-    :aria-label="!isLabeledByFormItem ? ariaLabel || 'rating' : undefined" :aria-labelledby="isLabeledByFormItem ? formItemContext?.labelId : undefined
-      " :aria-valuenow="currentValue" :aria-valuetext="text || undefined" aria-valuemin="0" :aria-valuemax="max"
-    tabindex="0" :style="rateStyles" @keydown="handleKey">
-    <span v-for="(item, key) in max" :key="key" :class="ns.e('item')" @mousemove="setCurrentValue(item, $event)"
-      @mouseleave="resetCurrentValue" @click="selectValue(item)">
-      <el-icon ref="iconRefs" :class="[
-        ns.e('icon'),
-        { hover: hoverIndex === item },
-        ns.is('active', item <= currentValue),
-        ns.is('focus-visible', item === Math.ceil(currentValue || 1)),
-      ]">
-        <component :is="activeComponent" v-show="!showDecimalIcon(item) && item <= currentValue" />
-        <component :is="voidComponent" v-show="!showDecimalIcon(item) && item > currentValue" />
-        <component :is="voidComponent" v-show="showDecimalIcon(item)" :class="[ns.em('decimal', 'box')]" />
-        <el-icon v-show="showDecimalIcon(item)" :style="decimalStyle" :class="[ns.e('icon'), ns.e('decimal')]">
+  <div
+    :id="inputId"
+    :class="[rateClasses, ns.is('disabled', rateDisabled)]"
+    role="slider"
+    :aria-label="!isLabeledByFormItem ? ariaLabel || 'rating' : undefined"
+    :aria-labelledby="
+      isLabeledByFormItem ? formItemContext?.labelId : undefined
+    "
+    :aria-valuenow="currentValue"
+    :aria-valuetext="text || undefined"
+    aria-valuemin="0"
+    :aria-valuemax="max"
+    tabindex="0"
+    :style="rateStyles"
+    @keydown="handleKey"
+  >
+    <span
+      v-for="(item, key) in max"
+      :key="key"
+      :class="ns.e('item')"
+      @mousemove="setCurrentValue(item, $event)"
+      @mouseleave="resetCurrentValue"
+      @click="selectValue(item)"
+    >
+      <el-icon
+        ref="iconRefs"
+        :class="[
+          ns.e('icon'),
+          { hover: hoverIndex === item },
+          ns.is('active', item <= currentValue),
+          ns.is('focus-visible', item === Math.ceil(currentValue || 1)),
+        ]"
+      >
+        <component
+          :is="activeComponent"
+          v-show="!showDecimalIcon(item) && item <= currentValue"
+        />
+        <component
+          :is="voidComponent"
+          v-show="!showDecimalIcon(item) && item > currentValue"
+        />
+        <component
+          :is="voidComponent"
+          v-show="showDecimalIcon(item)"
+          :class="[ns.em('decimal', 'box')]"
+        />
+        <el-icon
+          v-show="showDecimalIcon(item)"
+          :style="decimalStyle"
+          :class="[ns.e('icon'), ns.e('decimal')]"
+        >
           <component :is="decimalIconComponent" />
         </el-icon>
       </el-icon>
     </span>
-    <span v-if="showText || showScore" :class="ns.e('text')" :style="{ color: textColor }">
+    <span
+      v-if="showText || showScore"
+      :class="ns.e('text')"
+      :style="{ color: textColor }"
+    >
       {{ text }}
     </span>
   </div>
@@ -28,11 +67,7 @@
 <script lang="ts" setup>
 import { computed, inject, markRaw, ref, watch } from 'vue'
 import { clamp } from 'lodash-unified'
-import {
-  CHANGE_EVENT,
-  EVENT_CODE,
-  UPDATE_MODEL_EVENT,
-} from '@kn-ui/constants'
+import { CHANGE_EVENT, EVENT_CODE, UPDATE_MODEL_EVENT } from '@kn-ui/constants'
 import { getEventCode, isArray, isObject, isString } from '@kn-ui/utils'
 import {
   formItemContextKey,
@@ -141,10 +176,10 @@ const valueDecimal = computed(
 const colorMap = computed(() =>
   isArray(props.colors)
     ? {
-      [props.lowThreshold]: props.colors[0],
-      [props.highThreshold]: { value: props.colors[1], excluded: true },
-      [props.max]: props.colors[2],
-    }
+        [props.lowThreshold]: props.colors[0],
+        [props.highThreshold]: { value: props.colors[1], excluded: true },
+        [props.max]: props.colors[2],
+      }
     : props.colors
 )
 const activeColor = computed(() => {
@@ -171,13 +206,13 @@ const componentMap = computed(() => {
     | Record<number, string | Component>
   return isArray(icons)
     ? {
-      [props.lowThreshold]: icons[0],
-      [props.highThreshold]: {
-        value: icons[1],
-        excluded: true,
-      },
-      [props.max]: icons[2],
-    }
+        [props.lowThreshold]: icons[0],
+        [props.highThreshold]: {
+          value: icons[1],
+          excluded: true,
+        },
+        [props.max]: icons[2],
+      }
     : icons
 })
 const decimalIconComponent = computed(() =>

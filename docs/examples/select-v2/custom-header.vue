@@ -1,8 +1,21 @@
 <template>
-  <el-select-v2 v-model="value" :options="options" multiple clearable collapse-tags placeholder="Select"
-    popper-class="custom-header" :max-collapse-tags="1" style="width: 240px">
+  <el-select-v2
+    v-model="value"
+    :options="options"
+    multiple
+    clearable
+    collapse-tags
+    placeholder="Select"
+    popper-class="custom-header"
+    :max-collapse-tags="1"
+    style="width: 240px"
+  >
     <template #header>
-      <el-checkbox v-model="checkAll" :indeterminate="indeterminate" @change="handleCheckAll">
+      <el-checkbox
+        v-model="checkAll"
+        :indeterminate="indeterminate"
+        @change="handleCheckAll"
+      >
         All
       </el-checkbox>
     </template>

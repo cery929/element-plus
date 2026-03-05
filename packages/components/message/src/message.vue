@@ -1,16 +1,34 @@
 <template>
-  <transition :name="ns.b('fade')" @before-enter="isStartTransition = true" @before-leave="onClose"
-    @after-leave="$emit('destroy')">
-    <div v-show="visible" :id="id" ref="messageRef" :class="[
-      ns.b(),
-      { [ns.m(type)]: type },
-      ns.is('closable', showClose),
-      ns.is('plain', plain),
-      ns.is('bottom', verticalProperty === 'bottom'),
-      horizontalClass,
-      customClass,
-    ]" :style="customStyle" role="alert" @mouseenter="clearTimer" @mouseleave="startTimer">
-      <el-badge v-if="repeatNum > 1" :value="repeatNum" :type="badgeType" :class="ns.e('badge')" />
+  <transition
+    :name="ns.b('fade')"
+    @before-enter="isStartTransition = true"
+    @before-leave="onClose"
+    @after-leave="$emit('destroy')"
+  >
+    <div
+      v-show="visible"
+      :id="id"
+      ref="messageRef"
+      :class="[
+        ns.b(),
+        { [ns.m(type)]: type },
+        ns.is('closable', showClose),
+        ns.is('plain', plain),
+        ns.is('bottom', verticalProperty === 'bottom'),
+        horizontalClass,
+        customClass,
+      ]"
+      :style="customStyle"
+      role="alert"
+      @mouseenter="clearTimer"
+      @mouseleave="startTimer"
+    >
+      <el-badge
+        v-if="repeatNum > 1"
+        :value="repeatNum"
+        :type="badgeType"
+        :class="ns.e('badge')"
+      />
       <el-icon v-if="iconComponent" :class="[ns.e('icon'), typeClass]">
         <component :is="iconComponent" />
       </el-icon>
@@ -31,11 +49,7 @@
 <script lang="ts" setup>
 import { computed, nextTick, onMounted, ref, watch } from 'vue'
 import { useEventListener, useResizeObserver, useTimeoutFn } from '@vueuse/core'
-import {
-  TypeComponents,
-  TypeComponentsMap,
-  getEventCode,
-} from '@kn-ui/utils'
+import { TypeComponents, TypeComponentsMap, getEventCode } from '@kn-ui/utils'
 import { EVENT_CODE } from '@kn-ui/constants'
 import ElBadge from '@kn-ui/components/badge'
 import { useGlobalComponentSettings } from '@kn-ui/components/config-provider'
@@ -112,9 +126,9 @@ const customStyle = computed<CSSProperties>(() => ({
 
 function startTimer() {
   if (props.duration === 0) return
-    ; ({ stop: stopTimer } = useTimeoutFn(() => {
-      close()
-    }, props.duration))
+  ;({ stop: stopTimer } = useTimeoutFn(() => {
+    close()
+  }, props.duration))
 }
 
 function clearTimer() {

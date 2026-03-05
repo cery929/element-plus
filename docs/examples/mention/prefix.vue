@@ -1,6 +1,12 @@
 <template>
-  <el-mention v-model="value" :options="options" :prefix="['@', '#']" style="width: 320px"
-    placeholder="input @ to mention people, # to mention tag" @search="handleSearch" />
+  <el-mention
+    v-model="value"
+    :options="options"
+    :prefix="['@', '#']"
+    style="width: 320px"
+    placeholder="input @ to mention people, # to mention tag"
+    @search="handleSearch"
+  />
 </template>
 
 <script setup lang="ts">

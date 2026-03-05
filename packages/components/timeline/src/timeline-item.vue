@@ -1,9 +1,13 @@
 <template>
   <li :class="timelineItemKls">
     <div :class="ns.e('tail')" />
-    <div v-if="!$slots.dot" :class="defaultNodeKls" :style="{
-      backgroundColor: color,
-    }">
+    <div
+      v-if="!$slots.dot"
+      :class="defaultNodeKls"
+      :style="{
+        backgroundColor: color,
+      }"
+    >
       <el-icon v-if="icon" :class="ns.e('icon')">
         <component :is="icon" />
       </el-icon>
@@ -13,7 +17,10 @@
     </div>
 
     <div :class="ns.e('wrapper')">
-      <div v-if="!hideTimestamp && placement === 'top'" :class="[ns.e('timestamp'), ns.is('top')]">
+      <div
+        v-if="!hideTimestamp && placement === 'top'"
+        :class="[ns.e('timestamp'), ns.is('top')]"
+      >
         {{ timestamp }}
       </div>
 
@@ -21,7 +28,10 @@
         <slot />
       </div>
 
-      <div v-if="!hideTimestamp && placement === 'bottom'" :class="[ns.e('timestamp'), ns.is('bottom')]">
+      <div
+        v-if="!hideTimestamp && placement === 'bottom'"
+        :class="[ns.e('timestamp'), ns.is('bottom')]"
+      >
         {{ timestamp }}
       </div>
     </div>

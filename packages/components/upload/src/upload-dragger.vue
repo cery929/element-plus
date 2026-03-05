@@ -1,6 +1,10 @@
 <template>
-  <div :class="[ns.b('dragger'), ns.is('dragover', dragover)]" @drop.prevent="onDrop" @dragover.prevent="onDragover"
-    @dragleave.prevent="onDragleave">
+  <div
+    :class="[ns.b('dragger'), ns.is('dragover', dragover)]"
+    @drop.prevent="onDrop"
+    @dragover.prevent="onDragover"
+    @dragleave.prevent="onDragleave"
+  >
     <slot />
   </div>
 </template>

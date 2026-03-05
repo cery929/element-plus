@@ -1,18 +1,40 @@
 <template>
-  <li :id="`${menuId}-${node.uid}`" role="menuitem" :aria-haspopup="!isLeaf" :aria-owns="isLeaf ? undefined : menuId"
-    :aria-expanded="inExpandingPath" :tabindex="expandable ? -1 : undefined" :class="[
+  <li
+    :id="`${menuId}-${node.uid}`"
+    role="menuitem"
+    :aria-haspopup="!isLeaf"
+    :aria-owns="isLeaf ? undefined : menuId"
+    :aria-expanded="inExpandingPath"
+    :tabindex="expandable ? -1 : undefined"
+    :class="[
       ns.b(),
       ns.is('selectable', checkStrictly),
       ns.is('active', node.checked),
       ns.is('disabled', !expandable),
       inExpandingPath && 'in-active-path',
       inCheckedPath && 'in-checked-path',
-    ]" @mouseenter="handleHoverExpand" @focus="handleHoverExpand" @click="handleClick">
+    ]"
+    @mouseenter="handleHoverExpand"
+    @focus="handleHoverExpand"
+    @click="handleClick"
+  >
     <!-- prefix -->
-    <el-checkbox v-if="multiple && showPrefix" :model-value="node.checked" :indeterminate="node.indeterminate"
-      :disabled="isDisabled" @click.stop @update:model-value="handleSelectCheck" />
-    <el-radio v-else-if="checkStrictly && showPrefix" :model-value="checkedNodeId" :label="node.uid"
-      :disabled="isDisabled" @update:model-value="handleSelectCheck" @click.stop>
+    <el-checkbox
+      v-if="multiple && showPrefix"
+      :model-value="node.checked"
+      :indeterminate="node.indeterminate"
+      :disabled="isDisabled"
+      @click.stop
+      @update:model-value="handleSelectCheck"
+    />
+    <el-radio
+      v-else-if="checkStrictly && showPrefix"
+      :model-value="checkedNodeId"
+      :label="node.uid"
+      :disabled="isDisabled"
+      @update:model-value="handleSelectCheck"
+      @click.stop
+    >
       <!--
         Add an empty element to avoid render label,
         do not use empty fragment here for https://github.com/vuejs/vue-next/pull/2485

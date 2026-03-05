@@ -6,8 +6,8 @@
           <el-sub-menu index="1">
             <template #title>
               <el-icon>
-                <message />
-              </el-icon>Navigator One
+                <message /> </el-icon
+              >Navigator One
             </template>
             <el-menu-item-group>
               <template #title>Group 1</template>
@@ -42,8 +42,8 @@
           <el-sub-menu index="3">
             <template #title>
               <el-icon>
-                <setting />
-              </el-icon>Navigator Three
+                <setting /> </el-icon
+              >Navigator Three
             </template>
             <el-menu-item-group>
               <template #title>Group 1</template>

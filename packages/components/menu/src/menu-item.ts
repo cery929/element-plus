@@ -1,9 +1,4 @@
-import {
-  buildProps,
-  definePropType,
-  isArray,
-  isString,
-} from '@kn-ui/utils'
+import { buildProps, definePropType, isArray, isString } from '@kn-ui/utils'
 
 import type { ExtractPublicPropTypes } from 'vue'
 import type { RouteLocationRaw } from 'vue-router'

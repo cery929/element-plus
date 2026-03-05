@@ -1,8 +1,21 @@
 <template>
-  <component :is="tag" :id="groupId" :class="ns.b('group')" role="group" :aria-label="!isLabeledByFormItem ? ariaLabel || 'checkbox-group' : undefined
-    " :aria-labelledby="isLabeledByFormItem ? formItem?.labelId : undefined">
+  <component
+    :is="tag"
+    :id="groupId"
+    :class="ns.b('group')"
+    role="group"
+    :aria-label="
+      !isLabeledByFormItem ? ariaLabel || 'checkbox-group' : undefined
+    "
+    :aria-labelledby="isLabeledByFormItem ? formItem?.labelId : undefined"
+  >
     <slot>
-      <component :is="optionComponent" v-for="(item, index) in options" :key="index" v-bind="getOptionProps(item)" />
+      <component
+        :is="optionComponent"
+        v-for="(item, index) in options"
+        :key="index"
+        v-bind="getOptionProps(item)"
+      />
     </slot>
   </component>
 </template>

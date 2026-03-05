@@ -1,10 +1,26 @@
 <template>
   <div :class="switchKls" @click.prevent="switchValue">
-    <input :id="inputId" ref="input" :class="ns.e('input')" type="checkbox" role="switch" :aria-checked="checked"
-      :aria-disabled="switchDisabled" :aria-label="ariaLabel" :name="name" :true-value="activeValue"
-      :false-value="inactiveValue" :disabled="switchDisabled" :tabindex="tabindex" @change="handleChange"
-      @keydown.enter="switchValue" />
-    <span v-if="!inlinePrompt && (inactiveIcon || inactiveText || $slots.inactive)" :class="labelLeftKls">
+    <input
+      :id="inputId"
+      ref="input"
+      :class="ns.e('input')"
+      type="checkbox"
+      role="switch"
+      :aria-checked="checked"
+      :aria-disabled="switchDisabled"
+      :aria-label="ariaLabel"
+      :name="name"
+      :true-value="activeValue"
+      :false-value="inactiveValue"
+      :disabled="switchDisabled"
+      :tabindex="tabindex"
+      @change="handleChange"
+      @keydown.enter="switchValue"
+    />
+    <span
+      v-if="!inlinePrompt && (inactiveIcon || inactiveText || $slots.inactive)"
+      :class="labelLeftKls"
+    >
       <slot name="inactive">
         <el-icon v-if="inactiveIcon">
           <component :is="inactiveIcon" />
@@ -49,7 +65,10 @@
         </slot>
       </div>
     </span>
-    <span v-if="!inlinePrompt && (activeIcon || activeText || $slots.active)" :class="labelRightKls">
+    <span
+      v-if="!inlinePrompt && (activeIcon || activeText || $slots.active)"
+      :class="labelRightKls"
+    >
       <slot name="active">
         <el-icon v-if="activeIcon">
           <component :is="activeIcon" />
@@ -79,11 +98,7 @@ import {
   useFormSize,
 } from '@kn-ui/components/form'
 import { Loading } from '@kn-ui/icons-vue'
-import {
-  CHANGE_EVENT,
-  INPUT_EVENT,
-  UPDATE_MODEL_EVENT,
-} from '@kn-ui/constants'
+import { CHANGE_EVENT, INPUT_EVENT, UPDATE_MODEL_EVENT } from '@kn-ui/constants'
 import { useNamespace } from '@kn-ui/hooks'
 import { switchEmits } from './switch'
 

@@ -1,37 +1,87 @@
 <template>
   <div :class="[ns.b(), ns.is('disabled', disabled)]">
-    <el-tooltip ref="popperRef" :role="role" :effect="effect" :fallback-placements="['bottom', 'top']"
-      :popper-options="popperOptions" :gpu-acceleration="false" :placement="placement"
-      :popper-class="[ns.e('popper'), popperClass!]" :popper-style="popperStyle" :trigger="trigger"
-      :trigger-keys="triggerKeys" :trigger-target-el="contentRef" :show-arrow="showArrow"
-      :show-after="trigger === 'hover' ? showTimeout : 0" :hide-after="trigger === 'hover' ? hideTimeout : 0"
-      :virtual-ref="virtualRef ?? triggeringElementRef" :virtual-triggering="virtualTriggering || splitButton"
-      :disabled="disabled" :transition="`${ns.namespace.value}-zoom-in-top`" :teleported="teleported"
-      :append-to="appendTo" pure focus-on-target :persistent="persistent" @before-show="handleBeforeShowTooltip"
-      @show="handleShowTooltip" @before-hide="handleBeforeHideTooltip">
+    <el-tooltip
+      ref="popperRef"
+      :role="role"
+      :effect="effect"
+      :fallback-placements="['bottom', 'top']"
+      :popper-options="popperOptions"
+      :gpu-acceleration="false"
+      :placement="placement"
+      :popper-class="[ns.e('popper'), popperClass!]"
+      :popper-style="popperStyle"
+      :trigger="trigger"
+      :trigger-keys="triggerKeys"
+      :trigger-target-el="contentRef"
+      :show-arrow="showArrow"
+      :show-after="trigger === 'hover' ? showTimeout : 0"
+      :hide-after="trigger === 'hover' ? hideTimeout : 0"
+      :virtual-ref="virtualRef ?? triggeringElementRef"
+      :virtual-triggering="virtualTriggering || splitButton"
+      :disabled="disabled"
+      :transition="`${ns.namespace.value}-zoom-in-top`"
+      :teleported="teleported"
+      :append-to="appendTo"
+      pure
+      focus-on-target
+      :persistent="persistent"
+      @before-show="handleBeforeShowTooltip"
+      @show="handleShowTooltip"
+      @before-hide="handleBeforeHideTooltip"
+    >
       <template #content>
-        <el-scrollbar ref="scrollbar" :wrap-style="wrapStyle" tag="div" :view-class="ns.e('list')">
-          <el-roving-focus-group :loop="loop" :current-tab-id="currentTabId" orientation="horizontal"
-            @current-tab-id-change="handleCurrentTabIdChange">
+        <el-scrollbar
+          ref="scrollbar"
+          :wrap-style="wrapStyle"
+          tag="div"
+          :view-class="ns.e('list')"
+        >
+          <el-roving-focus-group
+            :loop="loop"
+            :current-tab-id="currentTabId"
+            orientation="horizontal"
+            @current-tab-id-change="handleCurrentTabIdChange"
+          >
             <slot name="dropdown" />
           </el-roving-focus-group>
         </el-scrollbar>
       </template>
       <template v-if="!splitButton" #default>
-        <el-only-child :id="triggerId" ref="triggeringElementRef" role="button" :tabindex="tabindex">
+        <el-only-child
+          :id="triggerId"
+          ref="triggeringElementRef"
+          role="button"
+          :tabindex="tabindex"
+        >
           <slot name="default" />
         </el-only-child>
       </template>
     </el-tooltip>
     <template v-if="splitButton">
       <el-button-group>
-        <el-button ref="referenceElementRef" v-bind="buttonProps" :size="dropdownSize" :type="type" :disabled="disabled"
-          :tabindex="tabindex" @click="handlerMainButtonClick">
+        <el-button
+          ref="referenceElementRef"
+          v-bind="buttonProps"
+          :size="dropdownSize"
+          :type="type"
+          :disabled="disabled"
+          :tabindex="tabindex"
+          @click="handlerMainButtonClick"
+        >
           <slot name="default" />
         </el-button>
-        <el-button :id="triggerId" ref="triggeringElementRef" v-bind="buttonProps" role="button" :size="dropdownSize"
-          :type="type" :class="ns.e('caret-button')" :disabled="disabled" :tabindex="tabindex"
-          :aria-label="t('el.dropdown.toggleDropdown')">
+        <el-button
+          :id="triggerId"
+          ref="triggeringElementRef"
+          v-bind="buttonProps"
+          role="button"
+          :size="dropdownSize"
+          :type="type"
+          :class="ns.e('caret-button')"
+          :disabled="disabled"
+          :tabindex="tabindex"
+          :aria-label="t('el.dropdown.toggleDropdown')"
+        >
           <el-icon :class="ns.e('icon')"><arrow-down /></el-icon>
         </el-button>
       </el-button-group>

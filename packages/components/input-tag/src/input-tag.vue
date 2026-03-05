@@ -1,32 +1,68 @@
 <template>
-  <div ref="wrapperRef" :class="containerKls" :style="containerStyle" @mouseenter="handleMouseEnter"
-    @mouseleave="handleMouseLeave">
+  <div
+    ref="wrapperRef"
+    :class="containerKls"
+    :style="containerStyle"
+    @mouseenter="handleMouseEnter"
+    @mouseleave="handleMouseLeave"
+  >
     <div v-if="slots.prefix" :class="ns.e('prefix')">
       <slot name="prefix" />
     </div>
     <div ref="innerRef" :class="innerKls">
-      <el-tag v-for="(item, index) in showTagList" :key="index" :size="tagSize" :closable="closable" :type="tagType"
-        :effect="tagEffect" :draggable="closable && draggable" :style="tagStyle" disable-transitions
-        @close="handleRemoveTag(index)" @dragstart="(event: DragEvent) => handleDragStart(event, index)"
-        @dragover="(event: DragEvent) => handleDragOver(event, index)" @dragend="handleDragEnd" @drop.stop>
+      <el-tag
+        v-for="(item, index) in showTagList"
+        :key="index"
+        :size="tagSize"
+        :closable="closable"
+        :type="tagType"
+        :effect="tagEffect"
+        :draggable="closable && draggable"
+        :style="tagStyle"
+        disable-transitions
+        @close="handleRemoveTag(index)"
+        @dragstart="(event: DragEvent) => handleDragStart(event, index)"
+        @dragover="(event: DragEvent) => handleDragOver(event, index)"
+        @dragend="handleDragEnd"
+        @drop.stop
+      >
         <slot name="tag" :value="item" :index="index">
           {{ item }}
         </slot>
       </el-tag>
-      <el-tooltip v-if="collapseTags && modelValue && modelValue.length > maxCollapseTags" ref="tagTooltipRef"
-        :disabled="!collapseTagsTooltip" :fallback-placements="['bottom', 'top', 'right', 'left']" :effect="effect"
-        placement="bottom">
+      <el-tooltip
+        v-if="collapseTags && modelValue && modelValue.length > maxCollapseTags"
+        ref="tagTooltipRef"
+        :disabled="!collapseTagsTooltip"
+        :fallback-placements="['bottom', 'top', 'right', 'left']"
+        :effect="effect"
+        placement="bottom"
+      >
         <template #default>
           <div ref="collapseItemRef" :class="ns.e('collapse-tag')">
-            <el-tag :closable="false" :size="tagSize" :type="tagType" :effect="tagEffect" disable-transitions>
+            <el-tag
+              :closable="false"
+              :size="tagSize"
+              :type="tagType"
+              :effect="tagEffect"
+              disable-transitions
+            >
               + {{ modelValue.length - maxCollapseTags }}
             </el-tag>
           </div>
         </template>
         <template #content>
           <div :class="ns.e('input-tag-list')">
-            <el-tag v-for="(item, index) in collapseTagList" :key="index" :size="tagSize" :closable="closable"
-              :type="tagType" :effect="tagEffect" disable-transitions @close="handleRemoveTag(index + maxCollapseTags)">
+            <el-tag
+              v-for="(item, index) in collapseTagList"
+              :key="index"
+              :size="tagSize"
+              :closable="closable"
+              :type="tagType"
+              :effect="tagEffect"
+              disable-transitions
+              @close="handleRemoveTag(index + maxCollapseTags)"
+            >
               <slot name="tag" :value="item" :index="index + maxCollapseTags">
                 {{ item }}
               </slot>
@@ -35,26 +71,61 @@
         </template>
       </el-tooltip>
       <div :class="ns.e('input-wrapper')">
-        <input :id="inputId" ref="inputRef" v-model="inputValue" v-bind="attrs" type="text" :minlength="minlength"
-          :maxlength="maxlength" :disabled="disabled" :readonly="readonly" :autocomplete="autocomplete"
-          :tabindex="tabindex" :placeholder="placeholder" :autofocus="autofocus" :ariaLabel="ariaLabel"
-          :class="ns.e('input')" :style="inputStyle" @compositionstart="handleCompositionStart"
-          @compositionupdate="handleCompositionUpdate" @compositionend="handleCompositionEnd" @input="handleInput"
-          @keydown="handleKeydown" @keyup="handleKeyup" />
-        <span ref="calculatorRef" aria-hidden="true" :class="ns.e('input-calculator')" v-text="inputValue" />
+        <input
+          :id="inputId"
+          ref="inputRef"
+          v-model="inputValue"
+          v-bind="attrs"
+          type="text"
+          :minlength="minlength"
+          :maxlength="maxlength"
+          :disabled="disabled"
+          :readonly="readonly"
+          :autocomplete="autocomplete"
+          :tabindex="tabindex"
+          :placeholder="placeholder"
+          :autofocus="autofocus"
+          :ariaLabel="ariaLabel"
+          :class="ns.e('input')"
+          :style="inputStyle"
+          @compositionstart="handleCompositionStart"
+          @compositionupdate="handleCompositionUpdate"
+          @compositionend="handleCompositionEnd"
+          @input="handleInput"
+          @keydown="handleKeydown"
+          @keyup="handleKeyup"
+        />
+        <span
+          ref="calculatorRef"
+          aria-hidden="true"
+          :class="ns.e('input-calculator')"
+          v-text="inputValue"
+        />
       </div>
-      <div v-show="showDropIndicator" ref="dropIndicatorRef" :class="ns.e('drop-indicator')" />
+      <div
+        v-show="showDropIndicator"
+        ref="dropIndicatorRef"
+        :class="ns.e('drop-indicator')"
+      />
     </div>
     <div v-if="showSuffix" :class="ns.e('suffix')">
       <slot name="suffix" />
-      <el-icon v-if="showClear" :class="[ns.e('icon'), ns.e('clear')]" @mousedown.prevent="NOOP" @click="handleClear">
+      <el-icon
+        v-if="showClear"
+        :class="[ns.e('icon'), ns.e('clear')]"
+        @mousedown.prevent="NOOP"
+        @click="handleClear"
+      >
         <component :is="clearIcon" />
       </el-icon>
-      <el-icon v-if="validateState && validateIcon && needStatusIcon" :class="[
-        nsInput.e('icon'),
-        nsInput.e('validateIcon'),
-        nsInput.is('loading', validateState === 'validating'),
-      ]">
+      <el-icon
+        v-if="validateState && validateIcon && needStatusIcon"
+        :class="[
+          nsInput.e('icon'),
+          nsInput.e('validateIcon'),
+          nsInput.is('loading', validateState === 'validating'),
+        ]"
+      >
         <component :is="validateIcon" />
       </el-icon>
     </div>

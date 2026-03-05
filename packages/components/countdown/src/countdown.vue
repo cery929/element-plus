@@ -1,6 +1,12 @@
 <template>
-  <el-statistic :value="rawValue" :title="title" :prefix="prefix" :suffix="suffix" :value-style="valueStyle"
-    :formatter="formatter">
+  <el-statistic
+    :value="rawValue"
+    :title="title"
+    :prefix="prefix"
+    :suffix="suffix"
+    :value-style="valueStyle"
+    :formatter="formatter"
+  >
     <template v-for="(_, name) in $slots" #[name]>
       <slot :name="name" />
     </template>

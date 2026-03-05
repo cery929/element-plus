@@ -1,9 +1,5 @@
 import { placements } from '@popperjs/core'
-import {
-  useAriaProps,
-  useEmptyValuesProps,
-  useSizeProp,
-} from '@kn-ui/hooks'
+import { useAriaProps, useEmptyValuesProps, useSizeProp } from '@kn-ui/hooks'
 import {
   buildProps,
   definePropType,
@@ -22,11 +18,7 @@ import type { Option, OptionType } from './select.types'
 import type { Props } from './useProps'
 import type { EmitFn } from '@kn-ui/utils/vue/typescript'
 import type { ExtractPropTypes, ExtractPublicPropTypes } from 'vue'
-import type {
-  Options,
-  Placement,
-  PopperEffect,
-} from '@kn-ui/components/popper'
+import type { Options, Placement, PopperEffect } from '@kn-ui/components/popper'
 
 export const selectV2Props = buildProps({
   /**

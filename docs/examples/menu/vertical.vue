@@ -2,7 +2,12 @@
   <el-row class="tac">
     <el-col :span="12">
       <h5 class="mb-2">Default colors</h5>
-      <el-menu default-active="2" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose">
+      <el-menu
+        default-active="2"
+        class="el-menu-vertical-demo"
+        @open="handleOpen"
+        @close="handleClose"
+      >
         <el-sub-menu index="1">
           <template #title>
             <el-icon>
@@ -42,8 +47,15 @@
     </el-col>
     <el-col :span="12">
       <h5 class="mb-2">Custom colors</h5>
-      <el-menu active-text-color="#ffd04b" background-color="#545c64" class="el-menu-vertical-demo" default-active="2"
-        text-color="#fff" @open="handleOpen" @close="handleClose">
+      <el-menu
+        active-text-color="#ffd04b"
+        background-color="#545c64"
+        class="el-menu-vertical-demo"
+        default-active="2"
+        text-color="#fff"
+        @open="handleOpen"
+        @close="handleClose"
+      >
         <el-sub-menu index="1">
           <template #title>
             <el-icon>
@@ -85,12 +97,7 @@
 </template>
 
 <script lang="ts" setup>
-import {
-  Document,
-  Menu as IconMenu,
-  Location,
-  Setting,
-} from '@kn-ui/icons-vue'
+import { Document, Menu as IconMenu, Location, Setting } from '@kn-ui/icons-vue'
 
 const handleOpen = (key: string, keyPath: string[]) => {
   console.log(key, keyPath)

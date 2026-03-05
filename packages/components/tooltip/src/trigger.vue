@@ -1,7 +1,18 @@
 <template>
-  <el-popper-trigger :id="id" :virtual-ref="virtualRef" :open="open" :virtual-triggering="virtualTriggering"
-    :class="ns.e('trigger')" @blur="onBlur" @click="onClick" @contextmenu="onContextMenu" @focus="onFocus"
-    @mouseenter="onMouseenter" @mouseleave="onMouseleave" @keydown="onKeydown">
+  <el-popper-trigger
+    :id="id"
+    :virtual-ref="virtualRef"
+    :open="open"
+    :virtual-triggering="virtualTriggering"
+    :class="ns.e('trigger')"
+    @blur="onBlur"
+    @click="onClick"
+    @contextmenu="onContextMenu"
+    @focus="onFocus"
+    @mouseenter="onMouseenter"
+    @mouseleave="onMouseleave"
+    @keydown="onKeydown"
+  >
     <slot />
   </el-popper-trigger>
 </template>
@@ -9,11 +20,7 @@
 <script lang="ts" setup>
 import { inject, nextTick, ref, toRef, unref } from 'vue'
 import { ElPopperTrigger } from '@kn-ui/components/popper'
-import {
-  composeEventHandlers,
-  focusElement,
-  getEventCode,
-} from '@kn-ui/utils'
+import { composeEventHandlers, focusElement, getEventCode } from '@kn-ui/utils'
 import { useNamespace } from '@kn-ui/hooks'
 import { TOOLTIP_INJECTION_KEY } from './constants'
 import { whenTrigger } from './utils'

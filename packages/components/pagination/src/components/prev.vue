@@ -1,6 +1,12 @@
 <template>
-  <button type="button" class="btn-prev" :disabled="internalDisabled" :aria-label="prevText || t('el.pagination.prev')"
-    :aria-disabled="internalDisabled" @click="$emit('click', $event)">
+  <button
+    type="button"
+    class="btn-prev"
+    :disabled="internalDisabled"
+    :aria-label="prevText || t('el.pagination.prev')"
+    :aria-disabled="internalDisabled"
+    @click="$emit('click', $event)"
+  >
     <span v-if="prevText">{{ prevText }}</span>
     <el-icon v-else>
       <component :is="prevIcon" />

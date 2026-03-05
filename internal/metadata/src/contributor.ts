@@ -11,11 +11,7 @@ import {
   projRoot,
   writeJson,
 } from '@kn-ui/build-utils'
-import {
-  REPO_BRANCH,
-  REPO_NAME,
-  REPO_OWNER,
-} from '@kn-ui/build-constants'
+import { REPO_BRANCH, REPO_NAME, REPO_OWNER } from '@kn-ui/build-constants'
 
 interface FetchOption {
   key: string

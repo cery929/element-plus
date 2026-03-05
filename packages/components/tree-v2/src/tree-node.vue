@@ -1,30 +1,55 @@
 <template>
-  <div ref="node$" :class="[
-    ns.b('node'),
-    ns.is('expanded', expanded),
-    ns.is('current', current),
-    ns.is('focusable', !disabled),
-    ns.is('checked', !disabled && checked),
-    getNodeClass(node),
-  ]" role="treeitem" tabindex="-1" :aria-expanded="expanded" :aria-disabled="disabled" :aria-checked="checked"
-    :data-key="node?.key" @click.stop="handleClick" @contextmenu="handleContextMenu" @dragover.prevent
-    @dragenter.prevent @drop.stop="handleDrop">
-    <div :class="ns.be('node', 'content')" :style="{
-      paddingLeft: `${(node.level - 1) * indent}px`,
-      height: itemSize + 'px',
-    }">
-      <el-icon v-if="icon" :class="[
-        ns.is('leaf', !!node?.isLeaf),
-        ns.is('hidden', hiddenExpandIcon),
-        {
-          expanded: !node?.isLeaf && expanded,
-        },
-        ns.be('node', 'expand-icon'),
-      ]" @click.stop="handleExpandIconClick">
+  <div
+    ref="node$"
+    :class="[
+      ns.b('node'),
+      ns.is('expanded', expanded),
+      ns.is('current', current),
+      ns.is('focusable', !disabled),
+      ns.is('checked', !disabled && checked),
+      getNodeClass(node),
+    ]"
+    role="treeitem"
+    tabindex="-1"
+    :aria-expanded="expanded"
+    :aria-disabled="disabled"
+    :aria-checked="checked"
+    :data-key="node?.key"
+    @click.stop="handleClick"
+    @contextmenu="handleContextMenu"
+    @dragover.prevent
+    @dragenter.prevent
+    @drop.stop="handleDrop"
+  >
+    <div
+      :class="ns.be('node', 'content')"
+      :style="{
+        paddingLeft: `${(node.level - 1) * indent}px`,
+        height: itemSize + 'px',
+      }"
+    >
+      <el-icon
+        v-if="icon"
+        :class="[
+          ns.is('leaf', !!node?.isLeaf),
+          ns.is('hidden', hiddenExpandIcon),
+          {
+            expanded: !node?.isLeaf && expanded,
+          },
+          ns.be('node', 'expand-icon'),
+        ]"
+        @click.stop="handleExpandIconClick"
+      >
         <component :is="icon" />
       </el-icon>
-      <el-checkbox v-if="showCheckbox" :model-value="checked" :indeterminate="indeterminate" :disabled="disabled"
-        @change="handleCheckChange" @click.stop />
+      <el-checkbox
+        v-if="showCheckbox"
+        :model-value="checked"
+        :indeterminate="indeterminate"
+        :disabled="disabled"
+        @change="handleCheckChange"
+        @click.stop
+      />
       <el-node-content :node="{ ...node, expanded }" />
     </div>
   </div>

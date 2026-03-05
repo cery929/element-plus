@@ -9,10 +9,7 @@ import {
   unref,
   watch,
 } from 'vue'
-import {
-  DynamicSizeGrid,
-  FixedSizeGrid,
-} from '@kn-ui/components/virtual-list'
+import { DynamicSizeGrid, FixedSizeGrid } from '@kn-ui/components/virtual-list'
 import { isNumber, isObject } from '@kn-ui/utils'
 import { Header } from './components'
 import { TABLE_V2_GRID_INJECTION_KEY, TableV2InjectionKey } from './tokens'

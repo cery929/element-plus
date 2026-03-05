@@ -3,53 +3,95 @@
     <div :class="ppNs.e('body-wrapper')">
       <slot name="sidebar" :class="ppNs.e('sidebar')" />
       <div v-if="hasShortcuts" :class="ppNs.e('sidebar')">
-        <button v-for="(shortcut, key) in shortcuts" :key="key" type="button" :class="ppNs.e('shortcut')"
-          :disabled="yearRangeDisabled" @click="handleShortcutClick(shortcut)">
+        <button
+          v-for="(shortcut, key) in shortcuts"
+          :key="key"
+          type="button"
+          :class="ppNs.e('shortcut')"
+          :disabled="yearRangeDisabled"
+          @click="handleShortcutClick(shortcut)"
+        >
           {{ shortcut.text }}
         </button>
       </div>
       <div :class="ppNs.e('body')">
         <div :class="leftPanelKls.content">
           <div :class="drpNs.e('header')">
-            <button type="button" :class="leftPanelKls.arrowLeftBtn" :disabled="yearRangeDisabled"
-              @click="leftPrevYear">
+            <button
+              type="button"
+              :class="leftPanelKls.arrowLeftBtn"
+              :disabled="yearRangeDisabled"
+              @click="leftPrevYear"
+            >
               <slot name="prev-year">
                 <el-icon><d-arrow-left /></el-icon>
               </slot>
             </button>
-            <button v-if="unlinkPanels" type="button" :disabled="!enableYearArrow || yearRangeDisabled"
-              :class="leftPanelKls.arrowRightBtn" @click="leftNextYear">
+            <button
+              v-if="unlinkPanels"
+              type="button"
+              :disabled="!enableYearArrow || yearRangeDisabled"
+              :class="leftPanelKls.arrowRightBtn"
+              @click="leftNextYear"
+            >
               <slot name="next-year">
                 <el-icon><d-arrow-right /></el-icon>
               </slot>
             </button>
             <div>{{ leftLabel }}</div>
           </div>
-          <year-table selection-mode="range" :date="leftDate" :min-date="minDate" :max-date="maxDate"
-            :range-state="rangeState" :disabled-date="disabledDate" :disabled="yearRangeDisabled"
-            :cell-class-name="cellClassName" @changerange="handleChangeRange" @pick="handleRangePick"
-            @select="onSelect" />
+          <year-table
+            selection-mode="range"
+            :date="leftDate"
+            :min-date="minDate"
+            :max-date="maxDate"
+            :range-state="rangeState"
+            :disabled-date="disabledDate"
+            :disabled="yearRangeDisabled"
+            :cell-class-name="cellClassName"
+            @changerange="handleChangeRange"
+            @pick="handleRangePick"
+            @select="onSelect"
+          />
         </div>
         <div :class="rightPanelKls.content">
           <div :class="drpNs.e('header')">
-            <button v-if="unlinkPanels" type="button" :disabled="!enableYearArrow || yearRangeDisabled"
-              :class="rightPanelKls.arrowLeftBtn" @click="rightPrevYear">
+            <button
+              v-if="unlinkPanels"
+              type="button"
+              :disabled="!enableYearArrow || yearRangeDisabled"
+              :class="rightPanelKls.arrowLeftBtn"
+              @click="rightPrevYear"
+            >
               <slot name="prev-year">
                 <el-icon><d-arrow-left /></el-icon>
               </slot>
             </button>
-            <button type="button" :class="rightPanelKls.arrowRightBtn" :disabled="yearRangeDisabled"
-              @click="rightNextYear">
+            <button
+              type="button"
+              :class="rightPanelKls.arrowRightBtn"
+              :disabled="yearRangeDisabled"
+              @click="rightNextYear"
+            >
               <slot name="next-year">
                 <el-icon><d-arrow-right /></el-icon>
               </slot>
             </button>
             <div>{{ rightLabel }}</div>
           </div>
-          <year-table selection-mode="range" :date="rightDate" :min-date="minDate" :max-date="maxDate"
-            :range-state="rangeState" :disabled-date="disabledDate" :disabled="yearRangeDisabled"
-            :cell-class-name="cellClassName" @changerange="handleChangeRange" @pick="handleRangePick"
-            @select="onSelect" />
+          <year-table
+            selection-mode="range"
+            :date="rightDate"
+            :min-date="minDate"
+            :max-date="maxDate"
+            :range-state="rangeState"
+            :disabled-date="disabledDate"
+            :disabled="yearRangeDisabled"
+            :cell-class-name="cellClassName"
+            @changerange="handleChangeRange"
+            @pick="handleRangePick"
+            @select="onSelect"
+          />
         </div>
       </div>
     </div>

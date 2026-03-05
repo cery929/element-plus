@@ -110,7 +110,11 @@ provide(
 </script>
 
 <template>
-  <div ref="containerEl" :class="[ns.b(), ns.e(layout)]" :style="splitterStyles">
+  <div
+    ref="containerEl"
+    :class="[ns.b(), ns.e(layout)]"
+    :style="splitterStyles"
+  >
     <slot />
     <panels-sorter />
     <!-- Prevent iframe touch events from breaking -->

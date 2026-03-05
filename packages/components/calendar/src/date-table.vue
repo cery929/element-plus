@@ -1,5 +1,9 @@
 <template>
-  <table :class="[nsTable.b(), nsTable.is('range', isInRange)]" cellspacing="0" cellpadding="0">
+  <table
+    :class="[nsTable.b(), nsTable.is('range', isInRange)]"
+    cellspacing="0"
+    cellpadding="0"
+  >
     <thead v-if="!hideHeader">
       <tr>
         <th v-for="day in weekDays" :key="day" scope="col">{{ day }}</th>
@@ -7,11 +11,20 @@
     </thead>
 
     <tbody>
-      <tr v-for="(row, index) in rows" :key="index" :class="{
-        [nsTable.e('row')]: true,
-        [nsTable.em('row', 'hide-border')]: index === 0 && hideHeader,
-      }">
-        <td v-for="(cell, key) in row" :key="key" :class="getCellClass(cell)" @click="handlePickDay(cell)">
+      <tr
+        v-for="(row, index) in rows"
+        :key="index"
+        :class="{
+          [nsTable.e('row')]: true,
+          [nsTable.em('row', 'hide-border')]: index === 0 && hideHeader,
+        }"
+      >
+        <td
+          v-for="(cell, key) in row"
+          :key="key"
+          :class="getCellClass(cell)"
+          @click="handlePickDay(cell)"
+        >
           <div :class="nsDay.b()">
             <slot name="date-cell" :data="getSlotData(cell)">
               <span>{{ cell.text }}</span>

@@ -1,9 +1,4 @@
-import {
-  buildProps,
-  definePropType,
-  isBoolean,
-  isNumber,
-} from '@kn-ui/utils'
+import { buildProps, definePropType, isBoolean, isNumber } from '@kn-ui/utils'
 import { CHANGE_EVENT } from '@kn-ui/constants'
 import { teleportProps } from '@kn-ui/components/teleport'
 

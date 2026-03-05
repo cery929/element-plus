@@ -1,6 +1,11 @@
 <template>
-  <el-table ref="multipleTableRef" :data="tableData" row-key="id" style="width: 100%"
-    @selection-change="handleSelectionChange">
+  <el-table
+    ref="multipleTableRef"
+    :data="tableData"
+    row-key="id"
+    style="width: 100%"
+    @selection-change="handleSelectionChange"
+  >
     <el-table-column type="selection" :selectable="selectable" width="55" />
     <el-table-column label="Date" width="120">
       <template #default="scope">{{ scope.row.date }}</template>

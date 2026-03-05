@@ -1,10 +1,6 @@
 import { isNil } from 'lodash-unified'
 import { buildProps, definePropType, isString } from '@kn-ui/utils'
-import {
-  useAriaProps,
-  useEmptyValuesProps,
-  useSizeProp,
-} from '@kn-ui/hooks'
+import { useAriaProps, useEmptyValuesProps, useSizeProp } from '@kn-ui/hooks'
 import { useTooltipContentProps } from '@kn-ui/components/tooltip'
 import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@kn-ui/constants'
 

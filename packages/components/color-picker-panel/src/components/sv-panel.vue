@@ -1,8 +1,19 @@
 <template>
   <div :class="rootKls" :style="rootStyle" @click="handleClick">
-    <div ref="cursorRef" :class="cursorKls" :style="cursorStyle" :tabindex="disabled ? undefined : 0"
-      :aria-disabled="disabled" role="slider" aria-valuemin="0,0" aria-valuemax="100,100" :aria-label="ariaLabel"
-      :aria-valuenow="`${saturation},${brightness}`" :aria-valuetext="ariaValuetext" @keydown="handleKeydown" />
+    <div
+      ref="cursorRef"
+      :class="cursorKls"
+      :style="cursorStyle"
+      :tabindex="disabled ? undefined : 0"
+      :aria-disabled="disabled"
+      role="slider"
+      aria-valuemin="0,0"
+      aria-valuemax="100,100"
+      :aria-label="ariaLabel"
+      :aria-valuenow="`${saturation},${brightness}`"
+      :aria-valuetext="ariaValuetext"
+      @keydown="handleKeydown"
+    />
   </div>
 </template>
 

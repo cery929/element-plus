@@ -1,13 +1,21 @@
 <template>
   <div :ref="composedDialogRef" :class="dialogKls" :style="style" tabindex="-1">
-    <header ref="headerRef" :class="[ns.e('header'), headerClass, { 'show-close': showClose }]">
+    <header
+      ref="headerRef"
+      :class="[ns.e('header'), headerClass, { 'show-close': showClose }]"
+    >
       <slot name="header">
         <span role="heading" :aria-level="ariaLevel" :class="ns.e('title')">
           {{ title }}
         </span>
       </slot>
-      <button v-if="showClose" :aria-label="t('el.dialog.close')" :class="ns.e('headerbtn')" type="button"
-        @click="$emit('close')">
+      <button
+        v-if="showClose"
+        :aria-label="t('el.dialog.close')"
+        :class="ns.e('headerbtn')"
+        type="button"
+        @click="$emit('close')"
+      >
         <el-icon :class="ns.e('close')">
           <component :is="closeIcon || Close" />
         </el-icon>

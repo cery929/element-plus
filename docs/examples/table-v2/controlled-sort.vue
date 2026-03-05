@@ -1,6 +1,13 @@
 <template>
-  <el-table-v2 v-model:sort-state="sortState" :columns="columns" :data="data" :width="700" :height="400" fixed
-    @column-sort="onSort" />
+  <el-table-v2
+    v-model:sort-state="sortState"
+    :columns="columns"
+    :data="data"
+    :width="700"
+    :height="400"
+    fixed
+    @column-sort="onSort"
+  />
 </template>
 
 <script lang="ts" setup>

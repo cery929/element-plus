@@ -28,12 +28,12 @@ export default defineComponent({
       return props.renderContent
         ? props.renderContent(h, { _self: nodeInstance, node, data, store })
         : renderSlot(tree.ctx.slots, 'default', { node, data }, () => [
-          h(
-            ElText,
-            { tag: 'span', truncated: true, class: ns.be('node', 'label') },
-            () => [node.label]
-          ),
-        ])
+            h(
+              ElText,
+              { tag: 'span', truncated: true, class: ns.be('node', 'label') },
+              () => [node.label]
+            ),
+          ])
     }
   },
 })

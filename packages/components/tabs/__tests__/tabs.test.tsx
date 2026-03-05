@@ -6,10 +6,7 @@ import Tabs from '../src/tabs'
 import TabPane from '../src/tab-pane.vue'
 import TabNav from '../src/tab-nav'
 
-import type {
-  TabPaneName,
-  TabsPaneContext,
-} from '@kn-ui/components/tabs'
+import type { TabPaneName, TabsPaneContext } from '@kn-ui/components/tabs'
 
 const Comp = defineComponent({
   components: {

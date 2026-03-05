@@ -4,10 +4,15 @@
       <template v-for="i in count" :key="i">
         <slot v-if="uiLoading" :key="i" name="template">
           <el-skeleton-item :class="ns.is('first')" variant="p" />
-          <el-skeleton-item v-for="item in rows" :key="item" :class="[
-            ns.e('paragraph'),
-            ns.is('last', item === rows && rows > 1),
-          ]" variant="p" />
+          <el-skeleton-item
+            v-for="item in rows"
+            :key="item"
+            :class="[
+              ns.e('paragraph'),
+              ns.is('last', item === rows && rows > 1),
+            ]"
+            variant="p"
+          />
         </slot>
       </template>
     </div>

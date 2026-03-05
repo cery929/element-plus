@@ -1,24 +1,48 @@
 <template>
-  <el-tooltip ref="tooltipRef" trigger="click" :effect="effect" v-bind="$attrs" :virtual-triggering="virtualTriggering"
-    :virtual-ref="virtualRef" :popper-class="`${ns.namespace.value}-popover`" :popper-style="style"
-    :teleported="teleported" :fallback-placements="['bottom', 'top', 'right', 'left']" :hide-after="hideAfter"
-    :persistent="persistent" loop @show="showPopper">
+  <el-tooltip
+    ref="tooltipRef"
+    trigger="click"
+    :effect="effect"
+    v-bind="$attrs"
+    :virtual-triggering="virtualTriggering"
+    :virtual-ref="virtualRef"
+    :popper-class="`${ns.namespace.value}-popover`"
+    :popper-style="style"
+    :teleported="teleported"
+    :fallback-placements="['bottom', 'top', 'right', 'left']"
+    :hide-after="hideAfter"
+    :persistent="persistent"
+    loop
+    @show="showPopper"
+  >
     <template #content>
       <div ref="rootRef" tabindex="-1" :class="ns.b()">
         <div :class="ns.e('main')">
-          <el-icon v-if="!hideIcon && icon" :class="ns.e('icon')" :style="{ color: iconColor }">
+          <el-icon
+            v-if="!hideIcon && icon"
+            :class="ns.e('icon')"
+            :style="{ color: iconColor }"
+          >
             <component :is="icon" />
           </el-icon>
           {{ title }}
         </div>
         <div :class="ns.e('action')">
           <slot name="actions" :confirm="confirm" :cancel="cancel">
-            <el-button size="small" :type="cancelButtonType === 'text' ? '' : cancelButtonType"
-              :text="cancelButtonType === 'text'" @click="cancel">
+            <el-button
+              size="small"
+              :type="cancelButtonType === 'text' ? '' : cancelButtonType"
+              :text="cancelButtonType === 'text'"
+              @click="cancel"
+            >
               {{ finalCancelButtonText }}
             </el-button>
-            <el-button size="small" :type="confirmButtonType === 'text' ? '' : confirmButtonType"
-              :text="confirmButtonType === 'text'" @click="confirm">
+            <el-button
+              size="small"
+              :type="confirmButtonType === 'text' ? '' : confirmButtonType"
+              :text="confirmButtonType === 'text'"
+              @click="confirm"
+            >
               {{ finalConfirmButtonText }}
             </el-button>
           </slot>

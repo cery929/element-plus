@@ -1,5 +1,9 @@
 <template>
-  <el-roving-focus-collection-item :id="id" :focusable="focusable" :active="active">
+  <el-roving-focus-collection-item
+    :id="id"
+    :focusable="focusable"
+    :active="active"
+  >
     <slot />
   </el-roving-focus-collection-item>
 </template>

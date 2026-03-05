@@ -89,9 +89,17 @@ onMounted(async () => {
 <template>
   <div class="App">
     <VPSkipLink />
-    <VPOverlay class="overlay" :show="isSidebarOpen" @click="toggleSidebar(false)" />
+    <VPOverlay
+      class="overlay"
+      :show="isSidebarOpen"
+      @click="toggleSidebar(false)"
+    />
     <VPNav />
-    <VPSubNav v-if="hasSidebar" :is-sidebar-open="isSidebarOpen" @open-menu="toggleSidebar(true)" />
+    <VPSubNav
+      v-if="hasSidebar"
+      :is-sidebar-open="isSidebarOpen"
+      @open-menu="toggleSidebar(true)"
+    />
     <VPSidebar :open="isSidebarOpen" @close="toggleSidebar(false)">
       <template #top>
         <!-- <VPSponsors /> -->

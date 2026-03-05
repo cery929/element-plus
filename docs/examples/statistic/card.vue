@@ -6,8 +6,11 @@
           <template #title>
             <div style="display: inline-flex; align-items: center">
               Daily active users
-              <el-tooltip effect="dark" content="Number of users who logged into the product in one day"
-                placement="top">
+              <el-tooltip
+                effect="dark"
+                content="Number of users who logged into the product in one day"
+                placement="top"
+              >
                 <el-icon style="margin-left: 4px" :size="12">
                   <Warning />
                 </el-icon>
@@ -34,8 +37,11 @@
           <template #title>
             <div style="display: inline-flex; align-items: center">
               Monthly Active Users
-              <el-tooltip effect="dark" content="Number of users who logged into the product in one month"
-                placement="top">
+              <el-tooltip
+                effect="dark"
+                content="Number of users who logged into the product in one month"
+                placement="top"
+              >
                 <el-icon style="margin-left: 4px" :size="12">
                   <Warning />
                 </el-icon>
@@ -87,12 +93,7 @@
 </template>
 
 <script lang="ts" setup>
-import {
-  ArrowRight,
-  CaretBottom,
-  CaretTop,
-  Warning,
-} from '@kn-ui/icons-vue'
+import { ArrowRight, CaretBottom, CaretTop, Warning } from '@kn-ui/icons-vue'
 </script>
 
 <style scoped>

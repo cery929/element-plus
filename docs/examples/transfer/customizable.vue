@@ -3,12 +3,22 @@
     Customize data items using render-content
   </p>
   <div style="text-align: center">
-    <el-transfer v-model="leftValue" style="text-align: left; display: inline-block" filterable
-      :left-default-checked="[2, 3]" :right-default-checked="[1]" :render-content="renderFunc"
-      :titles="['Source', 'Target']" :button-texts="['To left', 'To right']" :format="{
+    <el-transfer
+      v-model="leftValue"
+      style="text-align: left; display: inline-block"
+      filterable
+      :left-default-checked="[2, 3]"
+      :right-default-checked="[1]"
+      :render-content="renderFunc"
+      :titles="['Source', 'Target']"
+      :button-texts="['To left', 'To right']"
+      :format="{
         noChecked: '${total}',
         hasChecked: '${checked}/${total}',
-      }" :data="data" @change="handleChange">
+      }"
+      :data="data"
+      @change="handleChange"
+    >
       <template #left-footer>
         <el-button class="transfer-footer" size="small">Operation</el-button>
       </template>
@@ -20,12 +30,21 @@
       Customize data items using scoped slot
     </p>
     <div style="text-align: center">
-      <el-transfer v-model="rightValue" style="text-align: left; display: inline-block" filterable
-        :left-default-checked="[2, 3]" :right-default-checked="[1]" :titles="['Source', 'Target']"
-        :button-texts="['To left', 'To right']" :format="{
+      <el-transfer
+        v-model="rightValue"
+        style="text-align: left; display: inline-block"
+        filterable
+        :left-default-checked="[2, 3]"
+        :right-default-checked="[1]"
+        :titles="['Source', 'Target']"
+        :button-texts="['To left', 'To right']"
+        :format="{
           noChecked: '${total}',
           hasChecked: '${checked}/${total}',
-        }" :data="data" @change="handleChange">
+        }"
+        :data="data"
+        @change="handleChange"
+      >
         <template #default="{ option }">
           <span>{{ option.key }} - {{ option.label }}</span>
         </template>
@@ -43,11 +62,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-import type {
-  TransferDirection,
-  TransferKey,
-  renderContent,
-} from 'kn-ui'
+import type { TransferDirection, TransferKey, renderContent } from 'kn-ui'
 
 interface Option {
   key: number

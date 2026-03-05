@@ -8,7 +8,13 @@
     <div style="margin-bottom: 15px">
       fillRatio:<el-slider v-model="fillRatio" />
     </div>
-    <el-space fill wrap :fill-ratio="fillRatio" :direction="direction" style="width: 100%">
+    <el-space
+      fill
+      wrap
+      :fill-ratio="fillRatio"
+      :direction="direction"
+      style="width: 100%"
+    >
       <el-card v-for="i in 5" :key="i" class="box-card">
         <template #header>
           <div class="card-header">

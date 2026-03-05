@@ -1,12 +1,19 @@
 <template>
-  <el-tree-v2 style="max-width: 600px" :data="data" :props="props" :height="200">
+  <el-tree-v2
+    style="max-width: 600px"
+    :data="data"
+    :props="props"
+    :height="200"
+  >
     <template #default="{ node }">
       <el-icon class="el-icon--left">
         <Document v-if="node.isLeaf" />
         <Folder v-else-if="!node.expanded" />
         <FolderOpened v-else />
       </el-icon>
-      <span class="prefix" :class="{ 'is-leaf': node.isLeaf }">[ElementPlus]</span>
+      <span class="prefix" :class="{ 'is-leaf': node.isLeaf }"
+        >[ElementPlus]</span
+      >
       <span>{{ node.label }}</span>
     </template>
   </el-tree-v2>

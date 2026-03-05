@@ -7,8 +7,13 @@
     <el-button plain @click="openDialogWithObject"> Object Config </el-button>
   </div>
 
-  <el-dialog v-model="dialogVisible" class="custom-transition-dialog" :title="`${currentAnimation} Animation Dialog`"
-    width="30%" :transition="transitionConfig">
+  <el-dialog
+    v-model="dialogVisible"
+    class="custom-transition-dialog"
+    :title="`${currentAnimation} Animation Dialog`"
+    width="30%"
+    :transition="transitionConfig"
+  >
     <div>
       <p>
         Current animation: <strong>{{ currentAnimation }}</strong>

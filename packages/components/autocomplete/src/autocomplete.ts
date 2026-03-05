@@ -7,11 +7,7 @@ import {
   isString,
 } from '@kn-ui/utils'
 import { useTooltipContentProps } from '@kn-ui/components/tooltip'
-import {
-  CHANGE_EVENT,
-  INPUT_EVENT,
-  UPDATE_MODEL_EVENT,
-} from '@kn-ui/constants'
+import { CHANGE_EVENT, INPUT_EVENT, UPDATE_MODEL_EVENT } from '@kn-ui/constants'
 import { inputProps } from '@kn-ui/components/input'
 
 import type { ExtractPublicPropTypes } from 'vue'

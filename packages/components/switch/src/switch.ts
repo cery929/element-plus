@@ -7,11 +7,7 @@ import {
   isString,
   isValidComponentSize,
 } from '@kn-ui/utils'
-import {
-  CHANGE_EVENT,
-  INPUT_EVENT,
-  UPDATE_MODEL_EVENT,
-} from '@kn-ui/constants'
+import { CHANGE_EVENT, INPUT_EVENT, UPDATE_MODEL_EVENT } from '@kn-ui/constants'
 import { useAriaProps } from '@kn-ui/hooks'
 
 import type { ComponentSize } from '@kn-ui/constants'

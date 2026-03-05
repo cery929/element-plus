@@ -1,6 +1,14 @@
 <template>
-  <div v-if="shouldBeRender" v-show="active" :id="`pane-${paneName}`" ref="paneRef" :class="ns.b()" role="tabpanel"
-    :aria-hidden="!active" :aria-labelledby="`tab-${paneName}`">
+  <div
+    v-if="shouldBeRender"
+    v-show="active"
+    :id="`pane-${paneName}`"
+    ref="paneRef"
+    :class="ns.b()"
+    role="tabpanel"
+    :aria-hidden="!active"
+    :aria-labelledby="`tab-${paneName}`"
+  >
     <slot />
   </div>
 </template>

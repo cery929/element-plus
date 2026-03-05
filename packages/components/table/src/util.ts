@@ -13,9 +13,7 @@ import {
   isUndefined,
   throwError,
 } from '@kn-ui/utils'
-import ElTooltip, {
-  type ElTooltipProps,
-} from '@kn-ui/components/tooltip'
+import ElTooltip, { type ElTooltipProps } from '@kn-ui/components/tooltip'
 
 import type { DefaultRow, Table, TreeProps } from './table/defaults'
 import type { TableColumnCtx } from './table-column/defaults'

@@ -1,10 +1,26 @@
 <template>
-  <div ref="button" :class="[ns.e('button-wrapper'), { hover: hovering, dragging }]" :style="wrapperStyle"
-    :tabindex="disabled ? undefined : 0" @mouseenter="handleMouseEnter" @mouseleave="handleMouseLeave"
-    @mousedown="onButtonDown" @focus="handleMouseEnter" @blur="handleMouseLeave" @keydown="onKeyDown">
-    <el-tooltip ref="tooltip" :visible="tooltipVisible" :placement="placement"
-      :fallback-placements="['top', 'bottom', 'right', 'left']" :stop-popper-mouse-event="false"
-      :popper-class="tooltipClass" :disabled="!showTooltip" :persistent="tooltipPersistent">
+  <div
+    ref="button"
+    :class="[ns.e('button-wrapper'), { hover: hovering, dragging }]"
+    :style="wrapperStyle"
+    :tabindex="disabled ? undefined : 0"
+    @mouseenter="handleMouseEnter"
+    @mouseleave="handleMouseLeave"
+    @mousedown="onButtonDown"
+    @focus="handleMouseEnter"
+    @blur="handleMouseLeave"
+    @keydown="onKeyDown"
+  >
+    <el-tooltip
+      ref="tooltip"
+      :visible="tooltipVisible"
+      :placement="placement"
+      :fallback-placements="['top', 'bottom', 'right', 'left']"
+      :stop-popper-mouse-event="false"
+      :popper-class="tooltipClass"
+      :disabled="!showTooltip"
+      :persistent="tooltipPersistent"
+    >
       <template #content>
         <span>{{ formatValue }}</span>
       </template>

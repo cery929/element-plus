@@ -1,5 +1,9 @@
 <template>
-  <el-switch v-model="value1" :active-action-icon="View" :inactive-action-icon="Hide" />
+  <el-switch
+    v-model="value1"
+    :active-action-icon="View"
+    :inactive-action-icon="Hide"
+  />
 </template>
 
 <script setup lang="ts">

@@ -3,12 +3,29 @@
     <div v-if="$slots.header" :class="ns.be('dropdown', 'header')">
       <slot name="header" />
     </div>
-    <el-scrollbar v-show="options.length > 0 && !loading" :id="contentId" ref="scrollbarRef" tag="ul"
-      :wrap-class="ns.be('dropdown', 'wrap')" :view-class="ns.be('dropdown', 'list')" role="listbox"
-      :aria-label="ariaLabel" aria-orientation="vertical">
-      <li v-for="(item, index) in options" :id="`${contentId}-${index}`" ref="optionRefs" :key="index"
-        :class="optionkls(item, index)" role="option" :aria-disabled="item.disabled || disabled || undefined"
-        :aria-selected="hoveringIndex === index" @mousemove="handleMouseEnter(index)" @click.stop="handleSelect(item)">
+    <el-scrollbar
+      v-show="options.length > 0 && !loading"
+      :id="contentId"
+      ref="scrollbarRef"
+      tag="ul"
+      :wrap-class="ns.be('dropdown', 'wrap')"
+      :view-class="ns.be('dropdown', 'list')"
+      role="listbox"
+      :aria-label="ariaLabel"
+      aria-orientation="vertical"
+    >
+      <li
+        v-for="(item, index) in options"
+        :id="`${contentId}-${index}`"
+        ref="optionRefs"
+        :key="index"
+        :class="optionkls(item, index)"
+        role="option"
+        :aria-disabled="item.disabled || disabled || undefined"
+        :aria-selected="hoveringIndex === index"
+        @mousemove="handleMouseEnter(index)"
+        @click.stop="handleSelect(item)"
+      >
         <slot name="label" :item="item" :index="index">
           <span>{{ item.label ?? item.value }}</span>
         </slot>

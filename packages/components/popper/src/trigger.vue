@@ -1,6 +1,12 @@
 <template>
-  <el-only-child v-if="!virtualTriggering" v-bind="$attrs" :aria-controls="ariaControls"
-    :aria-describedby="ariaDescribedby" :aria-expanded="ariaExpanded" :aria-haspopup="ariaHaspopup">
+  <el-only-child
+    v-if="!virtualTriggering"
+    v-bind="$attrs"
+    :aria-controls="ariaControls"
+    :aria-describedby="ariaDescribedby"
+    :aria-expanded="ariaExpanded"
+    :aria-haspopup="ariaHaspopup"
+  >
     <slot />
   </el-only-child>
 </template>
@@ -86,7 +92,7 @@ onMounted(() => {
           const handler = props[eventName]
           if (handler) {
             // @ts-ignore
-            ; (prevEl as HTMLElement).removeEventListener(
+            ;(prevEl as HTMLElement).removeEventListener(
               eventName.slice(2).toLowerCase(),
               handler,
               ['onFocus', 'onBlur'].includes(eventName)
@@ -100,7 +106,7 @@ onMounted(() => {
           if (handler) {
             // It's not worth doing type gymnastics here
             // @ts-ignore
-            ; (el as HTMLElement).addEventListener(
+            ;(el as HTMLElement).addEventListener(
               eventName.slice(2).toLowerCase(),
               handler,
               ['onFocus', 'onBlur'].includes(eventName)

@@ -13,7 +13,12 @@
     with footer
   </el-button>
 
-  <el-drawer v-model="drawer" title="I am the title" :direction="direction" :before-close="handleClose">
+  <el-drawer
+    v-model="drawer"
+    title="I am the title"
+    :direction="direction"
+    :before-close="handleClose"
+  >
     <span>Hi, there!</span>
   </el-drawer>
   <el-drawer v-model="drawer2" :direction="direction">

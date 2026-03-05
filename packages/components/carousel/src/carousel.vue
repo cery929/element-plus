@@ -1,45 +1,81 @@
 <template>
-  <div ref="root" :class="carouselClasses" @mouseenter.stop="handleMouseEnter" @mouseleave.stop="handleMouseLeave">
+  <div
+    ref="root"
+    :class="carouselClasses"
+    @mouseenter.stop="handleMouseEnter"
+    @mouseleave.stop="handleMouseLeave"
+  >
     <transition v-if="arrowDisplay" name="carousel-arrow-left">
-      <button v-show="(arrow === 'always' || hover) && (loop || activeIndex > 0)" type="button"
-        :class="[ns.e('arrow'), ns.em('arrow', 'left')]" :aria-label="t('el.carousel.leftArrow')"
-        @mouseenter="handleButtonEnter('left')" @mouseleave="handleButtonLeave"
-        @click.stop="throttledArrowClick(activeIndex - 1)">
+      <button
+        v-show="(arrow === 'always' || hover) && (loop || activeIndex > 0)"
+        type="button"
+        :class="[ns.e('arrow'), ns.em('arrow', 'left')]"
+        :aria-label="t('el.carousel.leftArrow')"
+        @mouseenter="handleButtonEnter('left')"
+        @mouseleave="handleButtonLeave"
+        @click.stop="throttledArrowClick(activeIndex - 1)"
+      >
         <ElIcon>
           <ArrowLeft />
         </ElIcon>
       </button>
     </transition>
     <transition v-if="arrowDisplay" name="carousel-arrow-right">
-      <button v-show="(arrow === 'always' || hover) &&
-        (loop || activeIndex < items.length - 1)
-        " type="button" :class="[ns.e('arrow'), ns.em('arrow', 'right')]" :aria-label="t('el.carousel.rightArrow')"
-        @mouseenter="handleButtonEnter('right')" @mouseleave="handleButtonLeave"
-        @click.stop="throttledArrowClick(activeIndex + 1)">
+      <button
+        v-show="
+          (arrow === 'always' || hover) &&
+          (loop || activeIndex < items.length - 1)
+        "
+        type="button"
+        :class="[ns.e('arrow'), ns.em('arrow', 'right')]"
+        :aria-label="t('el.carousel.rightArrow')"
+        @mouseenter="handleButtonEnter('right')"
+        @mouseleave="handleButtonLeave"
+        @click.stop="throttledArrowClick(activeIndex + 1)"
+      >
         <ElIcon>
           <ArrowRight />
         </ElIcon>
       </button>
     </transition>
-    <div :class="ns.e('container')" :style="containerStyle" @transitionstart="handleTransitionStart"
-      @transitionend="handleTransitionEnd">
+    <div
+      :class="ns.e('container')"
+      :style="containerStyle"
+      @transitionstart="handleTransitionStart"
+      @transitionend="handleTransitionEnd"
+    >
       <PlaceholderItem />
       <slot />
     </div>
     <items-sorter>
       <ul v-if="indicatorPosition !== 'none'" :class="indicatorsClasses">
-        <li v-for="(item, index) in items" v-show="isTwoLengthShow(index)" :key="index" :class="[
-          ns.e('indicator'),
-          ns.em('indicator', direction),
-          ns.is('active', index === activeIndex),
-        ]" @mouseenter="throttledIndicatorHover(index)" @click.stop="handleIndicatorClick(index)">
-          <button :class="ns.e('button')" :aria-label="t('el.carousel.indicator', { index: index + 1 })">
+        <li
+          v-for="(item, index) in items"
+          v-show="isTwoLengthShow(index)"
+          :key="index"
+          :class="[
+            ns.e('indicator'),
+            ns.em('indicator', direction),
+            ns.is('active', index === activeIndex),
+          ]"
+          @mouseenter="throttledIndicatorHover(index)"
+          @click.stop="handleIndicatorClick(index)"
+        >
+          <button
+            :class="ns.e('button')"
+            :aria-label="t('el.carousel.indicator', { index: index + 1 })"
+          >
             <span v-if="hasLabel">{{ item.props.label }}</span>
           </button>
         </li>
       </ul>
     </items-sorter>
-    <svg v-if="motionBlur" xmlns="http://www.w3.org/2000/svg" version="1.1" style="display: none">
+    <svg
+      v-if="motionBlur"
+      xmlns="http://www.w3.org/2000/svg"
+      version="1.1"
+      style="display: none"
+    >
       <defs>
         <filter id="elCarouselHorizontal">
           <feGaussianBlur in="SourceGraphic" stdDeviation="12,0" />
@@ -139,7 +175,7 @@ function handleTransitionStart(e: TransitionEvent) {
   const kls = unref(isVertical)
     ? `${ns.namespace.value}-transitioning-vertical`
     : `${ns.namespace.value}-transitioning`
-    ; (e.currentTarget as HTMLDivElement).classList.add(kls)
+  ;(e.currentTarget as HTMLDivElement).classList.add(kls)
 }
 
 function handleTransitionEnd(e: TransitionEvent) {
@@ -148,7 +184,7 @@ function handleTransitionEnd(e: TransitionEvent) {
   const kls = unref(isVertical)
     ? `${ns.namespace.value}-transitioning-vertical`
     : `${ns.namespace.value}-transitioning`
-    ; (e.currentTarget as HTMLDivElement).classList.remove(kls)
+  ;(e.currentTarget as HTMLDivElement).classList.remove(kls)
 }
 
 defineExpose({

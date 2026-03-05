@@ -28,7 +28,11 @@
         <el-button size="small" @click="handleEdit(scope.$index, scope.row)">
           Edit
         </el-button>
-        <el-button size="small" type="danger" @click="handleDelete(scope.$index, scope.row)">
+        <el-button
+          size="small"
+          type="danger"
+          @click="handleDelete(scope.$index, scope.row)"
+        >
           Delete
         </el-button>
       </template>

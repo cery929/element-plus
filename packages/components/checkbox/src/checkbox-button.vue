@@ -1,10 +1,24 @@
 <template>
   <label :class="labelKls">
-    <input v-model="model" :class="ns.be('button', 'original')" type="checkbox" :name="name" :tabindex="tabindex"
-      :disabled="isDisabled" v-bind="inputBindings" @change="handleChange" @focus="isFocused = true"
-      @blur="isFocused = false" @click.stop />
+    <input
+      v-model="model"
+      :class="ns.be('button', 'original')"
+      type="checkbox"
+      :name="name"
+      :tabindex="tabindex"
+      :disabled="isDisabled"
+      v-bind="inputBindings"
+      @change="handleChange"
+      @focus="isFocused = true"
+      @blur="isFocused = false"
+      @click.stop
+    />
 
-    <span v-if="$slots.default || label" :class="ns.be('button', 'inner')" :style="isChecked ? activeStyle : undefined">
+    <span
+      v-if="$slots.default || label"
+      :class="ns.be('button', 'inner')"
+      :style="isChecked ? activeStyle : undefined"
+    >
       <slot>{{ label }}</slot>
     </span>
   </label>

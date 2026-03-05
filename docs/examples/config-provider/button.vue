@@ -8,7 +8,11 @@
       <el-checkbox v-model="config.round"> round </el-checkbox>
       <el-checkbox v-model="config.text"> text </el-checkbox>
       <el-select v-model="config.type" class="ml-5" style="max-width: 150px">
-        <el-option v-for="type in buttonTypes.filter(Boolean)" :key="type" :value="type" />
+        <el-option
+          v-for="type in buttonTypes.filter(Boolean)"
+          :key="type"
+          :value="type"
+        />
       </el-select>
     </div>
     <el-divider />

@@ -1,15 +1,44 @@
 <template>
   <el-teleport :disabled="!teleported" :to="appendTo">
-    <transition v-if="shouldRender || !ariaHidden" :name="transitionClass" :appear="!persistentRef"
-      @after-leave="onTransitionLeave" @before-enter="onBeforeEnter" @after-enter="onAfterShow"
-      @before-leave="onBeforeLeave">
-      <el-popper-content v-show="shouldShow" :id="id" ref="contentRef" v-bind="$attrs" :aria-label="ariaLabel"
-        :aria-hidden="ariaHidden" :boundaries-padding="boundariesPadding" :fallback-placements="fallbackPlacements"
-        :gpu-acceleration="gpuAcceleration" :offset="offset" :placement="placement" :popper-options="popperOptions"
-        :arrow-offset="arrowOffset" :strategy="strategy" :effect="effect" :enterable="enterable" :pure="pure"
-        :popper-class="popperClass" :popper-style="[popperStyle!, contentStyle]" :reference-el="referenceEl"
-        :trigger-target-el="triggerTargetEl" :visible="shouldShow" :z-index="zIndex" :loop="loop"
-        @mouseenter="onContentEnter" @mouseleave="onContentLeave" @blur="onBlur" @close="onClose">
+    <transition
+      v-if="shouldRender || !ariaHidden"
+      :name="transitionClass"
+      :appear="!persistentRef"
+      @after-leave="onTransitionLeave"
+      @before-enter="onBeforeEnter"
+      @after-enter="onAfterShow"
+      @before-leave="onBeforeLeave"
+    >
+      <el-popper-content
+        v-show="shouldShow"
+        :id="id"
+        ref="contentRef"
+        v-bind="$attrs"
+        :aria-label="ariaLabel"
+        :aria-hidden="ariaHidden"
+        :boundaries-padding="boundariesPadding"
+        :fallback-placements="fallbackPlacements"
+        :gpu-acceleration="gpuAcceleration"
+        :offset="offset"
+        :placement="placement"
+        :popper-options="popperOptions"
+        :arrow-offset="arrowOffset"
+        :strategy="strategy"
+        :effect="effect"
+        :enterable="enterable"
+        :pure="pure"
+        :popper-class="popperClass"
+        :popper-style="[popperStyle!, contentStyle]"
+        :reference-el="referenceEl"
+        :trigger-target-el="triggerTargetEl"
+        :visible="shouldShow"
+        :z-index="zIndex"
+        :loop="loop"
+        @mouseenter="onContentEnter"
+        @mouseleave="onContentLeave"
+        @blur="onBlur"
+        @close="onClose"
+      >
         <slot />
       </el-popper-content>
     </transition>
@@ -20,11 +49,7 @@
 import { computed, inject, onBeforeUnmount, ref, unref, watch } from 'vue'
 import { computedEager, onClickOutside } from '@vueuse/core'
 import { useNamespace, usePopperContainerId } from '@kn-ui/hooks'
-import {
-  castArray,
-  composeEventHandlers,
-  focusElement,
-} from '@kn-ui/utils'
+import { castArray, composeEventHandlers, focusElement } from '@kn-ui/utils'
 import { ElPopperContent } from '@kn-ui/components/popper'
 import ElTeleport from '@kn-ui/components/teleport'
 import { TOOLTIP_INJECTION_KEY } from './constants'

@@ -1,22 +1,46 @@
 <template>
-  <span v-if="disableTransitions" :class="containerKls" :style="{ backgroundColor: color }" @click="handleClick">
+  <span
+    v-if="disableTransitions"
+    :class="containerKls"
+    :style="{ backgroundColor: color }"
+    @click="handleClick"
+  >
     <span :class="ns.e('content')">
       <slot />
     </span>
-    <button v-if="closable" :aria-label="t('el.tag.close')" :class="ns.e('close')" type="button"
-      @click.stop="handleClose">
+    <button
+      v-if="closable"
+      :aria-label="t('el.tag.close')"
+      :class="ns.e('close')"
+      type="button"
+      @click.stop="handleClose"
+    >
       <el-icon>
         <Close />
       </el-icon>
     </button>
   </span>
-  <transition v-else :name="`${ns.namespace.value}-zoom-in-center`" appear @vue:mounted="handleVNodeMounted">
-    <span :class="containerKls" :style="{ backgroundColor: color }" @click="handleClick">
+  <transition
+    v-else
+    :name="`${ns.namespace.value}-zoom-in-center`"
+    appear
+    @vue:mounted="handleVNodeMounted"
+  >
+    <span
+      :class="containerKls"
+      :style="{ backgroundColor: color }"
+      @click="handleClick"
+    >
       <span :class="ns.e('content')">
         <slot />
       </span>
-      <button v-if="closable" :aria-label="t('el.tag.close')" :class="ns.e('close')" type="button"
-        @click.stop="handleClose">
+      <button
+        v-if="closable"
+        :aria-label="t('el.tag.close')"
+        :class="ns.e('close')"
+        type="button"
+        @click.stop="handleClose"
+      >
         <el-icon>
           <Close />
         </el-icon>

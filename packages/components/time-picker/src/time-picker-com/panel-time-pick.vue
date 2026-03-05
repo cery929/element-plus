@@ -2,18 +2,37 @@
   <transition :name="transitionName">
     <div v-if="actualVisible || visible" :class="ns.b('panel')">
       <div :class="[ns.be('panel', 'content'), { 'has-seconds': showSeconds }]">
-        <time-spinner ref="spinner" :role="datetimeRole || 'start'" :arrow-control="arrowControl"
-          :show-seconds="showSeconds" :am-pm-mode="amPmMode" :spinner-date="
+        <time-spinner
+          ref="spinner"
+          :role="datetimeRole || 'start'"
+          :arrow-control="arrowControl"
+          :show-seconds="showSeconds"
+          :am-pm-mode="amPmMode"
+          :spinner-date="
             // https://github.com/vuejs/language-tools/issues/2104#issuecomment-3092541527
             parsedValue as any
-            " :disabled-hours="disabledHours" :disabled-minutes="disabledMinutes" :disabled-seconds="disabledSeconds"
-          @change="handleChange" @set-option="onSetOption" @select-range="setSelectionRange" />
+          "
+          :disabled-hours="disabledHours"
+          :disabled-minutes="disabledMinutes"
+          :disabled-seconds="disabledSeconds"
+          @change="handleChange"
+          @set-option="onSetOption"
+          @select-range="setSelectionRange"
+        />
       </div>
       <div :class="ns.be('panel', 'footer')">
-        <button type="button" :class="[ns.be('panel', 'btn'), 'cancel']" @click="handleCancel">
+        <button
+          type="button"
+          :class="[ns.be('panel', 'btn'), 'cancel']"
+          @click="handleCancel"
+        >
           {{ t('el.datepicker.cancel') }}
         </button>
-        <button type="button" :class="[ns.be('panel', 'btn'), 'confirm']" @click="handleConfirm()">
+        <button
+          type="button"
+          :class="[ns.be('panel', 'btn'), 'confirm']"
+          @click="handleConfirm()"
+        >
           {{ t('el.datepicker.confirm') }}
         </button>
       </div>

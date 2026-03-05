@@ -1,8 +1,18 @@
 <template>
   <transition :name="ns.b('fade')">
-    <div v-show="always || visible" ref="instance" :class="[ns.e('bar'), ns.is(bar.key)]" @mousedown="clickTrackHandler"
-      @click.stop>
-      <div ref="thumb" :class="ns.e('thumb')" :style="thumbStyle" @mousedown="clickThumbHandler" />
+    <div
+      v-show="always || visible"
+      ref="instance"
+      :class="[ns.e('bar'), ns.is(bar.key)]"
+      @mousedown="clickTrackHandler"
+      @click.stop
+    >
+      <div
+        ref="thumb"
+        :class="ns.e('thumb')"
+        :style="thumbStyle"
+        @mousedown="clickThumbHandler"
+      />
     </div>
   </transition>
 </template>
@@ -80,7 +90,7 @@ const clickTrackHandler = (e: MouseEvent) => {
 
   const offset = Math.abs(
     (e.target as HTMLElement).getBoundingClientRect()[bar.value.direction] -
-    e[bar.value.client]
+      e[bar.value.client]
   )
   const thumbHalf = thumb.value[bar.value.offset] / 2
   const thumbPositionPercentage =

@@ -1,10 +1,24 @@
 <template>
   <el-teleport :to="appendTo">
     <div :class="kls" v-bind="$attrs">
-      <el-tour-mask :visible="mergedShowMask" :fill="mergedMaskStyle?.color" :style="mergedMaskStyle?.style" :pos="pos"
-        :z-index="mergedZIndex" :target-area-clickable="targetAreaClickable" />
-      <el-tour-content v-if="modelValue" :key="current" :reference="triggerTarget" :placement="mergedPlacement"
-        :show-arrow="mergedShowArrow" :z-index="mergedZIndex" :style="mergedContentStyle" @close="onEscClose">
+      <el-tour-mask
+        :visible="mergedShowMask"
+        :fill="mergedMaskStyle?.color"
+        :style="mergedMaskStyle?.style"
+        :pos="pos"
+        :z-index="mergedZIndex"
+        :target-area-clickable="targetAreaClickable"
+      />
+      <el-tour-content
+        v-if="modelValue"
+        :key="current"
+        :reference="triggerTarget"
+        :placement="mergedPlacement"
+        :show-arrow="mergedShowArrow"
+        :z-index="mergedZIndex"
+        :style="mergedContentStyle"
+        @close="onEscClose"
+      >
         <el-tour-steps :current="current" @update-total="onUpdateTotal">
           <slot />
         </el-tour-steps>

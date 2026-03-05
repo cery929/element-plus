@@ -9,10 +9,7 @@ import {
 } from 'vue'
 import { get } from 'lodash-unified'
 import { getEventCode, isIOS, isObject, isUndefined } from '@kn-ui/utils'
-import {
-  DynamicSizeList,
-  FixedSizeList,
-} from '@kn-ui/components/virtual-list'
+import { DynamicSizeList, FixedSizeList } from '@kn-ui/components/virtual-list'
 import { useNamespace } from '@kn-ui/hooks'
 import { EVENT_CODE } from '@kn-ui/constants'
 import GroupItem from './group-item.vue'

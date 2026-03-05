@@ -1,12 +1,28 @@
 <template>
-  <div v-if="options.length" :id="inputId" ref="segmentedRef" :class="segmentedCls" role="radiogroup"
+  <div
+    v-if="options.length"
+    :id="inputId"
+    ref="segmentedRef"
+    :class="segmentedCls"
+    role="radiogroup"
     :aria-label="!isLabeledByFormItem ? ariaLabel || 'segmented' : undefined"
-    :aria-labelledby="isLabeledByFormItem ? formItem!.labelId : undefined">
+    :aria-labelledby="isLabeledByFormItem ? formItem!.labelId : undefined"
+  >
     <div :class="[ns.e('group'), ns.m(direction)]">
       <div :style="selectedStyle" :class="selectedCls" />
-      <label v-for="(item, index) in options" :key="index" :class="getItemCls(item)">
-        <input :class="ns.e('item-input')" type="radio" :name="name" :disabled="getDisabled(item)"
-          :checked="getSelected(item)" @change="handleChange($event, item)" />
+      <label
+        v-for="(item, index) in options"
+        :key="index"
+        :class="getItemCls(item)"
+      >
+        <input
+          :class="ns.e('item-input')"
+          type="radio"
+          :name="name"
+          :disabled="getDisabled(item)"
+          :checked="getSelected(item)"
+          @change="handleChange($event, item)"
+        />
         <div :class="ns.e('item-label')">
           <slot :item="intoAny(item)">{{ getLabel(item) }}</slot>
         </div>
@@ -71,7 +87,7 @@ const handleChange = (evt: Event, item: Option) => {
   const value = getValue(item)
   emit(UPDATE_MODEL_EVENT, value)
   emit(CHANGE_EVENT, value)
-    ; (evt.target as HTMLInputElement).checked = value === props.modelValue
+  ;(evt.target as HTMLInputElement).checked = value === props.modelValue
 }
 
 const aliasProps = computed(() => ({ ...defaultProps, ...props.props }))
@@ -137,7 +153,7 @@ const updateSelect = () => {
   try {
     // This will failed in test
     state.focusVisible = selectedItemInput.matches(':focus-visible')
-  } catch { }
+  } catch {}
 }
 
 const segmentedCls = computed(() => [

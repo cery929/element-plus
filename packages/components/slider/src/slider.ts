@@ -1,15 +1,6 @@
 import { placements } from '@popperjs/core'
-import {
-  buildProps,
-  definePropType,
-  isArray,
-  isNumber,
-} from '@kn-ui/utils'
-import {
-  CHANGE_EVENT,
-  INPUT_EVENT,
-  UPDATE_MODEL_EVENT,
-} from '@kn-ui/constants'
+import { buildProps, definePropType, isArray, isNumber } from '@kn-ui/utils'
+import { CHANGE_EVENT, INPUT_EVENT, UPDATE_MODEL_EVENT } from '@kn-ui/constants'
 import { useAriaProps, useSizeProp } from '@kn-ui/hooks'
 
 import type { Arrayable } from '@kn-ui/utils'

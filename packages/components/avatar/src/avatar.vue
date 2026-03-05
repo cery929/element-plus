@@ -1,7 +1,13 @@
 <template>
   <span :class="avatarClass" :style="sizeStyle">
-    <img v-if="(src || srcSet) && !hasLoadError" :src="src" :alt="alt" :srcset="srcSet" :style="fitStyle"
-      @error="handleError" />
+    <img
+      v-if="(src || srcSet) && !hasLoadError"
+      :src="src"
+      :alt="alt"
+      :srcset="srcSet"
+      :style="fitStyle"
+      @error="handleError"
+    />
     <el-icon v-else-if="icon">
       <component :is="icon" />
     </el-icon>
@@ -54,8 +60,8 @@ const avatarClass = computed(() => {
 const sizeStyle = computed(() => {
   return isNumber(size.value)
     ? (ns.cssVarBlock({
-      size: addUnit(size.value)!,
-    }) as CSSProperties)
+        size: addUnit(size.value)!,
+      }) as CSSProperties)
     : undefined
 })
 

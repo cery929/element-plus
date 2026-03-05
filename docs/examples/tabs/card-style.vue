@@ -1,5 +1,10 @@
 <template>
-  <el-tabs v-model="activeName" type="card" class="demo-tabs" @tab-click="handleClick">
+  <el-tabs
+    v-model="activeName"
+    type="card"
+    class="demo-tabs"
+    @tab-click="handleClick"
+  >
     <el-tab-pane label="User" name="first">User</el-tab-pane>
     <el-tab-pane label="Config" name="second">Config</el-tab-pane>
     <el-tab-pane label="Role" name="third">Role</el-tab-pane>
@@ -20,7 +25,7 @@ const handleClick = (tab: TabsPaneContext, event: Event) => {
 </script>
 
 <style>
-.demo-tabs>.el-tabs__content {
+.demo-tabs > .el-tabs__content {
   padding: 32px;
   color: #6b778c;
   font-size: 32px;
